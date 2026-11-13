@@ -1,6 +1,33 @@
 {
-  "players": {},
-  "feed": [],
+  "players": {
+    "plr_vjwpql4t": {
+      "id": "plr_vjwpql4t",
+      "accountUser": "dion",
+      "nickname": "Diony",
+      "avatar": "👾",
+      "totalPoints": 250,
+      "solvedCount": 1,
+      "bestTimeSec": 16,
+      "bestBlitzScore": 0,
+      "lastPuzzleTitle": "5×5 • 1-1",
+      "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEerh6PLEjYAcLK285FXo5LxwbepFEqeDg9yePBQDpoEeiqeld5CLl3FVG5SZs4Fsd67FJj2aGa9iC/x082SguKw==",
+      "updatedAt": 1794599250915
+    }
+  },
+  "feed": [
+    {
+      "id": "match_plr_vjwpql4t_1794598794263",
+      "playerId": "plr_vjwpql4t",
+      "accountUser": "dion",
+      "nickname": "Diony",
+      "avatar": "👾",
+      "puzzleTitle": "5×5 • 1-1",
+      "pointsEarned": 250,
+      "elapsedSec": 16,
+      "proofOfSolve": "pos_42_cee21bb7",
+      "timestamp": 1794598794263
+    }
+  ],
   "activeChallenge": null,
   "roomProgress": {},
   "announcement": ""
