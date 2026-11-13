@@ -1,16 +1,16 @@
 {
-  "version": "1.8.4",
+  "version": "1.8.5",
   "releaseDate": "2026-11-13",
   "mandatory": true,
   "repoOwner": "Diony-source",
   "repoName": "puzzle-galaxies-releases",
   "updateManifestUrl": "https://raw.githubusercontent.com/Diony-source/puzzle-galaxies-releases/main/version.json",
   "releaseNotes": [
+    "v1.8.5: Profil Sadelestirme, Topbar Hover Duzeltmesi ve Cift Eksen Dokunmatik Cizim",
     "v1.8.4: 72 Saat Cevrimdisi Dogrulama, Eski Surum Kilidi ve 2-Repolu Dagitim Gecisi",
     "v1.8.3: Bulut Hesabi Baglanti Duzeltmesi & Yeni Sezon Sifirlamasi",
     "v1.8.2: Nick + Sifre ile Bulut Hesabi & Cihazlar Arasi Esitleme",
-    "v1.8.1: Imzali Release APK ve Play Protect Uyumlulugu",
-    "v1.8.0: Cift Platform Otomatik Guncelleme, Birlesik Releases ve Temiz Skor Tablosu"
+    "v1.8.1: Imzali Release APK ve Play Protect Uyumlulugu"
   ],
   "installerUrl": "",
   "files": [
@@ -28,8 +28,8 @@
   "minEngineVersion": "1.8.4",
   "announcement": "",
   "fileHashes": {
-    "assets/app.css": "345de4fa0ea1f96f6849409d273c1e88df62e0ec36bbedf8acf944f6cbce0750",
-    "assets/app.js": "5d53fa18d0a84a09864e4619775a80c1bc1523e023ecac10c845eca9180f1d27",
+    "assets/app.css": "e39989e6d96cb9f711eb0c20c2c63290af0b9c2cabac7dcfb95f79963df27177",
+    "assets/app.js": "eead7222dc5e58d89466e6c7d1713538d3e4687bfbbc161e2c05d09d0424f75e",
     "assets/web.js": "092d9d061f4a3129619d1c318da01190da6d04fb8c50d6fc6c8d90a6cde42eb9",
     "assets/web2.js": "4a0cc3ac09324665e3096b2d71937844328b6c6d9f037437098523a57031b0d5",
     "icon.ico": "45c7aaa8e0d7cc3e4c085d2fbd52e56ebfa23757d6ba2e21ffc30465613cb065",

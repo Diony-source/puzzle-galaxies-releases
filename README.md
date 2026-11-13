@@ -56,7 +56,7 @@ Her yeni sürüm hem **Windows kurulum paketi** hem **Android APK** olarak derle
 - 📱 **Alt Gezinme Barı (Bottom Dock) & Önizleme Modalları:**
   - 🪐 **Harita**, ⚔️ **1v1 Düello**, ⚡ **Blitz**, 📅 **Günlük** ve 🏆 **Sıralama** sekmeleri; Blitz ve Günlük sekmelerinde kişisel rekor/seri gösteren şık başlatma kartları ve ders-çıkış koruma onayları.
 - 🔍 **İmleç Odaklı Zoom & Serbest Pan:**
-  - Fare tekerleğiyle yakınlaştırma imlecin tam durduğu noktaya odaklanır; `0` tuşuyla anında %100 sıfırlama ve dokunmatik büyüteç (loupe) desteği.
+  - Fare tekerleğiyle yakınlaştırma imlecin tam durduğu noktaya odaklanır; `0` tuşuyla anında %100 sıfırlama ve mobilde iki parmakla yakınlaştırma/kaydırma desteği.
 - ⚡ **Galaksi Blitz & Canlı 1v1 Düello + Seyirci Arenası:**
   - 2 dakikalık Blitz modu (`×2.0` kombo çarpanı, net sonuç ekranı), tek başına oynarken duraklatma (`Pause`), canlı 1v1 rakip gerilim nabzı ve **Canlı İzle** seyirci arenası.
 - 🛡️ **3 Aşamalı Akıllı Simetri:** `Oto Koy` → `Göster` → `Kapalı`.
