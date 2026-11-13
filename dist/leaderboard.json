@@ -1,0 +1,145 @@
+{
+  "players": {
+    "plr_vjwpql4t": {
+      "id": "plr_vjwpql4t",
+      "accountUser": "dion",
+      "nickname": "Diony",
+      "avatar": "👾",
+      "totalPoints": 3908,
+      "solvedCount": 11,
+      "bestTimeSec": 8,
+      "bestBlitzScore": 1373,
+      "lastPuzzleTitle": "7×7 • 1-3",
+      "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEerh6PLEjYAcLK285FXo5LxwbepFEqeDg9yePBQDpoEeiqeld5CLl3FVG5SZs4Fsd67FJj2aGa9iC/x082SguKw==",
+      "updatedAt": 1794610018587,
+      "secretHash": "477d58e0"
+    },
+    "plr_2bcf9azw": {
+      "id": "plr_2bcf9azw",
+      "accountUser": "beratutq",
+      "secretHash": "74ed7536",
+      "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEUMwTRYpj/74HHjuhu2OXe6Xg1CXrzoWPAArSlv5hEl17xMSl16/ZxYl7T2niWgyojyeYO7UOzpADdqMPW9XJFw==",
+      "signature": "NEz6jf8PlQQ4McNMTWwneMQAa75HGvBZAbXslNRahD96GfIFqZ5StckpqqWBrdffeeXFGtYMhd70Hy08rLb05Q==",
+      "nickname": "BeratUtq",
+      "avatar": "☄️",
+      "totalPoints": 255,
+      "solvedCount": 1,
+      "bestTimeSec": 12,
+      "bestBlitzScore": 0,
+      "lastPuzzleTitle": "5×5 • 1-1",
+      "updatedAt": 1794602610258
+    }
+  },
+  "feed": [
+    {
+      "id": "match_plr_vjwpql4t_1794605586377",
+      "playerId": "plr_vjwpql4t",
+      "accountUser": "dion",
+      "nickname": "Diony",
+      "avatar": "👾",
+      "puzzleTitle": "7×7 • 1-3",
+      "pointsEarned": 355,
+      "elapsedSec": 59,
+      "proofOfSolve": "pos_81_414b22c4",
+      "timestamp": 1794605586378
+    },
+    {
+      "id": "match_plr_vjwpql4t_1794605525700",
+      "playerId": "plr_vjwpql4t",
+      "accountUser": "dion",
+      "nickname": "Diony",
+      "avatar": "👾",
+      "puzzleTitle": "7×7 • 1-2",
+      "pointsEarned": 470,
+      "elapsedSec": 37,
+      "proofOfSolve": "pos_83_d1757376",
+      "timestamp": 1794605525700
+    },
+    {
+      "id": "blitz_plr_vjwpql4t_1794605437336",
+      "playerId": "plr_vjwpql4t",
+      "accountUser": "dion",
+      "nickname": "Diony",
+      "avatar": "👾",
+      "puzzleTitle": "Blitz Modu (4 Bulmaca)",
+      "pointsEarned": 1373,
+      "elapsedSec": 120,
+      "timestamp": 1794605437336
+    },
+    {
+      "id": "match_plr_vjwpql4t_1794605216440",
+      "playerId": "plr_vjwpql4t",
+      "accountUser": "dion",
+      "nickname": "Diony",
+      "avatar": "👾",
+      "puzzleTitle": "Günlük Bulmaca (2026-11-13)",
+      "pointsEarned": 550,
+      "elapsedSec": 119,
+      "proofOfSolve": "pos_92_548f20fe",
+      "timestamp": 1794605216440
+    },
+    {
+      "id": "match_plr_2bcf9azw_1794602610258",
+      "playerId": "plr_2bcf9azw",
+      "accountUser": "beratutq",
+      "nickname": "BeratUtq",
+      "avatar": "☄️",
+      "puzzleTitle": "5×5 • 1-1",
+      "pointsEarned": 255,
+      "elapsedSec": 12,
+      "proofOfSolve": "pos_42_64a3b0d3",
+      "timestamp": 1794602610258
+    },
+    {
+      "id": "match_plr_vjwpql4t_1794601180809",
+      "playerId": "plr_vjwpql4t",
+      "accountUser": "dion",
+      "nickname": "Diony",
+      "avatar": "👾",
+      "puzzleTitle": "7×7 • 1-1",
+      "pointsEarned": 465,
+      "elapsedSec": 47,
+      "proofOfSolve": "pos_84_6abdaf74",
+      "timestamp": 1794601180809
+    },
+    {
+      "id": "match_plr_vjwpql4t_1794601009732",
+      "playerId": "plr_vjwpql4t",
+      "accountUser": "dion",
+      "nickname": "Diony",
+      "avatar": "👾",
+      "puzzleTitle": "5×5 • 1-3",
+      "pointsEarned": 255,
+      "elapsedSec": 8,
+      "proofOfSolve": "pos_42_9956d3ab",
+      "timestamp": 1794601009732
+    },
+    {
+      "id": "match_plr_vjwpql4t_1794600850836",
+      "playerId": "plr_vjwpql4t",
+      "accountUser": "dion",
+      "nickname": "Diony",
+      "avatar": "👾",
+      "puzzleTitle": "5×5 • 1-2",
+      "pointsEarned": 190,
+      "elapsedSec": 23,
+      "proofOfSolve": "pos_43_89e3345b",
+      "timestamp": 1794600850836
+    },
+    {
+      "id": "match_plr_vjwpql4t_1794598794263",
+      "playerId": "plr_vjwpql4t",
+      "accountUser": "dion",
+      "nickname": "Diony",
+      "avatar": "👾",
+      "puzzleTitle": "5×5 • 1-1",
+      "pointsEarned": 250,
+      "elapsedSec": 16,
+      "proofOfSolve": "pos_42_cee21bb7",
+      "timestamp": 1794598794263
+    }
+  ],
+  "activeChallenge": null,
+  "roomProgress": {},
+  "announcement": ""
+}

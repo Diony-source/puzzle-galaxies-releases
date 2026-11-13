@@ -1,0 +1,19 @@
+{
+  "name": "Puzzle Galaxies - Galaksi Bulmacası",
+  "short_name": "Galaxies",
+  "description": "180° Simetrik Galaksi Mantık Bulmacası (Tentai Show / Spiral Galaxies)",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#090d16",
+  "theme_color": "#6366f1",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
+
