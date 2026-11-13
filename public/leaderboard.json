@@ -5,17 +5,30 @@
       "accountUser": "dion",
       "nickname": "Diony",
       "avatar": "👾",
-      "totalPoints": 250,
-      "solvedCount": 1,
+      "totalPoints": 440,
+      "solvedCount": 2,
       "bestTimeSec": 16,
       "bestBlitzScore": 0,
-      "lastPuzzleTitle": "5×5 • 1-1",
+      "lastPuzzleTitle": "5×5 • 1-2",
       "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEerh6PLEjYAcLK285FXo5LxwbepFEqeDg9yePBQDpoEeiqeld5CLl3FVG5SZs4Fsd67FJj2aGa9iC/x082SguKw==",
-      "updatedAt": 1794600797527,
-      "secretHash": "477d58e0"
+      "updatedAt": 1794600850836,
+      "secretHash": "477d58e0",
+      "signature": "MqWNiJ1fcl0veOm0usSRK9RKsuvpDdYrI0vuJKv/Sh9Os10RFsWpXkIY0krEyr4zpgCmIU9+p0V9YAtQ7VBwoA=="
     }
   },
   "feed": [
+    {
+      "id": "match_plr_vjwpql4t_1794600850836",
+      "playerId": "plr_vjwpql4t",
+      "accountUser": "dion",
+      "nickname": "Diony",
+      "avatar": "👾",
+      "puzzleTitle": "5×5 • 1-2",
+      "pointsEarned": 190,
+      "elapsedSec": 23,
+      "proofOfSolve": "pos_43_89e3345b",
+      "timestamp": 1794600850836
+    },
     {
       "id": "match_plr_vjwpql4t_1794598794263",
       "playerId": "plr_vjwpql4t",
