@@ -5,14 +5,17 @@
       "accountUser": "dion",
       "nickname": "Diony",
       "avatar": "👾",
-      "totalPoints": 1160,
-      "solvedCount": 4,
+      "totalPoints": 1710,
+      "solvedCount": 5,
       "bestTimeSec": 8,
       "bestBlitzScore": 0,
-      "lastPuzzleTitle": "7×7 • 1-1",
+      "lastPuzzleTitle": "Günlük Bulmaca (2026-11-13)",
       "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEerh6PLEjYAcLK285FXo5LxwbepFEqeDg9yePBQDpoEeiqeld5CLl3FVG5SZs4Fsd67FJj2aGa9iC/x082SguKw==",
-      "updatedAt": 1794605071144,
-      "secretHash": "477d58e0"
+      "updatedAt": 1794605216440,
+      "secretHash": "477d58e0",
+      "dailyBestDate": "2026-11-13",
+      "dailyBestSec": 119,
+      "signature": "yu31VU60DhNwsFcgF3g7/zk5gy2xMpiBW5/GNUGZklOPhARvnK60vUcji6BR7Lv2WprFViZn8VduPa5BKwV30Q=="
     },
     "plr_2bcf9azw": {
       "id": "plr_2bcf9azw",
@@ -31,6 +34,18 @@
     }
   },
   "feed": [
+    {
+      "id": "match_plr_vjwpql4t_1794605216440",
+      "playerId": "plr_vjwpql4t",
+      "accountUser": "dion",
+      "nickname": "Diony",
+      "avatar": "👾",
+      "puzzleTitle": "Günlük Bulmaca (2026-11-13)",
+      "pointsEarned": 550,
+      "elapsedSec": 119,
+      "proofOfSolve": "pos_92_548f20fe",
+      "timestamp": 1794605216440
+    },
     {
       "id": "match_plr_2bcf9azw_1794602610258",
       "playerId": "plr_2bcf9azw",
