@@ -5,17 +5,15 @@
       "accountUser": "dion",
       "nickname": "Diony",
       "avatar": "👾",
-      "totalPoints": 1710,
-      "solvedCount": 5,
+      "totalPoints": 3083,
+      "solvedCount": 9,
       "bestTimeSec": 8,
-      "bestBlitzScore": 0,
-      "lastPuzzleTitle": "Günlük Bulmaca (2026-11-13)",
+      "bestBlitzScore": 1373,
+      "lastPuzzleTitle": "Blitz (4 Tablo)",
       "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEerh6PLEjYAcLK285FXo5LxwbepFEqeDg9yePBQDpoEeiqeld5CLl3FVG5SZs4Fsd67FJj2aGa9iC/x082SguKw==",
-      "updatedAt": 1794605216440,
+      "updatedAt": 1794605437336,
       "secretHash": "477d58e0",
-      "dailyBestDate": "2026-11-13",
-      "dailyBestSec": 119,
-      "signature": "yu31VU60DhNwsFcgF3g7/zk5gy2xMpiBW5/GNUGZklOPhARvnK60vUcji6BR7Lv2WprFViZn8VduPa5BKwV30Q=="
+      "signature": "kEm+BnmcjO622PFyZGTaGmuRKE8etROuDPRrOoUvp1wHOFP+bm8dDFTS7xbtiCujpf+HaHWzMzlNCKm+++HJkw=="
     },
     "plr_2bcf9azw": {
       "id": "plr_2bcf9azw",
@@ -34,6 +32,17 @@
     }
   },
   "feed": [
+    {
+      "id": "blitz_plr_vjwpql4t_1794605437336",
+      "playerId": "plr_vjwpql4t",
+      "accountUser": "dion",
+      "nickname": "Diony",
+      "avatar": "👾",
+      "puzzleTitle": "Blitz Modu (4 Bulmaca)",
+      "pointsEarned": 1373,
+      "elapsedSec": 120,
+      "timestamp": 1794605437336
+    },
     {
       "id": "match_plr_vjwpql4t_1794605216440",
       "playerId": "plr_vjwpql4t",
