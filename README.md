@@ -9,7 +9,7 @@ Simetrik galaksi mantık bulmacası (**Tentai Show / Spiral Galaxies**) — Masa
 <!-- LEADERBOARD_START -->
 | Sıra | Oyuncu | Toplam Puan | Çözülen Bulmaca | Blitz Rekoru | Son Çözülen Bölüm |
 | :--- | :--- | :---: | :---: | :---: | :--- |
-| **1.** | **Diony** | **440 Puan** | 2 | 0 | 5×5 • 1-2 |
+| **1.** | **Diony** | **695 Puan** | 3 | 0 | 5×5 • 1-3 |
 <!-- LEADERBOARD_END -->
 
 ---
