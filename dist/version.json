@@ -1,6 +1,6 @@
 {
   "channel": "beta",
-  "version": "2.0.0-beta.46",
+  "version": "2.0.0-beta.49",
   "releaseDate": "2026-11-14",
   "mandatory": true,
   "repoOwner": "Diony-source",
@@ -8,7 +8,8 @@
   "updateManifestUrl": "https://raw.githubusercontent.com/Diony-source/puzzle-galaxies-releases/beta/version.json",
   "releaseNotes": [
     "Faz 2 (%100 Tamamlandi): Yildizli Hedef Sureler (Altin/Gumus/Bronz), canli Hayalet Yarisi HUD ve 4 yildiz-kilitli Hangar kozmetigi eklendi.",
-    "Sonsuz Solucan Deligi (Endless) Modu: 5x5'ten 10x10 asteroitli dalgalara buyuyen hayatta kalma kosusu, 3 hata kalkani ve kisisel rekorlar eklendi.",
+    "Sonsuz Solucan Deligi (Endless) Modu: 5x5'ten 10x10 asteroitli dalgalara buyuyen hayatta kalma kosusu, 3 hata kalkani ve baslangic eksen uyarisi eklendi.",
+    "Cizim Ekseni Kilidi (Tek Yonlu / Cok Yonlu): Simetri sekmesinin yanina ve Ayarlara cizgi cekme ekseni secenegi eklendi; Solucan Deligi oncesi X+Y kose donme risk uyarisi gosteriliyor.",
     "Ipucu UX Iyilestirmesi: 'Hamleyi Uygula' butonu kaldirildi ve ipucu acilip kapanirken oyun tahtasinin ziplama/boyut degisimi sifirlandi.",
     "Beta Test Ortami: 60/60 bolum + 180/180 yildiz acik, MAX LVL 99 ve sinirsiz cekirdek ile ucretsiz Hangar satin alim testi suruyor."
   ],
@@ -28,8 +29,8 @@
   "minEngineVersion": "1.8.6",
   "announcement": "",
   "fileHashes": {
-    "assets/app.css": "aa526dd8a0cc67353475f729008ac7f72e611173789fb732bd447c3d9109d1a7",
-    "assets/app.js": "5fd48da3885d6e537efa251f42d200c1ca222e40813c65dc63b32c9e6c9eed44",
+    "assets/app.css": "3d5b9bb97fc71fb58177a0f8fe2194c55109a0167f34a1e177ef895e0d5e56ad",
+    "assets/app.js": "734a24082c8d771cb2994a4c8cdbf3a7b0591ab431285e657302cc5fc27b23f1",
     "assets/web.js": "092d9d061f4a3129619d1c318da01190da6d04fb8c50d6fc6c8d90a6cde42eb9",
     "assets/web2.js": "4a0cc3ac09324665e3096b2d71937844328b6c6d9f037437098523a57031b0d5",
     "icon.ico": "45c7aaa8e0d7cc3e4c085d2fbd52e56ebfa23757d6ba2e21ffc30465613cb065",
