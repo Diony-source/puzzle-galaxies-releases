@@ -1,12 +1,13 @@
 {
   "channel": "beta",
-  "version": "2.1.0-beta.67",
+  "version": "2.1.0-beta.69",
   "releaseDate": "2026-11-14",
   "mandatory": true,
   "repoOwner": "Diony-source",
   "repoName": "puzzle-galaxies-releases",
   "updateManifestUrl": "https://raw.githubusercontent.com/Diony-source/puzzle-galaxies-releases/beta/version.json",
   "releaseNotes": [
+    "24 Basarim & Basarim Kazanma Sesi: Profil basarim sayisi 8'den 24'e cikarildi (Kesif asamalari, yildiz hedefleri, 15x15 tahta, Gunluk seri, Blitz 1500+, Sonsuz Dalga, 1v1 galibiyet/seri, Haftalik Kupa ve Hangar parca uretimi eklendi) ve her yeni basarim acildiginda zafer sesinin ardindan gelen ozel kupa bildirim melodisi + titresim eklendi.",
     "Pilot ID Arayuz & Profil Etiket Kutusu Duzeltmesi: Arayuzdeki 'Riot ID' baslik ve bildirim metinleri oyun temasina uygun sekilde 'Pilot ID' olarak guncellendi; Profil duzenleme penceresinde #KOD kutusunun butonlarla ust uste binmesi giderildi.",
     "Karadelik Tema Ipucu Kontrast Duzeltmesi: Karadelik (sari duvarlar) ve Klasik Kagit temalarinda ipucu cizgisi, hucre vurgusu ve banner rengi duvar renginden net ayrisacak sekilde yuksek kontrastli cyan/turuncu isilti paletine tasindi.",
     "Oyun Ici Ust Bar Tasima & Seviye/Gunluk Kod Temizligi: Oyun ici ust barda baslik/kodlarin daralip alt satirlara kaymasi ve Ayarlar butonunun tasmasi giderildi; Kesif bolumlerinde ve Gunluk bulmacada gereksiz 'Kod: GLX-...' satiri kaldirilip bolum bilgisi gosterildi.",
@@ -32,8 +33,8 @@
   "minEngineVersion": "1.8.6",
   "announcement": "",
   "fileHashes": {
-    "assets/app.css": "cb3eea03acca47a9c517deb04a0e087c50ddc812d314bff15f5c1ed0edd38aa8",
-    "assets/app.js": "3a45b280e72f0b218b2eb1c5740dbbdbac581ed562d6789ef064b2b570dd64c6",
+    "assets/app.css": "ba06814a1f092e32702a39524df08d39d17dc8746d64dedf1568344b75c71b1d",
+    "assets/app.js": "56f08b3f3ead36613de28d656499d73453fdce3f6bcc80550200291deaac99b2",
     "assets/web.js": "092d9d061f4a3129619d1c318da01190da6d04fb8c50d6fc6c8d90a6cde42eb9",
     "assets/web2.js": "4a0cc3ac09324665e3096b2d71937844328b6c6d9f037437098523a57031b0d5",
     "icon.ico": "45c7aaa8e0d7cc3e4c085d2fbd52e56ebfa23757d6ba2e21ffc30465613cb065",
