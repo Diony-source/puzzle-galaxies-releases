@@ -9,7 +9,7 @@ Simetrik galaksi mantık bulmacası (**Tentai Show / Spiral Galaxies**) — Masa
 <!-- LEADERBOARD_START -->
 | Sıra | Oyuncu | Toplam Puan | Çözülen Bulmaca | Blitz Rekoru | Son Çözülen Bölüm |
 | :--- | :--- | :---: | :---: | :---: | :--- |
-| **1.** | **Diony** | **6093 Puan** | 15 | 1373 | Haftalık Kupa (2026-W46) • 2. Etap |
+| **1.** | **Diony** | **6968 Puan** | 16 | 1373 | Haftalık Kupa (2026-W46) • 3. Etap |
 | **2.** | **BeratUtq** | **5515 Puan** | 10 | 0 | 10×10 • 1-3 |
 <!-- LEADERBOARD_END -->
 

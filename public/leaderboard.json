@@ -5,14 +5,14 @@
       "accountUser": "dion",
       "nickname": "Diony",
       "avatar": "👾",
-      "totalPoints": 6093,
-      "solvedCount": 15,
+      "totalPoints": 6968,
+      "solvedCount": 16,
       "bestTimeSec": 8,
       "bestBlitzScore": 1373,
-      "lastPuzzleTitle": "Haftalık Kupa (2026-W46) • 2. Etap",
+      "lastPuzzleTitle": "Haftalık Kupa (2026-W46) • 3. Etap",
       "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEerh6PLEjYAcLK285FXo5LxwbepFEqeDg9yePBQDpoEeiqeld5CLl3FVG5SZs4Fsd67FJj2aGa9iC/x082SguKw==",
-      "updatedAt": 1794694926878,
-      "signature": "VgPCzdavZLsyA8kNzZNpNavG6aa/AzeysL/uvcBqddskTSYNeoR7/WkG5C+9C0VpmnYuIenb6yKGqEzmeopiSw==",
+      "updatedAt": 1794695065965,
+      "signature": "vfynpw2r67UMhG8oaPtg3Fan9fjaKQpK4Id4UCKqrRnUn8MPSOo6zuTl8g4dzv7/6sSWMafhigzJPYTZda4azQ==",
       "tag": "9031",
       "shipCode": "2.2.1.2.1",
       "pilotLevel": 5,
@@ -20,7 +20,8 @@
       "weeklyCupKey": "2026-W46",
       "dailyBestDate": "2026-11-14",
       "dailyBestSec": 102,
-      "weeklyCupScore": 1474
+      "weeklyCupScore": 1594,
+      "secretHash": "477d58e0"
     },
     "plr_2bcf9azw": {
       "id": "plr_2bcf9azw",
@@ -41,6 +42,18 @@
     }
   },
   "feed": [
+    {
+      "id": "match_plr_vjwpql4t_1794695065965",
+      "playerId": "plr_vjwpql4t",
+      "accountUser": "dion",
+      "nickname": "Diony",
+      "avatar": "👾",
+      "puzzleTitle": "Haftalık Kupa (2026-W46) • 3. Etap",
+      "pointsEarned": 875,
+      "elapsedSec": 132,
+      "proofOfSolve": "pos_115_4202e5ee",
+      "timestamp": 1794695065965
+    },
     {
       "id": "match_plr_vjwpql4t_1794694926852",
       "playerId": "plr_vjwpql4t",
