@@ -1,16 +1,16 @@
 {
-  "version": "1.8.6",
-  "releaseDate": "2026-11-13",
+  "version": "2.1.0",
+  "releaseDate": "2026-11-14",
   "mandatory": true,
   "repoOwner": "Diony-source",
   "repoName": "puzzle-galaxies-releases",
   "updateManifestUrl": "https://raw.githubusercontent.com/Diony-source/puzzle-galaxies-releases/main/version.json",
   "releaseNotes": [
-    "v1.8.6: Anlik GitHub Liderlik Senkronu ve Supabase Tablo Duzeltmesi",
-    "v1.8.5: Profil Sadelestirme, Topbar Hover Duzeltmesi ve Cift Eksen Dokunmatik Cizim",
-    "v1.8.4: 72 Saat Cevrimdisi Dogrulama, Eski Surum Kilidi ve 2-Repolu Dagitim Gecisi",
-    "v1.8.3: Bulut Hesabi Baglanti Duzeltmesi & Yeni Sezon Sifirlamasi",
-    "v1.8.2: Nick + Sifre ile Bulut Hesabi & Cihazlar Arasi Esitleme"
+    "v2.1.0 Buyuk Kozmik Guncelleme: 5 Evre / 60 Bolumluk Kesif Haritasi (1-1 - 5-12, net boyut bolgesi basliklari & Asteroit engelleri), 180 Yildiz Hedef Sureleri ve Canli Hayalet Yarisi eklendi.",
+    "Sonsuz Solucan Deligi (Endless) & Tek Yonlu Cizim Kilidi: 3 kalkanli hayatta kalma dalga modu, rekor takibi, X/Y eksen kilidi (D kisayolu) ve baslangic uyarisi eklendi.",
+    "Tam Sayfa 1v1 Arena, Lichess ELO & Kalici Pilot ID (#KOD): ELO eslesmesi, liglere ozel Prestige gemi parcalari, ilk kurulumda kalici kilitlenen Pilot ID (#KOD), gercek pilot arama, karsilikli arkadaslik/duello daveti, mac tekrari (1x/2x/4x) ve Haftalik Kupa (proofOfSolve dogrulamali) eklendi.",
+    "Masaustu Komuta Kokpiti, Atmosferik Gezegenler & Game Feel: No Man's Sky tarzinda 6 prosedurel gezegen biyomu, parallax uzay, kapama neon isik dalgasi, dinamik cok katmanli uzay ambiyansi, Karadelik ipucu cyan kontrast iyilestirmesi ve 24 basarim + ozel kupa bildirim sesi eklendi.",
+    "v1.8.6 Hesap & Veri Koruma Garantisi: Eski surumden gecen hesaplarin puan, yildiz, cozulen bolum, basarim ve Pilot ID (#KOD) verileri kayipsiz korunur."
   ],
   "installerUrl": "",
   "files": [
@@ -28,8 +28,8 @@
   "minEngineVersion": "1.8.6",
   "announcement": "",
   "fileHashes": {
-    "assets/app.css": "e39989e6d96cb9f711eb0c20c2c63290af0b9c2cabac7dcfb95f79963df27177",
-    "assets/app.js": "8c5d54425fbe0a929a256da4a65c0a91c804c58d2f51b85fc97ffc1149339215",
+    "assets/app.css": "2448ff05b47037d925f254267f2ead3d15255aa78c49c486dcebce4663569ba5",
+    "assets/app.js": "b6af3cb3c7c097749f158a0dad0f680aa782e1500bd2a356b87a57f2c99088c8",
     "assets/web.js": "092d9d061f4a3129619d1c318da01190da6d04fb8c50d6fc6c8d90a6cde42eb9",
     "assets/web2.js": "4a0cc3ac09324665e3096b2d71937844328b6c6d9f037437098523a57031b0d5",
     "icon.ico": "45c7aaa8e0d7cc3e4c085d2fbd52e56ebfa23757d6ba2e21ffc30465613cb065",
