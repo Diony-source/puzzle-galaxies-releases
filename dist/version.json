@@ -1,14 +1,16 @@
 {
   "channel": "beta",
-  "version": "2.0.0-beta.45",
-  "releaseDate": "2026-11-13",
+  "version": "2.0.0-beta.46",
+  "releaseDate": "2026-11-14",
   "mandatory": true,
   "repoOwner": "Diony-source",
   "repoName": "puzzle-galaxies-releases",
   "updateManifestUrl": "https://raw.githubusercontent.com/Diony-source/puzzle-galaxies-releases/beta/version.json",
   "releaseNotes": [
-    "Beta Test Ortami (Varsayilan): Beta acilisinda 60/60 bolum acik, MAX LVL 99, sinirsiz (∞) yildiz cekirdegi ve Hangar satin alimlari tamamen sifir (alinmamis) baslar.",
-    "Beta Otomatik Guncelleme (OTA) hatti aktif: yeni guncellemeler oyun icinden otomatik yuklenir."
+    "Faz 2 (%100 Tamamlandi): Yildizli Hedef Sureler (Altin/Gumus/Bronz), canli Hayalet Yarisi HUD ve 4 yildiz-kilitli Hangar kozmetigi eklendi.",
+    "Sonsuz Solucan Deligi (Endless) Modu: 5x5'ten 10x10 asteroitli dalgalara buyuyen hayatta kalma kosusu, 3 hata kalkani ve kisisel rekorlar eklendi.",
+    "Ipucu UX Iyilestirmesi: 'Hamleyi Uygula' butonu kaldirildi ve ipucu acilip kapanirken oyun tahtasinin ziplama/boyut degisimi sifirlandi.",
+    "Beta Test Ortami: 60/60 bolum + 180/180 yildiz acik, MAX LVL 99 ve sinirsiz cekirdek ile ucretsiz Hangar satin alim testi suruyor."
   ],
   "installerUrl": "",
   "files": [
@@ -26,15 +28,15 @@
   "minEngineVersion": "1.8.6",
   "announcement": "",
   "fileHashes": {
-    "assets/app.css": "87bb1c38b58e4067a78dd3ff3f72943312abf1b7a36b6cb9ee123ffab0b03920",
-    "assets/app.js": "24c3605a946ffc2d731d9f8d077831bb5bb98a53bdbbbfbe4334405a4b0e5e49",
+    "assets/app.css": "aa526dd8a0cc67353475f729008ac7f72e611173789fb732bd447c3d9109d1a7",
+    "assets/app.js": "5fd48da3885d6e537efa251f42d200c1ca222e40813c65dc63b32c9e6c9eed44",
     "assets/web.js": "092d9d061f4a3129619d1c318da01190da6d04fb8c50d6fc6c8d90a6cde42eb9",
     "assets/web2.js": "4a0cc3ac09324665e3096b2d71937844328b6c6d9f037437098523a57031b0d5",
     "icon.ico": "45c7aaa8e0d7cc3e4c085d2fbd52e56ebfa23757d6ba2e21ffc30465613cb065",
     "icon.png": "f17fd7015b90c27945381d056aa784eb83fd9155331a7bd22cde83cd19ddade2",
     "icon.svg": "33084c7a79a457eb932633ae1d99df97dcfce4ac7d86cb6025f75b59f083e8b0",
     "index.html": "22060a703a83b9bd2e0d631e3046128916cff81bdd3483430bb06eed476a4c35",
-    "leaderboard.json": "5cef7176f1576f7bab2b15ccdf308cd486a1487e0d1f12369273996acb777eb1",
+    "leaderboard.json": "54c55a9e862f3327d493e3674e843012abac57fdaf13ea01a6cad10c98d66992",
     "manifest.webmanifest": "1244578070351a78ee62f56be85a68773bffdba140871e9b8653e3c146c01273"
   },
   "minAndroidVersion": "1.8.6"
