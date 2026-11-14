@@ -1,12 +1,13 @@
 {
   "channel": "beta",
-  "version": "2.1.0-beta.55",
+  "version": "2.1.0-beta.57",
   "releaseDate": "2026-11-14",
   "mandatory": true,
   "repoOwner": "Diony-source",
   "repoName": "puzzle-galaxies-releases",
   "updateManifestUrl": "https://raw.githubusercontent.com/Diony-source/puzzle-galaxies-releases/beta/version.json",
   "releaseNotes": [
+    "Riot ID (Nick#XXXX) & Karsilikli Arkadaslik Daveti: Her pilota 4 haneli #KOD etiketi eklendi (ayni takma ad artik cakismiyor); sahte/olmayan pilot isimleriyle arkadas ekleme engellendi ve eklenen pilota canli 'Arkadaslik Istegi' bildirimi giderek onaylandiginda iki taraf karsilikli arkadas oluyor.",
     "Faz 3 Arena UI Yenilemesi: Beyaz varsayilan secim kutulari kaldirildi; Kozmik uzay temali secim cipleri (Hizli Eslesme & Oda Kur) ve koyu neonly Kodla Katil cubugu (+ Yapistir butonu) ile dengeli 2 sutunlu Arena yerlesimi eklendi.",
     "Haftalik Kozmik Kupa Yenilemesi: Turnuva mantigi, puan formulu, ilk cozum kristal/XP odulleri (+2/+4/+6 elmas & 3/3 +5 elmas seri bonusu) ve sag panelde canli 'Kupa' siralama sekmesi eklendi.",
     "Lige Ozel Prestige Gemi Parcalari: Hangar'a 1300 / 1500 / 1700 ELO kilitli 5 prestij parcasi ve Kozmik Arena Sampiyonu gemi plani eklendi.",
@@ -28,8 +29,8 @@
   "minEngineVersion": "1.8.6",
   "announcement": "",
   "fileHashes": {
-    "assets/app.css": "eba197b01afcc1c376b9712fa08ae06a5c14302656410c661bf0564ea38ce526",
-    "assets/app.js": "c1807cd169ec7d98c8573ea036f87750e7c0931877b013bb324cc1022b34e7f8",
+    "assets/app.css": "0a207d41bd4496a69899d8e2f8115c73113796197c194d70822cafccc659d4f3",
+    "assets/app.js": "11203c357bf1e933173fe03aff03ce311b790752c9593914871c4c044a169312",
     "assets/web.js": "092d9d061f4a3129619d1c318da01190da6d04fb8c50d6fc6c8d90a6cde42eb9",
     "assets/web2.js": "4a0cc3ac09324665e3096b2d71937844328b6c6d9f037437098523a57031b0d5",
     "icon.ico": "45c7aaa8e0d7cc3e4c085d2fbd52e56ebfa23757d6ba2e21ffc30465613cb065",
