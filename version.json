@@ -1,17 +1,16 @@
 {
   "channel": "beta",
-  "version": "2.1.0-beta.57",
+  "version": "2.1.0-beta.59",
   "releaseDate": "2026-11-14",
   "mandatory": true,
   "repoOwner": "Diony-source",
   "repoName": "puzzle-galaxies-releases",
   "updateManifestUrl": "https://raw.githubusercontent.com/Diony-source/puzzle-galaxies-releases/beta/version.json",
   "releaseNotes": [
-    "Riot ID (Nick#XXXX) & Karsilikli Arkadaslik Daveti: Her pilota 4 haneli #KOD etiketi eklendi (ayni takma ad artik cakismiyor); sahte/olmayan pilot isimleriyle arkadas ekleme engellendi ve eklenen pilota canli 'Arkadaslik Istegi' bildirimi giderek onaylandiginda iki taraf karsilikli arkadas oluyor.",
-    "Faz 3 Arena UI Yenilemesi: Beyaz varsayilan secim kutulari kaldirildi; Kozmik uzay temali secim cipleri (Hizli Eslesme & Oda Kur) ve koyu neonly Kodla Katil cubugu (+ Yapistir butonu) ile dengeli 2 sutunlu Arena yerlesimi eklendi.",
-    "Haftalik Kozmik Kupa Yenilemesi: Turnuva mantigi, puan formulu, ilk cozum kristal/XP odulleri (+2/+4/+6 elmas & 3/3 +5 elmas seri bonusu) ve sag panelde canli 'Kupa' siralama sekmesi eklendi.",
-    "Lige Ozel Prestige Gemi Parcalari: Hangar'a 1300 / 1500 / 1700 ELO kilitli 5 prestij parcasi ve Kozmik Arena Sampiyonu gemi plani eklendi.",
-    "Sunucu Tarafi proofOfSolve Dogrulamasi: Supabase verify-solve Edge Function + verified_solves tablosu ile cozum topolojisi ve skorlar sunucu tarafindan dogrulanip zafer rozeti ve Kupa liderliginde gosterilir."
+    "Faz 4 Masaustu Tam Ekran Komuta Duzeni & Cift Baslik Temizligi: PC/Electron pencerelerinde dar mobil sutun yerine 218px sol yan menu rayi, 3 sutunlu yildiz kumesi gezegen yerlesimi ve sagda sabit Radar Taramasi + Filo Hangari paneli eklendi; ust bardaki tekrar eden ikinci 'PUZZLE GALAXIES' basligi kaldirilirken mobil tek-el yerlesimi korundu.",
+    "No Man's Sky Atmosferik Gezegenler & Parallax Derin Uzay: 6 prosedurel gezegen biyomu (Okyanus, Biyo-Orman, Volkanik Krater, Buzul Kristal, Halkali Gaz Devi, Prizma Elmas) Fresnel atmosfer halesi, donen bulut/kitalar, 3B golgeleme, bolunmus gezegen halkalari, uydu/asteroitler ve imlec/kaydirma tepkili parallax yildiz/bulutsu arka plani eklendi.",
+    "Bolge Tamamlama Pariltisi, Armonik Combo Sesleri & Dinamik Uzay Ambiyansi: Kapanan her galaksi cevresinde neon isik dalgasi, radyal nebula parlamasi, 4 koseli yildiz kivilcimlari ve ardisik cozumlerde tizlesen Lydian nota zinciri eklendi; bulmaca cozuldukce yeni katmanlar acilan dinamik ambiyans muzigi ve finalde hiper-uzay konfeti/isin patlamasi eklendi.",
+    "Klasik Kagit Tema Kontrast Duzeltmesi: Ayarlar ve modal kartlarinda Acik Tema gecisi sirasindaki yazi soluklasma gecikmesi kaldirildi."
   ],
   "installerUrl": "",
   "files": [
@@ -29,8 +28,8 @@
   "minEngineVersion": "1.8.6",
   "announcement": "",
   "fileHashes": {
-    "assets/app.css": "0a207d41bd4496a69899d8e2f8115c73113796197c194d70822cafccc659d4f3",
-    "assets/app.js": "11203c357bf1e933173fe03aff03ce311b790752c9593914871c4c044a169312",
+    "assets/app.css": "1d2c35f33b48e74ce697a73d48c3aafb828f493a34fd28f02dbaf5ad41b105eb",
+    "assets/app.js": "a7f3b7de6502d49c3f0ef9abbb6d7a0cdc3e32f2f3e1ea3967d03845d019358b",
     "assets/web.js": "092d9d061f4a3129619d1c318da01190da6d04fb8c50d6fc6c8d90a6cde42eb9",
     "assets/web2.js": "4a0cc3ac09324665e3096b2d71937844328b6c6d9f037437098523a57031b0d5",
     "icon.ico": "45c7aaa8e0d7cc3e4c085d2fbd52e56ebfa23757d6ba2e21ffc30465613cb065",
