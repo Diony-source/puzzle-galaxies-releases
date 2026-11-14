@@ -11,15 +11,17 @@
       "bestBlitzScore": 10110,
       "lastPuzzleTitle": "Blitz (18 Tablo)",
       "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEerh6PLEjYAcLK285FXo5LxwbepFEqeDg9yePBQDpoEeiqeld5CLl3FVG5SZs4Fsd67FJj2aGa9iC/x082SguKw==",
-      "updatedAt": 1794695596557,
-      "signature": "gLMpvMb5NMTpiOoAhBC9cVw1SkoGv7NZM4dzhF2mnt8epHJksz8XKDmjPmgHxEIjZj6MivYDnCVQVYoBqMd6ug==",
+      "updatedAt": 1794696044816,
+      "signature": "Bg9ihyu7nkWsUhEWK6rHDtwxJ7+jXrXuy5tKKj3Kyey35cvbVh6FXVX0+vqBYcsHBLLotmNKGJDxkXFOLZ5Oew==",
       "tag": "9031",
-      "shipCode": "2.2.1.2.1",
-      "pilotLevel": 5,
+      "shipCode": "3.3.2.3.3",
+      "pilotLevel": 7,
       "duelElo": 1200,
       "weeklyCupKey": "2026-W46",
       "weeklyCupScore": 1594,
-      "secretHash": "477d58e0"
+      "secretHash": "477d58e0",
+      "dailyBestDate": "2026-11-14",
+      "dailyBestSec": 102
     },
     "plr_2bcf9azw": {
       "id": "plr_2bcf9azw",
