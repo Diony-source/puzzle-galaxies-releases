@@ -1,12 +1,13 @@
 {
   "channel": "beta",
-  "version": "2.1.0-beta.71",
+  "version": "2.1.0-beta.73",
   "releaseDate": "2026-11-14",
   "mandatory": true,
   "repoOwner": "Diony-source",
   "repoName": "puzzle-galaxies-releases",
   "updateManifestUrl": "https://raw.githubusercontent.com/Diony-source/puzzle-galaxies-releases/beta/version.json",
   "releaseNotes": [
+    "Kalici Pilot ID (#KOD) Kilidi: Kullanici Kayit Ol ekraninda (zar butonuyla veya elle) ya da misafir olarak ilk profil kaydinda #KOD etiketini yalnizca bir kez belirleyebilir; sonrasinda #KOD kalici olarak kilitlenir ve profil ayarlarindan tekrar degistirilemez.",
     "Kesif Haritasi Bolge Basliklari & Ardisik Numaralandirma: Her evre icindeki boyut bloklarina (5x5, 7x7, 10x10, 15x15) ardisik benzersiz bolum kodlari (1-1'den 1-12'ye) verildi; kafa karistiran 'Solucan Deligi • Sektorune Atlama' yazisi yerine net boyut bolgesi ayiricilari (orn. '7x7 Bolgesi • Bolumler 1-4 - 1-6 • 1-3 sonrasi acilir') eklendi.",
     "24 Basarim & Basarim Kazanma Sesi: Profil basarim sayisi 8'den 24'e cikarildi (Kesif asamalari, yildiz hedefleri, 15x15 tahta, Gunluk seri, Blitz 1500+, Sonsuz Dalga, 1v1 galibiyet/seri, Haftalik Kupa ve Hangar parca uretimi eklendi) ve her yeni basarim acildiginda zafer sesinin ardindan gelen ozel kupa bildirim melodisi + titresim eklendi.",
     "Pilot ID Arayuz & Profil Etiket Kutusu Duzeltmesi: Arayuzdeki 'Riot ID' baslik ve bildirim metinleri oyun temasina uygun sekilde 'Pilot ID' olarak guncellendi; Profil duzenleme penceresinde #KOD kutusunun butonlarla ust uste binmesi giderildi.",
@@ -34,8 +35,8 @@
   "minEngineVersion": "1.8.6",
   "announcement": "",
   "fileHashes": {
-    "assets/app.css": "aab0b01a7f2f42c0c006f9ae82583900fa381e1d8e99b478cd459e8e627ec5f3",
-    "assets/app.js": "b238ef6f8e581c3e2b001e5b2bac5e90529d3d7ac4c74cebd2eef6b181ebe00f",
+    "assets/app.css": "2448ff05b47037d925f254267f2ead3d15255aa78c49c486dcebce4663569ba5",
+    "assets/app.js": "25115ccd13dc5b66d648f3199a384063239e1d774db51f3254cee1898bc39d9e",
     "assets/web.js": "092d9d061f4a3129619d1c318da01190da6d04fb8c50d6fc6c8d90a6cde42eb9",
     "assets/web2.js": "4a0cc3ac09324665e3096b2d71937844328b6c6d9f037437098523a57031b0d5",
     "icon.ico": "45c7aaa8e0d7cc3e4c085d2fbd52e56ebfa23757d6ba2e21ffc30465613cb065",
