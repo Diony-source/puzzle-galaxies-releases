@@ -5,20 +5,22 @@
       "accountUser": "dion",
       "nickname": "Diony",
       "avatar": "👾",
-      "totalPoints": 4543,
-      "solvedCount": 12,
+      "totalPoints": 5113,
+      "solvedCount": 13,
       "bestTimeSec": 8,
       "bestBlitzScore": 1373,
-      "lastPuzzleTitle": "10×10 • 1-1",
+      "lastPuzzleTitle": "Günlük Bulmaca (2026-11-14)",
       "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEerh6PLEjYAcLK285FXo5LxwbepFEqeDg9yePBQDpoEeiqeld5CLl3FVG5SZs4Fsd67FJj2aGa9iC/x082SguKw==",
-      "updatedAt": 1794694653180,
+      "updatedAt": 1794694769033,
       "secretHash": "477d58e0",
-      "signature": "jW7jbJaVEXxbvbnibHzvXvJb7zGEntNlYbrI+nqHt8wirDN/6O0iDnsdLygR30wH5y4DOkHmH92ms/wff/17zQ==",
+      "signature": "vOfFkz6NAOwRiLMe/U4fx/pp5e8fEACZ2rewWkRyVvd4pIXkw/Tslq+HB83SWo+Jfkr3pwxuis4ExoZZ7BXhYA==",
       "tag": "9031",
       "shipCode": "0.0.0.0.0",
       "pilotLevel": 4,
       "duelElo": 1200,
-      "weeklyCupKey": "2026-W46"
+      "weeklyCupKey": "2026-W46",
+      "dailyBestDate": "2026-11-14",
+      "dailyBestSec": 102
     },
     "plr_2bcf9azw": {
       "id": "plr_2bcf9azw",
@@ -39,6 +41,18 @@
     }
   },
   "feed": [
+    {
+      "id": "match_plr_vjwpql4t_1794694769033",
+      "playerId": "plr_vjwpql4t",
+      "accountUser": "dion",
+      "nickname": "Diony",
+      "avatar": "👾",
+      "puzzleTitle": "Günlük Bulmaca (2026-11-14)",
+      "pointsEarned": 570,
+      "elapsedSec": 102,
+      "proofOfSolve": "pos_90_2e7291af",
+      "timestamp": 1794694769033
+    },
     {
       "id": "match_plr_vjwpql4t_1794619789191",
       "playerId": "plr_vjwpql4t",
