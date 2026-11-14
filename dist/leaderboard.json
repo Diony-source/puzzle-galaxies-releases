@@ -11,17 +11,14 @@
       "bestBlitzScore": 1373,
       "lastPuzzleTitle": "10×10 • 1-1",
       "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEerh6PLEjYAcLK285FXo5LxwbepFEqeDg9yePBQDpoEeiqeld5CLl3FVG5SZs4Fsd67FJj2aGa9iC/x082SguKw==",
-      "updatedAt": 1794674369725,
+      "updatedAt": 1794676916631,
       "secretHash": "477d58e0",
-      "signature": "TEt7gE60U27Wmdy1YDkKkj+TFf366+jinkssHjuOdMwDbwGms75irBkEXrBHR7fzZ7Qn7Rwni7gGPb6YQAG6gw==",
+      "signature": "3Z30KY0RKmY0Hb4Lqig4WvQoxGCP3mMABmKfP34ZJ7bijBq+rpRTP3yjpFCiTRPZEHBnknUNk20jR4ETrhp0LQ==",
       "tag": "9031",
       "shipCode": "0.0.0.0.0",
       "pilotLevel": 4,
       "duelElo": 1200,
-      "weeklyCupKey": "2026-W46",
-      "duelWins": 0,
-      "duelLosses": 0,
-      "weeklyCupScore": 0
+      "weeklyCupKey": "2026-W46"
     },
     "plr_2bcf9azw": {
       "id": "plr_2bcf9azw",
