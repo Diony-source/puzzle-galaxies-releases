@@ -1,17 +1,17 @@
 {
   "channel": "beta",
-  "version": "2.0.0-beta.49",
+  "version": "2.1.0-beta.51",
   "releaseDate": "2026-11-14",
   "mandatory": true,
   "repoOwner": "Diony-source",
   "repoName": "puzzle-galaxies-releases",
   "updateManifestUrl": "https://raw.githubusercontent.com/Diony-source/puzzle-galaxies-releases/beta/version.json",
   "releaseNotes": [
-    "Faz 2 (%100 Tamamlandi): Yildizli Hedef Sureler (Altin/Gumus/Bronz), canli Hayalet Yarisi HUD ve 4 yildiz-kilitli Hangar kozmetigi eklendi.",
-    "Sonsuz Solucan Deligi (Endless) Modu: 5x5'ten 10x10 asteroitli dalgalara buyuyen hayatta kalma kosusu, 3 hata kalkani ve baslangic eksen uyarisi eklendi.",
-    "Cizim Ekseni Kilidi (Tek Yonlu / Cok Yonlu): Simetri sekmesinin yanina ve Ayarlara cizgi cekme ekseni secenegi eklendi; Solucan Deligi oncesi X+Y kose donme risk uyarisi gosteriliyor.",
-    "Ipucu UX Iyilestirmesi: 'Hamleyi Uygula' butonu kaldirildi ve ipucu acilip kapanirken oyun tahtasinin ziplama/boyut degisimi sifirlandi.",
-    "Beta Test Ortami: 60/60 bolum + 180/180 yildiz acik, MAX LVL 99 ve sinirsiz cekirdek ile ucretsiz Hangar satin alim testi suruyor."
+    "Akilli Ipucu Duzeltmesi: Her ipucu tiklamasinda dis sinirdan dolayi otomatik cikan tekrarci 180° simetri duvar ipucu kaldirildi; imlec yakinindaki gercek mantik adimina odaklanildi.",
+    "Faz 3 — Tam Sayfa 1v1 Duello Arenasi: 1v1 Duello sekmesi popup yerine pilot gemi vitrini, Kozmik Lig rozeti, ELO ilerleme cubugu ve canli odalarla tam sayfa Arena ekranina tasindi.",
+    "Lichess Tarzi ELO Puani & Otomatik Eslesme: 1200 baslangic ELO, ±100 -> ±250 -> Acik Havuz kademeli Hizli Rakip Bul kuyrugu ve mac sonu gercek ELO degisimi eklendi.",
+    "Arkadaslar, Canli Davet & Mac Tekrari: Arkadas ekleme/davet etme, ekranda canli Kabul/Reddet daveti ve mac sonrasi 1x/2x/4x zaman cizelgeli Mac Tekrari Oynaticisi eklendi.",
+    "Haftalik Kupa (Weekly Cup): Her hafta 3 deterministik etapli kupa yarisi ve ayri kupa liderlik siralamasi eklendi."
   ],
   "installerUrl": "",
   "files": [
@@ -29,8 +29,8 @@
   "minEngineVersion": "1.8.6",
   "announcement": "",
   "fileHashes": {
-    "assets/app.css": "3d5b9bb97fc71fb58177a0f8fe2194c55109a0167f34a1e177ef895e0d5e56ad",
-    "assets/app.js": "734a24082c8d771cb2994a4c8cdbf3a7b0591ab431285e657302cc5fc27b23f1",
+    "assets/app.css": "c8cee972413aa00d03165c9e5f844f1b1f7b4e23c08dc7cfba7804232bd31cba",
+    "assets/app.js": "2a67e40bfc37a21f81c7f824374321176b3669a80f81a17819a791613bfb262a",
     "assets/web.js": "092d9d061f4a3129619d1c318da01190da6d04fb8c50d6fc6c8d90a6cde42eb9",
     "assets/web2.js": "4a0cc3ac09324665e3096b2d71937844328b6c6d9f037437098523a57031b0d5",
     "icon.ico": "45c7aaa8e0d7cc3e4c085d2fbd52e56ebfa23757d6ba2e21ffc30465613cb065",
