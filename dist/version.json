@@ -1,12 +1,13 @@
 {
   "channel": "beta",
-  "version": "2.3.0-beta.113",
+  "version": "2.3.0-beta.115",
   "releaseDate": "2026-11-15",
   "mandatory": true,
   "repoOwner": "Diony-source",
   "repoName": "puzzle-galaxies-releases",
   "updateManifestUrl": "https://raw.githubusercontent.com/Diony-source/puzzle-galaxies-releases/beta/version.json",
   "releaseNotes": [
+    "Tam 2D Piksel Sanat Puzzle Galaxies & Sarmal Galaksi Yıldızları: 1000in1 odasıyla tam uyum sağlaması için Puzzle Galaxies'in tüm menüleri, modalları, 32x32 gezegenleri, 24x24 uzay gemileri, parallax yıldız/bulutsu arka planı ve oyun tahtası 16-bit piksel sanat stiline dönüştürüldü; tahtadaki mayını andıran sade noktalar yerine galaksi temasına uygun piksel sarmal galaksi yıldızları (✦) ve güncellenmiş kural/eğitim metinleri eklendi.",
     "Temiz Oyun Dolabı Kaset Etiketleri: Dolaptaki kaset kartlarından PG ve TW kısaltma yazıları kaldırılarak kartların üzerinde doğrudan oyunların kendi tam adları (PUZZLE GALAXIES, TOWERS) gösterildi.",
     "Kaseti Sürükleyerek Çıkar & Dolapta Sırala: Atari yuvasındaki takılı kaseti doğrudan tutup dışarı veya oyun dolabındaki istediğin rafa sürükleyerek çıkarabilir; dolap rafları arasında kasetleri sürükleyip bırakarak yerlerini değiştirebilir veya boş alt rafa taşıyabilirsin.",
     "Atmosferik Puf Koltuk & Mini Buzdolabı: Puf koltuk odanın gece halısı ve TV ışığıyla uyumlu dolgun 16-bit kadife tasarıma, mini buzdolabı ise ahşap zemine oturan 3/4 izometrik gece kobaltı gövde ve üzerindeki sukulent/kaset detaylarıyla odanın genel piksel sanatıyla bütünleşecek şekilde yenilendi.",
@@ -47,8 +48,8 @@
   "minEngineVersion": "1.8.6",
   "announcement": "",
   "fileHashes": {
-    "assets/app.css": "ec72d6c755849599990977ffd238d432aec43995c0aa6df9bd0b7401302e06b2",
-    "assets/app.js": "93cb48b49fd9d404045ce648562f1cf587926c6d100524f9bf2e01da127ed1d9",
+    "assets/app.css": "d0e718b37795e88e7d0646c8a9b8bf19669608f2fbb2109593519ed97ca8d961",
+    "assets/app.js": "8e914457b43d6b6a9ca2205ac97d67ebeae956a3b76a0c8f2f5cb303ef8e25ca",
     "assets/web.js": "092d9d061f4a3129619d1c318da01190da6d04fb8c50d6fc6c8d90a6cde42eb9",
     "assets/web2.js": "4a0cc3ac09324665e3096b2d71937844328b6c6d9f037437098523a57031b0d5",
     "cozy-room-backdrop.jpg": "6503a18f7ff8c45fbe5ae3a0f59849559ba918d94758e2e62d4a03879aeb8a97",
