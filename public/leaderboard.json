@@ -5,14 +5,14 @@
       "accountUser": "dion",
       "nickname": "Diony",
       "avatar": "👾",
-      "totalPoints": 17078,
-      "solvedCount": 34,
+      "totalPoints": 17733,
+      "solvedCount": 35,
       "bestTimeSec": 8,
       "bestBlitzScore": 10110,
-      "lastPuzzleTitle": "Blitz (18 Tablo)",
+      "lastPuzzleTitle": "10×10 • 1-8",
       "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEerh6PLEjYAcLK285FXo5LxwbepFEqeDg9yePBQDpoEeiqeld5CLl3FVG5SZs4Fsd67FJj2aGa9iC/x082SguKw==",
-      "updatedAt": 1794785918220,
-      "signature": "KJt8CYBxEDK+hhLGGl7CMWm603V+AdEs7pkn3dpJIgzyTAN8on98k8f2O6kYvDHWkrfd0s1Vhao+m9mISm/uMg==",
+      "updatedAt": 1794786127163,
+      "signature": "16p0ikDSDrPRJgsc5jQBHF9SBVvuB97RHqgx8SSpqB1fo5Q1ePMrxv4e+NfIIQOUu+Ss/9xzpqbw29BnmI1cKg==",
       "tag": "9031",
       "shipCode": "3.3.2.3.3",
       "pilotLevel": 7,
@@ -34,7 +34,7 @@
       "bestTimeSec": 6,
       "bestBlitzScore": 0,
       "lastPuzzleTitle": "7×7 • 2-6",
-      "updatedAt": 1794786101754,
+      "updatedAt": 1794786103679,
       "dailyBestDate": "2026-11-15",
       "dailyBestSec": 67,
       "tag": "1177",
@@ -47,6 +47,18 @@
     }
   },
   "feed": [
+    {
+      "id": "match_plr_vjwpql4t_1794786127163",
+      "playerId": "plr_vjwpql4t",
+      "accountUser": "dion",
+      "nickname": "Diony",
+      "avatar": "👾",
+      "puzzleTitle": "10×10 • 1-8",
+      "pointsEarned": 655,
+      "elapsedSec": 182,
+      "proofOfSolve": "pos_154_1e65a0f4",
+      "timestamp": 1794786127163
+    },
     {
       "id": "match_plr_2bcf9azw_1794786101754",
       "playerId": "plr_2bcf9azw",
@@ -333,18 +345,6 @@
       "elapsedSec": 7,
       "proofOfSolve": "pos_42_63a998e4",
       "timestamp": 1794618006649
-    },
-    {
-      "id": "match_plr_2bcf9azw_1794617991978",
-      "playerId": "plr_2bcf9azw",
-      "accountUser": "beratutq",
-      "nickname": "BeratUtq",
-      "avatar": "☄️",
-      "puzzleTitle": "5×5 • 1-2",
-      "pointsEarned": 250,
-      "elapsedSec": 13,
-      "proofOfSolve": "pos_43_22e365a6",
-      "timestamp": 1794617991978
     }
   ],
   "activeChallenge": null,
