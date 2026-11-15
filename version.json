@@ -1,13 +1,13 @@
 {
   "channel": "beta",
-  "version": "2.3.0-beta.93",
+  "version": "2.3.0-beta.95",
   "releaseDate": "2026-11-15",
   "mandatory": true,
   "repoOwner": "Diony-source",
   "repoName": "puzzle-galaxies-releases",
   "updateManifestUrl": "https://raw.githubusercontent.com/Diony-source/puzzle-galaxies-releases/beta/version.json",
   "releaseNotes": [
-    "90'lar Atari / Famicom Konsolu & Tuplu CRT TV 1000-in-1 Kaset Sistemi: Galaksi temasi kaldirilarak acilis ekranina ustten kaset kapakli 90'lar konsol govdesi (Famicom / NES / Atari kasa secenekleri), mekanik 'KLIK' sesi ve kayma animasyonuyla yuvaya oturan fiziksel renkli kasetler (#001 Puzzle Galaxies, #002 Sari Kaset Towers ve #003-#1000 serisi), EJECT (kaset cikarma) tusu, Gamepad kontrolcusu ve tarama cizgili Tuplu CRT TV onizleme ekrani eklendi.",
+    "Surukle-Birak Atari Oyun Baslaticisi (PG & TW Kasetleri): Taslak cizime birebir uygun olarak acilis ekrani sade bir Atari sahnesine donusturuldu; solda PG (Puzzle Galaxies) ve sagda TW (Towers) fiziksel kasetleri, ortada Atari kaset takma yuvasi, ustte Retro Ekran + START tusu ve altta oyuncu karakteri yer alir. Kaseti surukleyip Atari yuvasina biraktiginda retro ekranda oyun adi ve START tusu belirir, START'a basildiginda CRT yakinlasma efektiyle oyuna gecilir.",
     "Yeni Oyun Kaseti #002 — Towers (Gokdelen Mimarlari): Simon Tatham'in efsanevi Towers (Skyscrapers) bulmacasi 2.5B izometrik gokdelen tahtasi, canli Perspektif Isini (Line-of-Sight), Aday Kat Not Modu, Akilli Mimar Ipucu, 60 bolumluk Sehir Seferi (4x4 - 7x7), Gunluk Kule, Sonsuz Dalga, 2 Dk Blitz, 1v1 Kule Arenasi ve 6 karakterli Mimar & Kule Atolyesi ile Beta kanalina eklendi.",
     "Web Worker Bulmaca Ureticisi & Moduler Arayuz: 10x10 / 15x15 ve tum yeni bulmaca uretimleri arka plan Web Worker is parcacigina tasinarak arayuz donmalari onlendi; profil, hangar, ayarlar ve bolum modallari modulerlestirildi, otomatik CI E2E testi eklendi.",
     "Profil Istatistik Grafikleri: Oyuncu Profili penceresine boyut bazli (5x5, 6-8x, 10x10, 15x15) ortalama ve en iyi cozum suresi cubuklari, 1v1 Arena galibiyet/maglubiyet halkasi + son mac ELO trend grafigi ve oyun modu dagilim grafigi eklendi.",
@@ -39,8 +39,8 @@
   "minEngineVersion": "1.8.6",
   "announcement": "",
   "fileHashes": {
-    "assets/app.css": "0d73bb927d8f5d0359671d9dd85fb369890fbdf11f6d60923c92543fc29ce51e",
-    "assets/app.js": "88ef9b006b7e5f8abf8c365ca4353ea28a1d4a51b986ea585f7376dd7afcdb8d",
+    "assets/app.css": "0077a9d3d4681e4757fe8b0062379a8468add96d3bfbf9426358a4ffa3c3b358",
+    "assets/app.js": "448dc2b95d02f06d123f04ef3a1082cd2d1386864d60a4d27c8d5ac175bd09c7",
     "assets/web.js": "092d9d061f4a3129619d1c318da01190da6d04fb8c50d6fc6c8d90a6cde42eb9",
     "assets/web2.js": "4a0cc3ac09324665e3096b2d71937844328b6c6d9f037437098523a57031b0d5",
     "icon.ico": "45c7aaa8e0d7cc3e4c085d2fbd52e56ebfa23757d6ba2e21ffc30465613cb065",
