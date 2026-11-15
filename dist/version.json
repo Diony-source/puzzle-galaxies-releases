@@ -1,12 +1,13 @@
 {
   "channel": "beta",
-  "version": "2.3.0-beta.101",
+  "version": "2.3.0-beta.102",
   "releaseDate": "2026-11-15",
   "mandatory": true,
   "repoOwner": "Diony-source",
   "repoName": "puzzle-galaxies-releases",
   "updateManifestUrl": "https://raw.githubusercontent.com/Diony-source/puzzle-galaxies-releases/beta/version.json",
   "releaseNotes": [
+    "1000in1 Ana Marka Basliklari: Pencere sol ust basligi, ana konsol ust cubugu, giris karti ve cikis mesajlari resmi oyun adi olan '1000in1' ile guncellendi (Puzzle Galaxies ilk oyun kasedi olarak rafta korunur).",
     "Kaset Yokken TV'de Zıplayan Nostaljik DVD Ekranı: Atari'de kaset takılı değilken tüplü televizyon ekranı koyu standby moduna geçer ve köşelere ramak kala değmeyen klasik renk değiştiren DVD logosu dolaşır; nadir köşe vuruşlarında karakteriniz bile heyecanlanır.",
     "Cozy 2D Piksel Atari Odasi (16-Bit Gece Illüstrasyonu & Etkilesimli Esyalar): Acilis ekrani Sicak/Kobalt Gece isikli 16-bit piksel gamer odasina donusturuldu. Posterli duvarlar ve desenli kirmizi hali uzerinde; solda koyu mürekkep hatli TV masasinin ustunde tuplu retro televizyon ile Atari konsolu, ortada kizil puf koltuk ile icinden isik sizan mini buzdolabi, sagda ise PG & TW kasetlerini barindiran oyun dolabi bulunur. Mini piksel karakter odada dolasir, buzdolabindan soguk icecek alir ve puf koltuga oturur; surukleyip Atariye taktiginiz oyunun 2D piksel onizlemesi tuplu TV ekraninda canlanir.",
     "Yeni Oyun Kaseti #002 — Towers (Gokdelen Mimarlari): Simon Tatham'in efsanevi Towers (Skyscrapers) bulmacasi 2.5B izometrik gokdelen tahtasi, canli Perspektif Isini (Line-of-Sight), Aday Kat Not Modu, Akilli Mimar Ipucu, 60 bolumluk Sehir Seferi (4x4 - 7x7), Gunluk Kule, Sonsuz Dalga, 2 Dk Blitz, 1v1 Kule Arenasi ve 6 karakterli Mimar & Kule Atolyesi ile Beta kanalina eklendi.",
@@ -42,14 +43,14 @@
   "announcement": "",
   "fileHashes": {
     "assets/app.css": "5203758752e6f8fb4389cea20ad57777ccdb2af468d9d3fa431aeb0be970b04d",
-    "assets/app.js": "f9695e9c7e74a78d43a76c769cb564b66e7665dc20004ee2fa1a1833e250b838",
+    "assets/app.js": "1f94beebda79be72b1a7a07074f8ff12ecbb561800144ea27f62938744941a7b",
     "assets/web.js": "092d9d061f4a3129619d1c318da01190da6d04fb8c50d6fc6c8d90a6cde42eb9",
     "assets/web2.js": "4a0cc3ac09324665e3096b2d71937844328b6c6d9f037437098523a57031b0d5",
     "cozy-room-backdrop.jpg": "6503a18f7ff8c45fbe5ae3a0f59849559ba918d94758e2e62d4a03879aeb8a97",
     "icon.ico": "45c7aaa8e0d7cc3e4c085d2fbd52e56ebfa23757d6ba2e21ffc30465613cb065",
     "icon.png": "f17fd7015b90c27945381d056aa784eb83fd9155331a7bd22cde83cd19ddade2",
     "icon.svg": "33084c7a79a457eb932633ae1d99df97dcfce4ac7d86cb6025f75b59f083e8b0",
-    "index.html": "57cdab5b01285a3e69f9b391e3743c4d6067f78ecc3e2068990cb98bd22b0ab4",
+    "index.html": "50058fb9043f9bc1e68ae6f33ee8d6d6dafe052e7b7c84688d810928e0ccf547",
     "leaderboard.json": "3be1466f23117a2da0b1c03a6272d4a38e314ae61cdf2d0f28b51ce4af314904",
     "manifest.webmanifest": "1244578070351a78ee62f56be85a68773bffdba140871e9b8653e3c146c01273"
   },
