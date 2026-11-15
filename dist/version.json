@@ -1,12 +1,13 @@
 {
   "channel": "beta",
-  "version": "2.3.0-beta.102",
+  "version": "2.3.0-beta.105",
   "releaseDate": "2026-11-15",
   "mandatory": true,
   "repoOwner": "Diony-source",
   "repoName": "puzzle-galaxies-releases",
   "updateManifestUrl": "https://raw.githubusercontent.com/Diony-source/puzzle-galaxies-releases/beta/version.json",
   "releaseNotes": [
+    "Tam Ekran & Küçük Pencere Ölçeklendirmesi: Alt kısımdaki ek hızlı erişim butonları kaldırıldı; 1000in1 oda sahnesi hem küçük pencere boyutlarına hem de tam ekran / geniş monitörlere orantılı şekilde tam oturacak biçimde güncellendi.",
     "1000in1 Ana Marka Basliklari: Pencere sol ust basligi, ana konsol ust cubugu, giris karti ve cikis mesajlari resmi oyun adi olan '1000in1' ile guncellendi (Puzzle Galaxies ilk oyun kasedi olarak rafta korunur).",
     "Kaset Yokken TV'de Zıplayan Nostaljik DVD Ekranı: Atari'de kaset takılı değilken tüplü televizyon ekranı koyu standby moduna geçer ve köşelere ramak kala değmeyen klasik renk değiştiren DVD logosu dolaşır; nadir köşe vuruşlarında karakteriniz bile heyecanlanır.",
     "Cozy 2D Piksel Atari Odasi (16-Bit Gece Illüstrasyonu & Etkilesimli Esyalar): Acilis ekrani Sicak/Kobalt Gece isikli 16-bit piksel gamer odasina donusturuldu. Posterli duvarlar ve desenli kirmizi hali uzerinde; solda koyu mürekkep hatli TV masasinin ustunde tuplu retro televizyon ile Atari konsolu, ortada kizil puf koltuk ile icinden isik sizan mini buzdolabi, sagda ise PG & TW kasetlerini barindiran oyun dolabi bulunur. Mini piksel karakter odada dolasir, buzdolabindan soguk icecek alir ve puf koltuga oturur; surukleyip Atariye taktiginiz oyunun 2D piksel onizlemesi tuplu TV ekraninda canlanir.",
@@ -42,8 +43,8 @@
   "minEngineVersion": "1.8.6",
   "announcement": "",
   "fileHashes": {
-    "assets/app.css": "5203758752e6f8fb4389cea20ad57777ccdb2af468d9d3fa431aeb0be970b04d",
-    "assets/app.js": "1f94beebda79be72b1a7a07074f8ff12ecbb561800144ea27f62938744941a7b",
+    "assets/app.css": "1f855af550e8f1aebf1584f000cf9acaf2dea32b27f804d625872fb957653617",
+    "assets/app.js": "b52bd31582a0fb02ca5d5bc86a800350602ea8e241fba2cfe225691865d1ccaa",
     "assets/web.js": "092d9d061f4a3129619d1c318da01190da6d04fb8c50d6fc6c8d90a6cde42eb9",
     "assets/web2.js": "4a0cc3ac09324665e3096b2d71937844328b6c6d9f037437098523a57031b0d5",
     "cozy-room-backdrop.jpg": "6503a18f7ff8c45fbe5ae3a0f59849559ba918d94758e2e62d4a03879aeb8a97",
