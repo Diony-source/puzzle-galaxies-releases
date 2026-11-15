@@ -1,12 +1,13 @@
 {
   "channel": "beta",
-  "version": "2.3.0-beta.99",
+  "version": "2.3.0-beta.101",
   "releaseDate": "2026-11-15",
   "mandatory": true,
   "repoOwner": "Diony-source",
   "repoName": "puzzle-galaxies-releases",
   "updateManifestUrl": "https://raw.githubusercontent.com/Diony-source/puzzle-galaxies-releases/beta/version.json",
   "releaseNotes": [
+    "Kaset Yokken TV'de Zıplayan Nostaljik DVD Ekranı: Atari'de kaset takılı değilken tüplü televizyon ekranı koyu standby moduna geçer ve köşelere ramak kala değmeyen klasik renk değiştiren DVD logosu dolaşır; nadir köşe vuruşlarında karakteriniz bile heyecanlanır.",
     "Cozy 2D Piksel Atari Odasi (16-Bit Gece Illüstrasyonu & Etkilesimli Esyalar): Acilis ekrani Sicak/Kobalt Gece isikli 16-bit piksel gamer odasina donusturuldu. Posterli duvarlar ve desenli kirmizi hali uzerinde; solda koyu mürekkep hatli TV masasinin ustunde tuplu retro televizyon ile Atari konsolu, ortada kizil puf koltuk ile icinden isik sizan mini buzdolabi, sagda ise PG & TW kasetlerini barindiran oyun dolabi bulunur. Mini piksel karakter odada dolasir, buzdolabindan soguk icecek alir ve puf koltuga oturur; surukleyip Atariye taktiginiz oyunun 2D piksel onizlemesi tuplu TV ekraninda canlanir.",
     "Yeni Oyun Kaseti #002 — Towers (Gokdelen Mimarlari): Simon Tatham'in efsanevi Towers (Skyscrapers) bulmacasi 2.5B izometrik gokdelen tahtasi, canli Perspektif Isini (Line-of-Sight), Aday Kat Not Modu, Akilli Mimar Ipucu, 60 bolumluk Sehir Seferi (4x4 - 7x7), Gunluk Kule, Sonsuz Dalga, 2 Dk Blitz, 1v1 Kule Arenasi ve 6 karakterli Mimar & Kule Atolyesi ile Beta kanalina eklendi.",
     "Web Worker Bulmaca Ureticisi & Moduler Arayuz: 10x10 / 15x15 ve tum yeni bulmaca uretimleri arka plan Web Worker is parcacigina tasinarak arayuz donmalari onlendi; profil, hangar, ayarlar ve bolum modallari modulerlestirildi, otomatik CI E2E testi eklendi.",
@@ -40,8 +41,8 @@
   "minEngineVersion": "1.8.6",
   "announcement": "",
   "fileHashes": {
-    "assets/app.css": "996772ed5d70042a19b0f0a4274e5daed63b66c1323bf093bf1b5951a53012b1",
-    "assets/app.js": "51894ed84d217ad55d3cb1444a0afd1836333492f0a267df4f3c60204a7f7410",
+    "assets/app.css": "5203758752e6f8fb4389cea20ad57777ccdb2af468d9d3fa431aeb0be970b04d",
+    "assets/app.js": "f9695e9c7e74a78d43a76c769cb564b66e7665dc20004ee2fa1a1833e250b838",
     "assets/web.js": "092d9d061f4a3129619d1c318da01190da6d04fb8c50d6fc6c8d90a6cde42eb9",
     "assets/web2.js": "4a0cc3ac09324665e3096b2d71937844328b6c6d9f037437098523a57031b0d5",
     "cozy-room-backdrop.jpg": "6503a18f7ff8c45fbe5ae3a0f59849559ba918d94758e2e62d4a03879aeb8a97",
