@@ -29,16 +29,16 @@
       "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEUMwTRYpj/74HHjuhu2OXe6Xg1CXrzoWPAArSlv5hEl17xMSl16/ZxYl7T2niWgyojyeYO7UOzpADdqMPW9XJFw==",
       "nickname": "BeratUtq",
       "avatar": "☄️",
-      "totalPoints": 13395,
-      "solvedCount": 19,
+      "totalPoints": 14035,
+      "solvedCount": 20,
       "bestTimeSec": 6,
       "bestBlitzScore": 0,
-      "lastPuzzleTitle": "7×7 • 2-5",
-      "updatedAt": 1794786086140,
+      "lastPuzzleTitle": "7×7 • 2-6",
+      "updatedAt": 1794786101754,
       "dailyBestDate": "2026-11-15",
       "dailyBestSec": 67,
       "tag": "1177",
-      "signature": "cd//vCjXLCyCuPnF78or5FLlJBfgYWeE5P9Ar4CpDlAC9Z+b0Vy7S5KdVnerSdtj1JRTNJMXOpUQkZn/yXkTYg==",
+      "signature": "9NnKQMzb6xlJCexfRhFXckJMwA3ZAXKrWZuGPBXw4MEeIeuhNpvrSJ+9iMV+3YMFOkBHx7U8DEWKLkzOyTVncg==",
       "shipCode": "1.1.0.1.0",
       "pilotLevel": 5,
       "duelElo": 1200,
@@ -47,6 +47,18 @@
     }
   },
   "feed": [
+    {
+      "id": "match_plr_2bcf9azw_1794786101754",
+      "playerId": "plr_2bcf9azw",
+      "accountUser": "beratutq",
+      "nickname": "BeratUtq",
+      "avatar": "☄️",
+      "puzzleTitle": "7×7 • 2-6",
+      "pointsEarned": 640,
+      "elapsedSec": 14,
+      "proofOfSolve": "pos_69_e77cb3ac",
+      "timestamp": 1794786101754
+    },
     {
       "id": "match_plr_2bcf9azw_1794786086140",
       "playerId": "plr_2bcf9azw",
@@ -333,18 +345,6 @@
       "elapsedSec": 13,
       "proofOfSolve": "pos_43_22e365a6",
       "timestamp": 1794617991978
-    },
-    {
-      "id": "match_plr_vjwpql4t_1794605586377",
-      "playerId": "plr_vjwpql4t",
-      "accountUser": "dion",
-      "nickname": "Diony",
-      "avatar": "👾",
-      "puzzleTitle": "7×7 • 1-3",
-      "pointsEarned": 355,
-      "elapsedSec": 59,
-      "proofOfSolve": "pos_81_414b22c4",
-      "timestamp": 1794605586378
     }
   ],
   "activeChallenge": null,
