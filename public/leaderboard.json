@@ -30,18 +30,42 @@
       "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEUMwTRYpj/74HHjuhu2OXe6Xg1CXrzoWPAArSlv5hEl17xMSl16/ZxYl7T2niWgyojyeYO7UOzpADdqMPW9XJFw==",
       "nickname": "BeratUtq",
       "avatar": "☄️",
-      "totalPoints": 8970,
-      "solvedCount": 12,
+      "totalPoints": 11270,
+      "solvedCount": 14,
       "bestTimeSec": 7,
       "bestBlitzScore": 0,
-      "lastPuzzleTitle": "15×15 • 1-11",
-      "updatedAt": 1794697425685,
-      "dailyBestDate": "2026-11-14",
-      "dailyBestSec": 111,
+      "lastPuzzleTitle": "15×15 • 1-12",
+      "updatedAt": 1794730524054,
+      "dailyBestDate": "2026-11-15",
+      "dailyBestSec": 67,
       "tag": "1177"
     }
   },
   "feed": [
+    {
+      "id": "match_plr_2bcf9azw_1794730514006",
+      "playerId": "plr_2bcf9azw",
+      "accountUser": "beratutq",
+      "nickname": "BeratUtq",
+      "avatar": "☄️",
+      "puzzleTitle": "15×15 • 1-12",
+      "pointsEarned": 1535,
+      "elapsedSec": 353,
+      "proofOfSolve": "pos_310_81314dcf",
+      "timestamp": 1794730514006
+    },
+    {
+      "id": "match_plr_2bcf9azw_1794730103082",
+      "playerId": "plr_2bcf9azw",
+      "accountUser": "beratutq",
+      "nickname": "BeratUtq",
+      "avatar": "☄️",
+      "puzzleTitle": "Günlük Bulmaca (2026-11-15)",
+      "pointsEarned": 765,
+      "elapsedSec": 67,
+      "proofOfSolve": "pos_94_ac6f8c0b",
+      "timestamp": 1794730103082
+    },
     {
       "id": "match_plr_2bcf9azw_1794697423139",
       "playerId": "plr_2bcf9azw",
@@ -315,30 +339,6 @@
       "elapsedSec": 47,
       "proofOfSolve": "pos_84_6abdaf74",
       "timestamp": 1794601180809
-    },
-    {
-      "id": "match_plr_vjwpql4t_1794601009732",
-      "playerId": "plr_vjwpql4t",
-      "accountUser": "dion",
-      "nickname": "Diony",
-      "avatar": "👾",
-      "puzzleTitle": "5×5 • 1-3",
-      "pointsEarned": 255,
-      "elapsedSec": 8,
-      "proofOfSolve": "pos_42_9956d3ab",
-      "timestamp": 1794601009732
-    },
-    {
-      "id": "match_plr_vjwpql4t_1794600850836",
-      "playerId": "plr_vjwpql4t",
-      "accountUser": "dion",
-      "nickname": "Diony",
-      "avatar": "👾",
-      "puzzleTitle": "5×5 • 1-2",
-      "pointsEarned": 190,
-      "elapsedSec": 23,
-      "proofOfSolve": "pos_43_89e3345b",
-      "timestamp": 1794600850836
     }
   ],
   "activeChallenge": null,
