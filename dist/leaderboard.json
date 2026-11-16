@@ -5,22 +5,20 @@
       "accountUser": "dion",
       "nickname": "Diony",
       "avatar": "👾",
-      "totalPoints": 18318,
-      "solvedCount": 36,
+      "totalPoints": 24831,
+      "solvedCount": 47,
       "bestTimeSec": 8,
       "bestBlitzScore": 10110,
-      "lastPuzzleTitle": "Günlük Bulmaca (2026-11-15)",
+      "lastPuzzleTitle": "Blitz (10 Tablo)",
       "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEerh6PLEjYAcLK285FXo5LxwbepFEqeDg9yePBQDpoEeiqeld5CLl3FVG5SZs4Fsd67FJj2aGa9iC/x082SguKw==",
-      "updatedAt": 1794789779128,
+      "updatedAt": 1794869444241,
       "tag": "9031",
-      "shipCode": "3.3.2.3.3",
-      "pilotLevel": 7,
+      "shipCode": "3.3.3.3.5",
+      "pilotLevel": 8,
       "duelElo": 1200,
-      "weeklyCupKey": "2026-W46",
-      "weeklyCupScore": 1594,
+      "weeklyCupKey": "2026-W47",
       "secretHash": "477d58e0",
-      "dailyBestDate": "2026-11-15",
-      "dailyBestSec": 90
+      "signature": "dVGcvCtGAh8OJHusRWIhP9h/oAVpxE41VvjBKN45bxiP4omwx99mVFgQRFFkMLyFMYapCrgYp77vPUK1sJ8d0g=="
     },
     "plr_2bcf9azw": {
       "id": "plr_2bcf9azw",
@@ -39,12 +37,34 @@
       "pilotLevel": 5,
       "duelElo": 1200,
       "weeklyCupKey": "2026-W46",
-      "secretHash": "74ed7536",
       "dailyBestDate": "2026-11-16",
       "dailyBestSec": 144
     }
   },
   "feed": [
+    {
+      "id": "blitz_plr_vjwpql4t_1794869420817",
+      "playerId": "plr_vjwpql4t",
+      "accountUser": "dion",
+      "nickname": "Diony",
+      "avatar": "👾",
+      "puzzleTitle": "Blitz Modu (10 Bulmaca)",
+      "pointsEarned": 5788,
+      "elapsedSec": 120,
+      "timestamp": 1794869420817
+    },
+    {
+      "id": "match_plr_vjwpql4t_1794868934957",
+      "playerId": "plr_vjwpql4t",
+      "accountUser": "dion",
+      "nickname": "Diony",
+      "avatar": "👾",
+      "puzzleTitle": "10×10 • 1-9",
+      "pointsEarned": 725,
+      "elapsedSec": 106,
+      "proofOfSolve": "pos_144_b1ea1b8d",
+      "timestamp": 1794868934957
+    },
     {
       "id": "match_plr_2bcf9azw_1794817333063",
       "playerId": "plr_2bcf9azw",
@@ -319,30 +339,6 @@
       "elapsedSec": 248,
       "proofOfSolve": "pos_152_315a7675",
       "timestamp": 1794619039238
-    },
-    {
-      "id": "match_plr_2bcf9azw_1794618788849",
-      "playerId": "plr_2bcf9azw",
-      "accountUser": "beratutq",
-      "nickname": "BeratUtq",
-      "avatar": "☄️",
-      "puzzleTitle": "7×7 • 1-3",
-      "pointsEarned": 480,
-      "elapsedSec": 29,
-      "proofOfSolve": "pos_81_a5ad1cf1",
-      "timestamp": 1794618788849
-    },
-    {
-      "id": "match_plr_2bcf9azw_1794618196077",
-      "playerId": "plr_2bcf9azw",
-      "accountUser": "beratutq",
-      "nickname": "BeratUtq",
-      "avatar": "☄️",
-      "puzzleTitle": "Günlük Bulmaca (2026-11-14)",
-      "pointsEarned": 700,
-      "elapsedSec": 111,
-      "proofOfSolve": "pos_90_f429cabf",
-      "timestamp": 1794618196077
     }
   ],
   "activeChallenge": null,

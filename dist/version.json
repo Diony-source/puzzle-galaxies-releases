@@ -1,12 +1,13 @@
 {
   "channel": "beta",
-  "version": "2.4.1-beta.131",
+  "version": "2.4.1-beta.140",
   "releaseDate": "2026-11-16",
   "mandatory": true,
   "repoOwner": "Diony-source",
   "repoName": "puzzle-galaxies-releases",
   "updateManifestUrl": "https://raw.githubusercontent.com/Diony-source/puzzle-galaxies-releases/beta/version.json",
   "releaseNotes": [
+    "Discord Tarzı Sol Komuta Rayı, Kanal Listesi & Alt Pilot/Ses Barı: Masaüstünde Harita, 1v1, Blitz, Günlük ve Skor modları sol dikey Discord sunucu rayına (en üstte DM/Sosyal ikonuyla), #genel-sohbet / #1v1-arena / #bolumler / #egitim / #kurallar / #basarimlar yan kanal sütununa taşındı. Sol altta Filo Gemisi + Hangar bağlantı şeridinin altında Avatar, Nick#KOD, LVL ve Puan satırıyla birlikte hızlı Ses/Müzik aç-kapa ve Ayarlar butonları yer alır; üst bardaki kalabalık kalktığı için '⟳ Yenile' artık asla alt satıra kaymaz.",
     "Çok Bölümlü & Zorluğa Duyarlı Dinamik Müzik Motoru (Tekrar Yok!): Kısa döngüler yerine A/B/Köprü(Break)/Nakarat(Chorus) yapısında 16 barlık 6 ayrı beste eklendi — 1000in1 Odası için sakin Lo-Fi 'Midnight Atari Lounge', Komuta Güvertesi için 'Orbital Command', Kolay/Orta/Zor bölümler için 'Starlight Outrun' / 'Miami Nebula Cruiser' / 'Event Horizon Noir' ve Blitz/1v1 Arena için 'Neon Turbo Overdrive'. Ayarlar menüsüne Müzik Seviyesi kaydırıcısı ve ⏭ Parça Değiştirici eklendi.",
     "Discord Tarzı Arkadaşlar, Direkt Mesaj (DM) & Genel Oyun Sohbeti (#genel-sohbet): 1000in1 üst barındaki Arkadaşlar ve Sohbet butonları, Puzzle Galaxies üst barı ve 1v1 Arena üstündeki yeni Arkadaşlar & Sohbet vitriniyle doğrudan Discord tarzı Sosyal Merkez açılır. Çevrimiçi pilot durumu, Nick#KOD ile arkadaş bulma, özel DM mesajlaşma, #genel-sohbet odası ve sohbette tek tıkla 1v1 oda daveti paylaşma eklendi.",
     "Hotline Miami Synthwave Müzikler (1000in1 & Puzzle Galaxies): 1000in1 odası ve Puzzle Galaxies modu için iki ayrı dark-synthwave / retrowave parça eklendi; Blitz son 20 saniye ve bulmaca ilerlemesine göre dinamik katman/tempo yükselir.",
@@ -54,8 +55,8 @@
   "minEngineVersion": "2.4.0",
   "announcement": "",
   "fileHashes": {
-    "assets/app.css": "b9de4b6fd3e7ca7392d64b6c8ee474770a829a9fd2945f6e03323e5513c29e93",
-    "assets/app.js": "af5c3890c7e7c66e044e938cda6e432c37e687eb35a8c313a04584862bde3fe8",
+    "assets/app.css": "b0cad237e05e93d3c6a9035e1b9d68a83437d60986d5aff658b4e2737fde9d4c",
+    "assets/app.js": "a4be83ce9ca8642870d7b763f1a1d5757ef590b4528f09de9016098e06295a89",
     "assets/web.js": "092d9d061f4a3129619d1c318da01190da6d04fb8c50d6fc6c8d90a6cde42eb9",
     "assets/web2.js": "4a0cc3ac09324665e3096b2d71937844328b6c6d9f037437098523a57031b0d5",
     "cozy-room-backdrop.jpg": "6503a18f7ff8c45fbe5ae3a0f59849559ba918d94758e2e62d4a03879aeb8a97",
@@ -63,7 +64,7 @@
     "icon.png": "f17fd7015b90c27945381d056aa784eb83fd9155331a7bd22cde83cd19ddade2",
     "icon.svg": "33084c7a79a457eb932633ae1d99df97dcfce4ac7d86cb6025f75b59f083e8b0",
     "index.html": "50058fb9043f9bc1e68ae6f33ee8d6d6dafe052e7b7c84688d810928e0ccf547",
-    "leaderboard.json": "6b9d75fd0b378ed09ac35f50e4ab3176b72944a560242fdc11ace3fd412463f3",
+    "leaderboard.json": "b1c2618bcd03f190c42733e049e72880dbe62f1a0d14d1f4e8e53e632f7a2385",
     "manifest.webmanifest": "1244578070351a78ee62f56be85a68773bffdba140871e9b8653e3c146c01273"
   },
   "minAndroidVersion": "2.4.0"
