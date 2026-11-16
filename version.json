@@ -1,12 +1,14 @@
 {
   "channel": "beta",
-  "version": "2.3.1-beta.127",
+  "version": "2.3.1-beta.129",
   "releaseDate": "2026-11-16",
   "mandatory": true,
   "repoOwner": "Diony-source",
   "repoName": "puzzle-galaxies-releases",
   "updateManifestUrl": "https://raw.githubusercontent.com/Diony-source/puzzle-galaxies-releases/beta/version.json",
   "releaseNotes": [
+    "Çok Bölümlü & Zorluğa Duyarlı Dinamik Müzik Motoru (Tekrar Yok!): Kısa döngüler yerine A/B/Köprü(Break)/Nakarat(Chorus) yapısında 16 barlık 6 ayrı beste eklendi — 1000in1 Odası için sakin Lo-Fi 'Midnight Atari Lounge', Komuta Güvertesi için 'Orbital Command', Kolay/Orta/Zor bölümler için 'Starlight Outrun' / 'Miami Nebula Cruiser' / 'Event Horizon Noir' ve Blitz/1v1 Arena için 'Neon Turbo Overdrive'. Ayarlar menüsüne Müzik Seviyesi kaydırıcısı ve ⏭ Parça Değiştirici eklendi.",
+    "Discord Tarzı Arkadaşlar, Direkt Mesaj (DM) & Genel Oyun Sohbeti (#genel-sohbet): 1000in1 üst barındaki Arkadaşlar ve Sohbet butonları, Puzzle Galaxies üst barı ve 1v1 Arena üstündeki yeni Arkadaşlar & Sohbet vitriniyle doğrudan Discord tarzı Sosyal Merkez açılır. Çevrimiçi pilot durumu, Nick#KOD ile arkadaş bulma, özel DM mesajlaşma, #genel-sohbet odası ve sohbette tek tıkla 1v1 oda daveti paylaşma eklendi.",
     "Hotline Miami Synthwave Müzikler (1000in1 & Puzzle Galaxies): 1000in1 odası ve Puzzle Galaxies modu için iki ayrı dark-synthwave / retrowave parça eklendi; Blitz son 20 saniye ve bulmaca ilerlemesine göre dinamik katman/tempo yükselir.",
     "8-Bit Atari / Piksel Sanat Ses Efektleri: Duvar yerleştirme, işaretleme, galaksi tamamlama kombosu, kaset tak/çıkar, zafer fanfarı, süre dolumu ve başarım bildirimleri Atari/arcade chiptune ses sentezine dönüştürüldü.",
     "Canlı <-> Beta Tek Tık Geçiş & Beta İndirilebilir Paketler: Ayarlar menüsüne Canlı (Prod) ve Beta (Test) kanalları arasında veri kaybı olmadan anında geçiş kartı eklendi; ayrıca Beta Setup.exe ve Beta APK yayınları beta-latest ön sürümünden doğrudan indirilebilir hale getirildi.",
@@ -52,8 +54,8 @@
   "minEngineVersion": "1.8.6",
   "announcement": "",
   "fileHashes": {
-    "assets/app.css": "3be27d0f4e4f0d1f22900f4ffaf7b22d4740bab022f231b2478df85e95f48378",
-    "assets/app.js": "81a933449382f1333538daac325a0dba251d1fc0f5d7c97c53746f45adf6ae22",
+    "assets/app.css": "b9de4b6fd3e7ca7392d64b6c8ee474770a829a9fd2945f6e03323e5513c29e93",
+    "assets/app.js": "abf17f2086eab29a1ce984b6d2f2f3853bd9a5d01b086c13b84d317a40d59167",
     "assets/web.js": "092d9d061f4a3129619d1c318da01190da6d04fb8c50d6fc6c8d90a6cde42eb9",
     "assets/web2.js": "4a0cc3ac09324665e3096b2d71937844328b6c6d9f037437098523a57031b0d5",
     "cozy-room-backdrop.jpg": "6503a18f7ff8c45fbe5ae3a0f59849559ba918d94758e2e62d4a03879aeb8a97",
@@ -61,7 +63,7 @@
     "icon.png": "f17fd7015b90c27945381d056aa784eb83fd9155331a7bd22cde83cd19ddade2",
     "icon.svg": "33084c7a79a457eb932633ae1d99df97dcfce4ac7d86cb6025f75b59f083e8b0",
     "index.html": "50058fb9043f9bc1e68ae6f33ee8d6d6dafe052e7b7c84688d810928e0ccf547",
-    "leaderboard.json": "1259f995f8f3176aa5e8ab176faff59662c99221a712cc930293ba98c8562157",
+    "leaderboard.json": "6b9d75fd0b378ed09ac35f50e4ab3176b72944a560242fdc11ace3fd412463f3",
     "manifest.webmanifest": "1244578070351a78ee62f56be85a68773bffdba140871e9b8653e3c146c01273"
   },
   "minAndroidVersion": "1.8.6"
