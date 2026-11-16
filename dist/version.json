@@ -1,6 +1,6 @@
 {
   "channel": "beta",
-  "version": "2.3.1-beta.129",
+  "version": "2.4.1-beta.131",
   "releaseDate": "2026-11-16",
   "mandatory": true,
   "repoOwner": "Diony-source",
@@ -51,11 +51,11 @@
     "leaderboard.json",
     "manifest.webmanifest"
   ],
-  "minEngineVersion": "1.8.6",
+  "minEngineVersion": "2.4.0",
   "announcement": "",
   "fileHashes": {
     "assets/app.css": "b9de4b6fd3e7ca7392d64b6c8ee474770a829a9fd2945f6e03323e5513c29e93",
-    "assets/app.js": "abf17f2086eab29a1ce984b6d2f2f3853bd9a5d01b086c13b84d317a40d59167",
+    "assets/app.js": "af5c3890c7e7c66e044e938cda6e432c37e687eb35a8c313a04584862bde3fe8",
     "assets/web.js": "092d9d061f4a3129619d1c318da01190da6d04fb8c50d6fc6c8d90a6cde42eb9",
     "assets/web2.js": "4a0cc3ac09324665e3096b2d71937844328b6c6d9f037437098523a57031b0d5",
     "cozy-room-backdrop.jpg": "6503a18f7ff8c45fbe5ae3a0f59849559ba918d94758e2e62d4a03879aeb8a97",
@@ -66,5 +66,5 @@
     "leaderboard.json": "6b9d75fd0b378ed09ac35f50e4ab3176b72944a560242fdc11ace3fd412463f3",
     "manifest.webmanifest": "1244578070351a78ee62f56be85a68773bffdba140871e9b8653e3c146c01273"
   },
-  "minAndroidVersion": "1.8.6"
+  "minAndroidVersion": "2.4.0"
 }
