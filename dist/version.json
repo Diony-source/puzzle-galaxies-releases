@@ -1,12 +1,13 @@
 {
   "channel": "beta",
-  "version": "2.4.1-beta.142",
+  "version": "2.4.1-beta.146",
   "releaseDate": "2026-11-17",
   "mandatory": true,
   "repoOwner": "Diony-source",
   "repoName": "puzzle-galaxies-releases",
   "updateManifestUrl": "https://raw.githubusercontent.com/Diony-source/puzzle-galaxies-releases/beta/version.json",
   "releaseNotes": [
+    "Tek Satır Sade Oyun İçi Üst Bar & Discord Menü Uyumu: Oyun içi üst bardaki sayaç/galaksi/hedef göstergeleri tek bir kompakt HUD kapsülünde toplandı; Duraklat/Devam, Discord tarzı Sohbet, Bölümler ve Skor/Kurallar/Ayarlar ikon kümesi alt satıra taşmadan tek hizada düzenlendi.",
     "Tek Sütun Discord Sol Menü, Tam Ekran DM/Genel Sohbet & Görevler (Yakında): Ana menüdeki kalabalık 2. kanal sütunu kaldırılarak Harita, 1v1 Düello, Blitz, Solucan Deliği, Günlük, Sıralama, Eğitim, Kurallar ve Başarımlar tek temiz Discord sol menüsünde birleştirildi. Sol üstteki DM & Sohbet butonu ana menüdeyken Discord tarzı tam ekran sohbete ('Genel Sohbet' varsayılan, üstte Arkadaşlar & Görevler Yakında, Nitro/Mağaza olmadan) açılır; aktif bir oyundayken basıldığında oyunu otomatik duraklatıp açılır pencerede sohbete geçer. Ana menüdeki Bölümler modali sadeleştirilip Serbest Mod & Hızlı Oyun haline getirildi.",
     "Çok Bölümlü & Zorluğa Duyarlı Dinamik Müzik Motoru (Tekrar Yok!): Kısa döngüler yerine A/B/Köprü(Break)/Nakarat(Chorus) yapısında 16 barlık 6 ayrı beste eklendi — 1000in1 Odası için sakin Lo-Fi 'Midnight Atari Lounge', Komuta Güvertesi için 'Orbital Command', Kolay/Orta/Zor bölümler için 'Starlight Outrun' / 'Miami Nebula Cruiser' / 'Event Horizon Noir' ve Blitz/1v1 Arena için 'Neon Turbo Overdrive'. Ayarlar menüsüne Müzik Seviyesi kaydırıcısı ve ⏭ Parça Değiştirici eklendi.",
     "Discord Tarzı Arkadaşlar, Direkt Mesaj (DM) & Genel Oyun Sohbeti (#genel-sohbet): 1000in1 üst barındaki Arkadaşlar ve Sohbet butonları, Puzzle Galaxies üst barı ve 1v1 Arena üstündeki yeni Arkadaşlar & Sohbet vitriniyle doğrudan Discord tarzı Sosyal Merkez açılır. Çevrimiçi pilot durumu, Nick#KOD ile arkadaş bulma, özel DM mesajlaşma, #genel-sohbet odası ve sohbette tek tıkla 1v1 oda daveti paylaşma eklendi.",
@@ -55,8 +56,8 @@
   "minEngineVersion": "2.4.0",
   "announcement": "",
   "fileHashes": {
-    "assets/app.css": "30b382d9f3c444b177fa4918bff65a71835bcff1c5b8275c1d7ae5bf1f11cc05",
-    "assets/app.js": "67c073d9d3a66ab3533f1971e33ecc135ce59976e319700da03b47a34e96a7f5",
+    "assets/app.css": "825e53933fa0020b5d6b9e44ab7f6a68fbaa313a61a823061428bc9082f1c96c",
+    "assets/app.js": "ae09b8ac4e8926ca6b2a42ee381e57f9adf7adc81ab5c0ac993df33e21106166",
     "assets/web.js": "092d9d061f4a3129619d1c318da01190da6d04fb8c50d6fc6c8d90a6cde42eb9",
     "assets/web2.js": "4a0cc3ac09324665e3096b2d71937844328b6c6d9f037437098523a57031b0d5",
     "cozy-room-backdrop.jpg": "6503a18f7ff8c45fbe5ae3a0f59849559ba918d94758e2e62d4a03879aeb8a97",
