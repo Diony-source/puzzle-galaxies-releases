@@ -1,11 +1,12 @@
 {
-  "version": "2.4.2",
+  "version": "2.4.3",
   "releaseDate": "2026-11-19",
   "mandatory": true,
   "repoOwner": "Diony-source",
   "repoName": "puzzle-galaxies-releases",
   "updateManifestUrl": "https://raw.githubusercontent.com/Diony-source/puzzle-galaxies-releases/main/version.json",
   "releaseNotes": [
+    "Mobil Tahta Alt Yardım Çubuğu Stabilizasyonu (v2.4.3): Galaksi seçimi, yakınlaştırma veya çizim modu değişiminde alttaki yardım metninin 1–2 satır arasında kırılıp tahtayı düşeyde kaydırması giderildi; dokunmatik tahta koordinatları sabitlendi.",
     "Mobil Sohbet / DM Alt Bar Çakışması Düzeltmesi: Android/mobil ekranlarda alt navigasyon barının sohbet yazma çubuğunu (#inp-social-chat) kapatması giderildi; klavye odaklanmasında ve normal görünümde mesaj kutusu her zaman tıklanabilir konuma alındı ve üst kısma '← Harita' hızlı dönüş butonu eklendi.",
     "15×15 Büyük Tahta Dokunma & Çekirdek Erişim Düzeltmesi: Küçük hücrelerde (15×15 / 10×10) galaksi çekirdeği tıklama alanı küçültüldü, dokunmatik kenar algılama eşiği genişletilip galaksinin içinden geçen geçersiz kenarlar yerine komşu geçerli duvarlara öncelik verildi, dar ekranlarda hücre boyutu büyütüldü, galaksi sarmalları sade 7×7 piksel boyutuna çekildi ve %101 yanlış zoom takılması giderildi.",
     "Mobil 1v1 Lobi Kart Hizalaması & Tek Sütun Discord Menü Temelleri (v2.4.1): Dar telefon ekranlarında 1v1 lobi kartlarının kenara taşması giderildi; tek sütun Discord sol menü, tam ekran DM, Görevler (Yakında) ve tek satır oyun içi HUD korundu."
@@ -27,8 +28,8 @@
   "minEngineVersion": "2.4.0",
   "announcement": "",
   "fileHashes": {
-    "assets/app.css": "8df63536eb62bf3c4bc82a80907f0ac84f5e360d1f94059761ca136bef34e911",
-    "assets/app.js": "af7ea9511b2abd74c7d81da17e25b2c3c621b277cecba51e50163c889c781ee1",
+    "assets/app.css": "5ef782a0f1ec831266e2e5fc2955724c8687cda997c5407bfc4f09cfef495004",
+    "assets/app.js": "e70003fa44ff42a60710d71f253aac8ce20e1b3c450a69ec678a19354142d277",
     "assets/web.js": "092d9d061f4a3129619d1c318da01190da6d04fb8c50d6fc6c8d90a6cde42eb9",
     "assets/web2.js": "4a0cc3ac09324665e3096b2d71937844328b6c6d9f037437098523a57031b0d5",
     "cozy-room-backdrop.jpg": "6503a18f7ff8c45fbe5ae3a0f59849559ba918d94758e2e62d4a03879aeb8a97",
@@ -36,7 +37,7 @@
     "icon.png": "f17fd7015b90c27945381d056aa784eb83fd9155331a7bd22cde83cd19ddade2",
     "icon.svg": "33084c7a79a457eb932633ae1d99df97dcfce4ac7d86cb6025f75b59f083e8b0",
     "index.html": "d591cb2e5c34d6b6835ab670459fb26d05272dbb768d6e83bb3f683ae284ce22",
-    "leaderboard.json": "9b280431403913c212b94c0911a99607c7a565f6cbdc1ce5678667487f598292",
+    "leaderboard.json": "289eac7f9a50baa02a3e858c9e0afa9992e92deda28c271280121c91eda9282a",
     "manifest.webmanifest": "1244578070351a78ee62f56be85a68773bffdba140871e9b8653e3c146c01273"
   },
   "minAndroidVersion": "2.4.0"
