@@ -1,15 +1,15 @@
 {
-  "version": "2.4.3",
-  "releaseDate": "2026-11-19",
+  "version": "2.4.4",
+  "releaseDate": "2026-11-20",
   "mandatory": true,
   "repoOwner": "Diony-source",
   "repoName": "puzzle-galaxies-releases",
   "updateManifestUrl": "https://raw.githubusercontent.com/Diony-source/puzzle-galaxies-releases/main/version.json",
   "releaseNotes": [
+    "1000in1 Mobil Otomatik Ekran Sığdırma (v2.4.4): Telefon ekran yüksekliğine göre üst bar, tüplü TV, Atari 2600 yuvası, piksel oda ve Oyun Dolabı otomatik ölçeklenir; kaset seçmek veya sürüklemek için artık aşağı kaydırmak gerekmez ve yatay telefon görünümü de tek ekrana sığar.",
     "Mobil Tahta Alt Yardım Çubuğu Stabilizasyonu (v2.4.3): Galaksi seçimi, yakınlaştırma veya çizim modu değişiminde alttaki yardım metninin 1–2 satır arasında kırılıp tahtayı düşeyde kaydırması giderildi; dokunmatik tahta koordinatları sabitlendi.",
     "Mobil Sohbet / DM Alt Bar Çakışması Düzeltmesi: Android/mobil ekranlarda alt navigasyon barının sohbet yazma çubuğunu (#inp-social-chat) kapatması giderildi; klavye odaklanmasında ve normal görünümde mesaj kutusu her zaman tıklanabilir konuma alındı ve üst kısma '← Harita' hızlı dönüş butonu eklendi.",
-    "15×15 Büyük Tahta Dokunma & Çekirdek Erişim Düzeltmesi: Küçük hücrelerde (15×15 / 10×10) galaksi çekirdeği tıklama alanı küçültüldü, dokunmatik kenar algılama eşiği genişletilip galaksinin içinden geçen geçersiz kenarlar yerine komşu geçerli duvarlara öncelik verildi, dar ekranlarda hücre boyutu büyütüldü, galaksi sarmalları sade 7×7 piksel boyutuna çekildi ve %101 yanlış zoom takılması giderildi.",
-    "Mobil 1v1 Lobi Kart Hizalaması & Tek Sütun Discord Menü Temelleri (v2.4.1): Dar telefon ekranlarında 1v1 lobi kartlarının kenara taşması giderildi; tek sütun Discord sol menü, tam ekran DM, Görevler (Yakında) ve tek satır oyun içi HUD korundu."
+    "15×15 Büyük Tahta Dokunma & Çekirdek Erişim Düzeltmesi: Küçük hücrelerde (15×15 / 10×10) galaksi çekirdeği tıklama alanı küçültüldü, dokunmatik kenar algılama eşiği genişletilip galaksinin içinden geçen geçersiz kenarlar yerine komşu geçerli duvarlara öncelik verildi, dar ekranlarda hücre boyutu büyütüldü, galaksi sarmalları sade 7×7 piksel boyutuna çekildi ve %101 yanlış zoom takılması giderildi."
   ],
   "installerUrl": "",
   "files": [
@@ -29,7 +29,7 @@
   "announcement": "",
   "fileHashes": {
     "assets/app.css": "f37d79f128d093a5375a39830e5e2133503539b1dc10d093e0fec7b428adade9",
-    "assets/app.js": "e70003fa44ff42a60710d71f253aac8ce20e1b3c450a69ec678a19354142d277",
+    "assets/app.js": "43fe42a469e38c626c4374ba2be99320145d10177ab9717b90ac2840dee43814",
     "assets/web.js": "092d9d061f4a3129619d1c318da01190da6d04fb8c50d6fc6c8d90a6cde42eb9",
     "assets/web2.js": "4a0cc3ac09324665e3096b2d71937844328b6c6d9f037437098523a57031b0d5",
     "cozy-room-backdrop.jpg": "6503a18f7ff8c45fbe5ae3a0f59849559ba918d94758e2e62d4a03879aeb8a97",
