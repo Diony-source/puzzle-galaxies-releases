@@ -1,12 +1,13 @@
 {
   "channel": "beta",
-  "version": "2.4.3-beta.152",
+  "version": "2.4.4-beta.155",
   "releaseDate": "2026-11-19",
   "mandatory": true,
   "repoOwner": "Diony-source",
   "repoName": "puzzle-galaxies-releases",
   "updateManifestUrl": "https://raw.githubusercontent.com/Diony-source/puzzle-galaxies-releases/beta/version.json",
   "releaseNotes": [
+    "Mobil Tahta Alt Yardım Çubuğu Stabilizasyonu & Dokunmatik Sabitleme (v2.4.3): Galaksi seçimi, yakınlaştırma veya araç değişiminde yardım çubuğunun satır atlayıp oyun tahtasını dikeyde kaydırması giderildi; E2E ve mobil dokunma kararlılığı artırıldı.",
     "Mobil Sohbet Alt Bar Çakışması & 15×15 Büyük Tahta Dokunma Düzeltmesi (v2.4.2): Mobilde sohbet giriş kutusunun alttaki menü barı tarafından kapatılması çözüldü; 15×15 ve 10×10 tahtalarda galaksi çekirdekleri etrafındaki çizgilere ulaşamama, çekirdek boyut sıkışıklığı ve %101 zoom takılması düzeltildi, mobil 1v1 lobi kart hizalaması iyileştirildi.",
     "Tek Satır Sade Oyun İçi Üst Bar & Discord Menü Uyumu: Oyun içi üst bardaki sayaç/galaksi/hedef göstergeleri tek bir kompakt HUD kapsülünde toplandı; Duraklat/Devam, Discord tarzı Sohbet, Bölümler ve Skor/Kurallar/Ayarlar ikon kümesi alt satıra taşmadan tek hizada düzenlendi.",
     "Tek Sütun Discord Sol Menü, Tam Ekran DM/Genel Sohbet & Görevler (Yakında): Ana menüdeki kalabalık 2. kanal sütunu kaldırılarak Harita, 1v1 Düello, Blitz, Solucan Deliği, Günlük, Sıralama, Eğitim, Kurallar ve Başarımlar tek temiz Discord sol menüsünde birleştirildi. Sol üstteki DM & Sohbet butonu ana menüdeyken Discord tarzı tam ekran sohbete ('Genel Sohbet' varsayılan, üstte Arkadaşlar & Görevler Yakında, Nitro/Mağaza olmadan) açılır; aktif bir oyundayken basıldığında oyunu otomatik duraklatıp açılır pencerede sohbete geçer. Ana menüdeki Bölümler modali sadeleştirilip Serbest Mod & Hızlı Oyun haline getirildi.",
@@ -57,8 +58,8 @@
   "minEngineVersion": "2.4.0",
   "announcement": "",
   "fileHashes": {
-    "assets/app.css": "8df63536eb62bf3c4bc82a80907f0ac84f5e360d1f94059761ca136bef34e911",
-    "assets/app.js": "dfd23eae2ad69f73e4c31fdef3be13b8516e94f623e74083ed39aec75bb1d525",
+    "assets/app.css": "5ef782a0f1ec831266e2e5fc2955724c8687cda997c5407bfc4f09cfef495004",
+    "assets/app.js": "cc676ea5722d6c73ee174255ca5256e5a3db1473b4a8b700f2550f94bb7b39af",
     "assets/web.js": "092d9d061f4a3129619d1c318da01190da6d04fb8c50d6fc6c8d90a6cde42eb9",
     "assets/web2.js": "4a0cc3ac09324665e3096b2d71937844328b6c6d9f037437098523a57031b0d5",
     "cozy-room-backdrop.jpg": "6503a18f7ff8c45fbe5ae3a0f59849559ba918d94758e2e62d4a03879aeb8a97",
