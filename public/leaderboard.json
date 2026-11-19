@@ -11,14 +11,14 @@
       "bestBlitzScore": 10110,
       "lastPuzzleTitle": "15×15 • 1-10",
       "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEerh6PLEjYAcLK285FXo5LxwbepFEqeDg9yePBQDpoEeiqeld5CLl3FVG5SZs4Fsd67FJj2aGa9iC/x082SguKw==",
-      "updatedAt": 1794924932362,
+      "updatedAt": 1795092082606,
       "tag": "9031",
       "shipCode": "3.3.3.3.3",
       "pilotLevel": 8,
       "duelElo": 1200,
       "weeklyCupKey": "2026-W47",
       "secretHash": "477d58e0",
-      "signature": "5cOhBC50TnP3zNm+gsdAIjtNjsyVVv/EOXzc+oESLnEglcZshsWGoT0J6EoErXg3bn9G1IjZxg3jKNyiM4yTvQ=="
+      "signature": "YYG9XbV/SnOlXeD2XuAbUDah3IRQ0ZSCqAJ8QudS8LzbBlooNIuRaOwsIoVp8Ljh/uyKETB2PAVqU9wITXWlvA=="
     },
     "plr_2bcf9azw": {
       "id": "plr_2bcf9azw",
@@ -42,6 +42,18 @@
     }
   },
   "feed": [
+    {
+      "id": "match_plr_2bcf9azw_1795066409194",
+      "playerId": "plr_2bcf9azw",
+      "accountUser": "beratutq",
+      "nickname": "BeratUtq",
+      "avatar": "☄️",
+      "puzzleTitle": "Günlük Bulmaca (2026-11-19)",
+      "pointsEarned": 680,
+      "elapsedSec": 121,
+      "proofOfSolve": "pos_95_95077e84",
+      "timestamp": 1795066409194
+    },
     {
       "id": "match_plr_vjwpql4t_1794924931629",
       "playerId": "plr_vjwpql4t",
@@ -327,18 +339,6 @@
       "elapsedSec": 68,
       "proofOfSolve": "pos_144_60170e0c",
       "timestamp": 1794619288726
-    },
-    {
-      "id": "match_plr_2bcf9azw_1794619158932",
-      "playerId": "plr_2bcf9azw",
-      "accountUser": "beratutq",
-      "nickname": "BeratUtq",
-      "avatar": "☄️",
-      "puzzleTitle": "10×10 • 1-2",
-      "pointsEarned": 915,
-      "elapsedSec": 102,
-      "proofOfSolve": "pos_154_15971d1c",
-      "timestamp": 1794619158932
     }
   ],
   "activeChallenge": null,
