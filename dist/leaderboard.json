@@ -5,20 +5,20 @@
       "accountUser": "dion",
       "nickname": "Diony",
       "avatar": "👾",
-      "totalPoints": 24831,
-      "solvedCount": 47,
+      "totalPoints": 26391,
+      "solvedCount": 48,
       "bestTimeSec": 8,
       "bestBlitzScore": 10110,
-      "lastPuzzleTitle": "Blitz (10 Tablo)",
+      "lastPuzzleTitle": "15×15 • 1-10",
       "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEerh6PLEjYAcLK285FXo5LxwbepFEqeDg9yePBQDpoEeiqeld5CLl3FVG5SZs4Fsd67FJj2aGa9iC/x082SguKw==",
-      "updatedAt": 1794869444241,
+      "updatedAt": 1794924932362,
       "tag": "9031",
-      "shipCode": "3.3.3.3.5",
+      "shipCode": "3.3.3.3.3",
       "pilotLevel": 8,
       "duelElo": 1200,
       "weeklyCupKey": "2026-W47",
       "secretHash": "477d58e0",
-      "signature": "dVGcvCtGAh8OJHusRWIhP9h/oAVpxE41VvjBKN45bxiP4omwx99mVFgQRFFkMLyFMYapCrgYp77vPUK1sJ8d0g=="
+      "signature": "5cOhBC50TnP3zNm+gsdAIjtNjsyVVv/EOXzc+oESLnEglcZshsWGoT0J6EoErXg3bn9G1IjZxg3jKNyiM4yTvQ=="
     },
     "plr_2bcf9azw": {
       "id": "plr_2bcf9azw",
@@ -26,22 +26,34 @@
       "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEUMwTRYpj/74HHjuhu2OXe6Xg1CXrzoWPAArSlv5hEl17xMSl16/ZxYl7T2niWgyojyeYO7UOzpADdqMPW9XJFw==",
       "nickname": "BeratUtq",
       "avatar": "☄️",
-      "totalPoints": 52367,
-      "solvedCount": 77,
+      "totalPoints": 55227,
+      "solvedCount": 80,
       "bestTimeSec": 6,
       "bestBlitzScore": 12000,
-      "lastPuzzleTitle": "10×10 • 2-7",
-      "updatedAt": 1794817334045,
+      "lastPuzzleTitle": "Günlük Bulmaca (2026-11-19)",
+      "updatedAt": 1795066411360,
       "tag": "1177",
       "shipCode": "1.1.0.1.0",
       "pilotLevel": 5,
       "duelElo": 1200,
       "weeklyCupKey": "2026-W46",
-      "dailyBestDate": "2026-11-16",
-      "dailyBestSec": 144
+      "dailyBestDate": "2026-11-19",
+      "dailyBestSec": 121
     }
   },
   "feed": [
+    {
+      "id": "match_plr_vjwpql4t_1794924931629",
+      "playerId": "plr_vjwpql4t",
+      "accountUser": "dion",
+      "nickname": "Diony",
+      "avatar": "👾",
+      "puzzleTitle": "15×15 • 1-10",
+      "pointsEarned": 1560,
+      "elapsedSec": 326,
+      "proofOfSolve": "pos_317_a4ab07df",
+      "timestamp": 1794924931629
+    },
     {
       "id": "blitz_plr_vjwpql4t_1794869420817",
       "playerId": "plr_vjwpql4t",
@@ -327,18 +339,6 @@
       "elapsedSec": 102,
       "proofOfSolve": "pos_154_15971d1c",
       "timestamp": 1794619158932
-    },
-    {
-      "id": "match_plr_2bcf9azw_1794619039238",
-      "playerId": "plr_2bcf9azw",
-      "accountUser": "beratutq",
-      "nickname": "BeratUtq",
-      "avatar": "☄️",
-      "puzzleTitle": "10×10 • 1-1",
-      "pointsEarned": 745,
-      "elapsedSec": 248,
-      "proofOfSolve": "pos_152_315a7675",
-      "timestamp": 1794619039238
     }
   ],
   "activeChallenge": null,

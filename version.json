@@ -1,12 +1,13 @@
 {
   "channel": "beta",
-  "version": "2.4.1-beta.146",
-  "releaseDate": "2026-11-17",
+  "version": "2.4.3-beta.152",
+  "releaseDate": "2026-11-19",
   "mandatory": true,
   "repoOwner": "Diony-source",
   "repoName": "puzzle-galaxies-releases",
   "updateManifestUrl": "https://raw.githubusercontent.com/Diony-source/puzzle-galaxies-releases/beta/version.json",
   "releaseNotes": [
+    "Mobil Sohbet Alt Bar Çakışması & 15×15 Büyük Tahta Dokunma Düzeltmesi (v2.4.2): Mobilde sohbet giriş kutusunun alttaki menü barı tarafından kapatılması çözüldü; 15×15 ve 10×10 tahtalarda galaksi çekirdekleri etrafındaki çizgilere ulaşamama, çekirdek boyut sıkışıklığı ve %101 zoom takılması düzeltildi, mobil 1v1 lobi kart hizalaması iyileştirildi.",
     "Tek Satır Sade Oyun İçi Üst Bar & Discord Menü Uyumu: Oyun içi üst bardaki sayaç/galaksi/hedef göstergeleri tek bir kompakt HUD kapsülünde toplandı; Duraklat/Devam, Discord tarzı Sohbet, Bölümler ve Skor/Kurallar/Ayarlar ikon kümesi alt satıra taşmadan tek hizada düzenlendi.",
     "Tek Sütun Discord Sol Menü, Tam Ekran DM/Genel Sohbet & Görevler (Yakında): Ana menüdeki kalabalık 2. kanal sütunu kaldırılarak Harita, 1v1 Düello, Blitz, Solucan Deliği, Günlük, Sıralama, Eğitim, Kurallar ve Başarımlar tek temiz Discord sol menüsünde birleştirildi. Sol üstteki DM & Sohbet butonu ana menüdeyken Discord tarzı tam ekran sohbete ('Genel Sohbet' varsayılan, üstte Arkadaşlar & Görevler Yakında, Nitro/Mağaza olmadan) açılır; aktif bir oyundayken basıldığında oyunu otomatik duraklatıp açılır pencerede sohbete geçer. Ana menüdeki Bölümler modali sadeleştirilip Serbest Mod & Hızlı Oyun haline getirildi.",
     "Çok Bölümlü & Zorluğa Duyarlı Dinamik Müzik Motoru (Tekrar Yok!): Kısa döngüler yerine A/B/Köprü(Break)/Nakarat(Chorus) yapısında 16 barlık 6 ayrı beste eklendi — 1000in1 Odası için sakin Lo-Fi 'Midnight Atari Lounge', Komuta Güvertesi için 'Orbital Command', Kolay/Orta/Zor bölümler için 'Starlight Outrun' / 'Miami Nebula Cruiser' / 'Event Horizon Noir' ve Blitz/1v1 Arena için 'Neon Turbo Overdrive'. Ayarlar menüsüne Müzik Seviyesi kaydırıcısı ve ⏭ Parça Değiştirici eklendi.",
@@ -56,8 +57,8 @@
   "minEngineVersion": "2.4.0",
   "announcement": "",
   "fileHashes": {
-    "assets/app.css": "825e53933fa0020b5d6b9e44ab7f6a68fbaa313a61a823061428bc9082f1c96c",
-    "assets/app.js": "ae09b8ac4e8926ca6b2a42ee381e57f9adf7adc81ab5c0ac993df33e21106166",
+    "assets/app.css": "8df63536eb62bf3c4bc82a80907f0ac84f5e360d1f94059761ca136bef34e911",
+    "assets/app.js": "dfd23eae2ad69f73e4c31fdef3be13b8516e94f623e74083ed39aec75bb1d525",
     "assets/web.js": "092d9d061f4a3129619d1c318da01190da6d04fb8c50d6fc6c8d90a6cde42eb9",
     "assets/web2.js": "4a0cc3ac09324665e3096b2d71937844328b6c6d9f037437098523a57031b0d5",
     "cozy-room-backdrop.jpg": "6503a18f7ff8c45fbe5ae3a0f59849559ba918d94758e2e62d4a03879aeb8a97",
@@ -65,7 +66,7 @@
     "icon.png": "f17fd7015b90c27945381d056aa784eb83fd9155331a7bd22cde83cd19ddade2",
     "icon.svg": "33084c7a79a457eb932633ae1d99df97dcfce4ac7d86cb6025f75b59f083e8b0",
     "index.html": "50058fb9043f9bc1e68ae6f33ee8d6d6dafe052e7b7c84688d810928e0ccf547",
-    "leaderboard.json": "b1c2618bcd03f190c42733e049e72880dbe62f1a0d14d1f4e8e53e632f7a2385",
+    "leaderboard.json": "289eac7f9a50baa02a3e858c9e0afa9992e92deda28c271280121c91eda9282a",
     "manifest.webmanifest": "1244578070351a78ee62f56be85a68773bffdba140871e9b8653e3c146c01273"
   },
   "minAndroidVersion": "2.4.0"

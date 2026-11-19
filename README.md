@@ -2,5 +2,5 @@
 
 Bu dal (`beta`), yalnızca **Puzzle Galaxies BETA** istemcilerinin (Android `.beta` APK ve Windows `Puzzle Galaxies BETA` / `TEST_BETA_BASLAT.bat`) oyun içi otomatik güncelleme alması için derlenmiş statik dağıtım dosyalarını barındırır.
 
-- **Aktif Beta Sürümü:** `v2.4.1-beta.146`
+- **Aktif Beta Sürümü:** `v2.4.3-beta.152`
 - **Canlı (Prod) Kanal İzolasyonu:** Canlı kullanıcılar `main` dalını kullanır; bu dal hiçbir zaman canlı oyuncuları etkilemez.
