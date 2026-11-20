@@ -50,7 +50,7 @@
     "towers/lot_empty.png",
     "towers/town_sky_backdrop.jpg"
   ],
-  "minEngineVersion": "2.4.0",
+  "minEngineVersion": "2.3.0",
   "announcement": "",
   "fileHashes": {
     "assets/TowersPlugin.js": "635680fc77a6f59f0145941b791818f31befc8b3d2732c7648f5b3b2f96befd3",
