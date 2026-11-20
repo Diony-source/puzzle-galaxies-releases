@@ -309,6 +309,12 @@ class MyClass {
     }
 
     async downloadFile(url) {
+        try {
+            var pre = window.parent && window.parent.__PG_DOOM64_PRELOADED__;
+            if (pre && pre.assetsZip && (url === 'assets.zip' || String(url).endsWith('assets.zip'))) {
+                return new Uint8Array(pre.assetsZip);
+            }
+        } catch (_) {}
         return new Promise(function (resolve, reject) {
             var oReq = new XMLHttpRequest();
             oReq.open("GET", url, true);
@@ -832,6 +838,13 @@ class MyClass {
 
     load_url(path) {
         console.log('loading ' + path);
+        try {
+            var pre = window.parent && window.parent.__PG_DOOM64_PRELOADED__;
+            if (pre && pre.romZ64 && (path === 'game.z64' || String(path).endsWith('game.z64'))) {
+                myClass.LoadEmulator(new Uint8Array(pre.romZ64));
+                return;
+            }
+        } catch (_) {}
 
         var req = new XMLHttpRequest();
         req.open("GET", path);
@@ -1687,7 +1700,10 @@ if (window.postLoad)
     window.postLoad();
 }
 
+var __pgPreMod = null;
+try { __pgPreMod = window.parent && window.parent.__PG_DOOM64_PRELOADED__; } catch (_) {}
 window["Module"] = {
+    wasmBinary: (__pgPreMod && __pgPreMod.wasmBinary) ? new Uint8Array(__pgPreMod.wasmBinary) : undefined,
     onRuntimeInitialized: myClass.initModule,
     canvas: document.getElementById('canvas'),
     print: (text) => myClass.processPrintStatement(text),
@@ -1696,7 +1712,7 @@ window["Module"] = {
 
 var rando2 = Math.floor(Math.random() * 100000);
 var script2 = document.createElement('script');
-script2.src = 'input_controller.js?v=' + rando2;
+script2.src = (__pgPreMod && __pgPreMod.blobUrls && __pgPreMod.blobUrls['input_controller.js']) || ('input_controller.js?v=' + rando2);
 document.getElementsByTagName('head')[0].appendChild(script2);
 
 myClass.listenForDarkModeCheckbox();

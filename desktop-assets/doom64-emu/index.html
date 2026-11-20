@@ -25,6 +25,20 @@
 
         document.documentElement.dataset.darkmode = "true";
         try { localStorage.setItem('n64wasm-darkMode', 'true'); } catch (_) {}
+        try {
+            var __origGetGamepads = navigator.getGamepads ? navigator.getGamepads.bind(navigator) : null;
+            Object.defineProperty(navigator, 'getGamepads', {
+                configurable: true,
+                writable: true,
+                value: function () {
+                    try {
+                        return __origGetGamepads ? __origGetGamepads() : [];
+                    } catch (_) {
+                        return [];
+                    }
+                }
+            });
+        } catch (_) {}
     </script>
     <style>
         input[type="file"] {
@@ -1167,9 +1181,11 @@ Source: <a href="https://github.com/andrewnakas/doom64-cleanroom">andrewnakas/do
     <script src="romlist.js"></script>
     <script src="host-bridge.js"></script>
     <script type="text/javascript">
+        var __pgPre = null;
+        try { __pgPre = window.parent && window.parent.__PG_DOOM64_PRELOADED__; } catch (_) {}
         var rando = Math.floor(Math.random() * Math.floor(100000));
         var script = document.createElement('script');
-        script.src = 'script.js?v=' + rando;
+        script.src = (__pgPre && __pgPre.blobUrls && __pgPre.blobUrls['script.js']) || ('script.js?v=' + rando);
         document.getElementsByTagName('head')[0].appendChild(script);
     </script>
 </body>

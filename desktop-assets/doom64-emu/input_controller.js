@@ -638,6 +638,8 @@ class InputController {
 
 window["myApp"].setupInputController();
 
+var __pgPreInp = null;
+try { __pgPreInp = window.parent && window.parent.__PG_DOOM64_PRELOADED__; } catch (_) {}
 var script = document.createElement('script');
-script.src = 'n64wasm.js'
+script.src = (__pgPreInp && __pgPreInp.blobUrls && __pgPreInp.blobUrls['n64wasm.js']) || 'n64wasm.js';
 document.getElementsByTagName('head')[0].appendChild(script);
