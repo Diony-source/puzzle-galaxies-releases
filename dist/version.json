@@ -1,6 +1,6 @@
 {
   "channel": "beta",
-  "version": "2.4.5-beta.182",
+  "version": "2.5.1-beta.186",
   "releaseDate": "2026-11-20",
   "mandatory": true,
   "repoOwner": "Diony-source",
@@ -80,9 +80,9 @@
   "announcement": "",
   "fileHashes": {
     "assets/Doom64Plugin.js": "9c2166852ffe59a7ac69a09dbc0cf8988d61746ce38396ddbf4f44fbac1c469d",
-    "assets/TowersPlugin.js": "dd05fedeaff4b6bde01ac950e57d7ed81e9a6d224bbda47bc327b78a38c78760",
-    "assets/app.css": "1fdc1f54cc0130b54f2946657ad042f086bd282eac0aefb0e20317fa662dbcdc",
-    "assets/app.js": "47a0d7b66e71a3b85e676ea6555e99fba677dad5a8195f71ab7ad424e0ba8835",
+    "assets/TowersPlugin.js": "f6189f2631996f060bc1bac34363633fbcf04659deff4266cb781970c0651bc9",
+    "assets/app.css": "87a22e4a36434c3997acad5eb2c0b250325e7713a85efe2fcae54953958fe8d2",
+    "assets/app.js": "c706d00019dd5e98617ad57cd5d29828ffb5b29d56fc07af739c81692a491a63",
     "assets/app2.css": "13215f00c03d6b3f159c95335df657d3ac75e318226be03fa4ece847378ace1f",
     "assets/web.js": "092d9d061f4a3129619d1c318da01190da6d04fb8c50d6fc6c8d90a6cde42eb9",
     "assets/web2.js": "4a0cc3ac09324665e3096b2d71937844328b6c6d9f037437098523a57031b0d5",
