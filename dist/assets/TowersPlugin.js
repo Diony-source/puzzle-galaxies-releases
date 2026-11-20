@@ -1,229 +1,157 @@
-var kt=Object.defineProperty;var St=(o,t,e)=>t in o?kt(o,t,{enumerable:!0,configurable:!0,writable:!0,value:e}):o[t]=e;var v=(o,t,e)=>St(o,typeof t!="symbol"?t+"":t,e);import{T as q,A as it,g as ft,a as ut,l as nt,v as ot,b as xt,c as K,e as zt,s as Y,r as W,d as gt,f as wt,h as Ct,i as L,j as Et,k as yt,m as Mt,n as J,o as dt,p as I}from"./app.js";const tt={brickPrimary:"#b45309",brickSecondary:"#c2410c",mortar:"#572814",trim:"#fde68a",roofPrimary:"#f59e0b",roofAccent:"#fef3c7",windowLit:"#fef08a",windowGlass:"#38bdf8"};function rt(o,t){const e=q.find(s=>s.id===o),i=q.find(s=>s.id===t);return!e&&!i?tt:{brickPrimary:(e==null?void 0:e.primaryColor)||tt.brickPrimary,brickSecondary:(e==null?void 0:e.secondaryColor)||tt.brickSecondary,mortar:"#2b1810",trim:"#fde68a",roofPrimary:(i==null?void 0:i.primaryColor)||tt.roofPrimary,roofAccent:(i==null?void 0:i.secondaryColor)||tt.roofAccent,windowLit:"#fef08a",windowGlass:"#7dd3fc"}}function Tt(o,t,e,i,s){const r=e+Math.floor(i/2);return o==="roof_spire"?`
-      <rect x="${r-3}" y="${t-6}" width="6" height="4" fill="#090d16" />
-      <rect x="${r-2}" y="${t-5}" width="4" height="3" fill="${s.roofPrimary}" />
-      <rect x="${r-1}" y="${t-9}" width="2" height="4" fill="#e2e8f0" />
-      <rect x="${r-1}" y="${t-11}" width="2" height="2" fill="#ef4444" />
-    `:o==="roof_pyramid"?`
-      <rect x="${e+1}" y="${t-5}" width="${i-2}" height="3" fill="${s.roofPrimary}" />
-      <rect x="${e+4}" y="${t-7}" width="${Math.max(4,i-8)}" height="2" fill="${s.roofAccent}" />
-      <rect x="${r-2}" y="${t-9}" width="4" height="2" fill="${s.roofPrimary}" />
-    `:o==="roof_halo"?`
-      <rect x="${r-5}" y="${t-7}" width="10" height="5" fill="#090d16" />
-      <rect x="${r-4}" y="${t-6}" width="8" height="4" fill="#92400e" />
-      <rect x="${r-4}" y="${t-4}" width="8" height="1" fill="#334155" />
-      <rect x="${r-3}" y="${t-8}" width="6" height="2" fill="${s.roofPrimary}" />
-    `:o==="roof_sun"?`
-      <rect x="${r-4}" y="${t-6}" width="8" height="4" fill="#334155" />
-      <rect x="${r-2}" y="${t-9}" width="4" height="3" fill="${s.roofPrimary}" />
-      <rect x="${r-1}" y="${t-8}" width="2" height="2" fill="#fef08a" />
-      <rect x="${r}" y="${t-11}" width="1" height="2" fill="#fde047" />
-    `:`
-    <rect x="${e+3}" y="${t-6}" width="4" height="4" fill="#090d16" />
-    <rect x="${e+4}" y="${t-5}" width="2" height="3" fill="${s.brickSecondary}" />
-    <rect x="${e+4}" y="${t-8}" width="2" height="1" fill="#cbd5e1" opacity="0.65" />
-  `}function pt(o,t,e,i="roof_flat"){const s=Math.max(3,t),r=Math.max(1,Math.min(s,o)),f=r/s,b=Math.round(9+f*24),h=44,a=h-b,d=r===1,p=r>=5,c=d?7:5,$=d?18:21,y=d?6:7,u=c+$,l=[];for(let S=a+2;S<h-2;S+=3){const g=Math.floor((S-a)/3)%2===0?0:3;for(let C=c+1+g;C<u-2;C+=6)l.push(`<rect x="${C}" y="${S}" width="4" height="2" fill="${e.brickSecondary}" opacity="0.62" />`);S%6===0&&y>=6&&l.push(`<rect x="${u+1}" y="${S-1}" width="${y-2}" height="1" fill="#090d16" opacity="0.35" />`)}const m=[];if(d)m.push(`<rect x="${c-1}" y="${a-2}" width="${$+y+2}" height="3" fill="#090d16" />`,`<rect x="${c}" y="${a-1}" width="${$}" height="2" fill="#dc2626" />`,`<rect x="${u}" y="${a-1}" width="${y}" height="2" fill="#991b1b" />`,`<rect x="${c+2}" y="${a+2}" width="8" height="2" fill="#ef4444" />`,`<rect x="${c+4}" y="${a+2}" width="2" height="2" fill="#fef3c7" />`,`<rect x="${c+8}" y="${a+2}" width="2" height="2" fill="#fef3c7" />`,`<rect x="${c+3}" y="${a+4}" width="6" height="4" fill="${e.windowLit}" />`,`<rect x="${c+12}" y="${a+3}" width="4" height="6" fill="#451a03" />`,`<rect x="${u+2}" y="${a+4}" width="3" height="3" fill="${e.windowGlass}" />`);else{const S=Math.min(6,r),T=Math.max(4,Math.floor((b-6)/S));for(let g=0;g<S;g++){const C=a+3+g*T;if(C+3>h-4)break;const P=(r+g)%2===0,A=(r+g*2)%3!==0;m.push(`<rect x="${c+2}" y="${C}" width="4" height="2" fill="${P?e.windowLit:e.windowGlass}" />`,`<rect x="${c+8}" y="${C}" width="4" height="2" fill="${e.windowLit}" />`,`<rect x="${c+14}" y="${C}" width="4" height="2" fill="${A?e.windowLit:e.windowGlass}" />`),m.push(`<rect x="${u+2}" y="${C-1}" width="3" height="2" fill="${A?e.windowLit:e.windowGlass}" opacity="0.82" />`)}m.push(`<rect x="${c+7}" y="${h-5}" width="6" height="5" fill="#1c1917" />`,`<rect x="${c+6}" y="${h-6}" width="8" height="1" fill="${e.trim}" />`)}const z=p?`
-      <rect x="${c+7}" y="${a+1}" width="7" height="6" fill="#090d16" />
-      <rect x="${c+8}" y="${a+2}" width="5" height="4" fill="#fef3c7" />
-      <rect x="${c+10}" y="${a+2}" width="1" height="3" fill="#0f172a" />
-      <rect x="${c+10}" y="${a+4}" width="2" height="1" fill="#0f172a" />
-    `:"",k=d?"":`
-      <polygon points="${c},${a} ${u},${a} ${u+y},${a-3} ${c+y},${a-3}" fill="${e.roofAccent}" />
-      <rect x="${c-1}" y="${a}" width="${$+y+2}" height="2" fill="${e.roofPrimary}" />
-    `;return`
-    <svg class="tower-pixel-bldg-svg" viewBox="0 0 40 48" shape-rendering="crispEdges" aria-hidden="true">
-      <!-- Sidewalk curb & ambient pixel drop shadow -->
-      <rect x="2" y="44" width="36" height="3" fill="#090d16" />
-      <rect x="3" y="43" width="34" height="2" fill="#475569" />
-      <rect x="${u+y}" y="${a+2}" width="2" height="${b}" fill="#090d16" opacity="0.45" />
+var $t=Object.defineProperty;var St=(n,t,e)=>t in n?$t(n,t,{enumerable:!0,configurable:!0,writable:!0,value:e}):n[t]=e;var b=(n,t,e)=>St(n,typeof t!="symbol"?t+"":t,e);import{A as it,T as D,g as yt,a as ut,l as ot,v as lt,b as zt,c as R,e as Ct,s as Q,r as W,d as gt,f as mt,h as Mt,i as A,j as Et,k as wt,m as Tt,n as J,o as dt,p as G}from"./app.js";const H="./towers",xt={1:{src:`${H}/bldg_1.png`,heightPct:54},2:{src:`${H}/bldg_2.png`,heightPct:68},3:{src:`${H}/bldg_3.png`,heightPct:78},4:{src:`${H}/bldg_4.png`,heightPct:87},5:{src:`${H}/bldg_5.png`,heightPct:94},6:{src:`${H}/bldg_6.png`,heightPct:100}};function nt(n,t){const e={facade_neon:{p:"#c85a32",s:"#e07a47",sh:"#7f3319",mortar:"#471d10",w:"#fde047",wg:"#fef08a",hl:"#ffedd5"},facade_crimson:{p:"#b91c1c",s:"#ef4444",sh:"#7f1d1d",mortar:"#450a0a",w:"#fed7aa",wg:"#fef3c7",hl:"#fecaca"},facade_emerald:{p:"#047857",s:"#10b981",sh:"#064e3b",mortar:"#022c22",w:"#fde68a",wg:"#fef9c3",hl:"#a7f3d0"},facade_gold:{p:"#b45309",s:"#f59e0b",sh:"#78350f",mortar:"#451a03",w:"#fef08a",wg:"#ffffff",hl:"#fde68a"},facade_plasma:{p:"#4338ca",s:"#818cf8",sh:"#312e81",mortar:"#1e1b4b",w:"#a5f3fc",wg:"#ecfeff",hl:"#ddd6fe"}},i={roof_flat:{rp:"#78716c",ra:"#fbbf24"},roof_spire:{rp:"#d97706",ra:"#fde047"},roof_dome:{rp:"#0f766e",ra:"#5eead4"},roof_beacon:{rp:"#3b82f6",ra:"#bae6fd"},roof_sun:{rp:"#ea580c",ra:"#fef08a"}},s=e[n]||e.facade_neon,d=i[t]||i.roof_flat;return{brickPrimary:s.p,brickSecondary:s.s,brickShadow:s.sh,mortar:s.mortar,windowLit:s.w,windowGlow:s.wg,roofPrimary:d.rp,roofAccent:d.ra,outline:"#1e1829",highlight:s.hl}}function Lt(n,t){const e=Math.max(1,Math.min(t,n));let i=1;t<=3?i=e===1?1:e===2?3:5:t===4?i=e===1?1:e===2?2:e===3?4:6:t===5?i=e===1?1:e===2?2:e===3?3:e===4?5:6:e===1?i=1:e===2?i=2:e===3?i=3:e===4?i=4:e===5?i=5:i=6;const s=t>6?Math.min(100,48+Math.round(e/t*52)):null,d=xt[i];return{tierIdx:i,src:d.src,heightPct:s??d.heightPct}}function Pt(n){switch(n){case"roof_spire":return"--bldg-glow: rgba(251, 191, 36, 0.55);";case"roof_dome":return"--bldg-glow: rgba(45, 212, 191, 0.5);";case"roof_beacon":return"--bldg-glow: rgba(56, 189, 248, 0.55);";case"roof_sun":return"--bldg-glow: rgba(251, 146, 60, 0.6);";default:return""}}function pt(n,t,e,i){const{tierIdx:s,src:d,heightPct:y}=Lt(n,t),f=Pt(i);return`
+    <div
+      class="tower-pixel-bldg-svg tier-sprite-${s}"
+      style="--bldg-h: ${y}%; --bldg-trim: ${e.brickSecondary}; ${f}"
+      aria-hidden="true"
+    >
+      <img
+        class="tower-pixel-sprite-img"
+        src="${d}"
+        alt=""
+        loading="eager"
+        decoding="async"
+        draggable="false"
+      />
+    </div>
+  `}function ft(n,t,e){return n?e>=3?"gold":e===2?"silver":"bronze":t?"active":"locked"}function kt(n,t=!1){switch(n){case"gold":return`${H}/${t?"bldg_6.png":"bldg_5.png"}`;case"silver":return`${H}/bldg_3.png`;case"bronze":return`${H}/bldg_1.png`;case"active":return`${H}/lot_crane.png`;default:return`${H}/lot_empty.png`}}function At(n,t,e,i="",s=!1){const d=kt(n,s);return`
+    <img
+      class="${i} street-sprite-img street-tier-${n}"
+      src="${d}"
+      alt=""
+      loading="eager"
+      decoding="async"
+      draggable="false"
+      aria-hidden="true"
+    />
+  `}function Bt(n,t,e,i,s,d){const w=Math.max(1,n.length),o=78,u=(1200-o*2)/w,p=206,E=n.map((S,h)=>{const l=d(S.id),k=t.solvedIds.includes(S.id),C=l<=s||k,a=t.levelStars[S.id]||0,g=ft(k,C,a),$=h===w-1,v=kt(g,$),M=Math.round(o+u*(h+.5)),T=Math.min(82,Math.round(u*.9)),P=g==="gold"?$?148:132:g==="silver"?106:g==="bronze"?64:g==="active"?88:34,B=p-P,I=g==="gold"?"#f59e0b":g==="silver"?"#cbd5e1":g==="bronze"?"#d97706":g==="active"?"#0ea5e9":"#64748b",_=g==="silver"||g==="gold"?"#1e1b2e":"#ffffff";return`
+        <g>
+          <ellipse cx="${M}" cy="${p+1}" rx="${Math.round(T*.42)}" ry="5" fill="rgba(30,24,41,0.22)" />
+          <image
+            href="${v}"
+            x="${M-Math.round(T/2)}"
+            y="${B}"
+            width="${T}"
+            height="${P}"
+            preserveAspectRatio="xMidYMax meet"
+            style="image-rendering: pixelated;"
+          />
+          <rect x="${M-12}" y="${p+10}" width="24" height="16" rx="3" fill="${I}" stroke="#1e1829" stroke-width="2" />
+          <text x="${M}" y="${p+21}" text-anchor="middle" fill="${_}" font-size="10" font-weight="900" font-family="monospace">${h+1}</text>
+        </g>
+      `}).join("");return`
+    <svg class="towers-street-panorama-svg" viewBox="0 0 1200 248" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mahalle Caddesi Silüeti">
+      <image
+        href="${H}/town_sky_backdrop.jpg"
+        x="0"
+        y="0"
+        width="1200"
+        height="218"
+        preserveAspectRatio="xMidYMax slice"
+        style="image-rendering: pixelated;"
+      />
+      <!-- Sunlit sidewalk curb & paved boulevard street connecting all 12 buildings -->
+      <rect x="0" y="${p-4}" width="1200" height="8" fill="#fef3c7" stroke="#292524" stroke-width="2" />
+      <rect x="0" y="${p+4}" width="1200" height="40" fill="#475569" />
+      <line x1="0" y1="${p+28}" x2="1200" y2="${p+28}" stroke="#fde047" stroke-width="3" stroke-dasharray="22 14" />
+      ${E}
+    </svg>
+  `}function Kt(n,t,e,i,s){const o=Math.max(1,n.length),c=82+Math.max(0,o-1)*148+84,u=n.map((a,g)=>{const $=g%2===0,v=$?20:80,M=Math.round(v/100*680),T=82+g*148,P=$?"right":"left",B=Math.round($?680*.34:680*.66);return{...a,xPct:v,xSvg:M,ySvg:T,plotSide:P,drivewayX:B}}),p=u.slice(0,-1).map((a,g)=>{const $=u[g+1],v=Math.round((a.ySvg+$.ySvg)/2),M=`M ${a.xSvg} ${a.ySvg} C ${a.xSvg} ${v}, ${$.xSvg} ${v}, ${$.xSvg} ${$.ySvg}`,T=$.isUnlocked||a.isCompleted,P=T?"#fef3c7":"#e7e5e4",B=a.isCompleted&&$.isUnlocked?"#334155":T?"#475569":"#94a3b8";return`
+        <path d="${M}" fill="none" stroke="#1e293b" stroke-width="52" stroke-linecap="round" vector-effect="non-scaling-stroke" opacity="0.28" />
+        <path d="${M}" fill="none" stroke="${P}" stroke-width="44" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+        <path d="${M}" fill="none" stroke="${B}" stroke-width="32" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+        <path d="${M}" fill="none" stroke="${T?"#fde047":"#cbd5e1"}" stroke-width="3.5" stroke-dasharray="11 11" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+      `}).join(""),E=u[0],S=u[u.length-1],h=E?`M ${Math.round(680*.5)} 0 C ${Math.round(680*.5)} 36, ${E.xSvg} 36, ${E.xSvg} ${E.ySvg}`:"",l=S?`M ${S.xSvg} ${S.ySvg} C ${S.xSvg} ${c-34}, ${Math.round(680*.5)} ${c-34}, ${Math.round(680*.5)} ${c}`:"",k=u.map(a=>{const g=a.isCompleted,$=a.isUnlocked,v=g?"#fde68a":$?"#fef3c7":"#cbd5e1";return`
+        <line x1="${a.xSvg}" y1="${a.ySvg}" x2="${a.drivewayX}" y2="${a.ySvg}" stroke="#1e293b" stroke-width="22" stroke-linecap="round" vector-effect="non-scaling-stroke" opacity="0.22" />
+        <line x1="${a.xSvg}" y1="${a.ySvg}" x2="${a.drivewayX}" y2="${a.ySvg}" stroke="${v}" stroke-width="16" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+        <circle cx="${a.xSvg}" cy="${a.ySvg}" r="18" fill="${v}" stroke="#292524" stroke-width="2.5" />
+      `}).join(""),C=u.map(a=>{const g=(a.ySvg/c*100).toFixed(3),$=["candy-road-pin",`tier-${a.tier}`,a.isUnlocked?"unlocked":"locked"].join(" "),v=a.tier==="active"?"▶":a.isCompleted?`${a.relIdx+1}`:"🔒",M=a.stars>0?"★".repeat(a.stars):a.tier==="active"?`#${a.lvl.code}`:`${a.relIdx+1}`,T="★".repeat(a.stars)+"☆".repeat(Math.max(0,3-a.stars));return`
+        ${a.isUnlocked?`
+          <button
+            type="button"
+            class="${$}"
+            style="left: ${a.xPct}%; top: ${g}%;"
+            data-start-campaign="${a.lvl.id}"
+            title="#${s(a.lvl.code)} ${s(a.lvl.cityName)}"
+          >
+            <span class="pin-main">${v}</span>
+            <span class="pin-sub">${M}</span>
+          </button>
+        `:`
+          <div
+            class="${$}"
+            style="left: ${a.xPct}%; top: ${g}%;"
+            aria-label="Kilitli Parsel #${s(a.lvl.code)}"
+          >
+            <span class="pin-main">${v}</span>
+            <span class="pin-sub">${M}</span>
+          </div>
+        `}
 
-      <!-- Hard 1px pixel ink contour around whole 2.5D volume -->
-      <rect x="${c-1}" y="${a-2}" width="${$+y+2}" height="${b+2}" fill="#090d16" />
-
-      <!-- Front lit facade -->
-      <rect x="${c}" y="${a}" width="${$}" height="${b}" fill="${e.brickPrimary}" />
-      <!-- 2.5D Right shadowed side facade -->
-      <rect x="${u}" y="${a-1}" width="${y}" height="${b+1}" fill="${e.brickPrimary}" />
-      <rect x="${u}" y="${a-1}" width="${y}" height="${b+1}" fill="#090d16" opacity="0.38" />
-      <!-- Corner seam highlight -->
-      <rect x="${u-1}" y="${a}" width="1" height="${b}" fill="#090d16" opacity="0.6" />
-
-      ${l.join("")}
-      ${k}
-      ${Tt(i,a-(d?1:2),c,$,e)}
-      ${m.join("")}
-      ${z}
-    </svg>
-  `}function mt(o,t,e="roof_flat",i="street-medal-bldg-svg"){return o==="locked"?`
-      <svg class="${i}" viewBox="0 0 36 44" shape-rendering="crispEdges" aria-hidden="true">
-        <rect x="2" y="38" width="32" height="4" fill="#1e293b" />
-        <rect x="4" y="35" width="28" height="4" fill="#57361c" />
-        <!-- Picket fence & barrier -->
-        <rect x="6" y="30" width="2" height="7" fill="#92400e" />
-        <rect x="13" y="30" width="2" height="7" fill="#92400e" />
-        <rect x="21" y="30" width="2" height="7" fill="#92400e" />
-        <rect x="28" y="30" width="2" height="7" fill="#92400e" />
-        <rect x="6" y="32" width="24" height="2" fill="#b45309" />
-        <rect x="14" y="24" width="8" height="6" fill="#090d16" />
-        <rect x="15" y="25" width="6" height="4" fill="#475569" />
-        <rect x="16" y="26" width="4" height="2" fill="#94a3b8" />
+        <article
+          class="towers-street-node candy-plot-card side-${a.plotSide} tier-${a.tier} ${a.isUnlocked?"unlocked":"locked"}"
+          style="top: ${g}%;"
+          data-city-card="${a.lvl.id}"
+        >
+          <div class="street-node-art">
+            ${At(a.tier,t,e,"street-node-bldg-svg",a.isLandmark)}
+          </div>
+          <div class="street-node-body">
+            <div class="towers-city-top">
+              <span class="towers-city-code">#${s(a.lvl.code)} • ${a.lvl.size}×${a.lvl.size} ${a.diffBadge}</span>
+              ${a.mechPill}
+            </div>
+            <h4 class="towers-city-name">${s(a.lvl.cityName)}</h4>
+            <div class="candy-tier-chip tier-${a.tier}">${a.tierTitle}</div>
+            <div class="towers-city-meta">
+              <span class="towers-city-stars ${a.stars>0?"earned":""}">${T}</span>
+              <span class="towers-city-time">${a.bestSec?a.stars<3?`⏱️ ${i(a.bestSec)} • 🥇 ≤ ${i(a.lvl.goldSec)}`:`🥇 ${i(a.bestSec)}`:`🥇 ≤ ${i(a.lvl.goldSec)}`}</span>
+            </div>
+            <div class="candy-plot-action">
+              ${a.isUnlocked?`<button type="button" class="towers-city-play-btn ${a.isCompleted?"completed":"active"}" data-start-campaign="${a.lvl.id}">${a.isCompleted?"🔁 Tekrar Oyna":"🏗️ İnşa Et"}</button>`:'<span class="towers-city-lock-pill">🔒 Önceki Parseli Bitir</span>'}
+            </div>
+          </div>
+        </article>
+      `}).join("");return`
+    <div class="towers-candy-map" style="--candy-map-h: ${c}px;">
+      <svg
+        class="candy-road-svg"
+        viewBox="0 0 680 ${c}"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        ${h?`
+          <path d="${h}" fill="none" stroke="#fef3c7" stroke-width="44" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+          <path d="${h}" fill="none" stroke="#475569" stroke-width="32" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+          <path d="${h}" fill="none" stroke="#fde047" stroke-width="3.5" stroke-dasharray="11 11" vector-effect="non-scaling-stroke" />
+        `:""}
+        ${l?`
+          <path d="${l}" fill="none" stroke="#e7e5e4" stroke-width="44" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+          <path d="${l}" fill="none" stroke="#94a3b8" stroke-width="32" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+          <path d="${l}" fill="none" stroke="#cbd5e1" stroke-width="3.5" stroke-dasharray="11 11" vector-effect="non-scaling-stroke" />
+        `:""}
+        ${p}
+        ${k}
       </svg>
-    `:o==="active"?`
-      <svg class="${i}" viewBox="0 0 36 44" shape-rendering="crispEdges" aria-hidden="true">
-        <rect x="2" y="38" width="32" height="4" fill="#334155" />
-        <rect x="5" y="35" width="26" height="4" fill="#78350f" />
-        <!-- Yellow pixel crane tower & jib -->
-        <rect x="9" y="10" width="4" height="26" fill="#090d16" />
-        <rect x="10" y="11" width="2" height="25" fill="#facc15" />
-        <rect x="7" y="10" width="22" height="3" fill="#090d16" />
-        <rect x="8" y="11" width="20" height="2" fill="#eab308" />
-        <rect x="23" y="13" width="1" height="8" fill="#cbd5e1" />
-        <!-- Hanging brick block -->
-        <rect x="20" y="20" width="7" height="5" fill="#ea580c" />
-        <rect x="21" y="21" width="5" height="2" fill="#fdba74" />
-        <!-- Stacked bricks on dirt lot -->
-        <rect x="15" y="31" width="11" height="5" fill="#c2410c" />
-        <rect x="16" y="32" width="4" height="2" fill="#f97316" />
-        <rect x="21" y="32" width="4" height="2" fill="#f97316" />
-      </svg>
-    `:o==="bronze"?`
-      <svg class="${i}" viewBox="0 0 36 44" shape-rendering="crispEdges" aria-hidden="true">
-        <rect x="2" y="39" width="32" height="3" fill="#090d16" />
-        <rect x="3" y="38" width="30" height="2" fill="#57534e" />
-        <!-- Humble stovepipe & smoke puffs -->
-        <rect x="21" y="19" width="3" height="7" fill="#475569" />
-        <rect x="22" y="15" width="2" height="2" fill="#cbd5e1" opacity="0.6" />
-        <rect x="24" y="12" width="3" height="2" fill="#e2e8f0" opacity="0.45" />
-        <!-- House 2.5D body -->
-        <rect x="6" y="27" width="23" height="12" fill="#090d16" />
-        <rect x="7" y="28" width="15" height="11" fill="#d6d3d1" />
-        <rect x="7" y="34" width="15" height="5" fill="#b45309" />
-        <rect x="22" y="28" width="6" height="11" fill="#78716c" />
-        <!-- Corrugated patched tin roof -->
-        <rect x="5" y="25" width="25" height="3" fill="#090d16" />
-        <rect x="6" y="25" width="17" height="2" fill="#ea580c" />
-        <rect x="11" y="25" width="4" height="2" fill="#64748b" />
-        <rect x="23" y="25" width="6" height="2" fill="#9a3412" />
-        <!-- Warm lantern window + small wooden door -->
-        <rect x="9" y="30" width="4" height="4" fill="#facc15" />
-        <rect x="16" y="31" width="4" height="8" fill="#451a03" />
-        <rect x="24" y="31" width="2" height="3" fill="#fde047" />
-        <!-- Small yard pot -->
-        <rect x="4" y="36" width="3" height="3" fill="#16a34a" />
-      </svg>
-    `:o==="silver"?`
-      <svg class="${i}" viewBox="0 0 36 44" shape-rendering="crispEdges" aria-hidden="true">
-        <rect x="2" y="39" width="32" height="3" fill="#090d16" />
-        <rect x="3" y="38" width="30" height="2" fill="#475569" />
-        <!-- Rooftop antenna -->
-        <rect x="16" y="10" width="1" height="6" fill="#94a3b8" />
-        <rect x="14" y="12" width="5" height="1" fill="#e2e8f0" />
-        <!-- Main 2.5D Apartment -->
-        <rect x="6" y="16" width="24" height="23" fill="#090d16" />
-        <rect x="7" y="17" width="16" height="22" fill="${t.brickPrimary}" />
-        <rect x="23" y="17" width="6" height="22" fill="${t.mortar}" />
-        <!-- Roof coping -->
-        <rect x="6" y="15" width="24" height="3" fill="${t.roofPrimary}" />
-        <!-- 3 floors of crisp windows + balcony rails -->
-        <rect x="9" y="20" width="4" height="3" fill="#fde047" />
-        <rect x="16" y="20" width="4" height="3" fill="#7dd3fc" />
-        <rect x="9" y="25" width="4" height="3" fill="#7dd3fc" />
-        <rect x="16" y="25" width="4" height="3" fill="#fde047" />
-        <rect x="8" y="28" width="13" height="1" fill="#e2e8f0" />
-        <rect x="9" y="30" width="4" height="3" fill="#fde047" />
-        <rect x="16" y="30" width="4" height="3" fill="#fde047" />
-        <rect x="25" y="21" width="2" height="3" fill="#7dd3fc" />
-        <rect x="25" y="27" width="2" height="3" fill="#fde047" />
-        <!-- Canopy entrance -->
-        <rect x="13" y="34" width="5" height="5" fill="#1e293b" />
-        <rect x="12" y="33" width="7" height="1" fill="#f59e0b" />
-      </svg>
-    `:`
-    <svg class="${i}" viewBox="0 0 36 44" shape-rendering="crispEdges" aria-hidden="true">
-      <rect x="2" y="39" width="32" height="3" fill="#090d16" />
-      <rect x="3" y="38" width="30" height="2" fill="#94a3b8" />
-      <!-- Golden Spire + penthouse beacon -->
-      <rect x="17" y="2" width="2" height="6" fill="#fde047" />
-      <rect x="14" y="6" width="8" height="4" fill="#f59e0b" />
-      <rect x="12" y="9" width="12" height="2" fill="#fef08a" />
-      <!-- Luxury Stone & Warm Terracotta Tower -->
-      <rect x="5" y="10" width="26" height="29" fill="#090d16" />
-      <rect x="6" y="11" width="18" height="28" fill="#fef3c7" />
-      <rect x="7" y="12" width="16" height="27" fill="#d97706" />
-      <rect x="24" y="11" width="6" height="28" fill="#78350f" />
-      <!-- Marble cornice stripes -->
-      <rect x="6" y="11" width="18" height="2" fill="#fde047" />
-      <rect x="6" y="20" width="18" height="2" fill="#fef3c7" />
-      <rect x="6" y="29" width="18" height="2" fill="#fef3c7" />
-      <!-- Tall illuminated luxury suite windows -->
-      <rect x="9" y="14" width="4" height="5" fill="#fef08a" />
-      <rect x="17" y="14" width="4" height="5" fill="#7dd3fc" />
-      <rect x="9" y="23" width="4" height="5" fill="#7dd3fc" />
-      <rect x="17" y="23" width="4" height="5" fill="#fef08a" />
-      <rect x="26" y="15" width="3" height="4" fill="#fef08a" />
-      <rect x="26" y="24" width="3" height="4" fill="#7dd3fc" />
-      <!-- Arched Gold Marble Lobby + ornamental pixel cypress trees -->
-      <rect x="12" y="32" width="6" height="7" fill="#0f172a" />
-      <rect x="11" y="31" width="8" height="2" fill="#facc15" />
-      <rect x="3" y="32" width="3" height="6" fill="#16a34a" />
-      <rect x="31" y="32" width="3" height="6" fill="#15803d" />
-      ${e==="roof_halo"?'<rect x="11" y="5" width="14" height="2" fill="#38bdf8" />':""}
+      <div class="candy-map-nodes-layer">
+        ${C}
+      </div>
+    </div>
+  `}function at(n,t=44){const i={char_apprentice:"#ea580c",char_planner:"#0284c7",char_master:"#0d9488",char_emperor:"#b45309"}[n]||"#f59e0b",s=n==="char_emperor"?"#facc15":n==="char_master"?"#e2e8f0":n==="char_planner"?"#38bdf8":"#fbbf24";return`
+    <svg viewBox="0 0 24 24" width="${t}" height="${t}" class="architect-avatar-svg" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+      <rect width="24" height="24" fill="#1e1b2e" />
+      <rect x="6" y="4" width="12" height="2" fill="${s}" />
+      <rect x="4" y="6" width="16" height="2" fill="${s}" stroke="#090d16" stroke-width="1" />
+      <rect x="7" y="8" width="10" height="7" fill="#fcd34d" />
+      <rect x="8" y="8" width="8" height="2" fill="#92400e" />
+      <rect x="9" y="11" width="2" height="2" fill="#0f172a" />
+      <rect x="13" y="11" width="2" height="2" fill="#0f172a" />
+      <rect x="5" y="16" width="14" height="7" fill="${i}" />
+      <rect x="10" y="16" width="4" height="7" fill="#1e293b" />
+      <rect x="7" y="17" width="2" height="2" fill="#ffffff" />
+      <rect x="15" y="17" width="2" height="2" fill="#ffffff" />
     </svg>
-  `}function $t(o,t,e){return o?e>=3?"gold":e===2?"silver":"bronze":t?"active":"locked"}function Lt(o,t,e,i,s,r){const b=o.map((d,p)=>{const c=r(d.id),$=t.solvedIds.includes(d.id),y=c<=s,u=t.levelStars[d.id]||0,l=$t($,y,u),m=12+p*38,z=mt(l,e,i).replace(/<svg[^>]*>/,"").replace("</svg>","");return`
-      <g transform="translate(${m}, 38)" class="skyline-lot-group tier-${l}">
-        <g transform="scale(0.95)">${z}</g>
-        <rect x="11" y="42" width="12" height="7" fill="#090d16" />
-        <rect x="12" y="43" width="10" height="5" fill="${l==="gold"?"#facc15":l==="silver"?"#cbd5e1":l==="bronze"?"#d97706":l==="active"?"#38bdf8":"#475569"}" />
-        <text x="17" y="47" font-size="4.5" font-weight="900" text-anchor="middle" fill="#090d16">${p+1}</text>
-      </g>
-    `}),h=[6,126,246,366,466].map(d=>`
-      <rect x="${d}" y="58" width="2" height="22" fill="#334155" />
-      <rect x="${d-1}" y="56" width="4" height="3" fill="#fef08a" />
-      <rect x="${d-3}" y="59" width="8" height="6" fill="#fde047" opacity="0.16" />
-    `),a=[];for(let d=8;d<480;d+=26)a.push(`<rect x="${d}" y="87" width="14" height="2" fill="#facc15" opacity="0.7" />`);return`
-    <svg class="towers-street-panorama-svg" viewBox="0 0 480 96" shape-rendering="crispEdges" aria-label="Mahalle Caddesi Görünümü">
-      <!-- Dusk pixel sky & faint horizon buildings -->
-      <rect width="480" height="96" fill="#0b1021" />
-      <rect y="28" width="480" height="24" fill="#171530" />
-      <rect y="50" width="480" height="28" fill="#1e1b2e" />
-      <!-- Pixel stars & moon -->
-      <rect x="424" y="8" width="10" height="10" fill="#fef08a" />
-      <rect x="429" y="8" width="5" height="5" fill="#0b1021" />
-      <rect x="28" y="10" width="2" height="2" fill="#e2e8f0" />
-      <rect x="92" y="16" width="2" height="2" fill="#fde047" />
-      <rect x="174" y="9" width="2" height="2" fill="#93c5fd" />
-      <rect x="262" y="14" width="2" height="2" fill="#e2e8f0" />
-      <rect x="338" y="11" width="2" height="2" fill="#fde047" />
-      <!-- Distant city blocks silhouette -->
-      <rect x="18" y="34" width="26" height="24" fill="#131a33" />
-      <rect x="64" y="28" width="22" height="30" fill="#11162b" />
-      <rect x="112" y="38" width="32" height="20" fill="#151b36" />
-      <rect x="182" y="25" width="24" height="33" fill="#11162b" />
-      <rect x="242" y="32" width="34" height="26" fill="#151b36" />
-      <rect x="314" y="26" width="22" height="32" fill="#11162b" />
-      <rect x="378" y="34" width="28" height="24" fill="#151b36" />
-      <!-- Sidewalk curb + asphalt avenue -->
-      <rect y="75" width="480" height="7" fill="#475569" />
-      <rect y="75" width="480" height="2" fill="#94a3b8" />
-      <rect y="82" width="480" height="14" fill="#1e293b" />
-      ${a.join("")}
-      ${h.join("")}
-      ${b.join("")}
-    </svg>
-  `}function at(o,t=36){let e="#fbbf24",i="#d97706",s="#0284c7",r="#f97316";return o==="char_planner"?(e="#34d399",i="#059669",s="#0f766e",r="#fde047"):o==="char_skyline"?(e="#f97316",i="#c2410c",s="#334155",r="#38bdf8"):o==="char_neon"?(e="#ec4899",i="#9d174d",s="#312e81",r="#22d3ee"):o==="char_quantum"?(e="#a855f7",i="#6b21a8",s="#1e1b4b",r="#c084fc"):o==="char_emperor"&&(e="#fde047",i="#b45309",s="#7c2d12",r="#fef08a"),`
-    <svg width="${t}" height="${t}" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true">
-      <rect width="16" height="16" fill="#0f172a" />
-      <!-- Hard hat / Architect Crown -->
-      <rect x="4" y="2" width="8" height="3" fill="${e}" />
-      <rect x="3" y="4" width="10" height="2" fill="${i}" />
-      <!-- Face -->
-      <rect x="5" y="6" width="6" height="4" fill="#fdba74" />
-      <rect x="6" y="7" width="1" height="1" fill="#0f172a" />
-      <rect x="9" y="7" width="1" height="1" fill="#0f172a" />
-      <!-- Jacket & Blueprint Tie -->
-      <rect x="3" y="10" width="10" height="5" fill="${s}" />
-      <rect x="7" y="10" width="2" height="4" fill="${r}" />
-    </svg>
-  `}function H(o){return o.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}function Pt(o){const t=Math.max(0,Math.floor(o)),e=Math.floor(t/60),i=t%60;return`${String(e).padStart(2,"0")}:${String(i).padStart(2,"0")}`}const ct=[[1,3,2],[2,1,3],[3,2,1]],et=[[1,0,0],[2,1,0],[3,0,1]];function At(o){const{step:t,miniBoard:e,selectedMiniCell:i,palId:s}=o,r=rt(s.facade,s.roof),f=e.every((a,d)=>a.every((p,c)=>p===ct[d][c])),b=[3,1,2],h=[2,2,1];return`
+  `}function q(n){return n.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}function Ht(n){const t=Math.max(0,Math.floor(n)),e=Math.floor(t/60),i=t%60;return`${String(e).padStart(2,"0")}:${String(i).padStart(2,"0")}`}const ct=[[1,3,2],[2,1,3],[3,2,1]],et=[[1,0,0],[2,1,0],[3,0,1]];function It(n){const{step:t,miniBoard:e,selectedMiniCell:i,palId:s}=n,d=nt(s.facade,s.roof),y=e.every((o,c)=>o.every((u,p)=>u===ct[c][p])),f=[3,1,2],w=[2,2,1];return`
     <div class="towers-modal-backdrop" id="towers-tutorial-modal">
       <div class="towers-modal-card wide">
         <div class="towers-modal-head">
@@ -266,45 +194,45 @@ var kt=Object.defineProperty;var St=(o,t,e)=>t in o?kt(o,t,{enumerable:!0,config
             <div class="towers-tut-mini-wrap">
               <div class="towers-tut-mini-grid">
                 <div class="mini-corner"></div>
-                ${b.map(a=>`<div class="mini-clue"><b>${a}</b><small>▾</small></div>`).join("")}
-                ${[0,1,2].map(a=>`
-                  <div class="mini-clue"><b>${h[a]}</b><small>▸</small></div>
-                  ${[0,1,2].map(d=>{var l;const p=((l=e[a])==null?void 0:l[d])||0,c=et[a][d]>0,$=i.r===a&&i.c===d,y=p>0&&p===ct[a][d],u=p>0&&p!==ct[a][d];return`
+                ${f.map(o=>`<div class="mini-clue"><b>${o}</b><small>▾</small></div>`).join("")}
+                ${[0,1,2].map(o=>`
+                  <div class="mini-clue"><b>${w[o]}</b><small>▸</small></div>
+                  ${[0,1,2].map(c=>{var l;const u=((l=e[o])==null?void 0:l[c])||0,p=et[o][c]>0,E=i.r===o&&i.c===c,S=u>0&&u===ct[o][c],h=u>0&&u!==ct[o][c];return`
                         <button
                           type="button"
-                          class="mini-cell ${c?"fixed":""} ${$?"selected":""} ${u?"wrong":y?"correct":""}"
-                          data-tut-cell="${a}-${d}"
+                          class="mini-cell ${p?"fixed":""} ${E?"selected":""} ${h?"wrong":S?"correct":""}"
+                          data-tut-cell="${o}-${c}"
                         >
-                          ${p>0?`<div class="mini-bldg-box">${pt(p,3,r,"roof_flat")}<span class="mini-bldg-num">${p}</span></div>`:'<span class="mini-empty-plus">+</span>'}
+                          ${u>0?`<div class="mini-bldg-box">${pt(u,3,d,"roof_flat")}<span class="mini-bldg-num">${u}</span></div>`:'<span class="mini-empty-plus">+</span>'}
                         </button>
                       `}).join("")}
                 `).join("")}
               </div>
 
               <div class="towers-tut-num-row">
-                ${[1,2,3].map(a=>`
-                  <button type="button" class="towers-mini-num-btn" data-tut-num="${a}">
-                    🧱 ${a} Kat
+                ${[1,2,3].map(o=>`
+                  <button type="button" class="towers-mini-num-btn" data-tut-num="${o}">
+                    🧱 ${o} Kat
                   </button>
                 `).join("")}
                 <button type="button" class="towers-mini-num-btn clear" data-tut-num="0">Sil</button>
               </div>
-              <div class="towers-tut-status ${f?"ok":""}">
-                ${f?"✅ Harika! Tüm 3×3 blok çözüldü, artık hazırsın!":`Seçili Kare: S${i.r+1}, K${i.c+1}`}
+              <div class="towers-tut-status ${y?"ok":""}">
+                ${y?"✅ Harika! Tüm 3×3 blok çözüldü, artık hazırsın!":`Seçili Kare: S${i.r+1}, K${i.c+1}`}
               </div>
             </div>
           </div>
 
           <div class="towers-modal-footer">
-            ${t<3&&!f?'<button id="btn-towers-tutorial-next" class="towers-primary-cta">Sonraki Adım ➡️</button>':""}
+            ${t<3&&!y?'<button id="btn-towers-tutorial-next" class="towers-primary-cta">Sonraki Adım ➡️</button>':""}
             <button id="btn-towers-tutorial-practice" class="towers-primary-cta">
-              🧱 ${f?"İlk Şehir #1-1 Başlat!":"Hemen #1-1 İle Başla"}
+              🧱 ${y?"İlk Şehir #1-1 Başlat!":"Hemen #1-1 İle Başla"}
             </button>
           </div>
         </div>
       </div>
     </div>
-  `}function Bt(){return`
+  `}function qt(){return`
     <div class="towers-modal-backdrop" id="towers-rules-modal">
       <div class="towers-modal-card">
         <div class="towers-modal-head">
@@ -322,7 +250,7 @@ var kt=Object.defineProperty;var St=(o,t,e)=>t in o?kt(o,t,{enumerable:!0,config
         </div>
       </div>
     </div>
-  `}function Ht(o){const t=rt(o.equippedFacadeId,o.equippedRoofId);return`
+  `}function Rt(n){const t=nt(n.equippedFacadeId,n.equippedRoofId);return`
     <div class="towers-modal-backdrop" id="towers-workshop-modal">
       <div class="towers-modal-card wide">
         <div class="towers-modal-head">
@@ -331,7 +259,7 @@ var kt=Object.defineProperty;var St=(o,t,e)=>t in o?kt(o,t,{enumerable:!0,config
             <p>Piksel mimarını seç ve apartman cepheleri ile tarihi çatı stillerini özelleştir.</p>
           </div>
           <div class="towers-modal-balance">
-            <span>Bakiye: <strong>💠 ${o.blueprintGems}</strong></span>
+            <span>Bakiye: <strong>💠 ${n.blueprintGems}</strong></span>
             <button id="btn-towers-close-modal" class="towers-close-btn">✕</button>
           </div>
         </div>
@@ -339,21 +267,21 @@ var kt=Object.defineProperty;var St=(o,t,e)=>t in o?kt(o,t,{enumerable:!0,config
         <div class="towers-modal-body">
           <h4 class="towers-section-sub">👷 Piksel Mimar Karakterleri (6 Rol)</h4>
           <div class="towers-workshop-grid">
-            ${it.map(e=>{const i=o.unlockedCharacterIds.includes(e.id),s=o.equippedCharacterId===e.id,r=o.blueprintGems>=e.costGems;return`
+            ${it.map(e=>{const i=n.unlockedCharacterIds.includes(e.id),s=n.equippedCharacterId===e.id,d=n.blueprintGems>=e.costGems;return`
                 <div class="towers-shop-item ${s?"equipped":""}">
                   <div class="towers-shop-head-row">
                     <div class="towers-shop-avatar" style="border-color:${e.accentColor}">
                       ${at(e.id,38)}
                     </div>
                     <div class="towers-shop-info">
-                      <strong>${H(e.name)}</strong>
-                      <span class="role">${H(e.title)}</span>
+                      <strong>${q(e.name)}</strong>
+                      <span class="role">${q(e.title)}</span>
                       <span class="perk">✨ Mimar Gücü +${e.powerScore}</span>
                     </div>
                   </div>
-                  <p class="towers-shop-desc">${H(e.description)}</p>
+                  <p class="towers-shop-desc">${q(e.description)}</p>
                   <div class="towers-shop-action">
-                    ${s?'<button class="towers-shop-btn equipped" disabled>✅ Aktif Mimar</button>':i?`<button class="towers-shop-btn equip" data-equip-char="${e.id}">👷 Seç</button>`:`<button class="towers-shop-btn buy" data-buy-char="${e.id}" ${r?"":"disabled"}>🔓 Aç (💠 ${e.costGems})</button>`}
+                    ${s?'<button class="towers-shop-btn equipped" disabled>✅ Aktif Mimar</button>':i?`<button class="towers-shop-btn equip" data-equip-char="${e.id}">👷 Seç</button>`:`<button class="towers-shop-btn buy" data-buy-char="${e.id}" ${d?"":"disabled"}>🔓 Aç (💠 ${e.costGems})</button>`}
                   </div>
                 </div>
               `}).join("")}
@@ -361,20 +289,20 @@ var kt=Object.defineProperty;var St=(o,t,e)=>t in o?kt(o,t,{enumerable:!0,config
 
           <h4 class="towers-section-sub">🧱 Tuğla Cepheler &amp; Çatı Silüetleri</h4>
           <div class="towers-workshop-grid">
-            ${q.map(e=>{const i=e.slot==="facade",s=o.unlockedCosmeticIds.includes(e.id),r=i?o.equippedFacadeId===e.id:o.equippedRoofId===e.id,f=o.blueprintGems>=e.costGems,b=i?{...t,brickPrimary:e.primaryColor,brickSecondary:e.secondaryColor}:{...t,roofPrimary:e.primaryColor,roofAccent:e.secondaryColor},h=i?o.equippedRoofId:e.id;return`
-                <div class="towers-shop-item ${r?"equipped":""}">
+            ${D.map(e=>{const i=e.slot==="facade",s=n.unlockedCosmeticIds.includes(e.id),d=i?n.equippedFacadeId===e.id:n.equippedRoofId===e.id,y=n.blueprintGems>=e.costGems,f=i?{brickPrimary:e.primaryColor,brickSecondary:e.secondaryColor}:{...t,roofPrimary:e.primaryColor,roofAccent:e.secondaryColor},w=i?n.equippedRoofId:e.id;return`
+                <div class="towers-shop-item ${d?"equipped":""}">
                   <div class="towers-shop-head-row">
                     <div class="towers-shop-swatch brick-preview">
-                      ${pt(4,5,b,h)}
+                      ${pt(4,5,f,w)}
                     </div>
                     <div class="towers-shop-info">
-                      <strong>${H(e.name)}</strong>
+                      <strong>${q(e.name)}</strong>
                       <span class="role">${i?"🧱 Tuğla Cephe":"🏠 Çatı Tasarımı"}</span>
                     </div>
                   </div>
-                  <p class="towers-shop-desc">${H(e.description)}</p>
+                  <p class="towers-shop-desc">${q(e.description)}</p>
                   <div class="towers-shop-action">
-                    ${r?'<button class="towers-shop-btn equipped" disabled>✅ Kullanımda</button>':s?`<button class="towers-shop-btn equip" data-equip-cosmetic="${e.id}">🎨 Uygula</button>`:`<button class="towers-shop-btn buy" data-buy-cosmetic="${e.id}" ${f?"":"disabled"}>🔓 Aç (💠 ${e.costGems})</button>`}
+                    ${d?'<button class="towers-shop-btn equipped" disabled>✅ Kullanımda</button>':s?`<button class="towers-shop-btn equip" data-equip-cosmetic="${e.id}">🎨 Uygula</button>`:`<button class="towers-shop-btn buy" data-buy-cosmetic="${e.id}" ${y?"":"disabled"}>🔓 Aç (💠 ${e.costGems})</button>`}
                   </div>
                 </div>
               `}).join("")}
@@ -382,29 +310,29 @@ var kt=Object.defineProperty;var St=(o,t,e)=>t in o?kt(o,t,{enumerable:!0,config
         </div>
       </div>
     </div>
-  `}function Kt(o){const t=ft(o.architectXp),e=Object.values(o.bestTimesSec),i=e.length>0?Math.min(...e):null;return`
+  `}function _t(n){const t=yt(n.architectXp),e=Object.values(n.bestTimesSec),i=e.length>0?Math.min(...e):null;return`
     <div class="towers-modal-backdrop" id="towers-profile-modal">
       <div class="towers-modal-card wide">
         <div class="towers-modal-head">
-          <h3>🏆 Towers Başarımlar &amp; İstatistikler (LVL ${t.level} • ${H(t.title)})</h3>
+          <h3>🏆 Towers Başarımlar &amp; İstatistikler (LVL ${t.level} • ${q(t.title)})</h3>
           <button id="btn-towers-close-modal" class="towers-close-btn">✕</button>
         </div>
         <div class="towers-modal-body">
           <div class="towers-stats-summary-grid">
-            <div class="towers-stat-box"><span>Çözülen Blok</span><strong>${o.totalSolved}</strong></div>
-            <div class="towers-stat-box"><span>Toplam Puan</span><strong>${o.totalPoints}</strong></div>
+            <div class="towers-stat-box"><span>Çözülen Blok</span><strong>${n.totalSolved}</strong></div>
+            <div class="towers-stat-box"><span>Toplam Puan</span><strong>${n.totalPoints}</strong></div>
             <div class="towers-stat-box"><span>En Hızlı Blok</span><strong>${i!==null?`${i} sn`:"—"}</strong></div>
-            <div class="towers-stat-box"><span>İmar / Sis / Baret</span><strong>${(o.zoningSolvedCount||0)+(o.fogSolvedCount||0)+(o.survivalClearsCount||0)}</strong></div>
+            <div class="towers-stat-box"><span>İmar / Sis / Baret</span><strong>${(n.zoningSolvedCount||0)+(n.fogSolvedCount||0)+(n.survivalClearsCount||0)}</strong></div>
           </div>
 
-          <h4 class="towers-section-sub">🎖️ Towers Başarımları (${o.unlockedAchievements.length} / ${ut.length})</h4>
+          <h4 class="towers-section-sub">🎖️ Towers Başarımları (${n.unlockedAchievements.length} / ${ut.length})</h4>
           <div class="towers-ach-grid">
             ${ut.map(s=>`
-                <div class="towers-ach-card ${o.unlockedAchievements.includes(s.id)?"unlocked":"locked"}">
+                <div class="towers-ach-card ${n.unlockedAchievements.includes(s.id)?"unlocked":"locked"}">
                   <span class="ach-icon">${s.icon}</span>
                   <div>
-                    <strong>${H(s.title)}</strong>
-                    <p>${H(s.description)}</p>
+                    <strong>${q(s.title)}</strong>
+                    <p>${q(s.description)}</p>
                   </div>
                 </div>
               `).join("")}
@@ -412,7 +340,7 @@ var kt=Object.defineProperty;var St=(o,t,e)=>t in o?kt(o,t,{enumerable:!0,config
         </div>
       </div>
     </div>
-  `}function qt(o){return`
+  `}function Gt(n){return`
     <div class="towers-modal-backdrop" id="towers-beta-modal">
       <div class="towers-modal-card">
         <div class="towers-modal-head">
@@ -431,7 +359,7 @@ var kt=Object.defineProperty;var St=(o,t,e)=>t in o?kt(o,t,{enumerable:!0,config
             <button id="btn-towers-preset-reset" class="towers-secondary-cta">
               🔄 Sıfırla (LVL 1 Çırak Mimar)
             </button>
-            ${o?`
+            ${n?`
               <button id="btn-towers-instant-solve" class="towers-primary-cta">
                 ⚡ Aktif Sokağı Anında Çöz (Beta Test)
               </button>
@@ -440,13 +368,13 @@ var kt=Object.defineProperty;var St=(o,t,e)=>t in o?kt(o,t,{enumerable:!0,config
         </div>
       </div>
     </div>
-  `}function It(o){const{elapsedSeconds:t,hintsUsed:e,summary:i,challengeKind:s}=o;return`
+  `}function Wt(n){const{elapsedSeconds:t,hintsUsed:e,summary:i,challengeKind:s}=n;return`
     <div class="towers-modal-backdrop" id="towers-victory-modal">
       <div class="towers-modal-card victory">
         <div class="towers-victory-stars">${"★".repeat(i.starsEarned)+"☆".repeat(Math.max(0,3-i.starsEarned))}</div>
         <h2>🧱 İnşaat Tamamlandı!</h2>
         <p>
-          Süre: <strong>${Pt(t)}</strong> • Kullanılan İpucu: <strong>${e}</strong>
+          Süre: <strong>${Ht(t)}</strong> • Kullanılan İpucu: <strong>${e}</strong>
         </p>
 
         <div class="towers-victory-rewards">
@@ -456,7 +384,7 @@ var kt=Object.defineProperty;var St=(o,t,e)=>t in o?kt(o,t,{enumerable:!0,config
         </div>
 
         ${i.leveledUp?'<div class="towers-levelup-banner">🎉 MİMAR SEVİYESİ YÜKSELDİ!</div>':""}
-        ${i.newlyUnlockedAchievements.length>0?`<div class="towers-ach-unlock-strip">🏅 Yeni Başarım: ${i.newlyUnlockedAchievements.map(f=>`${f.icon} ${H(f.title)}`).join(" • ")}</div>`:""}
+        ${i.newlyUnlockedAchievements.length>0?`<div class="towers-ach-unlock-strip">🏅 Yeni Başarım: ${i.newlyUnlockedAchievements.map(y=>`${y.icon} ${q(y.title)}`).join(" • ")}</div>`:""}
 
         <div class="towers-victory-actions">
           <button id="btn-towers-win-next" class="towers-primary-cta">➡️ Devam Et / Sıradaki Sokak</button>
@@ -464,30 +392,30 @@ var kt=Object.defineProperty;var St=(o,t,e)=>t in o?kt(o,t,{enumerable:!0,config
         </div>
       </div>
     </div>
-  `}function Rt(o){return`
+  `}function Dt(n){return`
     <div class="towers-modal-backdrop" id="towers-gameover-modal">
       <div class="towers-modal-card victory">
         <div class="towers-victory-stars">🪖✖️</div>
         <h2>🚧 Şantiye Durduruldu!</h2>
-        <p>${H(o)}</p>
+        <p>${q(n)}</p>
         <div class="towers-victory-actions">
           <button id="btn-towers-retry-board" class="towers-primary-cta">🔄 Tekrar Dene</button>
           <button id="btn-towers-win-map" class="towers-secondary-cta">🏙️ Şehir Menüsüne Dön</button>
         </div>
       </div>
     </div>
-  `}function M(o){return o.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}function R(o){const t=Math.max(0,Math.floor(o)),e=Math.floor(t/60),i=t%60;return`${String(e).padStart(2,"0")}:${String(i).padStart(2,"0")}`}function N(o){return o.map(t=>[...t])}function ht(o){return o.map(t=>t.map(e=>[...e]))}class Gt{constructor(t){v(this,"host");v(this,"stats");v(this,"activeTab","campaign");v(this,"selectedEpisode",1);v(this,"activeModal",null);v(this,"tutorialStep",1);v(this,"tutorialMiniBoard",et.map(t=>[...t]));v(this,"tutorialSelectedCell",{r:0,c:1});v(this,"customSize",4);v(this,"customDifficulty","easy");v(this,"customSeedInput","");v(this,"inBoardView",!1);v(this,"isPaused",!1);v(this,"activePuzzle",null);v(this,"activeMode","campaign");v(this,"activeChallengeKind","standard");v(this,"activeCupStageIdx",null);v(this,"activeCampaignLevel",null);v(this,"board",[]);v(this,"notes",[]);v(this,"history",[]);v(this,"redoStack",[]);v(this,"selectedCell",{r:0,c:0});v(this,"noteMode",!1);v(this,"activeHint",null);v(this,"activeSightRay",null);v(this,"hintsUsedThisGame",0);v(this,"elapsedSeconds",0);v(this,"timerHandle",null);v(this,"gameWon",!1);v(this,"gameOverReason","");v(this,"endlessWave",1);v(this,"blitzRemainingSeconds",120);v(this,"blitzScore",0);v(this,"blitzSolvedCount",0);v(this,"survivalLives",3);v(this,"survivalStreak",0);v(this,"lastWinSummary",null);v(this,"keydownHandler",null);v(this,"resizeHandler",null);v(this,"lastDesktopMode",typeof window<"u"?window.innerWidth>=900:!0);v(this,"mountEl",null);this.host=t,this.stats=nt()}reloadStats(){this.stats=nt()}getStats(){return this.stats}pauseIfPlaying(){this.inBoardView&&!this.gameWon&&!this.isPaused&&(this.isPaused=!0,this.render())}syncStatsFromStorage(){this.stats=nt()}handleBackNavigation(){return this.activeModal!==null?(this.activeModal=null,this.render(),!0):this.inBoardView?this.isPaused?(this.isPaused=!1,this.render(),!0):(this.stopTimer(),this.inBoardView=!1,this.render(),!0):!1}destroy(){this.stopTimer(),this.keydownHandler&&(window.removeEventListener("keydown",this.keydownHandler),this.keydownHandler=null),this.resizeHandler&&(window.removeEventListener("resize",this.resizeHandler),this.resizeHandler=null)}stopTimer(){this.timerHandle!==null&&(window.clearInterval(this.timerHandle),this.timerHandle=null)}startTimer(){this.stopTimer(),this.timerHandle=window.setInterval(()=>{if(!this.inBoardView||this.gameWon||this.isPaused||this.activeModal!==null)return;if(this.elapsedSeconds+=1,this.activeMode==="blitz"&&(this.blitzRemainingSeconds=Math.max(0,this.blitzRemainingSeconds-1),this.blitzRemainingSeconds<=0)){this.stopTimer(),this.inBoardView=!1,this.render();return}const t=document.getElementById("towers-hud-timer");t&&(t.textContent=this.activeMode==="blitz"?`⏱️ ${R(this.blitzRemainingSeconds)}`:`⏱️ ${R(this.elapsedSeconds)}`)},1e3)}mount(t){this.mountEl=t,this.reloadStats(),this.attachKeyboardListener(),this.attachResizeListener(),this.renderInto(t)}render(){const t=this.mountEl||document.getElementById("towers-mount-root")||document.getElementById("app");t&&this.renderInto(t)}attachResizeListener(){this.resizeHandler&&window.removeEventListener("resize",this.resizeHandler),this.resizeHandler=()=>{const t=window.innerWidth>=900;t!==this.lastDesktopMode&&(this.lastDesktopMode=t,this.render())},window.addEventListener("resize",this.resizeHandler)}attachKeyboardListener(){this.keydownHandler&&window.removeEventListener("keydown",this.keydownHandler),this.keydownHandler=t=>{if(!this.inBoardView||!this.activePuzzle||this.activeModal!==null||this.isPaused||document.activeElement&&["INPUT","TEXTAREA"].includes(document.activeElement.tagName))return;const e=this.activePuzzle.size;if(t.key==="ArrowUp")t.preventDefault(),this.selectedCell.r=(this.selectedCell.r-1+e)%e,this.render();else if(t.key==="ArrowDown")t.preventDefault(),this.selectedCell.r=(this.selectedCell.r+1)%e,this.render();else if(t.key==="ArrowLeft")t.preventDefault(),this.selectedCell.c=(this.selectedCell.c-1+e)%e,this.render();else if(t.key==="ArrowRight")t.preventDefault(),this.selectedCell.c=(this.selectedCell.c+1)%e,this.render();else if(t.key.toLowerCase()==="n")t.preventDefault(),this.noteMode=!this.noteMode,this.render();else if(t.key.toLowerCase()==="v")t.preventDefault(),this.toggleSightRayFromSelection();else if(t.key==="Backspace"||t.key==="Delete"||t.key==="0")t.preventDefault(),this.handleEraseInput();else if((t.ctrlKey||t.metaKey)&&t.key.toLowerCase()==="z")t.preventDefault(),this.handleUndo();else if((t.ctrlKey||t.metaKey)&&t.key.toLowerCase()==="y")t.preventDefault(),this.handleRedo();else if(/^[1-8]$/.test(t.key)){const i=Number(t.key);i>=1&&i<=e&&(t.preventDefault(),this.handleNumberInput(i))}},window.addEventListener("keydown",this.keydownHandler)}startPuzzleSession(t,e,i=null,s){var f,b;this.activePuzzle=t,this.activeMode=e,this.activeChallengeKind=t.challengeKind||"standard",this.activeCupStageIdx=(s==null?void 0:s.cupStageIdx)??null,this.activeCampaignLevel=i,this.board=N(t.givens),this.notes=Array.from({length:t.size},()=>Array.from({length:t.size},()=>[])),this.history=[],this.redoStack=[],this.selectedCell={r:0,c:0};let r=!1;for(let h=0;h<t.size&&!r;h++)for(let a=0;a<t.size;a++)if(t.givens[h][a]===0){this.selectedCell={r:h,c:a},r=!0;break}this.activeHint=null,this.activeSightRay=null,this.hintsUsedThisGame=0,this.elapsedSeconds=0,this.gameWon=!1,this.isPaused=!1,this.gameOverReason="",this.inBoardView=!0,e==="blitz"&&(s==null?void 0:s.resetSeries)!==!1?(this.blitzRemainingSeconds=120,this.blitzScore=0,this.blitzSolvedCount=0):this.activeChallengeKind==="survival"&&(s==null?void 0:s.resetSeries)!==!1&&(this.survivalLives=3,this.survivalStreak=0),this.startTimer(),(b=(f=this.host).playSound)==null||b.call(f,"click"),this.render()}pushHistory(){this.history.push({board:N(this.board),notes:ht(this.notes)}),this.history.length>100&&this.history.shift(),this.redoStack=[]}handleNumberInput(t){var b,h,a,d,p,c,$,y,u,l,m;if(!this.activePuzzle||this.gameWon||this.isPaused)return;const{r:e,c:i}=this.selectedCell;if(((b=this.activePuzzle.givens[e])==null?void 0:b[i])>0){(a=(h=this.host).playSound)==null||a.call(h,"error");return}if(this.pushHistory(),this.activeHint=null,this.noteMode){this.board[e][i]!==0&&(this.board[e][i]=0);const z=this.notes[e][i],k=z.indexOf(t);k>=0?z.splice(k,1):(z.push(t),z.sort((S,T)=>S-T)),(p=(d=this.host).playSound)==null||p.call(d,"click"),this.render();return}if(this.board[e][i]=this.board[e][i]===t?0:t,this.notes[e][i]=[],this.board[e][i]===0){($=(c=this.host).playSound)==null||$.call(c,"erase"),this.render();return}const s=this.board[e][i],r=ot(this.activePuzzle,this.board);if(r.duplicateKeys.has(`${e},${i}`)||r.zoningViolationKeys.has(`${e},${i}`)||this.activeChallengeKind==="survival"&&s!==this.activePuzzle.solution[e][i]){if((u=(y=this.host).playSound)==null||u.call(y,"error"),this.activeChallengeKind==="survival"&&(this.survivalLives=Math.max(0,this.survivalLives-1),this.survivalLives<=0)){this.stopTimer(),this.gameOverReason="3 inşaat baretinin tamamı tükendi! Kat çakışması veya hatalı kat yerleşimi şantiyeyi durdurdu.",this.activeModal="gameover",this.render();return}}else(m=(l=this.host).playSound)==null||m.call(l,"place",{floors:s,maxFloors:this.activePuzzle.size});this.checkWinAfterMove(),this.render()}handleEraseInput(){var i,s,r;if(!this.activePuzzle||this.gameWon||this.isPaused)return;const{r:t,c:e}=this.selectedCell;((i=this.activePuzzle.givens[t])==null?void 0:i[e])>0||this.board[t][e]===0&&this.notes[t][e].length===0||(this.pushHistory(),this.board[t][e]=0,this.notes[t][e]=[],this.activeHint=null,(r=(s=this.host).playSound)==null||r.call(s,"erase"),this.render())}handleUndo(){var e,i;if(this.history.length===0||this.gameWon||this.isPaused)return;this.redoStack.push({board:N(this.board),notes:ht(this.notes)});const t=this.history.pop();this.board=t.board,this.notes=t.notes,this.activeHint=null,(i=(e=this.host).playSound)==null||i.call(e,"click"),this.render()}handleRedo(){var e,i;if(this.redoStack.length===0||this.gameWon||this.isPaused)return;this.history.push({board:N(this.board),notes:ht(this.notes)});const t=this.redoStack.pop();this.board=t.board,this.notes=t.notes,this.activeHint=null,(i=(e=this.host).playSound)==null||i.call(e,"click"),this.render()}handleSmartHint(){var e,i;if(!this.activePuzzle||this.gameWon||this.isPaused)return;const t=xt(this.activePuzzle,this.board);if(t){if(this.activeHint=t,this.selectedCell={r:t.r,c:t.c},this.hintsUsedThisGame+=1,t.focusClueKey){const[s,r]=t.focusClueKey.split(":");this.activeSightRay={side:s,index:Number(r)||0}}(i=(e=this.host).playSound)==null||i.call(e,"hint"),this.render()}}applyActiveHintMove(){var s,r,f;if(!this.activeHint||!this.activePuzzle||this.gameWon)return;const{r:t,c:e,value:i}=this.activeHint;((s=this.activePuzzle.givens[t])==null?void 0:s[e])>0||(this.pushHistory(),this.board[t][e]=i,this.notes[t][e]=[],this.activeHint=null,(f=(r=this.host).playSound)==null||f.call(r,"place",{floors:i,maxFloors:this.activePuzzle.size}),this.checkWinAfterMove(),this.render())}toggleSightRayFromSelection(){var t,e;this.activePuzzle&&(this.activeSightRay?this.activeSightRay.side==="left"||this.activeSightRay.side==="right"?this.activeSightRay={side:"top",index:this.selectedCell.c}:this.activeSightRay=null:this.activeSightRay={side:"left",index:this.selectedCell.r},(e=(t=this.host).playSound)==null||e.call(t,"click"),this.render())}checkWinAfterMove(){var r,f,b,h,a,d,p;if(!this.activePuzzle||this.gameWon||!ot(this.activePuzzle,this.board).isSolved)return;const e=new Date().toISOString().slice(0,10);if(this.activeMode==="blitz"){this.blitzSolvedCount+=1,this.blitzScore+=180+Math.max(0,25-this.hintsUsedThisGame*20),this.blitzScore>this.stats.bestBlitzScore&&(this.stats.bestBlitzScore=this.blitzScore);const c=`TWR-BLITZ-${Date.now()}-${this.blitzSolvedCount}`,$=K(4,"easy",c,{title:`⚡ Blitz Kule #${this.blitzSolvedCount+1}`});(f=(r=this.host).playSound)==null||f.call(r,"win");const y=zt(this.stats,{elapsedSec:this.elapsedSeconds,hintsUsed:this.hintsUsedThisGame,size:4,isDaily:!1});y.length>0&&(this.stats.blueprintGems+=y.length),Y(this.stats),W("towers_solve"),this.hintsUsedThisGame===0&&W("no_hint_solve"),this.startPuzzleSession($,"blitz",null,{resetSeries:!1});return}if(this.activeMode==="endless"){this.endlessWave>this.stats.bestEndlessWave&&(this.stats.bestEndlessWave=this.endlessWave),this.endlessWave+=1;const c=gt(this.stats,{puzzleId:this.activePuzzle.id,size:this.activePuzzle.size,difficulty:this.activePuzzle.difficulty,elapsedSec:this.elapsedSeconds,hintsUsed:this.hintsUsedThisGame});this.stats=c.nextStats,W("towers_solve"),this.hintsUsedThisGame===0&&W("no_hint_solve"),this.gameWon=!0,this.stopTimer(),this.lastWinSummary={starsEarned:c.starsEarned,xpGain:c.xpEarned,blueprintGain:c.gemsEarned,leveledUp:c.leveledUp,newlyUnlockedAchievements:c.newlyUnlockedAchievements},this.activeModal="victory",(h=(b=this.host).playSound)==null||h.call(b,"win");return}this.activeChallengeKind==="zoning"?this.stats.zoningSolvedCount=(this.stats.zoningSolvedCount||0)+1:this.activeChallengeKind==="fog"?this.stats.fogSolvedCount=(this.stats.fogSolvedCount||0)+1:this.activeChallengeKind==="survival"&&(this.survivalStreak+=1,this.stats.survivalClearsCount=(this.stats.survivalClearsCount||0)+1);let i;if(this.activeChallengeKind==="weekly_cup"&&this.activeCupStageIdx!==null){const c=wt(),$=Ct(this.activePuzzle.size,this.elapsedSeconds,this.hintsUsedThisGame);i=$;const y=this.stats.weeklyCupKey,u=y===c&&Array.isArray(this.stats.weeklyCupScores)?[...this.stats.weeklyCupScores]:[0,0,0],l=y===c&&Array.isArray(this.stats.weeklyCupRewarded)?[...this.stats.weeklyCupRewarded]:[!1,!1,!1];u[this.activeCupStageIdx]=Math.max(u[this.activeCupStageIdx]||0,$),l[this.activeCupStageIdx]=!0,this.stats.weeklyCupKey=c,this.stats.weeklyCupScores=u,this.stats.weeklyCupRewarded=l}this.gameWon=!0,this.stopTimer();const s=gt(this.stats,{puzzleId:((a=this.activeCampaignLevel)==null?void 0:a.id)||this.activePuzzle.id,size:this.activePuzzle.size,difficulty:this.activePuzzle.difficulty,elapsedSec:this.elapsedSeconds,hintsUsed:this.hintsUsedThisGame,isDaily:this.activeMode==="daily",dailyDateKey:this.activeMode==="daily"?e:void 0,campaignLevel:this.activeCampaignLevel?{goldSec:this.activeCampaignLevel.goldSec,silverSec:this.activeCampaignLevel.silverSec}:null});this.stats=s.nextStats,W("towers_solve"),this.hintsUsedThisGame===0&&W("no_hint_solve"),this.activeChallengeKind==="weekly_cup"&&W("duel_or_cup"),this.lastWinSummary={starsEarned:s.starsEarned,xpGain:s.xpEarned,blueprintGain:s.gemsEarned,leveledUp:s.leveledUp,newlyUnlockedAchievements:s.newlyUnlockedAchievements,cupScore:i},this.activeModal="victory",(p=(d=this.host).playSound)==null||p.call(d,"win")}getUnlockedCampaignIndex(){let t=-1;for(let e=0;e<L.length;e++)this.stats.solvedIds.includes(L[e].id)&&(t=e);return Math.min(L.length-1,t+1)}renderInto(t){var r,f,b,h;const e=typeof window<"u"?window.innerWidth>=900:!0;this.lastDesktopMode=e;const i=((f=(r=this.host).renderTitlebar)==null?void 0:f.call(r))||"",s=this.inBoardView&&this.activePuzzle?this.renderBoardScreenHTML():this.renderHubScreenHTML(e);t.innerHTML=`
+  `}function L(n){return n.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}function tt(n){const t=Math.max(0,Math.floor(n)),e=Math.floor(t/60),i=t%60;return`${String(e).padStart(2,"0")}:${String(i).padStart(2,"0")}`}function N(n){return n.map(t=>[...t])}function ht(n){return n.map(t=>t.map(e=>[...e]))}class Ut{constructor(t){b(this,"host");b(this,"stats");b(this,"activeTab","campaign");b(this,"selectedEpisode",1);b(this,"activeModal",null);b(this,"tutorialStep",1);b(this,"tutorialMiniBoard",et.map(t=>[...t]));b(this,"tutorialSelectedCell",{r:0,c:1});b(this,"customSize",4);b(this,"customDifficulty","easy");b(this,"customSeedInput","");b(this,"inBoardView",!1);b(this,"isPaused",!1);b(this,"activePuzzle",null);b(this,"activeMode","campaign");b(this,"activeChallengeKind","standard");b(this,"activeCupStageIdx",null);b(this,"activeCampaignLevel",null);b(this,"board",[]);b(this,"notes",[]);b(this,"history",[]);b(this,"redoStack",[]);b(this,"selectedCell",{r:0,c:0});b(this,"noteMode",!1);b(this,"activeHint",null);b(this,"activeSightRay",null);b(this,"hintsUsedThisGame",0);b(this,"elapsedSeconds",0);b(this,"timerHandle",null);b(this,"gameWon",!1);b(this,"gameOverReason","");b(this,"endlessWave",1);b(this,"blitzRemainingSeconds",120);b(this,"blitzScore",0);b(this,"blitzSolvedCount",0);b(this,"survivalLives",3);b(this,"survivalStreak",0);b(this,"lastWinSummary",null);b(this,"keydownHandler",null);b(this,"resizeHandler",null);b(this,"lastDesktopMode",typeof window<"u"?window.innerWidth>=900:!0);b(this,"mountEl",null);this.host=t,this.stats=ot()}reloadStats(){this.stats=ot()}getStats(){return this.stats}pauseIfPlaying(){this.inBoardView&&!this.gameWon&&!this.isPaused&&(this.isPaused=!0,this.render())}syncStatsFromStorage(){this.stats=ot()}handleBackNavigation(){return this.activeModal!==null?(this.activeModal=null,this.render(),!0):this.inBoardView?this.isPaused?(this.isPaused=!1,this.render(),!0):(this.stopTimer(),this.inBoardView=!1,this.render(),!0):!1}destroy(){this.stopTimer(),this.keydownHandler&&(window.removeEventListener("keydown",this.keydownHandler),this.keydownHandler=null),this.resizeHandler&&(window.removeEventListener("resize",this.resizeHandler),this.resizeHandler=null)}stopTimer(){this.timerHandle!==null&&(window.clearInterval(this.timerHandle),this.timerHandle=null)}startTimer(){this.stopTimer(),this.timerHandle=window.setInterval(()=>{if(!this.inBoardView||this.gameWon||this.isPaused||this.activeModal!==null)return;if(this.elapsedSeconds+=1,this.activeMode==="blitz"&&(this.blitzRemainingSeconds=Math.max(0,this.blitzRemainingSeconds-1),this.blitzRemainingSeconds<=0)){this.stopTimer(),this.inBoardView=!1,this.render();return}const t=document.getElementById("towers-hud-timer");t&&(t.textContent=this.activeMode==="blitz"?`⏱️ ${tt(this.blitzRemainingSeconds)}`:`⏱️ ${tt(this.elapsedSeconds)}`)},1e3)}mount(t){this.mountEl=t,this.reloadStats(),this.attachKeyboardListener(),this.attachResizeListener(),this.renderInto(t)}render(){const t=this.mountEl||document.getElementById("towers-mount-root")||document.getElementById("app");t&&this.renderInto(t)}attachResizeListener(){this.resizeHandler&&window.removeEventListener("resize",this.resizeHandler),this.resizeHandler=()=>{const t=window.innerWidth>=900;t!==this.lastDesktopMode&&(this.lastDesktopMode=t,this.render())},window.addEventListener("resize",this.resizeHandler)}attachKeyboardListener(){this.keydownHandler&&window.removeEventListener("keydown",this.keydownHandler),this.keydownHandler=t=>{if(!this.inBoardView||!this.activePuzzle||this.activeModal!==null||this.isPaused||document.activeElement&&["INPUT","TEXTAREA"].includes(document.activeElement.tagName))return;const e=this.activePuzzle.size;if(t.key==="ArrowUp")t.preventDefault(),this.selectedCell.r=(this.selectedCell.r-1+e)%e,this.render();else if(t.key==="ArrowDown")t.preventDefault(),this.selectedCell.r=(this.selectedCell.r+1)%e,this.render();else if(t.key==="ArrowLeft")t.preventDefault(),this.selectedCell.c=(this.selectedCell.c-1+e)%e,this.render();else if(t.key==="ArrowRight")t.preventDefault(),this.selectedCell.c=(this.selectedCell.c+1)%e,this.render();else if(t.key.toLowerCase()==="n")t.preventDefault(),this.noteMode=!this.noteMode,this.render();else if(t.key.toLowerCase()==="v")t.preventDefault(),this.toggleSightRayFromSelection();else if(t.key==="Backspace"||t.key==="Delete"||t.key==="0")t.preventDefault(),this.handleEraseInput();else if((t.ctrlKey||t.metaKey)&&t.key.toLowerCase()==="z")t.preventDefault(),this.handleUndo();else if((t.ctrlKey||t.metaKey)&&t.key.toLowerCase()==="y")t.preventDefault(),this.handleRedo();else if(/^[1-8]$/.test(t.key)){const i=Number(t.key);i>=1&&i<=e&&(t.preventDefault(),this.handleNumberInput(i))}},window.addEventListener("keydown",this.keydownHandler)}startPuzzleSession(t,e,i=null,s){var y,f;this.activePuzzle=t,this.activeMode=e,this.activeChallengeKind=t.challengeKind||"standard",this.activeCupStageIdx=(s==null?void 0:s.cupStageIdx)??null,this.activeCampaignLevel=i,this.board=N(t.givens),this.notes=Array.from({length:t.size},()=>Array.from({length:t.size},()=>[])),this.history=[],this.redoStack=[],this.selectedCell={r:0,c:0};let d=!1;for(let w=0;w<t.size&&!d;w++)for(let o=0;o<t.size;o++)if(t.givens[w][o]===0){this.selectedCell={r:w,c:o},d=!0;break}this.activeHint=null,this.activeSightRay=null,this.hintsUsedThisGame=0,this.elapsedSeconds=0,this.gameWon=!1,this.isPaused=!1,this.gameOverReason="",this.inBoardView=!0,e==="blitz"&&(s==null?void 0:s.resetSeries)!==!1?(this.blitzRemainingSeconds=120,this.blitzScore=0,this.blitzSolvedCount=0):this.activeChallengeKind==="survival"&&(s==null?void 0:s.resetSeries)!==!1&&(this.survivalLives=3,this.survivalStreak=0),this.startTimer(),(f=(y=this.host).playSound)==null||f.call(y,"click"),this.render()}pushHistory(){this.history.push({board:N(this.board),notes:ht(this.notes)}),this.history.length>100&&this.history.shift(),this.redoStack=[]}handleNumberInput(t){var f,w,o,c,u,p,E,S,h,l,k;if(!this.activePuzzle||this.gameWon||this.isPaused)return;const{r:e,c:i}=this.selectedCell;if(((f=this.activePuzzle.givens[e])==null?void 0:f[i])>0){(o=(w=this.host).playSound)==null||o.call(w,"error");return}if(this.pushHistory(),this.activeHint=null,this.noteMode){this.board[e][i]!==0&&(this.board[e][i]=0);const C=this.notes[e][i],a=C.indexOf(t);a>=0?C.splice(a,1):(C.push(t),C.sort((g,$)=>g-$)),(u=(c=this.host).playSound)==null||u.call(c,"click"),this.render();return}if(this.board[e][i]=this.board[e][i]===t?0:t,this.notes[e][i]=[],this.board[e][i]===0){(E=(p=this.host).playSound)==null||E.call(p,"erase"),this.render();return}const s=this.board[e][i],d=lt(this.activePuzzle,this.board);if(d.duplicateKeys.has(`${e},${i}`)||d.zoningViolationKeys.has(`${e},${i}`)||this.activeChallengeKind==="survival"&&s!==this.activePuzzle.solution[e][i]){if((h=(S=this.host).playSound)==null||h.call(S,"error"),this.activeChallengeKind==="survival"&&(this.survivalLives=Math.max(0,this.survivalLives-1),this.survivalLives<=0)){this.stopTimer(),this.gameOverReason="3 inşaat baretinin tamamı tükendi! Kat çakışması veya hatalı kat yerleşimi şantiyeyi durdurdu.",this.activeModal="gameover",this.render();return}}else(k=(l=this.host).playSound)==null||k.call(l,"place",{floors:s,maxFloors:this.activePuzzle.size});this.checkWinAfterMove(),this.render()}handleEraseInput(){var i,s,d;if(!this.activePuzzle||this.gameWon||this.isPaused)return;const{r:t,c:e}=this.selectedCell;((i=this.activePuzzle.givens[t])==null?void 0:i[e])>0||this.board[t][e]===0&&this.notes[t][e].length===0||(this.pushHistory(),this.board[t][e]=0,this.notes[t][e]=[],this.activeHint=null,(d=(s=this.host).playSound)==null||d.call(s,"erase"),this.render())}handleUndo(){var e,i;if(this.history.length===0||this.gameWon||this.isPaused)return;this.redoStack.push({board:N(this.board),notes:ht(this.notes)});const t=this.history.pop();this.board=t.board,this.notes=t.notes,this.activeHint=null,(i=(e=this.host).playSound)==null||i.call(e,"click"),this.render()}handleRedo(){var e,i;if(this.redoStack.length===0||this.gameWon||this.isPaused)return;this.history.push({board:N(this.board),notes:ht(this.notes)});const t=this.redoStack.pop();this.board=t.board,this.notes=t.notes,this.activeHint=null,(i=(e=this.host).playSound)==null||i.call(e,"click"),this.render()}handleSmartHint(){var e,i;if(!this.activePuzzle||this.gameWon||this.isPaused)return;const t=zt(this.activePuzzle,this.board);if(t){if(this.activeHint=t,this.selectedCell={r:t.r,c:t.c},this.hintsUsedThisGame+=1,t.focusClueKey){const[s,d]=t.focusClueKey.split(":");this.activeSightRay={side:s,index:Number(d)||0}}(i=(e=this.host).playSound)==null||i.call(e,"hint"),this.render()}}applyActiveHintMove(){var s,d,y;if(!this.activeHint||!this.activePuzzle||this.gameWon)return;const{r:t,c:e,value:i}=this.activeHint;((s=this.activePuzzle.givens[t])==null?void 0:s[e])>0||(this.pushHistory(),this.board[t][e]=i,this.notes[t][e]=[],this.activeHint=null,(y=(d=this.host).playSound)==null||y.call(d,"place",{floors:i,maxFloors:this.activePuzzle.size}),this.checkWinAfterMove(),this.render())}toggleSightRayFromSelection(){var t,e;this.activePuzzle&&(this.activeSightRay?this.activeSightRay.side==="left"||this.activeSightRay.side==="right"?this.activeSightRay={side:"top",index:this.selectedCell.c}:this.activeSightRay=null:this.activeSightRay={side:"left",index:this.selectedCell.r},(e=(t=this.host).playSound)==null||e.call(t,"click"),this.render())}checkWinAfterMove(){var d,y,f,w,o,c,u;if(!this.activePuzzle||this.gameWon||!lt(this.activePuzzle,this.board).isSolved)return;const e=new Date().toISOString().slice(0,10);if(this.activeMode==="blitz"){this.blitzSolvedCount+=1,this.blitzScore+=180+Math.max(0,25-this.hintsUsedThisGame*20),this.blitzScore>this.stats.bestBlitzScore&&(this.stats.bestBlitzScore=this.blitzScore);const p=`TWR-BLITZ-${Date.now()}-${this.blitzSolvedCount}`,E=R(4,"easy",p,{title:`⚡ Blitz Kule #${this.blitzSolvedCount+1}`});(y=(d=this.host).playSound)==null||y.call(d,"win");const S=Ct(this.stats,{elapsedSec:this.elapsedSeconds,hintsUsed:this.hintsUsedThisGame,size:4,isDaily:!1});S.length>0&&(this.stats.blueprintGems+=S.length),Q(this.stats),W("towers_solve"),this.hintsUsedThisGame===0&&W("no_hint_solve"),this.startPuzzleSession(E,"blitz",null,{resetSeries:!1});return}if(this.activeMode==="endless"){this.endlessWave>this.stats.bestEndlessWave&&(this.stats.bestEndlessWave=this.endlessWave),this.endlessWave+=1;const p=gt(this.stats,{puzzleId:this.activePuzzle.id,size:this.activePuzzle.size,difficulty:this.activePuzzle.difficulty,elapsedSec:this.elapsedSeconds,hintsUsed:this.hintsUsedThisGame});this.stats=p.nextStats,W("towers_solve"),this.hintsUsedThisGame===0&&W("no_hint_solve"),this.gameWon=!0,this.stopTimer(),this.lastWinSummary={starsEarned:p.starsEarned,xpGain:p.xpEarned,blueprintGain:p.gemsEarned,leveledUp:p.leveledUp,newlyUnlockedAchievements:p.newlyUnlockedAchievements},this.activeModal="victory",(w=(f=this.host).playSound)==null||w.call(f,"win");return}this.activeChallengeKind==="zoning"?this.stats.zoningSolvedCount=(this.stats.zoningSolvedCount||0)+1:this.activeChallengeKind==="fog"?this.stats.fogSolvedCount=(this.stats.fogSolvedCount||0)+1:this.activeChallengeKind==="survival"&&(this.survivalStreak+=1,this.stats.survivalClearsCount=(this.stats.survivalClearsCount||0)+1);let i;if(this.activeChallengeKind==="weekly_cup"&&this.activeCupStageIdx!==null){const p=mt(),E=Mt(this.activePuzzle.size,this.elapsedSeconds,this.hintsUsedThisGame);i=E;const S=this.stats.weeklyCupKey,h=S===p&&Array.isArray(this.stats.weeklyCupScores)?[...this.stats.weeklyCupScores]:[0,0,0],l=S===p&&Array.isArray(this.stats.weeklyCupRewarded)?[...this.stats.weeklyCupRewarded]:[!1,!1,!1];h[this.activeCupStageIdx]=Math.max(h[this.activeCupStageIdx]||0,E),l[this.activeCupStageIdx]=!0,this.stats.weeklyCupKey=p,this.stats.weeklyCupScores=h,this.stats.weeklyCupRewarded=l}this.gameWon=!0,this.stopTimer();const s=gt(this.stats,{puzzleId:((o=this.activeCampaignLevel)==null?void 0:o.id)||this.activePuzzle.id,size:this.activePuzzle.size,difficulty:this.activePuzzle.difficulty,elapsedSec:this.elapsedSeconds,hintsUsed:this.hintsUsedThisGame,isDaily:this.activeMode==="daily",dailyDateKey:this.activeMode==="daily"?e:void 0,campaignLevel:this.activeCampaignLevel?{goldSec:this.activeCampaignLevel.goldSec,silverSec:this.activeCampaignLevel.silverSec}:null});this.stats=s.nextStats,W("towers_solve"),this.hintsUsedThisGame===0&&W("no_hint_solve"),this.activeChallengeKind==="weekly_cup"&&W("duel_or_cup"),this.lastWinSummary={starsEarned:s.starsEarned,xpGain:s.xpEarned,blueprintGain:s.gemsEarned,leveledUp:s.leveledUp,newlyUnlockedAchievements:s.newlyUnlockedAchievements,cupScore:i},this.activeModal="victory",(u=(c=this.host).playSound)==null||u.call(c,"win")}getUnlockedCampaignIndex(){let t=-1;for(let e=0;e<A.length;e++)this.stats.solvedIds.includes(A[e].id)&&(t=e);return Math.min(A.length-1,t+1)}renderInto(t){var d,y,f,w;const e=typeof window<"u"?window.innerWidth>=900:!0;this.lastDesktopMode=e;const i=((y=(d=this.host).renderTitlebar)==null?void 0:y.call(d))||"",s=this.inBoardView&&this.activePuzzle?this.renderBoardScreenHTML():this.renderHubScreenHTML(e);t.innerHTML=`
       ${i}
       <div class="screen-body ${this.inBoardView?"towers-board-body":"menu-mode towers-menu-mode"}" id="towers-screen">
         ${s}
         ${this.renderActiveModal()}
       </div>
-    `,(h=(b=this.host).bindTitlebarEvents)==null||h.call(b),this.bindEvents(t)}renderHubScreenHTML(t){var y,u,l,m,z,k,S,T;const e=this.host.getUsername(),i=this.host.getPilotTag(),s=this.host.isBetaChannel(),r=((u=(y=this.host).getCloudSynced)==null?void 0:u.call(y))??!1,f=((m=(l=this.host).canQuit)==null?void 0:m.call(l))??!1,b=ft(this.stats.architectXp),h=it.find(g=>g.id===this.stats.equippedCharacterId)||it[0],a=Et(this.stats),d=(this.stats.solvedIds||[]).filter(g=>L.some(C=>C.id===g)).length,p=((k=(z=this.host).getSocialAttentionCount)==null?void 0:k.call(z))??0,c=((T=(S=this.host).getAudioSettings)==null?void 0:T.call(S))??{soundEnabled:!0,musicEnabled:!0},$=[{id:"campaign",icon:"🏙️",label:"Şehir Haritası",badge:`${d}/60`},{id:"challenges",icon:"🚧",label:"Challenge & Kupa",badge:"3+1"},{id:"daily",icon:"🧱",label:"Günlük Bina",badge:this.stats.dailyStreak>0?`🔥${this.stats.dailyStreak}`:""},{id:"blitz",icon:"⚡",label:"Kule Blitz",badge:""},{id:"endless",icon:"🏗️",label:"Sonsuz İnşaat",badge:""},{id:"custom",icon:"🎲",label:"Serbest Mimari",badge:""}];return`
+    `,(w=(f=this.host).bindTitlebarEvents)==null||w.call(f),this.bindEvents(t)}renderHubScreenHTML(t){var S,h,l,k,C,a,g,$;const e=this.host.getUsername(),i=this.host.getPilotTag(),s=this.host.isBetaChannel(),d=((h=(S=this.host).getCloudSynced)==null?void 0:h.call(S))??!1,y=((k=(l=this.host).canQuit)==null?void 0:k.call(l))??!1,f=yt(this.stats.architectXp),w=it.find(v=>v.id===this.stats.equippedCharacterId)||it[0],o=Et(this.stats),c=(this.stats.solvedIds||[]).filter(v=>A.some(M=>M.id===v)).length,u=((a=(C=this.host).getSocialAttentionCount)==null?void 0:a.call(C))??0,p=(($=(g=this.host).getAudioSettings)==null?void 0:$.call(g))??{soundEnabled:!0,musicEnabled:!0},E=[{id:"campaign",icon:"🏙️",label:"Şehir Haritası",badge:`${c}/60`},{id:"challenges",icon:"🚧",label:"Challenge & Kupa",badge:"3+1"},{id:"daily",icon:"🧱",label:"Günlük Bina",badge:this.stats.dailyStreak>0?`🔥${this.stats.dailyStreak}`:""},{id:"blitz",icon:"⚡",label:"Kule Blitz",badge:""},{id:"endless",icon:"🏗️",label:"Sonsuz İnşaat",badge:""},{id:"custom",icon:"🎲",label:"Serbest Mimari",badge:""}];return`
       <header class="main-menu-topbar towers-menu-topbar">
         <div class="topbar-left">
           <button type="button" class="arcade-return-chip" id="btn-towers-back-hub" title="1000in1 Kaset Odasına Dön">🕹️ Kaset</button>
           <div class="topbar-desktop-telemetry">
-            <span class="topbar-sector-pill towers-sector-pill">🧱 TOWERS • ${d}/${L.length} Mahalle • ⭐ ${a}/${L.length*3}</span>
+            <span class="topbar-sector-pill towers-sector-pill">🧱 TOWERS • ${c}/${A.length} Mahalle • ⭐ ${o}/${A.length*3}</span>
             ${s?'<button type="button" class="beta-badge beta-lab-trigger" id="btn-towers-beta-lab" title="Towers Beta Test Laboratuvarı">🧪 BETA LAB</button>':""}
           </div>
         </div>
@@ -496,35 +424,35 @@ var kt=Object.defineProperty;var St=(o,t,e)=>t in o?kt(o,t,{enumerable:!0,config
           ${t?"":`
             <button type="button" class="steam-btn" id="btn-towers-open-social" title="DM &amp; Topluluk">
               <div>💬 SOSYAL</div>
-              ${p>0?`<b class="social-nav-badge" style="display:inline-flex;">${p}</b>`:""}
+              ${u>0?`<b class="social-nav-badge" style="display:inline-flex;">${u}</b>`:""}
             </button>
             <button type="button" class="steam-btn" id="btn-towers-tutorial"><div>🎓 EĞİTİM</div></button>
             <button type="button" class="steam-btn" id="btn-towers-workshop"><div>🏗️ ATÖLYE</div></button>
             <button type="button" class="steam-btn" id="btn-towers-settings"><div>⚙️ AYAR</div></button>
           `}
-          ${f?'<button type="button" class="steam-btn quit-btn" id="btn-towers-quit"><div>ÇIKIŞ</div></button>':""}
+          ${y?'<button type="button" class="steam-btn quit-btn" id="btn-towers-quit"><div>ÇIKIŞ</div></button>':""}
         </div>
       </header>
 
       <main class="main-tab-stage towers-main-stage">
         <section class="towers-architect-hero">
           <div class="towers-architect-card">
-            <div class="towers-architect-avatar" style="border-color:${h.accentColor}">
-              ${at(h.id,46)}
+            <div class="towers-architect-avatar" style="border-color:${w.accentColor}">
+              ${at(w.id,46)}
             </div>
             <div class="towers-architect-info">
               <div class="towers-architect-head">
-                <span class="towers-architect-name">${M(h.name)}</span>
-                <span class="towers-architect-role">${M(h.title)}</span>
-                <span class="towers-perk-chip">🧱 Güç +${h.powerScore}</span>
+                <span class="towers-architect-name">${L(w.name)}</span>
+                <span class="towers-architect-role">${L(w.title)}</span>
+                <span class="towers-perk-chip">🧱 Güç +${w.powerScore}</span>
               </div>
               <div class="towers-xp-bar-wrap">
                 <div class="towers-xp-labels">
-                  <span><strong>Mimar LVL ${b.level}</strong> • ${M(b.title)}</span>
-                  <span>${this.stats.architectXp>=9e5?"MAX (Beta Sandbox)":`${b.currentXp} / ${b.nextLevelXp} XP (%${b.progressPct})`}</span>
+                  <span><strong>Mimar LVL ${f.level}</strong> • ${L(f.title)}</span>
+                  <span>${this.stats.architectXp>=9e5?"MAX (Beta Sandbox)":`${f.currentXp} / ${f.nextLevelXp} XP (%${f.progressPct})`}</span>
                 </div>
                 <div class="towers-xp-track">
-                  <div class="towers-xp-fill" style="width:${b.progressPct}%"></div>
+                  <div class="towers-xp-fill" style="width:${f.progressPct}%"></div>
                 </div>
               </div>
             </div>
@@ -532,17 +460,17 @@ var kt=Object.defineProperty;var St=(o,t,e)=>t in o?kt(o,t,{enumerable:!0,config
 
           <div class="towers-Currencies-row">
             <div class="towers-stat-chip"><span class="lbl">Proje Kristali</span><strong class="val">${this.stats.blueprintGems>=9e8?"♾️ Beta":`💠 ${this.stats.blueprintGems}`}</strong></div>
-            <div class="towers-stat-chip"><span class="lbl">Mahalle</span><strong class="val">🏘️ ${d} / 60</strong></div>
-            <div class="towers-stat-chip"><span class="lbl">Yıldız</span><strong class="val">⭐ ${a}</strong></div>
+            <div class="towers-stat-chip"><span class="lbl">Mahalle</span><strong class="val">🏘️ ${c} / 60</strong></div>
+            <div class="towers-stat-chip"><span class="lbl">Yıldız</span><strong class="val">⭐ ${o}</strong></div>
             <div class="towers-stat-chip"><span class="lbl">Başarım</span><strong class="val">🏅 ${this.stats.unlockedAchievements.length}/24</strong></div>
           </div>
         </section>
 
         ${t?"":`
           <div class="towers-mobile-mode-strip" role="tablist">
-            ${$.map(g=>`
-              <button type="button" class="towers-mobile-pill ${this.activeTab===g.id?"active":""}" data-towers-tab="${g.id}">
-                ${g.icon} ${g.label}
+            ${E.map(v=>`
+              <button type="button" class="towers-mobile-pill ${this.activeTab===v.id?"active":""}" data-towers-tab="${v.id}">
+                ${v.icon} ${v.label}
               </button>
             `).join("")}
           </div>
@@ -560,18 +488,18 @@ var kt=Object.defineProperty;var St=(o,t,e)=>t in o?kt(o,t,{enumerable:!0,config
               <span class="discord-nav-indicator" aria-hidden="true"></span>
               <span class="discord-dm-icon-box" aria-hidden="true">💬</span>
               <span class="tab-label">DM &amp; Sohbet</span>
-              ${p>0?`<b class="social-nav-badge" style="display:inline-flex;">${p}</b>`:""}
+              ${u>0?`<b class="social-nav-badge" style="display:inline-flex;">${u}</b>`:""}
             </button>
             <div class="discord-nav-divider" aria-hidden="true"></div>
           </div>
 
           <div class="discord-single-links">
-            ${$.map(g=>`
-              <button type="button" class="bottom-nav-tab ${this.activeTab===g.id?"active":""}" data-towers-tab="${g.id}">
+            ${E.map(v=>`
+              <button type="button" class="bottom-nav-tab ${this.activeTab===v.id?"active":""}" data-towers-tab="${v.id}">
                 <span class="discord-nav-indicator" aria-hidden="true"></span>
-                <span class="tab-icon">${g.icon}</span>
-                <span class="tab-label">${g.label}</span>
-                ${g.badge?`<span class="tab-badge">${M(g.badge)}</span>`:""}
+                <span class="tab-icon">${v.icon}</span>
+                <span class="tab-label">${v.label}</span>
+                ${v.badge?`<span class="tab-badge">${L(v.badge)}</span>`:""}
               </button>
             `).join("")}
             <div class="discord-nav-divider slim" aria-hidden="true"></div>
@@ -596,11 +524,11 @@ var kt=Object.defineProperty;var St=(o,t,e)=>t in o?kt(o,t,{enumerable:!0,config
           <div class="desktop-sidebar-footer discord-user-dock">
             <div class="discord-voice-ship-strip">
               <div class="sidebar-ship-preview">
-                ${at(h.id,30)}
+                ${at(w.id,30)}
               </div>
               <div class="discord-voice-ship-info">
                 <span class="discord-conn-green">● Şantiye Hazır</span>
-                <small class="discord-conn-sub">LVL ${b.level} • ${M(h.name)}</small>
+                <small class="discord-conn-sub">LVL ${f.level} • ${L(w.name)}</small>
               </div>
               <button type="button" class="sidebar-hangar-mini-btn" id="btn-towers-workshop">🏗️ Atölye</button>
             </div>
@@ -608,17 +536,17 @@ var kt=Object.defineProperty;var St=(o,t,e)=>t in o?kt(o,t,{enumerable:!0,config
             <div class="discord-user-bar">
               <button type="button" class="discord-user-identity profile-badge" id="btn-towers-open-profile" title="Ortak Oyuncu Kimliği">
                 <div class="discord-user-avatar">
-                  ${at(h.id,28)}
-                  <span class="discord-presence-dot ${r?"online":"guest"}"></span>
+                  ${at(w.id,28)}
+                  <span class="discord-presence-dot ${d?"online":"guest"}"></span>
                 </div>
                 <div class="discord-user-meta">
-                  <strong class="discord-user-nick">${M(e)}<small>#${M(i)}</small></strong>
+                  <strong class="discord-user-nick">${L(e)}<small>#${L(i)}</small></strong>
                   <span class="discord-user-sub">${this.stats.totalPoints} Puan</span>
                 </div>
               </button>
               <div class="discord-user-controls">
-                <button type="button" class="discord-ctrl-btn ${c.soundEnabled?"is-on":"is-muted"}" id="btn-towers-dock-sfx" title="Ses Efektleri">🔊</button>
-                <button type="button" class="discord-ctrl-btn ${c.musicEnabled?"is-on":"is-muted"}" id="btn-towers-dock-music" title="Şehir Müziği">🎵</button>
+                <button type="button" class="discord-ctrl-btn ${p.soundEnabled?"is-on":"is-muted"}" id="btn-towers-dock-sfx" title="Ses Efektleri">🔊</button>
+                <button type="button" class="discord-ctrl-btn ${p.musicEnabled?"is-on":"is-muted"}" id="btn-towers-dock-music" title="Şehir Müziği">🎵</button>
                 <button type="button" class="discord-ctrl-btn" id="btn-towers-settings" title="Ayarlar">⚙️</button>
               </div>
             </div>
@@ -643,7 +571,7 @@ var kt=Object.defineProperty;var St=(o,t,e)=>t in o?kt(o,t,{enumerable:!0,config
           </div>
         `}
       </nav>
-    `}renderTabContent(){if(this.activeTab==="campaign"){const t=this.getUnlockedCampaignIndex(),e=L[t]||L[0],i=L.filter(h=>h.episode===this.selectedEpisode),s={1:"1. Evre: Kırmızı Tuğla Mahallesi (4×4 – 6×6)",2:"2. Evre: İmarlı Tarihi Semt (4×4 – 7×7)",3:"3. Evre: Eski Saat Meydanı (5×5 – 7×7)",4:"4. Evre: Sisli Konaklar (5×5 – 8×8)",5:"5. Evre: Büyük Metropol (6×6 – 8×8)"},r=rt(this.stats.equippedFacadeId,this.stats.equippedRoofId),f=Lt(i,this.stats,r,this.stats.equippedRoofId,t,h=>L.findIndex(a=>a.id===h)),b=["track-left","track-center","track-right","track-right","track-center","track-left"];return`
+    `}renderTabContent(){if(this.activeTab==="campaign"){const t=this.getUnlockedCampaignIndex(),e=A[t]||A[0],i=A.filter(o=>o.episode===this.selectedEpisode),s={1:"1. Evre: Kırmızı Tuğla Mahallesi (4×4 – 6×6)",2:"2. Evre: İmarlı Tarihi Semt (4×4 – 7×7)",3:"3. Evre: Eski Saat Meydanı (5×5 – 7×7)",4:"4. Evre: Sisli Konaklar (5×5 – 8×8)",5:"5. Evre: Büyük Metropol (6×6 – 8×8)"},d=nt(this.stats.equippedFacadeId,this.stats.equippedRoofId),y=Bt(i,this.stats,d,this.stats.equippedRoofId,t,o=>A.findIndex(c=>c.id===o)),f=i.map((o,c)=>{const u=A.findIndex(g=>g.id===o.id),p=this.stats.solvedIds.includes(o.id),E=u<=t||p,S=this.stats.levelStars[o.id]||0,h=ft(p,E,S),l=this.stats.bestTimesSec[o.id],k=o.difficulty==="easy"?"Kolay":o.difficulty==="medium"?"Orta":"Zor",C=h==="gold"?"Lüks Altın Konak":h==="silver"?"Klasik Tuğla Apartman":h==="bronze"?"Mahalle Gecekondusu":h==="active"?"Aktif İnşaat Parseli":"Kilitli Boş Arsa",a=o.challengeKind==="zoning"?'<span class="street-mech-tag zoning">🧱 İmar Kısıtı</span>':o.challengeKind==="fog"?'<span class="street-mech-tag fog">🌫️ Sisli Sokak</span>':"";return{lvl:o,relIdx:c,isCompleted:p,isUnlocked:E,stars:S,tier:h,tierTitle:C,mechPill:a,diffBadge:k,bestSec:l,isLandmark:c===i.length-1}}),w=Kt(f,d,this.stats.equippedRoofId,tt,L);return`
         <div class="towers-campaign-wrap">
           <div class="towers-campaign-header">
             <div>
@@ -651,66 +579,38 @@ var kt=Object.defineProperty;var St=(o,t,e)=>t in o?kt(o,t,{enumerable:!0,config
               <p>Her parsel boş arsa başlar! Bölüm bitince madalyana göre sokağa <b>Gecekondu ★</b>, <b>Apartman ★★</b> veya <b>Lüks Konak ★★★</b> dikilir.</p>
             </div>
             <button id="btn-towers-play-next" class="towers-primary-cta" data-start-campaign="${e.id}">
-              ▶️ Sıradaki Parsel: #${M(e.code)} (${M(e.cityName)})
+              ▶️ Sıradaki Parsel: #${L(e.code)} (${L(e.cityName)})
             </button>
           </div>
 
           <div class="towers-episode-tabs">
-            ${[1,2,3,4,5].map(h=>`
-              <button type="button" class="towers-ep-btn ${this.selectedEpisode===h?"active":""}" data-towers-ep="${h}">
-                ${M(s[h])}
+            ${[1,2,3,4,5].map(o=>`
+              <button type="button" class="towers-ep-btn ${this.selectedEpisode===o?"active":""}" data-towers-ep="${o}">
+                ${L(s[o])}
               </button>
             `).join("")}
           </div>
 
           <section class="towers-street-panorama-card" aria-label="Mahalle Caddesi Silüeti">
             <div class="street-panorama-head">
-              <strong>🛣️ ${M(s[this.selectedEpisode]||"")}</strong>
+              <strong>🛣️ ${L(s[this.selectedEpisode]||"")}</strong>
               <div class="street-medal-legend">
-                <span>🚧 Arsa</span>
+                <span>🌱 Arsa</span>
                 <span>🥉 Gecekondu (★)</span>
                 <span>🥈 Apartman (★★)</span>
                 <span>🥇 Lüks Konak (★★★)</span>
               </div>
             </div>
             <div class="street-panorama-frame">
-              ${f}
+              ${y}
             </div>
           </section>
 
-          <div class="towers-street-route">
-            ${i.map((h,a)=>{const d=L.findIndex(T=>T.id===h.id),p=this.stats.solvedIds.includes(h.id),c=d<=t||p,$=this.stats.levelStars[h.id]||0,y=$t(p,c,$),u="★".repeat($)+"☆".repeat(Math.max(0,3-$)),l=this.stats.bestTimesSec[h.id],m=h.difficulty==="easy"?"Kolay":h.difficulty==="medium"?"Orta":"Zor",z=b[a%b.length],k=y==="gold"?"Lüks Altın Konak":y==="silver"?"Klasik Tuğla Apartman":y==="bronze"?"Mahalle Gecekondusu":y==="active"?"Aktif İnşaat Parseli":"Kilitli Boş Arsa",S=h.challengeKind==="zoning"?'<span class="street-mech-tag zoning">🧱 İmar Kısıtı</span>':h.challengeKind==="fog"?'<span class="street-mech-tag fog">🌫️ Sisli Sokak</span>':"";return`
-                  <div class="towers-street-row ${z}">
-                    <article class="towers-street-node tier-${y} ${c?"unlocked":"locked"}" data-city-card="${h.id}">
-                      <div class="street-node-art">
-                        ${mt(y,r,this.stats.equippedRoofId,"street-node-bldg-svg")}
-                      </div>
-                      <div class="street-node-body">
-                        <div class="towers-city-top">
-                          <span class="towers-city-code">#${M(h.code)} • ${h.size}×${h.size} ${m}</span>
-                          ${S}
-                        </div>
-                        <h4 class="towers-city-name">${M(h.cityName)}</h4>
-                        <div class="street-tier-subtitle">${k}</div>
-                        <div class="towers-city-meta">
-                          <span class="towers-city-stars ${$>0?"earned":""}">${u}</span>
-                          <span class="towers-city-time">${l?$<3?`⏱️ ${R(l)} • 🥇 ≤ ${R(h.goldSec)}`:`🥇 Rekor: ${R(l)}`:`🥇 Hedef: ${R(h.goldSec)}`}</span>
-                        </div>
-                      </div>
-                      <button
-                        type="button"
-                        class="towers-city-play-btn"
-                        data-start-campaign="${h.id}"
-                        ${c?"":"disabled"}
-                      >
-                        ${p?$<3?"⬆️ Lükse Yükselt":"🔄 Tekrar Oyna":c?"🏗️ İnşa Et":"🔒 Kilitli"}
-                      </button>
-                    </article>
-                  </div>
-                `}).join("")}
+          <div class="towers-street-route" style="background-image: linear-gradient(180deg, rgba(220, 252, 231, 0.16), rgba(187, 247, 208, 0.24)), url('./towers/candy_park_bg.jpg');">
+            ${w}
           </div>
         </div>
-      `}if(this.activeTab==="challenges"){const t=wt(),e=yt(t),i=this.stats.weeklyCupKey===t&&Array.isArray(this.stats.weeklyCupScores)?this.stats.weeklyCupScores:[0,0,0];return`
+      `}if(this.activeTab==="challenges"){const t=mt(),e=wt(t),i=this.stats.weeklyCupKey===t&&Array.isArray(this.stats.weeklyCupScores)?this.stats.weeklyCupScores:[0,0,0];return`
         <div class="towers-challenges-layout">
           <div class="towers-challenge-cards-grid">
             <article class="towers-challenge-card zoning">
@@ -753,19 +653,19 @@ var kt=Object.defineProperty;var St=(o,t,e)=>t in o?kt(o,t,{enumerable:!0,config
           <section class="towers-cup-panel">
             <div class="towers-cup-head">
               <div>
-                <h3>🏆 Haftalık Mimar Kupası (${M(t)})</h3>
+                <h3>🏆 Haftalık Mimar Kupası (${L(t)})</h3>
                 <p>Tüm oyuncularla aynı 3 sabit tohumlu tuğla sokak etabı üzerinden yüksek skor yarışı.</p>
               </div>
               <span class="towers-cup-total">Toplam: ${i[0]+i[1]+i[2]} P</span>
             </div>
             <div class="towers-cup-grid">
-              ${e.map(s=>{const r=i[s.index]||0;return`
-                    <div class="towers-cup-stage ${r>0?"done":""}">
+              ${e.map(s=>{const d=i[s.index]||0;return`
+                    <div class="towers-cup-stage ${d>0?"done":""}">
                       <div class="stage-top"><strong>${s.label}</strong><span>${s.size}×${s.size}</span></div>
-                      <small>${M(s.subtitle)}</small>
-                      <div class="stage-score">${r>0?`Skor: <b>${r} P</b>`:"Henüz Çözülmedi"}</div>
+                      <small>${L(s.subtitle)}</small>
+                      <div class="stage-score">${d>0?`Skor: <b>${d} P</b>`:"Henüz Çözülmedi"}</div>
                       <button type="button" class="towers-city-play-btn" data-towers-cup-stage="${s.index}">
-                        ${r>0?"Skoru Geliştir ↻":"Etap Başlat →"}
+                        ${d>0?"Skoru Geliştir ↻":"Etap Başlat →"}
                       </button>
                     </div>
                   `}).join("")}
@@ -841,25 +741,25 @@ var kt=Object.defineProperty;var St=(o,t,e)=>t in o?kt(o,t,{enumerable:!0,config
             </div>
             <div class="towers-form-group">
               <label for="inp-towers-custom-seed">Özel Tohum Kodu (Opsiyonel)</label>
-              <input id="inp-towers-custom-seed" class="towers-seed-input" type="text" placeholder="Örn: TWR-5-ORTA-2026" value="${M(this.customSeedInput)}" />
+              <input id="inp-towers-custom-seed" class="towers-seed-input" type="text" placeholder="Örn: TWR-5-ORTA-2026" value="${L(this.customSeedInput)}" />
             </div>
           </div>
           <button id="btn-towers-start-custom" class="towers-primary-cta">🎲 ${this.customSize}×${this.customSize} İnşaata Başla</button>
         </div>
       </div>
-    `}renderBoardScreenHTML(){var $,y;const t=this.activePuzzle,e=t.size,i=ot(t,this.board),s=q.find(u=>u.id===this.stats.equippedFacadeId)||q[0],r=q.find(u=>u.id===this.stats.equippedRoofId)||q[5],f=rt(s.id,r.id),b=new Int32Array(e+1);for(let u=0;u<e;u++)for(let l=0;l<e;l++){const m=this.board[u][l];m>=1&&m<=e&&b[m]++}const h=new Map;let a="";if(this.activeSightRay){const{side:u,index:l}=this.activeSightRay,m=!!((y=($=t.hiddenCluesMask)==null?void 0:$[u])!=null&&y[l]),z=m?0:t.clues[u][l],k=[];for(let g=0;g<e;g++){let C=l,P=g;u==="top"?(C=g,P=l):u==="bottom"?(C=e-1-g,P=l):u==="left"?(C=l,P=g):(C=l,P=e-1-g),k.push({r:C,c:P})}const S=Mt(k,this.board,z,u,l);S.visibleCells.forEach(g=>h.set(`${g.r},${g.c}`,"visible")),S.hiddenCells.forEach(g=>h.set(`${g.r},${g.c}`,"blocked")),a=`
+    `}renderBoardScreenHTML(){var E,S;const t=this.activePuzzle,e=t.size,i=lt(t,this.board),s=D.find(h=>h.id===this.stats.equippedFacadeId)||D[0],d=D.find(h=>h.id===this.stats.equippedRoofId)||D[5],y=nt(s.id,d.id),f=new Int32Array(e+1);for(let h=0;h<e;h++)for(let l=0;l<e;l++){const k=this.board[h][l];k>=1&&k<=e&&f[k]++}const w=new Map;let o="";if(this.activeSightRay){const{side:h,index:l}=this.activeSightRay,k=!!((S=(E=t.hiddenCluesMask)==null?void 0:E[h])!=null&&S[l]),C=k?0:t.clues[h][l],a=[];for(let v=0;v<e;v++){let M=l,T=v;h==="top"?(M=v,T=l):h==="bottom"?(M=e-1-v,T=l):h==="left"?(M=l,T=v):(M=l,T=e-1-v),a.push({r:M,c:T})}const g=Tt(a,this.board,C,h,l);g.visibleCells.forEach(v=>w.set(`${v.r},${v.c}`,"visible")),g.hiddenCells.forEach(v=>w.set(`${v.r},${v.c}`,"blocked")),o=`
         <div class="towers-sight-banner" id="towers-sight-banner">
-          <span>👁️ <strong>Görüş Hattı (${u==="top"?`${l+1}. Sütun (Üstten ▾)`:u==="bottom"?`${l+1}. Sütun (Alttan ▴)`:u==="left"?`${l+1}. Satır (Soldan ▸)`:`${l+1}. Satır (Sağdan ◂)`}):</strong> ${m?"Sisli İpucu (?)":`Hedef = <b>${z||"Yok"}</b>`} • <b class="sight-ok">Görüldü: ${S.visibleCells.length}</b> • <b class="sight-hid">Örtüldü: ${S.hiddenCells.length}</b></span>
+          <span>👁️ <strong>Görüş Hattı (${h==="top"?`${l+1}. Sütun (Üstten ▾)`:h==="bottom"?`${l+1}. Sütun (Alttan ▴)`:h==="left"?`${l+1}. Satır (Soldan ▸)`:`${l+1}. Satır (Sağdan ◂)`}):</strong> ${k?"Sisli İpucu (?)":`Hedef = <b>${C||"Yok"}</b>`} • <b class="sight-ok">Görüldü: ${g.visibleCells.length}</b> • <b class="sight-hid">Örtüldü: ${g.hiddenCells.length}</b></span>
           <button type="button" id="btn-towers-clear-sight" class="towers-mini-btn">Kapat ✕</button>
         </div>
-      `}const d=this.activeMode==="campaign"&&this.activeCampaignLevel?`🏘️ #${this.activeCampaignLevel.code}: ${this.activeCampaignLevel.cityName}`:this.activeMode==="daily"?"🧱 Günlük Bina":this.activeMode==="endless"?`🏗️ Dalga #${this.endlessWave}`:this.activeMode==="blitz"?`⚡ Blitz: ${this.blitzScore} P`:this.activeChallengeKind==="zoning"?"🚧 İmar Kısıtı":this.activeChallengeKind==="fog"?"🌫️ Sisli Sokak":this.activeChallengeKind==="survival"?"🪖 3 Baret Hayatta Kalma":this.activeChallengeKind==="weekly_cup"?`🏆 Kupa Etabı #${(this.activeCupStageIdx??0)+1}`:`🎲 Serbest (${e}×${e})`,p=(u,l)=>{var z,k;if((k=(z=t.hiddenCluesMask)==null?void 0:z[u])!=null&&k[l])return"fogged";const m=`${u}:${l}`;return i.violatedClueKeys.has(m)?"violated":i.satisfiedClueKeys.has(m)?"satisfied":"pending"},c=(u,l,m)=>{var C,P,A,G;const z=!!((P=(C=t.hiddenCluesMask)==null?void 0:C[u])!=null&&P[l]),k=t.clues[u][l],S=p(u,l),T=((A=this.activeSightRay)==null?void 0:A.side)===u&&((G=this.activeSightRay)==null?void 0:G.index)===l,g=z?"🌫️":k>0?String(k):"·";return`
+      `}const c=this.activeMode==="campaign"&&this.activeCampaignLevel?`🏘️ #${this.activeCampaignLevel.code}: ${this.activeCampaignLevel.cityName}`:this.activeMode==="daily"?"🧱 Günlük Bina":this.activeMode==="endless"?`🏗️ Dalga #${this.endlessWave}`:this.activeMode==="blitz"?`⚡ Blitz: ${this.blitzScore} P`:this.activeChallengeKind==="zoning"?"🚧 İmar Kısıtı":this.activeChallengeKind==="fog"?"🌫️ Sisli Sokak":this.activeChallengeKind==="survival"?"🪖 3 Baret Hayatta Kalma":this.activeChallengeKind==="weekly_cup"?`🏆 Kupa Etabı #${(this.activeCupStageIdx??0)+1}`:`🎲 Serbest (${e}×${e})`,u=(h,l)=>{var C,a;if((a=(C=t.hiddenCluesMask)==null?void 0:C[h])!=null&&a[l])return"fogged";const k=`${h}:${l}`;return i.violatedClueKeys.has(k)?"violated":i.satisfiedClueKeys.has(k)?"satisfied":"pending"},p=(h,l,k)=>{var M,T,P,B;const C=!!((T=(M=t.hiddenCluesMask)==null?void 0:M[h])!=null&&T[l]),a=t.clues[h][l],g=u(h,l),$=((P=this.activeSightRay)==null?void 0:P.side)===h&&((B=this.activeSightRay)==null?void 0:B.index)===l,v=C?"🌫️":a>0?String(a):"·";return`
         <button
           type="button"
-          class="towers-clue-cell ${u} ${S} ${T?"active-ray":""}"
-          data-towers-clue="${u}-${l}"
-          title="${z?"Sisli İpucu":"Görüş Hattını Göster / Gizle"}"
+          class="towers-clue-cell ${h} ${g} ${$?"active-ray":""}"
+          data-towers-clue="${h}-${l}"
+          title="${C?"Sisli İpucu":"Görüş Hattını Göster / Gizle"}"
         >
-          ${u==="right"||u==="bottom"?`<span class="clue-arrow">${m}</span><span class="clue-num">${g}</span>`:`<span class="clue-num">${g}</span><span class="clue-arrow">${m}</span>`}
+          ${h==="right"||h==="bottom"?`<span class="clue-arrow">${k}</span><span class="clue-num">${v}</span>`:`<span class="clue-num">${v}</span><span class="clue-arrow">${k}</span>`}
         </button>
       `};return`
       <div class="towers-board-screen" id="towers-board-screen">
@@ -870,14 +770,14 @@ var kt=Object.defineProperty;var St=(o,t,e)=>t in o?kt(o,t,{enumerable:!0,config
           </div>
 
           <div class="towers-hud-center">
-            <span class="towers-hud-title">${M(d)}</span>
-            <span class="towers-hud-sub">${e}×${e} • ${M(s.name)}</span>
+            <span class="towers-hud-title">${L(c)}</span>
+            <span class="towers-hud-sub">${e}×${e} • ${L(s.name)}</span>
           </div>
 
           <div class="towers-hud-metrics">
             ${this.activeChallengeKind==="survival"?`<span class="towers-hud-pill survival-lives">${"🪖".repeat(this.survivalLives)}${"⚫".repeat(Math.max(0,3-this.survivalLives))}</span>`:""}
             <span class="towers-hud-pill" id="towers-hud-timer">
-              ⏱️ ${this.activeMode==="blitz"?R(this.blitzRemainingSeconds):R(this.elapsedSeconds)}
+              ⏱️ ${this.activeMode==="blitz"?tt(this.blitzRemainingSeconds):tt(this.elapsedSeconds)}
             </span>
             <button type="button" id="btn-towers-sight-toggle" class="towers-hud-pill btn-pill ${this.activeSightRay?"active":""}" title="Görüş Hattını İncele (V)">
               👁️ Görüş
@@ -886,12 +786,12 @@ var kt=Object.defineProperty;var St=(o,t,e)=>t in o?kt(o,t,{enumerable:!0,config
           </div>
         </div>
 
-        ${a}
+        ${o}
 
         ${this.activeHint?`
           <div class="towers-hint-banner" id="towers-hint-banner">
             <div class="towers-hint-text">
-              <strong>💡 ${M(this.activeHint.ruleTitle)}:</strong> ${M(this.activeHint.message)}
+              <strong>💡 ${L(this.activeHint.ruleTitle)}:</strong> ${L(this.activeHint.message)}
             </div>
             <button type="button" id="btn-towers-apply-hint" class="towers-apply-hint-btn">
               🧱 ${this.activeHint.value} Kat Dik (S${this.activeHint.r+1}, K${this.activeHint.c+1})
@@ -909,48 +809,48 @@ var kt=Object.defineProperty;var St=(o,t,e)=>t in o?kt(o,t,{enumerable:!0,config
           `:""}
           <div class="towers-matrix" id="towers-matrix" style="--towers-size: ${e};">
             <div class="towers-corner-spacer"></div>
-            ${Array.from({length:e},(u,l)=>c("top",l,"▾")).join("")}
+            ${Array.from({length:e},(h,l)=>p("top",l,"▾")).join("")}
             <div class="towers-corner-spacer"></div>
 
-            ${Array.from({length:e},(u,l)=>{const m=Array.from({length:e},(z,k)=>{var O,V,j,F;const S=this.board[l][k],T=t.givens[l][k]>0,g=this.selectedCell.r===l&&this.selectedCell.c===k,C=i.duplicateKeys.has(`${l},${k}`),P=i.zoningViolationKeys.has(`${l},${k}`),A=((V=(O=t.maxHeightLimits)==null?void 0:O[l])==null?void 0:V[k])||0,G=((j=this.activeHint)==null?void 0:j.r)===l&&((F=this.activeHint)==null?void 0:F.c)===k,D=h.get(`${l},${k}`)||"",_=this.notes[l][k];return`
+            ${Array.from({length:e},(h,l)=>{const k=Array.from({length:e},(C,a)=>{var O,V,j,Y;const g=this.board[l][a],$=t.givens[l][a]>0,v=this.selectedCell.r===l&&this.selectedCell.c===a,M=i.duplicateKeys.has(`${l},${a}`),T=i.zoningViolationKeys.has(`${l},${a}`),P=((V=(O=t.maxHeightLimits)==null?void 0:O[l])==null?void 0:V[a])||0,B=((j=this.activeHint)==null?void 0:j.r)===l&&((Y=this.activeHint)==null?void 0:Y.c)===a,I=w.get(`${l},${a}`)||"",_=this.notes[l][a];return`
                   <div
-                    class="towers-cell ${S>0?"has-tower":"empty"} ${T?"given":""} ${g?"selected":""} ${C||P?"conflict":""} ${G?"hint-target":""} ${A>0?"zoned":""} ${D?`sight-${D}`:""}"
-                    data-towers-cell="${l}-${k}"
+                    class="towers-cell ${g>0?"has-tower":"empty"} ${$?"given":""} ${v?"selected":""} ${M||T?"conflict":""} ${B?"hint-target":""} ${P>0?"zoned":""} ${I?`sight-${I}`:""}"
+                    data-towers-cell="${l}-${a}"
                     data-row="${l}"
-                    data-col="${k}"
-                    data-val="${S}"
+                    data-col="${a}"
+                    data-val="${g}"
                   >
-                    ${A>0?`<span class="tower-zone-badge" title="İmar Kısıtı: Maksimum ${A} kat">≤${A}</span>`:""}
-                    ${S>0?`
+                    ${P>0?`<span class="tower-zone-badge" title="İmar Kısıtı: Maksimum ${P} kat">≤${P}</span>`:""}
+                    ${g>0?`
                       <div class="tower-pixel-bldg-wrap">
-                        ${pt(S,e,f,r.id)}
-                        <span class="tower-height-badge ${T?"given-badge":""}">${S}</span>
+                        ${pt(g,e,y,d.id)}
+                        <span class="tower-height-badge ${$?"given-badge":""}">${g}</span>
                       </div>
                     `:_.length>0?`
                       <div class="tower-notes-grid">
-                        ${Array.from({length:e},(lt,st)=>{const U=st+1;return`<span class="tower-note-item ${_.includes(U)?"on":""}">${_.includes(U)?U:""}</span>`}).join("")}
+                        ${Array.from({length:e},(rt,st)=>{const U=st+1;return`<span class="tower-note-item ${_.includes(U)?"on":""}">${_.includes(U)?U:""}</span>`}).join("")}
                       </div>
                     `:'<span class="tower-plot-stakes" aria-hidden="true"><i></i><i></i></span>'}
-                    ${D==="visible"?'<span class="tower-sight-tag visible" title="Görüldü">👁️</span>':D==="blocked"?'<span class="tower-sight-tag blocked" title="Önündeki yüksek bina tarafından örtüldü">⬛</span>':""}
+                    ${I==="visible"?'<span class="tower-sight-tag visible" title="Görüldü">👁️</span>':I==="blocked"?'<span class="tower-sight-tag blocked" title="Önündeki yüksek bina tarafından örtüldü">⬛</span>':""}
                   </div>
-                `}).join("");return`${c("left",l,"▸")}${m}${c("right",l,"◂")}`}).join("")}
+                `}).join("");return`${p("left",l,"▸")}${k}${p("right",l,"◂")}`}).join("")}
 
             <div class="towers-corner-spacer"></div>
-            ${Array.from({length:e},(u,l)=>c("bottom",l,"▴")).join("")}
+            ${Array.from({length:e},(h,l)=>p("bottom",l,"▴")).join("")}
             <div class="towers-corner-spacer"></div>
           </div>
         </div>
 
         <div class="towers-controls-dock">
           <div class="towers-numpad" role="group" aria-label="Bina Kat Yüksekliği">
-            ${Array.from({length:e},(u,l)=>{const m=l+1,z=Math.max(0,e-b[m]);return`
+            ${Array.from({length:e},(h,l)=>{const k=l+1,C=Math.max(0,e-f[k]);return`
                 <button
                   type="button"
-                  class="towers-num-btn ${this.noteMode?"note-active":""} ${z===0?"all-placed":""}"
-                  data-towers-num="${m}"
+                  class="towers-num-btn ${this.noteMode?"note-active":""} ${C===0?"all-placed":""}"
+                  data-towers-num="${k}"
                 >
-                  <span class="num-main">${m}</span>
-                  <span class="num-lbl">${this.noteMode?"Not":z===0?"✓":`×${z}`}</span>
+                  <span class="num-main">${k}</span>
+                  <span class="num-lbl">${this.noteMode?"Not":C===0?"✓":`×${C}`}</span>
                 </button>
               `}).join("")}
           </div>
@@ -967,4 +867,4 @@ var kt=Object.defineProperty;var St=(o,t,e)=>t in o?kt(o,t,{enumerable:!0,config
           </div>
         </div>
       </div>
-    `}renderActiveModal(){return this.activeModal?this.activeModal==="tutorial"?At({step:this.tutorialStep,miniBoard:this.tutorialMiniBoard,selectedMiniCell:this.tutorialSelectedCell,palId:{facade:this.stats.equippedFacadeId,roof:this.stats.equippedRoofId}}):this.activeModal==="rules"?Bt():this.activeModal==="workshop"?Ht(this.stats):this.activeModal==="profile"?Kt(this.stats):this.activeModal==="beta-lab"?qt(this.inBoardView):this.activeModal==="gameover"?Rt(this.gameOverReason):this.activeModal==="victory"&&this.lastWinSummary?It({elapsedSeconds:this.elapsedSeconds,hintsUsed:this.hintsUsedThisGame,challengeKind:this.activeChallengeKind,summary:this.lastWinSummary}):"":""}bindEvents(t){var i,s,r,f,b,h,a,d,p,c,$,y,u,l,m,z,k,S,T,g,C,P,A,G,D,_,O,V,j,F,lt,st,U,vt;(i=t.querySelector("#btn-towers-back-hub"))==null||i.addEventListener("click",()=>{this.stopTimer(),this.host.onBackToHub()}),(s=t.querySelector("#btn-towers-open-social"))==null||s.addEventListener("click",()=>{var n,w;(w=(n=this.host).onOpenSocialHub)==null||w.call(n)}),(r=t.querySelector("#btn-towers-open-profile"))==null||r.addEventListener("click",()=>{var n,w;(w=(n=this.host).onOpenGlobalProfile)==null||w.call(n)}),(f=t.querySelector("#btn-towers-dock-sfx"))==null||f.addEventListener("click",()=>{var n,w;(w=(n=this.host).onToggleSound)==null||w.call(n),this.render()}),(b=t.querySelector("#btn-towers-dock-music"))==null||b.addEventListener("click",()=>{var n,w;(w=(n=this.host).onToggleMusic)==null||w.call(n),this.render()}),(h=t.querySelector("#btn-towers-quit"))==null||h.addEventListener("click",()=>{var n,w;(w=(n=this.host).onQuitApp)==null||w.call(n)}),(a=t.querySelector("#btn-towers-tutorial"))==null||a.addEventListener("click",()=>{this.tutorialStep=1,this.tutorialMiniBoard=et.map(n=>[...n]),this.tutorialSelectedCell={r:0,c:1},this.activeModal="tutorial",this.render()}),(d=t.querySelector("#btn-towers-rules"))==null||d.addEventListener("click",()=>{this.activeModal="rules",this.render()}),(p=t.querySelector("#btn-towers-workshop"))==null||p.addEventListener("click",()=>{this.activeModal="workshop",this.render()}),(c=t.querySelector("#btn-towers-profile"))==null||c.addEventListener("click",()=>{this.activeModal="profile",this.render()}),($=t.querySelector("#btn-towers-settings"))==null||$.addEventListener("click",()=>{this.host.onOpenGlobalSettings()}),(y=t.querySelector("#btn-towers-beta-lab"))==null||y.addEventListener("click",()=>{this.activeModal="beta-lab",this.render()}),(u=t.querySelector("#btn-towers-close-modal"))==null||u.addEventListener("click",()=>{this.activeModal=null,this.render()}),t.querySelectorAll("[data-tut-step]").forEach(n=>{n.addEventListener("click",()=>{this.tutorialStep=Number(n.dataset.tutStep)||1,this.render()})}),t.querySelectorAll("[data-tut-cell]").forEach(n=>{n.addEventListener("click",()=>{var X,Z,Q;const[w,x]=(n.dataset.tutCell||"0-0").split("-"),E=Number(w)||0,B=Number(x)||0;((X=et[E])==null?void 0:X[B])>0||(this.tutorialSelectedCell={r:E,c:B},(Q=(Z=this.host).playSound)==null||Q.call(Z,"click"),this.render())})}),t.querySelectorAll("[data-tut-num]").forEach(n=>{n.addEventListener("click",()=>{var B,X,Z,Q,bt;const w=Number(n.dataset.tutNum)||0,{r:x,c:E}=this.tutorialSelectedCell;((B=et[x])==null?void 0:B[E])>0||(this.tutorialMiniBoard[x][E]=w,w>0?(Z=(X=this.host).playSound)==null||Z.call(X,"place",{floors:w,maxFloors:3}):(bt=(Q=this.host).playSound)==null||bt.call(Q,"erase"),this.render())})}),(l=t.querySelector("#btn-towers-tutorial-next"))==null||l.addEventListener("click",()=>{this.tutorialStep=Math.min(3,this.tutorialStep+1),this.render()}),(m=t.querySelector("#btn-towers-tutorial-practice"))==null||m.addEventListener("click",()=>{this.activeModal=null;const n=L[0],w=K(n.size,n.difficulty,n.seed,{id:n.id,title:n.cityName,code:n.code});this.startPuzzleSession(w,"campaign",n)}),t.querySelectorAll("[data-towers-tab]").forEach(n=>{n.addEventListener("click",()=>{var x,E;const w=n.dataset.towersTab;w&&(this.activeTab=w,(E=(x=this.host).playSound)==null||E.call(x,"click"),this.render())})}),t.querySelectorAll("[data-towers-ep]").forEach(n=>{n.addEventListener("click",()=>{this.selectedEpisode=Number(n.dataset.towersEp)||1,this.render()})}),t.querySelectorAll("[data-start-campaign]").forEach(n=>{n.addEventListener("click",()=>{const w=n.dataset.startCampaign,x=L.find(B=>B.id===w);if(!x)return;const E=x.challengeKind==="zoning"||x.challengeKind==="fog"?J(x.challengeKind,x.size,x.difficulty,x.seed,{id:x.id,title:x.cityName,code:x.code}):K(x.size,x.difficulty,x.seed,{id:x.id,title:x.cityName,code:x.code});this.startPuzzleSession(E,"campaign",x)})}),(z=t.querySelector("#btn-towers-start-zoning"))==null||z.addEventListener("click",()=>{const n=J("zoning",5,"medium",`TWR-ZONE-${Date.now()}`);this.startPuzzleSession(n,"challenge")}),(k=t.querySelector("#btn-towers-start-fog"))==null||k.addEventListener("click",()=>{const n=J("fog",5,"medium",`TWR-FOG-${Date.now()}`);this.startPuzzleSession(n,"challenge")}),(S=t.querySelector("#btn-towers-start-survival"))==null||S.addEventListener("click",()=>{const n=J("survival",5,"hard",`TWR-SURV-${Date.now()}`);this.startPuzzleSession(n,"challenge")}),t.querySelectorAll("[data-towers-cup-stage]").forEach(n=>{n.addEventListener("click",()=>{const w=Number(n.dataset.towersCupStage);if(w!==0&&w!==1&&w!==2)return;const E=yt()[w],B=J(E.challengeKind==="zoning"?"zoning":"weekly_cup",E.size,E.difficulty,E.seed,{id:E.seed,title:`🏆 ${E.label}: ${E.subtitle}`});B.challengeKind="weekly_cup",this.startPuzzleSession(B,"challenge",null,{cupStageIdx:w})})}),(T=t.querySelector("#btn-towers-start-daily"))==null||T.addEventListener("click",()=>{const n=new Date().toISOString().slice(0,10),w=K(5,"medium",`TWR-DAILY-${n}`);this.startPuzzleSession(w,"daily")}),(g=t.querySelector("#btn-towers-start-endless"))==null||g.addEventListener("click",()=>{const n=this.endlessWave<=2?4:this.endlessWave<=5?5:6,w=this.endlessWave<=2?"easy":this.endlessWave<=6?"medium":"hard",x=K(n,w,`TWR-ENDLESS-W${this.endlessWave}-${Date.now()}`);this.startPuzzleSession(x,"endless")}),(C=t.querySelector("#btn-towers-start-blitz"))==null||C.addEventListener("click",()=>{const n=K(4,"easy",`TWR-BLITZ-${Date.now()}-0`);this.startPuzzleSession(n,"blitz")}),t.querySelectorAll("[data-custom-size]").forEach(n=>{n.addEventListener("click",()=>{this.customSize=Number(n.dataset.customSize)||4,this.render()})}),t.querySelectorAll("[data-custom-diff]").forEach(n=>{n.addEventListener("click",()=>{this.customDifficulty=n.dataset.customDiff||"easy",this.render()})});const e=t.querySelector("#inp-towers-custom-seed");e==null||e.addEventListener("input",()=>{this.customSeedInput=e.value}),(P=t.querySelector("#btn-towers-start-custom"))==null||P.addEventListener("click",()=>{const n=this.customSeedInput.trim()||`TWR-CUSTOM-${this.customSize}-${this.customDifficulty}-${Date.now()}`,w=K(this.customSize,this.customDifficulty,n);this.startPuzzleSession(w,"custom")}),(A=t.querySelector("#btn-towers-leave-board"))==null||A.addEventListener("click",()=>{this.stopTimer(),this.inBoardView=!1,this.isPaused=!1,this.render()}),(G=t.querySelector("#btn-towers-pause"))==null||G.addEventListener("click",()=>{this.isPaused=!this.isPaused,this.render()}),(D=t.querySelector("#btn-towers-resume"))==null||D.addEventListener("click",()=>{this.isPaused=!1,this.render()}),(_=t.querySelector("#btn-towers-sight-toggle"))==null||_.addEventListener("click",()=>{this.toggleSightRayFromSelection()}),t.querySelectorAll("[data-towers-cell]").forEach(n=>{n.addEventListener("click",()=>{this.selectedCell={r:Number(n.dataset.row)||0,c:Number(n.dataset.col)||0},this.render()})}),t.querySelectorAll("[data-towers-clue]").forEach(n=>{n.addEventListener("click",()=>{const w=n.dataset.towersClue||"",[x,E]=w.split("-"),B=Number(E)||0;this.activeSightRay&&this.activeSightRay.side===x&&this.activeSightRay.index===B?this.activeSightRay=null:this.activeSightRay={side:x,index:B},this.render()})}),(O=t.querySelector("#btn-towers-clear-sight"))==null||O.addEventListener("click",()=>{this.activeSightRay=null,this.render()}),t.querySelectorAll("[data-towers-num]").forEach(n=>{n.addEventListener("click",()=>{const w=Number(n.dataset.towersNum)||1;this.handleNumberInput(w)})}),(V=t.querySelector("#btn-towers-notes-toggle"))==null||V.addEventListener("click",()=>{this.noteMode=!this.noteMode,this.render()}),(j=t.querySelector("#btn-towers-erase"))==null||j.addEventListener("click",()=>this.handleEraseInput()),(F=t.querySelector("#btn-towers-undo"))==null||F.addEventListener("click",()=>this.handleUndo()),(lt=t.querySelector("#btn-towers-redo"))==null||lt.addEventListener("click",()=>this.handleRedo()),(st=t.querySelector("#btn-towers-hint"))==null||st.addEventListener("click",()=>this.handleSmartHint()),(U=t.querySelector("#btn-towers-apply-hint"))==null||U.addEventListener("click",()=>this.applyActiveHintMove()),(vt=t.querySelector("#btn-towers-reset"))==null||vt.addEventListener("click",()=>{!this.activePuzzle||this.isPaused||(this.pushHistory(),this.board=N(this.activePuzzle.givens),this.notes=Array.from({length:this.activePuzzle.size},()=>Array.from({length:this.activePuzzle.size},()=>[])),this.activeHint=null,this.render())}),this.bindWorkshopAndMetaModals(t)}bindWorkshopAndMetaModals(t){var e,i,s,r,f,b,h;t.querySelectorAll("[data-buy-char]").forEach(a=>{a.addEventListener("click",()=>{const d=a.dataset.buyChar,p=it.find(c=>c.id===d);!p||this.stats.blueprintGems<p.costGems||(this.stats.blueprintGems-=p.costGems,this.stats.unlockedCharacterIds.includes(d)||this.stats.unlockedCharacterIds.push(d),this.stats.equippedCharacterId=d,Y(this.stats),this.render())})}),t.querySelectorAll("[data-equip-char]").forEach(a=>{a.addEventListener("click",()=>{const d=a.dataset.equipChar;this.stats.unlockedCharacterIds.includes(d)&&(this.stats.equippedCharacterId=d,Y(this.stats),this.render())})}),t.querySelectorAll("[data-buy-cosmetic]").forEach(a=>{a.addEventListener("click",()=>{const d=a.dataset.buyCosmetic,p=q.find(c=>c.id===d);!p||this.stats.blueprintGems<p.costGems||(this.stats.blueprintGems-=p.costGems,this.stats.unlockedCosmeticIds.includes(d)||this.stats.unlockedCosmeticIds.push(d),p.slot==="facade"?this.stats.equippedFacadeId=d:this.stats.equippedRoofId=d,Y(this.stats),this.render())})}),t.querySelectorAll("[data-equip-cosmetic]").forEach(a=>{a.addEventListener("click",()=>{const d=a.dataset.equipCosmetic,p=q.find(c=>c.id===d);p&&(p.slot==="facade"?this.stats.equippedFacadeId=d:this.stats.equippedRoofId=d,Y(this.stats),this.render())})}),(e=t.querySelector("#btn-towers-preset-max"))==null||e.addEventListener("click",()=>{this.stats=dt("unlock_all"),this.activeModal=null,this.render()}),(i=t.querySelector("#btn-towers-preset-mid"))==null||i.addEventListener("click",()=>{this.stats=dt("classic_sandbox"),this.activeModal=null,this.render()}),(s=t.querySelector("#btn-towers-preset-reset"))==null||s.addEventListener("click",()=>{this.stats=dt("fresh_lvl1"),this.activeModal=null,this.render()}),(r=t.querySelector("#btn-towers-instant-solve"))==null||r.addEventListener("click",()=>{this.activePuzzle&&(this.activeModal=null,this.board=N(this.activePuzzle.solution),this.checkWinAfterMove(),this.render())}),(f=t.querySelector("#btn-towers-retry-board"))==null||f.addEventListener("click",()=>{this.activePuzzle&&(this.activeModal=null,this.startPuzzleSession(this.activePuzzle,this.activeMode,this.activeCampaignLevel,{resetSeries:!0,cupStageIdx:this.activeCupStageIdx}))}),(b=t.querySelector("#btn-towers-win-map"))==null||b.addEventListener("click",()=>{this.activeModal=null,this.inBoardView=!1,this.render()}),(h=t.querySelector("#btn-towers-win-next"))==null||h.addEventListener("click",()=>{if(this.activeModal=null,this.activeMode==="campaign"&&this.activeCampaignLevel){const a=L.findIndex(c=>c.id===this.activeCampaignLevel.id),d=L[Math.min(L.length-1,a+1)];this.selectedEpisode=d.episode;const p=K(d.size,d.difficulty,d.seed,{id:d.id,title:d.cityName,code:d.code});this.startPuzzleSession(p,"campaign",d)}else if(this.activeMode==="endless"){const a=this.endlessWave<=2?4:this.endlessWave<=5?5:6,d=this.endlessWave<=2?"easy":this.endlessWave<=6?"medium":"hard",p=K(a,d,`TWR-ENDLESS-W${this.endlessWave}-${Date.now()}`);this.startPuzzleSession(p,"endless")}else this.inBoardView=!1,this.render()})}}class _t{constructor(){v(this,"id","towers");v(this,"title","Towers");v(this,"sceneTheme","brick-city");v(this,"controller",null);v(this,"host",null)}mount(t,e){this.unmount(),this.host=e;const i={getUsername:()=>e.getUsername(),getPilotTag:()=>e.getPilotTag(),isBetaChannel:()=>e.isBetaChannel,getCloudSynced:()=>{var s;return((s=e.getCloudSynced)==null?void 0:s.call(e))??!1},canQuit:()=>{var s;return((s=e.canQuit)==null?void 0:s.call(e))??!1},renderTitlebar:()=>{var s;return((s=e.renderTitlebar)==null?void 0:s.call(e))??""},bindTitlebarEvents:()=>{var s;return(s=e.bindTitlebarEvents)==null?void 0:s.call(e)},onBackToHub:()=>e.returnToHub(),onOpenGlobalSettings:()=>e.openGlobalSettings(),onOpenGlobalProfile:()=>{var s;return(s=e.openGlobalProfile)==null?void 0:s.call(e)},onOpenSocialHub:()=>e.openSocialHub({pauseActiveGame:!0}),getSocialAttentionCount:()=>{var s;return((s=e.getSocialAttentionCount)==null?void 0:s.call(e))??0},getAudioSettings:()=>{var s;return((s=e.getAudioSettings)==null?void 0:s.call(e))??{soundEnabled:I.soundEnabled,musicEnabled:I.musicEnabled}},onToggleSound:()=>{var s;return(s=e.toggleSound)==null?void 0:s.call(e)},onToggleMusic:()=>{var s;return(s=e.toggleMusic)==null?void 0:s.call(e)},onQuitApp:()=>{var s;return(s=e.quitApp)==null?void 0:s.call(e)},playSound:(s,r)=>{s==="error"?I.playLockedBarrier():s==="win"?I.playVictory():s==="hint"?I.playGalaxyComplete(1):s==="erase"?I.playTrowelErase():s==="place"?I.playBrickPlace((r==null?void 0:r.floors)||2,(r==null?void 0:r.maxFloors)||6):I.playConsoleButton()}};this.controller=new Gt(i),this.controller.mount(t),e.setAudioScene(this.sceneTheme)}unmount(){this.controller&&(this.controller.destroy(),this.controller=null),this.host=null}refreshHostState(){var t,e;(t=this.controller)==null||t.syncStatsFromStorage(),(e=this.controller)==null||e.render()}onPauseForOverlay(){var t;(t=this.controller)==null||t.pauseIfPlaying()}handleBackNavigation(){return!this.controller||!this.host?!1:(this.controller.handleBackNavigation()||this.host.returnToHub(),!0)}}export{_t as TowersPlugin};
+    `}renderActiveModal(){return this.activeModal?this.activeModal==="tutorial"?It({step:this.tutorialStep,miniBoard:this.tutorialMiniBoard,selectedMiniCell:this.tutorialSelectedCell,palId:{facade:this.stats.equippedFacadeId,roof:this.stats.equippedRoofId}}):this.activeModal==="rules"?qt():this.activeModal==="workshop"?Rt(this.stats):this.activeModal==="profile"?_t(this.stats):this.activeModal==="beta-lab"?Gt(this.inBoardView):this.activeModal==="gameover"?Dt(this.gameOverReason):this.activeModal==="victory"&&this.lastWinSummary?Wt({elapsedSeconds:this.elapsedSeconds,hintsUsed:this.hintsUsedThisGame,challengeKind:this.activeChallengeKind,summary:this.lastWinSummary}):"":""}bindEvents(t){var i,s,d,y,f,w,o,c,u,p,E,S,h,l,k,C,a,g,$,v,M,T,P,B,I,_,O,V,j,Y,rt,st,U,vt;(i=t.querySelector("#btn-towers-back-hub"))==null||i.addEventListener("click",()=>{this.stopTimer(),this.host.onBackToHub()}),(s=t.querySelector("#btn-towers-open-social"))==null||s.addEventListener("click",()=>{var r,m;(m=(r=this.host).onOpenSocialHub)==null||m.call(r)}),(d=t.querySelector("#btn-towers-open-profile"))==null||d.addEventListener("click",()=>{var r,m;(m=(r=this.host).onOpenGlobalProfile)==null||m.call(r)}),(y=t.querySelector("#btn-towers-dock-sfx"))==null||y.addEventListener("click",()=>{var r,m;(m=(r=this.host).onToggleSound)==null||m.call(r),this.render()}),(f=t.querySelector("#btn-towers-dock-music"))==null||f.addEventListener("click",()=>{var r,m;(m=(r=this.host).onToggleMusic)==null||m.call(r),this.render()}),(w=t.querySelector("#btn-towers-quit"))==null||w.addEventListener("click",()=>{var r,m;(m=(r=this.host).onQuitApp)==null||m.call(r)}),(o=t.querySelector("#btn-towers-tutorial"))==null||o.addEventListener("click",()=>{this.tutorialStep=1,this.tutorialMiniBoard=et.map(r=>[...r]),this.tutorialSelectedCell={r:0,c:1},this.activeModal="tutorial",this.render()}),(c=t.querySelector("#btn-towers-rules"))==null||c.addEventListener("click",()=>{this.activeModal="rules",this.render()}),(u=t.querySelector("#btn-towers-workshop"))==null||u.addEventListener("click",()=>{this.activeModal="workshop",this.render()}),(p=t.querySelector("#btn-towers-profile"))==null||p.addEventListener("click",()=>{this.activeModal="profile",this.render()}),(E=t.querySelector("#btn-towers-settings"))==null||E.addEventListener("click",()=>{this.host.onOpenGlobalSettings()}),(S=t.querySelector("#btn-towers-beta-lab"))==null||S.addEventListener("click",()=>{this.activeModal="beta-lab",this.render()}),(h=t.querySelector("#btn-towers-close-modal"))==null||h.addEventListener("click",()=>{this.activeModal=null,this.render()}),t.querySelectorAll("[data-tut-step]").forEach(r=>{r.addEventListener("click",()=>{this.tutorialStep=Number(r.dataset.tutStep)||1,this.render()})}),t.querySelectorAll("[data-tut-cell]").forEach(r=>{r.addEventListener("click",()=>{var F,X,Z;const[m,z]=(r.dataset.tutCell||"0-0").split("-"),x=Number(m)||0,K=Number(z)||0;((F=et[x])==null?void 0:F[K])>0||(this.tutorialSelectedCell={r:x,c:K},(Z=(X=this.host).playSound)==null||Z.call(X,"click"),this.render())})}),t.querySelectorAll("[data-tut-num]").forEach(r=>{r.addEventListener("click",()=>{var K,F,X,Z,bt;const m=Number(r.dataset.tutNum)||0,{r:z,c:x}=this.tutorialSelectedCell;((K=et[z])==null?void 0:K[x])>0||(this.tutorialMiniBoard[z][x]=m,m>0?(X=(F=this.host).playSound)==null||X.call(F,"place",{floors:m,maxFloors:3}):(bt=(Z=this.host).playSound)==null||bt.call(Z,"erase"),this.render())})}),(l=t.querySelector("#btn-towers-tutorial-next"))==null||l.addEventListener("click",()=>{this.tutorialStep=Math.min(3,this.tutorialStep+1),this.render()}),(k=t.querySelector("#btn-towers-tutorial-practice"))==null||k.addEventListener("click",()=>{this.activeModal=null;const r=A[0],m=R(r.size,r.difficulty,r.seed,{id:r.id,title:r.cityName,code:r.code});this.startPuzzleSession(m,"campaign",r)}),t.querySelectorAll("[data-towers-tab]").forEach(r=>{r.addEventListener("click",()=>{var z,x;const m=r.dataset.towersTab;m&&(this.activeTab=m,(x=(z=this.host).playSound)==null||x.call(z,"click"),this.render())})}),t.querySelectorAll("[data-towers-ep]").forEach(r=>{r.addEventListener("click",()=>{this.selectedEpisode=Number(r.dataset.towersEp)||1,this.render()})}),t.querySelectorAll("[data-start-campaign]").forEach(r=>{r.addEventListener("click",()=>{const m=r.dataset.startCampaign,z=A.find(K=>K.id===m);if(!z)return;const x=z.challengeKind==="zoning"||z.challengeKind==="fog"?J(z.challengeKind,z.size,z.difficulty,z.seed,{id:z.id,title:z.cityName,code:z.code}):R(z.size,z.difficulty,z.seed,{id:z.id,title:z.cityName,code:z.code});this.startPuzzleSession(x,"campaign",z)})}),(C=t.querySelector("#btn-towers-start-zoning"))==null||C.addEventListener("click",()=>{const r=J("zoning",5,"medium",`TWR-ZONE-${Date.now()}`);this.startPuzzleSession(r,"challenge")}),(a=t.querySelector("#btn-towers-start-fog"))==null||a.addEventListener("click",()=>{const r=J("fog",5,"medium",`TWR-FOG-${Date.now()}`);this.startPuzzleSession(r,"challenge")}),(g=t.querySelector("#btn-towers-start-survival"))==null||g.addEventListener("click",()=>{const r=J("survival",5,"hard",`TWR-SURV-${Date.now()}`);this.startPuzzleSession(r,"challenge")}),t.querySelectorAll("[data-towers-cup-stage]").forEach(r=>{r.addEventListener("click",()=>{const m=Number(r.dataset.towersCupStage);if(m!==0&&m!==1&&m!==2)return;const x=wt()[m],K=J(x.challengeKind==="zoning"?"zoning":"weekly_cup",x.size,x.difficulty,x.seed,{id:x.seed,title:`🏆 ${x.label}: ${x.subtitle}`});K.challengeKind="weekly_cup",this.startPuzzleSession(K,"challenge",null,{cupStageIdx:m})})}),($=t.querySelector("#btn-towers-start-daily"))==null||$.addEventListener("click",()=>{const r=new Date().toISOString().slice(0,10),m=R(5,"medium",`TWR-DAILY-${r}`);this.startPuzzleSession(m,"daily")}),(v=t.querySelector("#btn-towers-start-endless"))==null||v.addEventListener("click",()=>{const r=this.endlessWave<=2?4:this.endlessWave<=5?5:6,m=this.endlessWave<=2?"easy":this.endlessWave<=6?"medium":"hard",z=R(r,m,`TWR-ENDLESS-W${this.endlessWave}-${Date.now()}`);this.startPuzzleSession(z,"endless")}),(M=t.querySelector("#btn-towers-start-blitz"))==null||M.addEventListener("click",()=>{const r=R(4,"easy",`TWR-BLITZ-${Date.now()}-0`);this.startPuzzleSession(r,"blitz")}),t.querySelectorAll("[data-custom-size]").forEach(r=>{r.addEventListener("click",()=>{this.customSize=Number(r.dataset.customSize)||4,this.render()})}),t.querySelectorAll("[data-custom-diff]").forEach(r=>{r.addEventListener("click",()=>{this.customDifficulty=r.dataset.customDiff||"easy",this.render()})});const e=t.querySelector("#inp-towers-custom-seed");e==null||e.addEventListener("input",()=>{this.customSeedInput=e.value}),(T=t.querySelector("#btn-towers-start-custom"))==null||T.addEventListener("click",()=>{const r=this.customSeedInput.trim()||`TWR-CUSTOM-${this.customSize}-${this.customDifficulty}-${Date.now()}`,m=R(this.customSize,this.customDifficulty,r);this.startPuzzleSession(m,"custom")}),(P=t.querySelector("#btn-towers-leave-board"))==null||P.addEventListener("click",()=>{this.stopTimer(),this.inBoardView=!1,this.isPaused=!1,this.render()}),(B=t.querySelector("#btn-towers-pause"))==null||B.addEventListener("click",()=>{this.isPaused=!this.isPaused,this.render()}),(I=t.querySelector("#btn-towers-resume"))==null||I.addEventListener("click",()=>{this.isPaused=!1,this.render()}),(_=t.querySelector("#btn-towers-sight-toggle"))==null||_.addEventListener("click",()=>{this.toggleSightRayFromSelection()}),t.querySelectorAll("[data-towers-cell]").forEach(r=>{r.addEventListener("click",()=>{this.selectedCell={r:Number(r.dataset.row)||0,c:Number(r.dataset.col)||0},this.render()})}),t.querySelectorAll("[data-towers-clue]").forEach(r=>{r.addEventListener("click",()=>{const m=r.dataset.towersClue||"",[z,x]=m.split("-"),K=Number(x)||0;this.activeSightRay&&this.activeSightRay.side===z&&this.activeSightRay.index===K?this.activeSightRay=null:this.activeSightRay={side:z,index:K},this.render()})}),(O=t.querySelector("#btn-towers-clear-sight"))==null||O.addEventListener("click",()=>{this.activeSightRay=null,this.render()}),t.querySelectorAll("[data-towers-num]").forEach(r=>{r.addEventListener("click",()=>{const m=Number(r.dataset.towersNum)||1;this.handleNumberInput(m)})}),(V=t.querySelector("#btn-towers-notes-toggle"))==null||V.addEventListener("click",()=>{this.noteMode=!this.noteMode,this.render()}),(j=t.querySelector("#btn-towers-erase"))==null||j.addEventListener("click",()=>this.handleEraseInput()),(Y=t.querySelector("#btn-towers-undo"))==null||Y.addEventListener("click",()=>this.handleUndo()),(rt=t.querySelector("#btn-towers-redo"))==null||rt.addEventListener("click",()=>this.handleRedo()),(st=t.querySelector("#btn-towers-hint"))==null||st.addEventListener("click",()=>this.handleSmartHint()),(U=t.querySelector("#btn-towers-apply-hint"))==null||U.addEventListener("click",()=>this.applyActiveHintMove()),(vt=t.querySelector("#btn-towers-reset"))==null||vt.addEventListener("click",()=>{!this.activePuzzle||this.isPaused||(this.pushHistory(),this.board=N(this.activePuzzle.givens),this.notes=Array.from({length:this.activePuzzle.size},()=>Array.from({length:this.activePuzzle.size},()=>[])),this.activeHint=null,this.render())}),this.bindWorkshopAndMetaModals(t)}bindWorkshopAndMetaModals(t){var e,i,s,d,y,f,w;t.querySelectorAll("[data-buy-char]").forEach(o=>{o.addEventListener("click",()=>{const c=o.dataset.buyChar,u=it.find(p=>p.id===c);!u||this.stats.blueprintGems<u.costGems||(this.stats.blueprintGems-=u.costGems,this.stats.unlockedCharacterIds.includes(c)||this.stats.unlockedCharacterIds.push(c),this.stats.equippedCharacterId=c,Q(this.stats),this.render())})}),t.querySelectorAll("[data-equip-char]").forEach(o=>{o.addEventListener("click",()=>{const c=o.dataset.equipChar;this.stats.unlockedCharacterIds.includes(c)&&(this.stats.equippedCharacterId=c,Q(this.stats),this.render())})}),t.querySelectorAll("[data-buy-cosmetic]").forEach(o=>{o.addEventListener("click",()=>{const c=o.dataset.buyCosmetic,u=D.find(p=>p.id===c);!u||this.stats.blueprintGems<u.costGems||(this.stats.blueprintGems-=u.costGems,this.stats.unlockedCosmeticIds.includes(c)||this.stats.unlockedCosmeticIds.push(c),u.slot==="facade"?this.stats.equippedFacadeId=c:this.stats.equippedRoofId=c,Q(this.stats),this.render())})}),t.querySelectorAll("[data-equip-cosmetic]").forEach(o=>{o.addEventListener("click",()=>{const c=o.dataset.equipCosmetic,u=D.find(p=>p.id===c);u&&(u.slot==="facade"?this.stats.equippedFacadeId=c:this.stats.equippedRoofId=c,Q(this.stats),this.render())})}),(e=t.querySelector("#btn-towers-preset-max"))==null||e.addEventListener("click",()=>{this.stats=dt("unlock_all"),this.activeModal=null,this.render()}),(i=t.querySelector("#btn-towers-preset-mid"))==null||i.addEventListener("click",()=>{this.stats=dt("classic_sandbox"),this.activeModal=null,this.render()}),(s=t.querySelector("#btn-towers-preset-reset"))==null||s.addEventListener("click",()=>{this.stats=dt("fresh_lvl1"),this.activeModal=null,this.render()}),(d=t.querySelector("#btn-towers-instant-solve"))==null||d.addEventListener("click",()=>{this.activePuzzle&&(this.activeModal=null,this.board=N(this.activePuzzle.solution),this.checkWinAfterMove(),this.render())}),(y=t.querySelector("#btn-towers-retry-board"))==null||y.addEventListener("click",()=>{this.activePuzzle&&(this.activeModal=null,this.startPuzzleSession(this.activePuzzle,this.activeMode,this.activeCampaignLevel,{resetSeries:!0,cupStageIdx:this.activeCupStageIdx}))}),(f=t.querySelector("#btn-towers-win-map"))==null||f.addEventListener("click",()=>{this.activeModal=null,this.inBoardView=!1,this.render()}),(w=t.querySelector("#btn-towers-win-next"))==null||w.addEventListener("click",()=>{if(this.activeModal=null,this.activeMode==="campaign"&&this.activeCampaignLevel){const o=A.findIndex(p=>p.id===this.activeCampaignLevel.id),c=A[Math.min(A.length-1,o+1)];this.selectedEpisode=c.episode;const u=R(c.size,c.difficulty,c.seed,{id:c.id,title:c.cityName,code:c.code});this.startPuzzleSession(u,"campaign",c)}else if(this.activeMode==="endless"){const o=this.endlessWave<=2?4:this.endlessWave<=5?5:6,c=this.endlessWave<=2?"easy":this.endlessWave<=6?"medium":"hard",u=R(o,c,`TWR-ENDLESS-W${this.endlessWave}-${Date.now()}`);this.startPuzzleSession(u,"endless")}else this.inBoardView=!1,this.render()})}}class Vt{constructor(){b(this,"id","towers");b(this,"title","Towers");b(this,"sceneTheme","brick-city");b(this,"controller",null);b(this,"host",null)}mount(t,e){this.unmount(),this.host=e;const i={getUsername:()=>e.getUsername(),getPilotTag:()=>e.getPilotTag(),isBetaChannel:()=>e.isBetaChannel,getCloudSynced:()=>{var s;return((s=e.getCloudSynced)==null?void 0:s.call(e))??!1},canQuit:()=>{var s;return((s=e.canQuit)==null?void 0:s.call(e))??!1},renderTitlebar:()=>{var s;return((s=e.renderTitlebar)==null?void 0:s.call(e))??""},bindTitlebarEvents:()=>{var s;return(s=e.bindTitlebarEvents)==null?void 0:s.call(e)},onBackToHub:()=>e.returnToHub(),onOpenGlobalSettings:()=>e.openGlobalSettings(),onOpenGlobalProfile:()=>{var s;return(s=e.openGlobalProfile)==null?void 0:s.call(e)},onOpenSocialHub:()=>e.openSocialHub({pauseActiveGame:!0}),getSocialAttentionCount:()=>{var s;return((s=e.getSocialAttentionCount)==null?void 0:s.call(e))??0},getAudioSettings:()=>{var s;return((s=e.getAudioSettings)==null?void 0:s.call(e))??{soundEnabled:G.soundEnabled,musicEnabled:G.musicEnabled}},onToggleSound:()=>{var s;return(s=e.toggleSound)==null?void 0:s.call(e)},onToggleMusic:()=>{var s;return(s=e.toggleMusic)==null?void 0:s.call(e)},onQuitApp:()=>{var s;return(s=e.quitApp)==null?void 0:s.call(e)},playSound:(s,d)=>{s==="error"?G.playLockedBarrier():s==="win"?G.playVictory():s==="hint"?G.playGalaxyComplete(1):s==="erase"?G.playTrowelErase():s==="place"?G.playBrickPlace((d==null?void 0:d.floors)||2,(d==null?void 0:d.maxFloors)||6):G.playConsoleButton()}};this.controller=new Ut(i),this.controller.mount(t),e.setAudioScene(this.sceneTheme)}unmount(){this.controller&&(this.controller.destroy(),this.controller=null),this.host=null}refreshHostState(){var t,e;(t=this.controller)==null||t.syncStatsFromStorage(),(e=this.controller)==null||e.render()}onPauseForOverlay(){var t;(t=this.controller)==null||t.pauseIfPlaying()}handleBackNavigation(){return!this.controller||!this.host?!1:(this.controller.handleBackNavigation()||this.host.returnToHub(),!0)}}export{Vt as TowersPlugin};
