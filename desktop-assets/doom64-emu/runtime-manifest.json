@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-20T15:16:56.520Z",
+  "generatedAt": "2026-11-20T15:20:29.752Z",
   "files": [
     "THIRD_PARTY.md",
     "assets.zip",
@@ -25,26 +25,26 @@
     "vendor/toastr.min.js"
   ],
   "fileHashes": {
-    "THIRD_PARTY.md": "3fdc66b163f65f922a27a15db3d5adb4059795f395c38566e604f790efa90d8e",
+    "THIRD_PARTY.md": "c202cf53bb6b8924696ae087f15efaff8b92622b0e0967a1f7d80081459b3265",
     "assets.zip": "72f8b414469d0b40630c82ca193b6f67dba906bd84ccc43991ee1ac3e4b900a2",
     "game.z64": "40998fc04adf22774c05a0d80e79e123d9024583532af227204a54940afa6518",
     "host-bridge.js": "d441dad3963b304e6a65fb5bb2bd24cee01530aea07e60b89032d72497c50e1b",
-    "index.html": "7f4d0ef3beb46394340e71394dfd82b4e1ddde184093675c083b4e4c8c0f4e60",
-    "input_controller.js": "04f48738918188098c4cd5c00310a0ad4fcf9e2a5b23df0781655bb36e381a9b",
-    "n64wasm.js": "13bd7722740d4ddaa27a40aabebe80b4babcaf629575655b78709707705606d6",
+    "index.html": "0379d96b2315d415721fb9cfeb1fb045c20f232c4dd4a1fb353c921c9e7ce2f3",
+    "input_controller.js": "e1ba2638d7b693f347e2da7fab9a21aa3975e8e592fbf511b7768f97347ce3fb",
+    "n64wasm.js": "1db1dce5e356d1a1673d5dab6f73afd30bf4b69523c3292b1d44e33ff8f4d22e",
     "n64wasm.wasm": "c829ac2ac2a620816a3906af1135c1203f606b92ae7a6e118ea8a90749f028ea",
-    "romlist.js": "83bc6ccb1ed9a34c0725a8a859ef9447a4180c38fc2d413a9630262618a60b65",
-    "script.js": "c33215578f0c1109a8bfd8c98bc028e11f38aabc0e03e7f1db93b7273b970318",
-    "settings.js": "8f8b9b5d065127d731a62119ccca4958e0f3ae841ea12b457a938c1d5f7bafb2",
-    "touch.js": "fd43e5750caca92b819679f61413af8c8cc63f37a787ccd06182b5197f0666e3",
-    "vendor/FileSaver.min.js": "cff011b282c063977ca67ef2812e5acdcb2df361c04b1f1739592295d1dae76d",
-    "vendor/bootstrap.min.css": "c4b6ed2645519ec2c128badb2a2e7720052f8441ffa94c4f0bceca02311004da",
-    "vendor/bootstrap.min.js": "b00834c17c50af103e353ef86a69d90bbcaa819ed92b4d6ed670a425514e3c3a",
-    "vendor/jquery-3.3.1.min.js": "4fe68fa216176e6d1f4580e924bafecc9f519984ecc06b1a840a08b0d88c95de",
+    "romlist.js": "7f4b16105bc7052bbf4c9179302b8f9d245d3cfbc4da8798187616a3460dde80",
+    "script.js": "5d73690e96de83153ddb571e83554e4f9b371af26101169e7a5fc434c9401569",
+    "settings.js": "2e32ea341df9ccc198129b179ac08e05cd59ba5c91ae570b37251dc978edca3a",
+    "touch.js": "0320a0827222b960ea752c4eba812f49b910ab90764e8c1c76cfd9516ac7d444",
+    "vendor/FileSaver.min.js": "bbf27552b76b9379c260579fa68793320239be2535ba3083bb67d75e84898e18",
+    "vendor/bootstrap.min.css": "2c0f3dcfe93d7e380c290fe4ab838ed8cadff1596d62697f5444be460d1f876d",
+    "vendor/bootstrap.min.js": "e7ed36ceee5450b4243bbc35188afabdfb4280c7c57597001de0ed167299b01b",
+    "vendor/jquery-3.3.1.min.js": "160a426ff2894252cd7cebbdd6d6b7da8fcd319c65b70468f10b6690c45d02ef",
     "vendor/nipplejs.min.js": "eaa524902840b05ae0b9678f40f4fa98ee00a985955a0c7a4b08f8d7d79332dc",
-    "vendor/popper.min.js": "193a81e8713370250a88db26a3b201df9f841cba4a212b567ff994693bc1bf22",
-    "vendor/rivets.bundled.min.js": "a7f86a6e677f9024e03d3952768a9ce43531a7d0586872106c549732ac71d044",
+    "vendor/popper.min.js": "a52f7aa54d7bcaafa056ee0a050262dfc5694ae28dee8b4cac3429af37ff0d66",
+    "vendor/rivets.bundled.min.js": "5bbf6dbcc1e5968462c6440dac68dfdaacfe9e48ecba146d57437a76e24e627c",
     "vendor/toastr.min.css": "10d159adb573ca535b8275f1d27dc8d60fffd9678ee3b5f1a0f7b4be4a77342f",
-    "vendor/toastr.min.js": "f2bb0e8511764611ff0081b549ff188c326c7376bf86e28513782b0a48f9c7aa"
+    "vendor/toastr.min.js": "ddb96c25de07962ffbc0243e6e68177ce74aee9fd950cb4f5d8d3c8e6c524a09"
   }
 }
