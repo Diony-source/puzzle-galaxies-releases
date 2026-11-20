@@ -9,7 +9,7 @@ Simetrik galaksi mantık bulmacası (**Tentai Show / Spiral Galaxies**) — Masa
 <!-- LEADERBOARD_START -->
 | Sıra | Oyuncu | Toplam Puan | Çözülen Bulmaca | Blitz Rekoru | Son Çözülen Bölüm |
 | :--- | :--- | :---: | :---: | :---: | :--- |
-| **1.** | **BeratUtq** | **55227 Puan** | 80 | 12000 | Günlük Bulmaca (2026-11-19) |
+| **1.** | **BeratUtq** | **55997 Puan** | 82 | 12000 | Günlük Bulmaca (2026-11-20) |
 | **2.** | **Diony** | **26391 Puan** | 48 | 10110 | 15×15 • 1-10 |
 <!-- LEADERBOARD_END -->
 
