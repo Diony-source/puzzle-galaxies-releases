@@ -102,7 +102,7 @@ class MyClass {
             swapSticks: false,
             mouseMode: false,
             useZasCMobile: false, //used for starcraft mobile
-            showFPS: true,
+            showFPS: false,
             invert2P: false,
             invert3P: false,
             invert4P: false,
@@ -279,6 +279,11 @@ class MyClass {
         {
             await this.writeAssets();
             FS.writeFile('custom.v64',byteArray);
+            this.showToast = Module.cwrap('neil_toast_message', null, ['string']);
+            this.toggleFPSModule = Module.cwrap('toggleFPS', null, ['number']);
+            this.sendMobileControls = Module.cwrap('neil_send_mobile_controls', null, ['string','string','string']);
+            this.setRemainingAudio = Module.cwrap('neil_set_buffer_remaining', null, ['number']);
+            this.setDoubleSpeed = Module.cwrap('neil_set_double_speed', null, ['number']);
             this.beforeRun();
             this.WriteConfigFile();
             this.initAudio(); //need to initAudio before next call for iOS to work
@@ -288,11 +293,9 @@ class MyClass {
             this.configureEmulator();
             $('#canvasDiv').show();
             this.rivetsData.beforeEmulatorStarted = false;
-            this.showToast = Module.cwrap('neil_toast_message', null, ['string']);
-            this.toggleFPSModule = Module.cwrap('toggleFPS', null, ['number']);
-            this.sendMobileControls = Module.cwrap('neil_send_mobile_controls', null, ['string','string','string']);
-            this.setRemainingAudio = Module.cwrap('neil_set_buffer_remaining', null, ['number']);
-            this.setDoubleSpeed = Module.cwrap('neil_set_double_speed', null, ['number']);
+            if (typeof window.__pgAfterRunHook === 'function') {
+                try { window.__pgAfterRunHook(this); } catch (e) { console.log('afterRunHook err', e); }
+            }
         }
 
     }
@@ -498,7 +501,9 @@ class MyClass {
     }
 
     beforeRun(){
-        //add any overriding logic here before the emulator starts
+        if (typeof window.__pgBeforeRunHook === 'function') {
+            try { window.__pgBeforeRunHook(this); } catch (e) { console.log('beforeRunHook err', e); }
+        }
     }
 
     afterRun(){

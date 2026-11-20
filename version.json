@@ -1,6 +1,6 @@
 {
   "channel": "beta",
-  "version": "2.5.3-beta.206",
+  "version": "2.5.3-beta.207",
   "releaseDate": "2026-11-20",
   "mandatory": true,
   "repoOwner": "Diony-source",
@@ -86,7 +86,7 @@
   "minEngineVersion": "2.4.0",
   "announcement": "",
   "fileHashes": {
-    "assets/Doom64Plugin.js": "077211ea0a323e7eae15cb2049be440ccc5589556dcdf11aff97a3748d37f7e4",
+    "assets/Doom64Plugin.js": "782e46fdd30af9a15dc47e6aaa72e69d9726d632e5d83d99134c05b0dad346d7",
     "assets/TowersPlugin.js": "635680fc77a6f59f0145941b791818f31befc8b3d2732c7648f5b3b2f96befd3",
     "assets/app.css": "57540163c46790832c19b3a10baca8e14c93382aebc7fd5df8a5dfd6f664876c",
     "assets/app.js": "f26a0c70a543476c8faa07302abad86998e39024585b356acc5e5bed639a9016",
