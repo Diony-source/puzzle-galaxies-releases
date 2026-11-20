@@ -1,6 +1,6 @@
 {
   "channel": "beta",
-  "version": "2.5.3-beta.208",
+  "version": "2.5.4-beta.209",
   "releaseDate": "2026-11-20",
   "mandatory": true,
   "repoOwner": "Diony-source",
@@ -80,12 +80,12 @@
     "towers/lot_empty.png",
     "towers/town_sky_backdrop.jpg"
   ],
-  "minEngineVersion": "2.4.0",
+  "minEngineVersion": "2.3.0",
   "announcement": "",
   "fileHashes": {
     "assets/TowersPlugin.js": "635680fc77a6f59f0145941b791818f31befc8b3d2732c7648f5b3b2f96befd3",
     "assets/app.css": "9495da3aeaaa9855b8e3b5fc6ce5052e699206046c0be2df81f882b77462678d",
-    "assets/app.js": "b88e83a14fbed9592f1c1a8fa44ee1a8921367443363db8b3460b351a2f1cb72",
+    "assets/app.js": "6231ebd874dd0f38510e0741b52e23de5f354abfdef3a273896040d8b465a0e0",
     "assets/web.js": "092d9d061f4a3129619d1c318da01190da6d04fb8c50d6fc6c8d90a6cde42eb9",
     "assets/web2.js": "4a0cc3ac09324665e3096b2d71937844328b6c6d9f037437098523a57031b0d5",
     "cozy-room-backdrop.jpg": "6503a18f7ff8c45fbe5ae3a0f59849559ba918d94758e2e62d4a03879aeb8a97",
