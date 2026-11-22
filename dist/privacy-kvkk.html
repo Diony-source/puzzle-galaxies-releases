@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1000in1 Gizlilik Politikasi, KVKK / GDPR ve Lisans Bildirimi</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b1120;
+      --card: #111827;
+      --border: #1e293b;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 24px 16px;
+    }
+    main {
+      max-width: 820px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+    }
+    h1, h2 { color: #f8fafc; margin-top: 1.4em; }
+    h1 { margin-top: 0; font-size: 1.5rem; }
+    h2 { font-size: 1.12rem; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+    p, li { color: var(--text); font-size: 0.96rem; }
+    .meta { color: var(--muted); font-size: 0.88rem; margin-bottom: 20px; }
+    code { background: #1e293b; padding: 2px 6px; border-radius: 4px; color: var(--accent); }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); }
+    th { color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>1000in1 (Puzzle Galaxies &amp; Towers 3D) Gizlilik, KVKK / GDPR ve Lisans Bildirimi</h1>
+    <p class="meta">Son guncelleme: 2026-11-22 | Sorumlu: Diony Hub Corp (Diony-source/puzzle-galaxies)</p>
+
+    <h2>1. Toplanan Veriler ve Amaci (KVKK Md. 5 / GDPR Art. 6)</h2>
+    <ul>
+      <li><strong>Yerel Oyun Verileri:</strong> Bolum ilerlemesi, yildiz sayisi, kozmetik secimleri ve ses tercihleri cihaz icinde <code>localStorage</code> uzerinde saklanir.</li>
+      <li><strong>Bulut Hesap ve Liderlik Tablosu (Opsiyonel):</strong> Kullanici hesap olusturdugunda yalnizca kullanici adi, etiket (<code>#TAG</code>), avatar secimi, oyun skorlari ve sunucu dogrulamali cozum ozetleri Supabase projesinde saklanir. E-posta adresi veya telefon numarasi zorunlu tutulmaz.</li>
+      <li><strong>Tanilama Telemetrisi:</strong> Cihaz ici <code>1000in1_telemetry_v1</code> halkasi yalnizca son 100 oyun/kaset gecis olayini PII icermeden yerelde tutar; ucuncu taraf reklam aglarina aktarilmaz.</li>
+    </ul>
+
+    <h2>2. Veri Guvenligi ve Kullanici Haklari (KVKK Md. 11 / GDPR Art. 15-17)</h2>
+    <p>
+      Kullanicilar diledikleri zaman misafir modunda cevrimdisi oynayabilir, yerel depolama verilerini uygulama veya tarayici uzerinden silebilir ve bulut hesaplarinin kaldirilmasini talep edebilir. Cozum dogrulama RPC cagrilari HMAC/ECDSA butunluk imzasi ve Row-Level Security (RLS) kurallari ile korunur.
+    </p>
+
+    <h2>3. Ucuncu Taraf Acik Kaynak Lisanslari</h2>
+    <table>
+      <thead>
+        <tr><th>Paket</th><th>Surum</th><th>Lisans</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>@supabase/supabase-js</td><td>2.119.0</td><td>MIT</td></tr>
+        <tr><td>@capacitor/core, app, browser, android</td><td>8.x</td><td>MIT</td></tr>
+        <tr><td>electron &amp; electron-builder</td><td>45.4.1 / 26.18.0</td><td>MIT</td></tr>
+        <tr><td>vite &amp; vitest</td><td>6.4.6 / 5.1.1</td><td>MIT</td></tr>
+        <tr><td>typescript</td><td>5.9.3</td><td>Apache-2.0</td></tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>
