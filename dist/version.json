@@ -1,17 +1,16 @@
 {
-  "version": "2.5.3",
-  "releaseDate": "2026-11-20",
+  "version": "2.5.4",
+  "releaseDate": "2026-11-22",
   "mandatory": true,
   "repoOwner": "Diony-source",
   "repoName": "puzzle-galaxies-releases",
   "updateManifestUrl": "https://raw.githubusercontent.com/Diony-source/puzzle-galaxies-releases/main/version.json",
   "releaseNotes": [
+    "Towers 3D Tasarım, Mobil Okunabilirlik & Telefon-PC Bulut Senkronizasyonu (v2.5.4): Towers ilerlemesi (çözülen mahalleler, yıldızlar, mimar seviyesi, atölye kozmetikleri, başarımlar) ve 1000in1 karakter seçimi artık telefon ve PC arasında otomatik eşitlenir; oyun tahtası küçük ekranlarda da rahat okunabilen 3D mimari bloklar, dev merkez rakamlar, tek tık 3D/2D geçişi, satır/sütun vurgusu ve erken kenar ipucu uyarısıyla yenilendi.",
     "1000in1 Paket Temizliği & Skor Tablosu Senkronizasyon Koruması (v2.5.3): Kullanılmayan pasif kaset dosyaları OTA paketinden temizlendi; açılışta yerel skor tablosu puanının bulut senkronizasyonu sırasında ezilmesini önleyen puan koruma düzeltmesi yayınlandı.",
     "Steam Tarzı 1000in1 Profil, 2D Piksel Karakterler & OTA Yol Düzeltmesi (v2.5.2): Otomatik güncelleme manifestindeki Windows ters eğik çizgi (\\) engeli giderildi; 1000in1 ana odasında kullanıcı adına tıklayınca açılan profil, 6 GBA/retro seçilebilir 2D piksel karakter (oda yürüyüşüyle canlı senkron!), konsol seviyesi, 10 yeni 1000in1 Genel Platform Başarımı ve Steam tarzı '1000in1 Genel / Puzzle Galaxies / Towers' oyun sekmeleriyle yayınlandı.",
     "Yeni Oyun Kaseti #002 — TOWERS Canlı Sürümde (v2.5.0): 1000in1 oyun dolabında Towers kaseti açıldı! 60 bölümlü Tuğla Şehir Cadde Seferi (madalya derecene göre arsaya Gecekondu ★, Apartman ★★ veya Lüks Konak ★★★ dikilir), 6 ünlü mimar portresi (Ali Ağaoğlu'ndan Efsanevi Mimar Sinan'a), bina cepheleri ve çatı tasarımları, Günlük Bina, Kule Blitz, Sonsuz İnşaat, İmar Kısıtı, Sisli Sokak ve 3 Baret & Haftalık Kupa modlarıyla oynanabilir.",
-    "Güvenlik & Stabilite Sertleştirmesi: Electron ve Android güncellemeleri için SHA-256 doğrulama, RPC erişim sertleştirmesi ve tam masaüstü/mobil ekran ölçeklendirme iyileştirmeleri.",
-    "1000in1 Mobil Otomatik Ekran Sığdırma (v2.4.4): Telefon ekran yüksekliğine göre üst bar, tüplü TV, Atari 2600 yuvası, piksel oda ve Oyun Dolabı otomatik ölçeklenir; kaset seçmek veya sürüklemek için artık aşağı kaydırmak gerekmez ve yatay telefon görünümü de tek ekrana sığar.",
-    "Mobil Tahta Alt Yardım Çubuğu Stabilizasyonu (v2.4.3): Galaksi seçimi, yakınlaştırma veya çizim modu değişiminde alttaki yardım metninin 1–2 satır arasında kırılıp tahtayı düşeyde kaydırması giderildi; dokunmatik tahta koordinatları sabitlendi."
+    "Güvenlik & Stabilite Sertleştirmesi: Electron ve Android güncellemeleri için SHA-256 doğrulama, RPC erişim sertleştirmesi ve tam masaüstü/mobil ekran ölçeklendirme iyileştirmeleri."
   ],
   "installerUrl": "",
   "files": [
@@ -53,9 +52,9 @@
   "minEngineVersion": "2.3.0",
   "announcement": "",
   "fileHashes": {
-    "assets/TowersPlugin.js": "635680fc77a6f59f0145941b791818f31befc8b3d2732c7648f5b3b2f96befd3",
-    "assets/app.css": "9495da3aeaaa9855b8e3b5fc6ce5052e699206046c0be2df81f882b77462678d",
-    "assets/app.js": "8dfc790c7afa01be72aed04be784651015dff435de1610ff5951dfb6c4e9112a",
+    "assets/TowersPlugin.js": "b5e4b081f29b02b2a2fd65eab197084bcc9657548b3172b8997f741b68a33f7b",
+    "assets/app.css": "a2ef1621918c3a0a6aacd267a6274246bb793b5e62731b98db025a70fd68d4e2",
+    "assets/app.js": "1ef06d16f31f47aed059c94d61679815b14668b48a58b2ce3bfc92e17eecab74",
     "assets/web.js": "092d9d061f4a3129619d1c318da01190da6d04fb8c50d6fc6c8d90a6cde42eb9",
     "assets/web2.js": "4a0cc3ac09324665e3096b2d71937844328b6c6d9f037437098523a57031b0d5",
     "cozy-room-backdrop.jpg": "6503a18f7ff8c45fbe5ae3a0f59849559ba918d94758e2e62d4a03879aeb8a97",
@@ -69,7 +68,7 @@
     "icon.png": "f17fd7015b90c27945381d056aa784eb83fd9155331a7bd22cde83cd19ddade2",
     "icon.svg": "33084c7a79a457eb932633ae1d99df97dcfce4ac7d86cb6025f75b59f083e8b0",
     "index.html": "d591cb2e5c34d6b6835ab670459fb26d05272dbb768d6e83bb3f683ae284ce22",
-    "leaderboard.json": "7c4b757386746458c0ccfd810ef908d2d30732c2f62ff532970eac26dfa3dd93",
+    "leaderboard.json": "325a9381296820d485a0a1050210d5cd24cef22db4e9f26010f030e8f8382b16",
     "manifest.webmanifest": "1244578070351a78ee62f56be85a68773bffdba140871e9b8653e3c146c01273",
     "towers/arch_agaoglu.png": "c32205c94482d609f27f45ff480603ea3316f893ad12e93d703a61fcaaad1df4",
     "towers/arch_cansever.png": "1e6c10300e670715592d9ecd67d36946de0b4409bc47b4a7edb0e9ed1d983ae5",
