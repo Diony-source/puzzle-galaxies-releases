@@ -11,14 +11,14 @@
       "bestBlitzScore": 10110,
       "lastPuzzleTitle": "15×15 • 1-10",
       "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEerh6PLEjYAcLK285FXo5LxwbepFEqeDg9yePBQDpoEeiqeld5CLl3FVG5SZs4Fsd67FJj2aGa9iC/x082SguKw==",
-      "updatedAt": 1795338766119,
+      "updatedAt": 1795344416525,
       "tag": "9031",
       "shipCode": "3.3.3.3.3",
       "pilotLevel": 8,
       "duelElo": 1200,
       "weeklyCupKey": "2026-W47",
       "secretHash": "477d58e0",
-      "signature": "5+J40PtGCsPTViMqhIUtaKLCJ2/EW9Njt5NKNc5u9V46mjXkgWOlo2u35R5y3ywYH+2TSI+tygbiaEwURJ6x5w==",
+      "signature": "I9BLP59Po4+5t+2g3lboBwP/3mUD4HB8lwIw09kwDaRRVLUPglsBWoK2o8aaNacdGchvQ2qdjR1D0g/Msg255g==",
       "dailyBestDate": "2026-11-15",
       "dailyBestSec": 90
     },
@@ -33,14 +33,16 @@
       "bestTimeSec": 6,
       "bestBlitzScore": 12000,
       "lastPuzzleTitle": "Günlük Bulmaca (2026-11-20)",
-      "updatedAt": 1795166017440,
+      "updatedAt": 1795341674520,
       "tag": "1177",
-      "shipCode": "1.1.0.1.0",
-      "pilotLevel": 5,
+      "shipCode": "4.4.2.6.5",
+      "pilotLevel": 10,
       "duelElo": 1200,
-      "weeklyCupKey": "2026-W46",
+      "weeklyCupKey": "2026-W47",
       "dailyBestDate": "2026-11-20",
-      "dailyBestSec": 64
+      "dailyBestSec": 64,
+      "secretHash": "74ed7536",
+      "signature": "TMT7EfSjCnnz04AVEUy59uiAFONluJyoYUmoPujB+GDCR0VX9zjgjYB8t3hmctVusrBjRu7hCqSDw6Xzo9Kcbw=="
     }
   },
   "feed": [
