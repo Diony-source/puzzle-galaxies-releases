@@ -1,4 +1,4 @@
-var ft=Object.defineProperty;var $t=(d,t,e)=>t in d?ft(d,t,{enumerable:!0,configurable:!0,writable:!0,value:e}):d[t]=e;var c=(d,t,e)=>$t(d,typeof t!="symbol"?t+"":t,e);import{g as ot,r as mt,T as j,A as V,a as Z,b as zt,c as kt,d as bt,l as ct,v as ut,e as Ct,f as D,h as Et,s as st,i as Y,j as yt,k as gt,m as Tt,n as B,o as Mt,p as Lt,q as At,t as wt,u as Bt,w as at,x as ht,y as Ht,z as O}from"./app.js";function P(d){return d.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}function Pt(d){const t=Math.max(0,Math.floor(d)),e=Math.floor(t/60),s=t%60;return`${String(e).padStart(2,"0")}:${String(s).padStart(2,"0")}`}const pt=[[1,3,2],[2,1,3],[3,2,1]],nt=[[1,0,0],[2,1,0],[3,0,1]];function qt(d){const{step:t,miniBoard:e,selectedMiniCell:s,palId:a}=d,n=ot(a.facade,a.roof),b=e.every((r,l)=>r.every((h,v)=>h===pt[l][v])),m=[3,1,2],y=[2,2,1];return`
+var Mt=Object.defineProperty;var Et=(u,t,e)=>t in u?Mt(u,t,{enumerable:!0,configurable:!0,writable:!0,value:e}):u[t]=e;var c=(u,t,e)=>Et(u,typeof t!="symbol"?t+"":t,e);import{g as dt,r as wt,T as O,A as N,a as tt,b as Tt,c as zt,d as mt,l as ut,v as ht,e as Lt,f as G,h as At,s as st,i as Q,j as St,k as ft,m as Bt,n as P,o as Ht,p as Pt,q as qt,t as $t,u as Kt,w as it,x as pt,y as xt,z as _}from"./app.js";function K(u){return u.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}function It(u){const t=Math.max(0,Math.floor(u)),e=Math.floor(t/60),s=t%60;return`${String(e).padStart(2,"0")}:${String(s).padStart(2,"0")}`}const vt=[[1,3,2],[2,1,3],[3,2,1]],nt=[[1,0,0],[2,1,0],[3,0,1]];function Rt(u){const{step:t,miniBoard:e,selectedMiniCell:s,palId:i}=u,a=dt(i.facade,i.roof),b=e.every((l,o)=>l.every((h,g)=>h===vt[o][g])),m=[3,1,2],w=[2,2,1];return`
     <div class="towers-modal-backdrop" id="towers-tutorial-modal">
       <div class="towers-modal-card wide">
         <div class="towers-modal-head">
@@ -41,25 +41,25 @@ var ft=Object.defineProperty;var $t=(d,t,e)=>t in d?ft(d,t,{enumerable:!0,config
             <div class="towers-tut-mini-wrap">
               <div class="towers-tut-mini-grid">
                 <div class="mini-corner"></div>
-                ${m.map(r=>`<div class="mini-clue"><b>${r}</b><small>▾</small></div>`).join("")}
-                ${[0,1,2].map(r=>`
-                  <div class="mini-clue"><b>${y[r]}</b><small>▸</small></div>
-                  ${[0,1,2].map(l=>{var E;const h=((E=e[r])==null?void 0:E[l])||0,v=nt[r][l]>0,$=s.r===r&&s.c===l,C=h>0&&h===pt[r][l],z=h>0&&h!==pt[r][l];return`
+                ${m.map(l=>`<div class="mini-clue"><b>${l}</b><small>▾</small></div>`).join("")}
+                ${[0,1,2].map(l=>`
+                  <div class="mini-clue"><b>${w[l]}</b><small>▸</small></div>
+                  ${[0,1,2].map(o=>{var E;const h=((E=e[l])==null?void 0:E[o])||0,g=nt[l][o]>0,k=s.r===l&&s.c===o,$=h>0&&h===vt[l][o],M=h>0&&h!==vt[l][o];return`
                         <button
                           type="button"
-                          class="mini-cell ${v?"fixed":""} ${$?"selected":""} ${z?"wrong":C?"correct":""}"
-                          data-tut-cell="${r}-${l}"
+                          class="mini-cell ${g?"fixed":""} ${k?"selected":""} ${M?"wrong":$?"correct":""}"
+                          data-tut-cell="${l}-${o}"
                         >
-                          ${h>0?`<div class="mini-bldg-box">${mt(h,3,n,"roof_flat")}<span class="mini-bldg-num">${h}</span></div>`:'<span class="mini-empty-plus">+</span>'}
+                          ${h>0?`<div class="mini-bldg-box">${wt(h,3,a,"roof_flat",{isGiven:g,viewMode:"3d"})}</div>`:'<span class="mini-empty-plus">+</span>'}
                         </button>
                       `}).join("")}
                 `).join("")}
               </div>
 
               <div class="towers-tut-num-row">
-                ${[1,2,3].map(r=>`
-                  <button type="button" class="towers-mini-num-btn" data-tut-num="${r}">
-                    🧱 ${r} Kat
+                ${[1,2,3].map(l=>`
+                  <button type="button" class="towers-mini-num-btn" data-tut-num="${l}">
+                    🧱 ${l} Kat
                   </button>
                 `).join("")}
                 <button type="button" class="towers-mini-num-btn clear" data-tut-num="0">Sil</button>
@@ -79,7 +79,7 @@ var ft=Object.defineProperty;var $t=(d,t,e)=>t in d?ft(d,t,{enumerable:!0,config
         </div>
       </div>
     </div>
-  `}function Kt(){return`
+  `}function Gt(){return`
     <div class="towers-modal-backdrop" id="towers-rules-modal">
       <div class="towers-modal-card">
         <div class="towers-modal-head">
@@ -97,7 +97,7 @@ var ft=Object.defineProperty;var $t=(d,t,e)=>t in d?ft(d,t,{enumerable:!0,config
         </div>
       </div>
     </div>
-  `}function xt(d){const t=j.filter(s=>s.slot==="facade"),e=j.filter(s=>s.slot==="roof");return`
+  `}function Dt(u){const t=O.filter(s=>s.slot==="facade"),e=O.filter(s=>s.slot==="roof");return`
     <div class="towers-modal-backdrop" id="towers-workshop-modal">
       <div class="towers-modal-card towers-workshop-card wide">
         <div class="towers-modal-head workshop-head">
@@ -106,7 +106,7 @@ var ft=Object.defineProperty;var $t=(d,t,e)=>t in d?ft(d,t,{enumerable:!0,config
             <p>Şantiye mimarını seç, binalarının tuğla rengini ve çatı silüetini değiştir.</p>
           </div>
           <div class="towers-modal-balance">
-            <span class="balance-pill">💠 <strong>${d.blueprintGems}</strong></span>
+            <span class="balance-pill">💠 <strong>${u.blueprintGems}</strong></span>
             <button id="btn-towers-close-modal" class="towers-close-btn">✕</button>
           </div>
         </div>
@@ -114,22 +114,22 @@ var ft=Object.defineProperty;var $t=(d,t,e)=>t in d?ft(d,t,{enumerable:!0,config
         <div class="towers-modal-body">
           <h4 class="towers-section-sub">🏛️ Ünlü Mimarlar &amp; Müteahhitler (Efsaneviye Uzanan Kadro)</h4>
           <div class="towers-workshop-grid">
-            ${V.map(s=>{const a=d.unlockedCharacterIds.includes(s.id),n=d.equippedCharacterId===s.id,b=d.blueprintGems>=s.costGems;return`
-                <div class="towers-shop-item rarity-${s.rarity} ${n?"equipped":""}">
+            ${N.map(s=>{const i=u.unlockedCharacterIds.includes(s.id),a=u.equippedCharacterId===s.id,b=u.blueprintGems>=s.costGems;return`
+                <div class="towers-shop-item rarity-${s.rarity} ${a?"equipped":""}">
                   <div class="towers-shop-head-row">
                     <div class="towers-shop-avatar" style="border-color:${s.accentColor}">
-                      ${Z(s.id,62)}
+                      ${tt(s.id,62)}
                     </div>
                     <div class="towers-shop-info">
-                      <span class="rarity-pill rarity-${s.rarity}">${P(s.rarityLabel)}</span>
-                      <strong>${P(s.name)}</strong>
-                      <span class="role">${P(s.title)}</span>
+                      <span class="rarity-pill rarity-${s.rarity}">${K(s.rarityLabel)}</span>
+                      <strong>${K(s.name)}</strong>
+                      <span class="role">${K(s.title)}</span>
                       <span class="perk">🧱 İnşaat Ustalığı +${s.powerScore}</span>
                     </div>
                   </div>
-                  <p class="towers-shop-desc">${P(s.description)}</p>
+                  <p class="towers-shop-desc">${K(s.description)}</p>
                   <div class="towers-shop-action">
-                    ${n?'<button class="towers-shop-btn equipped" disabled>✅ Aktif Mimar</button>':a?`<button class="towers-shop-btn equip" data-equip-char="${s.id}">👷 Göreve Getir</button>`:`<button class="towers-shop-btn buy" data-buy-char="${s.id}" ${b?"":"disabled"}>🔓 Aç (💠 ${s.costGems})</button>`}
+                    ${a?'<button class="towers-shop-btn equipped" disabled>✅ Aktif Mimar</button>':i?`<button class="towers-shop-btn equip" data-equip-char="${s.id}">👷 Göreve Getir</button>`:`<button class="towers-shop-btn buy" data-buy-char="${s.id}" ${b?"":"disabled"}>🔓 Aç (💠 ${s.costGems})</button>`}
                   </div>
                 </div>
               `}).join("")}
@@ -137,20 +137,20 @@ var ft=Object.defineProperty;var $t=(d,t,e)=>t in d?ft(d,t,{enumerable:!0,config
 
           <h4 class="towers-section-sub">🧱 Bina Cephe Stilleri (Tahtada Renk &amp; Doku Değiştirir)</h4>
           <div class="towers-workshop-grid">
-            ${t.map(s=>{const a=d.unlockedCosmeticIds.includes(s.id),n=d.equippedFacadeId===s.id,b=d.blueprintGems>=s.costGems,m=ot(s.id,d.equippedRoofId);return`
-                  <div class="towers-shop-item ${n?"equipped":""}">
+            ${t.map(s=>{const i=u.unlockedCosmeticIds.includes(s.id),a=u.equippedFacadeId===s.id,b=u.blueprintGems>=s.costGems,m=dt(s.id,u.equippedRoofId);return`
+                  <div class="towers-shop-item ${a?"equipped":""}">
                     <div class="towers-shop-head-row">
                       <div class="towers-shop-swatch brick-preview">
-                        ${mt(4,5,m,d.equippedRoofId)}
+                        ${wt(4,5,m,u.equippedRoofId,{viewMode:"3d"})}
                       </div>
                       <div class="towers-shop-info">
-                        <strong>${P(s.name)}</strong>
+                        <strong>${K(s.name)}</strong>
                         <span class="role">🧱 Tuğla &amp; Taş Kaplama</span>
                       </div>
                     </div>
-                    <p class="towers-shop-desc">${P(s.description)}</p>
+                    <p class="towers-shop-desc">${K(s.description)}</p>
                     <div class="towers-shop-action">
-                      ${n?'<button class="towers-shop-btn equipped" disabled>✅ Kullanımda</button>':a?`<button class="towers-shop-btn equip" data-equip-cosmetic="${s.id}">🎨 Cepheye Uygula</button>`:`<button class="towers-shop-btn buy" data-buy-cosmetic="${s.id}" ${b?"":"disabled"}>🔓 Aç (💠 ${s.costGems})</button>`}
+                      ${a?'<button class="towers-shop-btn equipped" disabled>✅ Kullanımda</button>':i?`<button class="towers-shop-btn equip" data-equip-cosmetic="${s.id}">🎨 Cepheye Uygula</button>`:`<button class="towers-shop-btn buy" data-buy-cosmetic="${s.id}" ${b?"":"disabled"}>🔓 Aç (💠 ${s.costGems})</button>`}
                     </div>
                   </div>
                 `}).join("")}
@@ -158,20 +158,20 @@ var ft=Object.defineProperty;var $t=(d,t,e)=>t in d?ft(d,t,{enumerable:!0,config
 
           <h4 class="towers-section-sub">🏰 Çatı Tasarımları &amp; Şehir Tepeleri</h4>
           <div class="towers-workshop-grid">
-            ${e.map(s=>{const a=d.unlockedCosmeticIds.includes(s.id),n=d.equippedRoofId===s.id,b=d.blueprintGems>=s.costGems;return`
-                  <div class="towers-shop-item ${n?"equipped":""}">
+            ${e.map(s=>{const i=u.unlockedCosmeticIds.includes(s.id),a=u.equippedRoofId===s.id,b=u.blueprintGems>=s.costGems;return`
+                  <div class="towers-shop-item ${a?"equipped":""}">
                     <div class="towers-shop-head-row">
                       <div class="towers-shop-swatch brick-preview roof-preview" style="border-color:${s.primaryColor}">
-                        ${zt(s.id,46)}
+                        ${Tt(s.id,46)}
                       </div>
                       <div class="towers-shop-info">
-                        <strong>${P(s.name)}</strong>
+                        <strong>${K(s.name)}</strong>
                         <span class="role">🏠 Çatı Silüeti</span>
                       </div>
                     </div>
-                    <p class="towers-shop-desc">${P(s.description)}</p>
+                    <p class="towers-shop-desc">${K(s.description)}</p>
                     <div class="towers-shop-action">
-                      ${n?'<button class="towers-shop-btn equipped" disabled>✅ Kullanımda</button>':a?`<button class="towers-shop-btn equip" data-equip-cosmetic="${s.id}">🏠 Çatıya Tak</button>`:`<button class="towers-shop-btn buy" data-buy-cosmetic="${s.id}" ${b?"":"disabled"}>🔓 Aç (💠 ${s.costGems})</button>`}
+                      ${a?'<button class="towers-shop-btn equipped" disabled>✅ Kullanımda</button>':i?`<button class="towers-shop-btn equip" data-equip-cosmetic="${s.id}">🏠 Çatıya Tak</button>`:`<button class="towers-shop-btn buy" data-buy-cosmetic="${s.id}" ${b?"":"disabled"}>🔓 Aç (💠 ${s.costGems})</button>`}
                     </div>
                   </div>
                 `}).join("")}
@@ -179,29 +179,29 @@ var ft=Object.defineProperty;var $t=(d,t,e)=>t in d?ft(d,t,{enumerable:!0,config
         </div>
       </div>
     </div>
-  `}function It(d){const t=kt(d.architectXp),e=Object.values(d.bestTimesSec),s=e.length>0?Math.min(...e):null;return`
+  `}function Wt(u){const t=zt(u.architectXp),e=Object.values(u.bestTimesSec),s=e.length>0?Math.min(...e):null;return`
     <div class="towers-modal-backdrop" id="towers-profile-modal">
       <div class="towers-modal-card wide">
         <div class="towers-modal-head">
-          <h3>🏆 Towers Başarımlar &amp; İstatistikler (LVL ${t.level} • ${P(t.title)})</h3>
+          <h3>🏆 Towers Başarımlar &amp; İstatistikler (LVL ${t.level} • ${K(t.title)})</h3>
           <button id="btn-towers-close-modal" class="towers-close-btn">✕</button>
         </div>
         <div class="towers-modal-body">
           <div class="towers-stats-summary-grid">
-            <div class="towers-stat-box"><span>Çözülen Blok</span><strong>${d.totalSolved}</strong></div>
-            <div class="towers-stat-box"><span>Toplam Puan</span><strong>${d.totalPoints}</strong></div>
+            <div class="towers-stat-box"><span>Çözülen Blok</span><strong>${u.totalSolved}</strong></div>
+            <div class="towers-stat-box"><span>Toplam Puan</span><strong>${u.totalPoints}</strong></div>
             <div class="towers-stat-box"><span>En Hızlı Blok</span><strong>${s!==null?`${s} sn`:"—"}</strong></div>
-            <div class="towers-stat-box"><span>İmar / Sis / Baret</span><strong>${(d.zoningSolvedCount||0)+(d.fogSolvedCount||0)+(d.survivalClearsCount||0)}</strong></div>
+            <div class="towers-stat-box"><span>İmar / Sis / Baret</span><strong>${(u.zoningSolvedCount||0)+(u.fogSolvedCount||0)+(u.survivalClearsCount||0)}</strong></div>
           </div>
 
-          <h4 class="towers-section-sub">🎖️ Towers Başarımları (${d.unlockedAchievements.length} / ${bt.length})</h4>
+          <h4 class="towers-section-sub">🎖️ Towers Başarımları (${u.unlockedAchievements.length} / ${mt.length})</h4>
           <div class="towers-ach-grid">
-            ${bt.map(a=>`
-                <div class="towers-ach-card ${d.unlockedAchievements.includes(a.id)?"unlocked":"locked"}">
-                  <span class="ach-icon">${a.icon}</span>
+            ${mt.map(i=>`
+                <div class="towers-ach-card ${u.unlockedAchievements.includes(i.id)?"unlocked":"locked"}">
+                  <span class="ach-icon">${i.icon}</span>
                   <div>
-                    <strong>${P(a.title)}</strong>
-                    <p>${P(a.description)}</p>
+                    <strong>${K(i.title)}</strong>
+                    <p>${K(i.description)}</p>
                   </div>
                 </div>
               `).join("")}
@@ -209,7 +209,7 @@ var ft=Object.defineProperty;var $t=(d,t,e)=>t in d?ft(d,t,{enumerable:!0,config
         </div>
       </div>
     </div>
-  `}function Rt(d){return`
+  `}function Ut(u){return`
     <div class="towers-modal-backdrop" id="towers-beta-modal">
       <div class="towers-modal-card">
         <div class="towers-modal-head">
@@ -228,7 +228,7 @@ var ft=Object.defineProperty;var $t=(d,t,e)=>t in d?ft(d,t,{enumerable:!0,config
             <button id="btn-towers-preset-reset" class="towers-secondary-cta">
               🔄 Sıfırla (LVL 1 Ali Ağaoğlu)
             </button>
-            ${d?`
+            ${u?`
               <button id="btn-towers-instant-solve" class="towers-primary-cta">
                 ⚡ Aktif Sokağı Anında Çöz (Beta Test)
               </button>
@@ -237,23 +237,23 @@ var ft=Object.defineProperty;var $t=(d,t,e)=>t in d?ft(d,t,{enumerable:!0,config
         </div>
       </div>
     </div>
-  `}function Gt(d){const{elapsedSeconds:t,hintsUsed:e,summary:s,challengeKind:a,architect:n}=d;return`
+  `}function _t(u){const{elapsedSeconds:t,hintsUsed:e,summary:s,challengeKind:i,architect:a}=u;return`
     <div class="towers-modal-backdrop" id="towers-victory-modal">
       <div class="towers-modal-card victory">
-        <div class="towers-victory-stars">${Array.from({length:3},(m,y)=>y<s.starsEarned?'<span class="star-on">★</span>':'<span class="star-off">☆</span>').join("")}</div>
+        <div class="towers-victory-stars">${Array.from({length:3},(m,w)=>w<s.starsEarned?'<span class="star-on">★</span>':'<span class="star-off">☆</span>').join("")}</div>
         <h2>🧱 İnşaat Tamamlandı!</h2>
         <p>
-          Süre: <strong>${Pt(t)}</strong> • Kullanılan İpucu: <strong>${e}</strong>
+          Süre: <strong>${It(t)}</strong> • Kullanılan İpucu: <strong>${e}</strong>
         </p>
 
-        ${n?`
+        ${a?`
           <div class="towers-victory-arch-strip">
-            <div class="towers-victory-arch-portrait" style="border-color:${n.accentColor}">
-              ${Z(n.id,52)}
+            <div class="towers-victory-arch-portrait" style="border-color:${a.accentColor}">
+              ${tt(a.id,52)}
             </div>
             <div class="towers-victory-arch-quote">
-              <strong>${P(n.name)}</strong>
-              <span>“${P(n.winQuote)}”</span>
+              <strong>${K(a.name)}</strong>
+              <span>“${K(a.winQuote)}”</span>
             </div>
           </div>
         `:""}
@@ -261,11 +261,11 @@ var ft=Object.defineProperty;var $t=(d,t,e)=>t in d?ft(d,t,{enumerable:!0,config
         <div class="towers-victory-rewards">
           <div class="reward-pill">✨ +${s.xpGain} Mimar XP</div>
           <div class="reward-pill">💠 +${s.blueprintGain} Proje Kristali</div>
-          ${a==="weekly_cup"&&s.cupScore?`<div class="reward-pill">🏆 Kupa Puanı: ${s.cupScore}</div>`:""}
+          ${i==="weekly_cup"&&s.cupScore?`<div class="reward-pill">🏆 Kupa Puanı: ${s.cupScore}</div>`:""}
         </div>
 
         ${s.leveledUp?'<div class="towers-levelup-banner">🎉 MİMAR SEVİYESİ YÜKSELDİ!</div>':""}
-        ${s.newlyUnlockedAchievements.length>0?`<div class="towers-ach-unlock-strip">🏅 Yeni Başarım: ${s.newlyUnlockedAchievements.map(m=>`${m.icon} ${P(m.title)}`).join(" • ")}</div>`:""}
+        ${s.newlyUnlockedAchievements.length>0?`<div class="towers-ach-unlock-strip">🏅 Yeni Başarım: ${s.newlyUnlockedAchievements.map(m=>`${m.icon} ${K(m.title)}`).join(" • ")}</div>`:""}
 
         <div class="towers-victory-actions">
           <button id="btn-towers-win-next" class="towers-primary-cta">➡️ Devam Et / Sıradaki Sokak</button>
@@ -273,31 +273,31 @@ var ft=Object.defineProperty;var $t=(d,t,e)=>t in d?ft(d,t,{enumerable:!0,config
         </div>
       </div>
     </div>
-  `}function Dt(d){return`
+  `}function Nt(u){return`
     <div class="towers-modal-backdrop" id="towers-gameover-modal">
       <div class="towers-modal-card victory">
         <div class="towers-victory-stars">🪖✖️</div>
         <h2>🚧 Şantiye Durduruldu!</h2>
-        <p>${P(d)}</p>
+        <p>${K(u)}</p>
         <div class="towers-victory-actions">
           <button id="btn-towers-retry-board" class="towers-primary-cta">🔄 Tekrar Dene</button>
           <button id="btn-towers-win-map" class="towers-secondary-cta">🏙️ Şehir Menüsüne Dön</button>
         </div>
       </div>
     </div>
-  `}function S(d){return d.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}function it(d){const t=Math.max(0,Math.floor(d)),e=Math.floor(t/60),s=t%60;return`${String(e).padStart(2,"0")}:${String(s).padStart(2,"0")}`}function X(d){return d.map(t=>[...t])}function vt(d){return d.map(t=>t.map(e=>[...e]))}class Wt{constructor(t){c(this,"host");c(this,"stats");c(this,"activeTab","campaign");c(this,"selectedEpisode",1);c(this,"activeModal",null);c(this,"tutorialStep",1);c(this,"tutorialMiniBoard",nt.map(t=>[...t]));c(this,"tutorialSelectedCell",{r:0,c:1});c(this,"customSize",4);c(this,"customDifficulty","easy");c(this,"customSeedInput","");c(this,"inBoardView",!1);c(this,"isPaused",!1);c(this,"activePuzzle",null);c(this,"activeMode","campaign");c(this,"activeChallengeKind","standard");c(this,"activeCupStageIdx",null);c(this,"activeCampaignLevel",null);c(this,"board",[]);c(this,"notes",[]);c(this,"history",[]);c(this,"redoStack",[]);c(this,"selectedCell",{r:0,c:0});c(this,"noteMode",!1);c(this,"activeHint",null);c(this,"activeSightRay",null);c(this,"lastBuiltCell",null);c(this,"buildAnimSeq",0);c(this,"hintsUsedThisGame",0);c(this,"elapsedSeconds",0);c(this,"timerHandle",null);c(this,"gameWon",!1);c(this,"gameOverReason","");c(this,"endlessWave",1);c(this,"blitzRemainingSeconds",120);c(this,"blitzScore",0);c(this,"blitzSolvedCount",0);c(this,"survivalLives",3);c(this,"survivalStreak",0);c(this,"lastWinSummary",null);c(this,"keydownHandler",null);c(this,"resizeHandler",null);c(this,"lastDesktopMode",typeof window<"u"?window.innerWidth>=900:!0);c(this,"mountEl",null);this.host=t,this.stats=ct()}reloadStats(){this.stats=ct()}getStats(){return this.stats}pauseIfPlaying(){this.inBoardView&&!this.gameWon&&!this.isPaused&&(this.isPaused=!0,this.render())}syncStatsFromStorage(){this.stats=ct()}handleBackNavigation(){return this.activeModal!==null?(this.activeModal=null,this.render(),!0):this.inBoardView?this.isPaused?(this.isPaused=!1,this.render(),!0):(this.stopTimer(),this.inBoardView=!1,this.render(),!0):!1}destroy(){this.stopTimer(),this.keydownHandler&&(window.removeEventListener("keydown",this.keydownHandler),this.keydownHandler=null),this.resizeHandler&&(window.removeEventListener("resize",this.resizeHandler),this.resizeHandler=null)}stopTimer(){this.timerHandle!==null&&(window.clearInterval(this.timerHandle),this.timerHandle=null)}startTimer(){this.stopTimer(),this.timerHandle=window.setInterval(()=>{if(!this.inBoardView||this.gameWon||this.isPaused||this.activeModal!==null)return;if(this.elapsedSeconds+=1,this.activeMode==="blitz"&&(this.blitzRemainingSeconds=Math.max(0,this.blitzRemainingSeconds-1),this.blitzRemainingSeconds<=0)){this.stopTimer(),this.inBoardView=!1,this.render();return}const t=document.getElementById("towers-hud-timer");t&&(t.textContent=this.activeMode==="blitz"?`⏱️ ${it(this.blitzRemainingSeconds)}`:`⏱️ ${it(this.elapsedSeconds)}`)},1e3)}mount(t){this.mountEl=t,this.reloadStats(),this.attachKeyboardListener(),this.attachResizeListener(),this.renderInto(t)}render(){const t=this.mountEl||document.getElementById("towers-mount-root")||document.getElementById("app");t&&this.renderInto(t)}attachResizeListener(){this.resizeHandler&&window.removeEventListener("resize",this.resizeHandler),this.resizeHandler=()=>{const t=window.innerWidth>=900;t!==this.lastDesktopMode&&(this.lastDesktopMode=t,this.render())},window.addEventListener("resize",this.resizeHandler)}attachKeyboardListener(){this.keydownHandler&&window.removeEventListener("keydown",this.keydownHandler),this.keydownHandler=t=>{if(!this.inBoardView||!this.activePuzzle||this.activeModal!==null||this.isPaused||document.activeElement&&["INPUT","TEXTAREA"].includes(document.activeElement.tagName))return;const e=this.activePuzzle.size;if(t.key==="ArrowUp")t.preventDefault(),this.selectedCell.r=(this.selectedCell.r-1+e)%e,this.render();else if(t.key==="ArrowDown")t.preventDefault(),this.selectedCell.r=(this.selectedCell.r+1)%e,this.render();else if(t.key==="ArrowLeft")t.preventDefault(),this.selectedCell.c=(this.selectedCell.c-1+e)%e,this.render();else if(t.key==="ArrowRight")t.preventDefault(),this.selectedCell.c=(this.selectedCell.c+1)%e,this.render();else if(t.key.toLowerCase()==="n")t.preventDefault(),this.noteMode=!this.noteMode,this.render();else if(t.key.toLowerCase()==="v")t.preventDefault(),this.toggleSightRayFromSelection();else if(t.key==="Backspace"||t.key==="Delete"||t.key==="0")t.preventDefault(),this.handleEraseInput();else if((t.ctrlKey||t.metaKey)&&t.key.toLowerCase()==="z")t.preventDefault(),this.handleUndo();else if((t.ctrlKey||t.metaKey)&&t.key.toLowerCase()==="y")t.preventDefault(),this.handleRedo();else if(/^[1-8]$/.test(t.key)){const s=Number(t.key);s>=1&&s<=e&&(t.preventDefault(),this.handleNumberInput(s))}},window.addEventListener("keydown",this.keydownHandler)}startPuzzleSession(t,e,s=null,a){var b,m;this.activePuzzle=t,this.activeMode=e,this.activeChallengeKind=t.challengeKind||"standard",this.activeCupStageIdx=(a==null?void 0:a.cupStageIdx)??null,this.activeCampaignLevel=s,this.board=X(t.givens),this.notes=Array.from({length:t.size},()=>Array.from({length:t.size},()=>[])),this.history=[],this.redoStack=[],this.selectedCell={r:0,c:0};let n=!1;for(let y=0;y<t.size&&!n;y++)for(let r=0;r<t.size;r++)if(t.givens[y][r]===0){this.selectedCell={r:y,c:r},n=!0;break}this.activeHint=null,this.activeSightRay=null,this.lastBuiltCell=null,this.hintsUsedThisGame=0,this.elapsedSeconds=0,this.gameWon=!1,this.isPaused=!1,this.gameOverReason="",this.inBoardView=!0,e==="blitz"&&(a==null?void 0:a.resetSeries)!==!1?(this.blitzRemainingSeconds=120,this.blitzScore=0,this.blitzSolvedCount=0):this.activeChallengeKind==="survival"&&(a==null?void 0:a.resetSeries)!==!1&&(this.survivalLives=3,this.survivalStreak=0),this.startTimer(),(m=(b=this.host).playSound)==null||m.call(b,"click"),this.render()}pushHistory(){this.history.push({board:X(this.board),notes:vt(this.notes)}),this.history.length>100&&this.history.shift(),this.redoStack=[]}handleNumberInput(t){var m,y,r,l,h,v,$,C,z,E,q;if(!this.activePuzzle||this.gameWon||this.isPaused)return;const{r:e,c:s}=this.selectedCell;if(((m=this.activePuzzle.givens[e])==null?void 0:m[s])>0){(r=(y=this.host).playSound)==null||r.call(y,"error");return}if(this.pushHistory(),this.activeHint=null,this.noteMode){this.board[e][s]!==0&&(this.board[e][s]=0);const H=this.notes[e][s],K=H.indexOf(t);K>=0?H.splice(K,1):(H.push(t),H.sort((p,o)=>p-o)),(h=(l=this.host).playSound)==null||h.call(l,"click"),this.render();return}if(this.board[e][s]=this.board[e][s]===t?0:t,this.notes[e][s]=[],this.board[e][s]===0){this.lastBuiltCell=null,($=(v=this.host).playSound)==null||$.call(v,"erase"),this.render();return}const a=this.board[e][s];this.lastBuiltCell={r:e,c:s,seq:++this.buildAnimSeq};const n=ut(this.activePuzzle,this.board);if(n.duplicateKeys.has(`${e},${s}`)||n.zoningViolationKeys.has(`${e},${s}`)||this.activeChallengeKind==="survival"&&a!==this.activePuzzle.solution[e][s]){if((z=(C=this.host).playSound)==null||z.call(C,"error"),this.activeChallengeKind==="survival"&&(this.survivalLives=Math.max(0,this.survivalLives-1),this.survivalLives<=0)){this.stopTimer(),this.gameOverReason="3 inşaat baretinin tamamı tükendi! Kat çakışması veya hatalı kat yerleşimi şantiyeyi durdurdu.",this.activeModal="gameover",this.render();return}}else(q=(E=this.host).playSound)==null||q.call(E,"place",{floors:a,maxFloors:this.activePuzzle.size});this.checkWinAfterMove(),this.render()}handleEraseInput(){var s,a,n;if(!this.activePuzzle||this.gameWon||this.isPaused)return;const{r:t,c:e}=this.selectedCell;((s=this.activePuzzle.givens[t])==null?void 0:s[e])>0||this.board[t][e]===0&&this.notes[t][e].length===0||(this.pushHistory(),this.board[t][e]=0,this.notes[t][e]=[],this.activeHint=null,this.lastBuiltCell=null,(n=(a=this.host).playSound)==null||n.call(a,"erase"),this.render())}handleUndo(){var e,s;if(this.history.length===0||this.gameWon||this.isPaused)return;this.redoStack.push({board:X(this.board),notes:vt(this.notes)});const t=this.history.pop();this.board=t.board,this.notes=t.notes,this.activeHint=null,this.lastBuiltCell=null,(s=(e=this.host).playSound)==null||s.call(e,"click"),this.render()}handleRedo(){var e,s;if(this.redoStack.length===0||this.gameWon||this.isPaused)return;this.history.push({board:X(this.board),notes:vt(this.notes)});const t=this.redoStack.pop();this.board=t.board,this.notes=t.notes,this.activeHint=null,this.lastBuiltCell=null,(s=(e=this.host).playSound)==null||s.call(e,"click"),this.render()}handleSmartHint(){var e,s;if(!this.activePuzzle||this.gameWon||this.isPaused)return;const t=Ct(this.activePuzzle,this.board);if(t){if(this.activeHint=t,this.selectedCell={r:t.r,c:t.c},this.hintsUsedThisGame+=1,t.focusClueKey){const[a,n]=t.focusClueKey.split(":");this.activeSightRay={side:a,index:Number(n)||0}}(s=(e=this.host).playSound)==null||s.call(e,"hint"),this.render()}}applyActiveHintMove(){var a,n,b;if(!this.activeHint||!this.activePuzzle||this.gameWon)return;const{r:t,c:e,value:s}=this.activeHint;((a=this.activePuzzle.givens[t])==null?void 0:a[e])>0||(this.pushHistory(),this.board[t][e]=s,this.notes[t][e]=[],this.lastBuiltCell={r:t,c:e,seq:++this.buildAnimSeq},this.activeHint=null,(b=(n=this.host).playSound)==null||b.call(n,"place",{floors:s,maxFloors:this.activePuzzle.size}),this.checkWinAfterMove(),this.render())}toggleSightRayFromSelection(){var t,e;this.activePuzzle&&(this.activeSightRay?this.activeSightRay.side==="left"||this.activeSightRay.side==="right"?this.activeSightRay={side:"top",index:this.selectedCell.c}:this.activeSightRay=null:this.activeSightRay={side:"left",index:this.selectedCell.r},(e=(t=this.host).playSound)==null||e.call(t,"click"),this.render())}checkWinAfterMove(){var n,b,m,y,r,l,h;if(!this.activePuzzle||this.gameWon||!ut(this.activePuzzle,this.board).isSolved)return;const e=new Date().toISOString().slice(0,10);if(this.activeMode==="blitz"){this.blitzSolvedCount+=1,this.blitzScore+=180+Math.max(0,25-this.hintsUsedThisGame*20),this.blitzScore>this.stats.bestBlitzScore&&(this.stats.bestBlitzScore=this.blitzScore);const v=`TWR-BLITZ-${Date.now()}-${this.blitzSolvedCount}`,$=D(4,"easy",v,{title:`⚡ Blitz Kule #${this.blitzSolvedCount+1}`});(b=(n=this.host).playSound)==null||b.call(n,"win");const C=Et(this.stats,{elapsedSec:this.elapsedSeconds,hintsUsed:this.hintsUsedThisGame,size:4,isDaily:!1});C.length>0&&(this.stats.blueprintGems+=C.length),st(this.stats),Y("towers_solve"),this.hintsUsedThisGame===0&&Y("no_hint_solve"),this.startPuzzleSession($,"blitz",null,{resetSeries:!1});return}if(this.activeMode==="endless"){this.endlessWave>this.stats.bestEndlessWave&&(this.stats.bestEndlessWave=this.endlessWave),this.endlessWave+=1;const v=yt(this.stats,{puzzleId:this.activePuzzle.id,size:this.activePuzzle.size,difficulty:this.activePuzzle.difficulty,elapsedSec:this.elapsedSeconds,hintsUsed:this.hintsUsedThisGame});this.stats=v.nextStats,Y("towers_solve"),this.hintsUsedThisGame===0&&Y("no_hint_solve"),this.gameWon=!0,this.stopTimer(),this.lastWinSummary={starsEarned:v.starsEarned,xpGain:v.xpEarned,blueprintGain:v.gemsEarned,leveledUp:v.leveledUp,newlyUnlockedAchievements:v.newlyUnlockedAchievements},this.activeModal="victory",(y=(m=this.host).playSound)==null||y.call(m,"win");return}this.activeChallengeKind==="zoning"?this.stats.zoningSolvedCount=(this.stats.zoningSolvedCount||0)+1:this.activeChallengeKind==="fog"?this.stats.fogSolvedCount=(this.stats.fogSolvedCount||0)+1:this.activeChallengeKind==="survival"&&(this.survivalStreak+=1,this.stats.survivalClearsCount=(this.stats.survivalClearsCount||0)+1);let s;if(this.activeChallengeKind==="weekly_cup"&&this.activeCupStageIdx!==null){const v=gt(),$=Tt(this.activePuzzle.size,this.elapsedSeconds,this.hintsUsedThisGame);s=$;const C=this.stats.weeklyCupKey,z=C===v&&Array.isArray(this.stats.weeklyCupScores)?[...this.stats.weeklyCupScores]:[0,0,0],E=C===v&&Array.isArray(this.stats.weeklyCupRewarded)?[...this.stats.weeklyCupRewarded]:[!1,!1,!1];z[this.activeCupStageIdx]=Math.max(z[this.activeCupStageIdx]||0,$),E[this.activeCupStageIdx]=!0,this.stats.weeklyCupKey=v,this.stats.weeklyCupScores=z,this.stats.weeklyCupRewarded=E}this.gameWon=!0,this.stopTimer();const a=yt(this.stats,{puzzleId:((r=this.activeCampaignLevel)==null?void 0:r.id)||this.activePuzzle.id,size:this.activePuzzle.size,difficulty:this.activePuzzle.difficulty,elapsedSec:this.elapsedSeconds,hintsUsed:this.hintsUsedThisGame,isDaily:this.activeMode==="daily",dailyDateKey:this.activeMode==="daily"?e:void 0,campaignLevel:this.activeCampaignLevel?{goldSec:this.activeCampaignLevel.goldSec,silverSec:this.activeCampaignLevel.silverSec}:null});this.stats=a.nextStats,Y("towers_solve"),this.hintsUsedThisGame===0&&Y("no_hint_solve"),this.activeChallengeKind==="weekly_cup"&&Y("duel_or_cup"),this.lastWinSummary={starsEarned:a.starsEarned,xpGain:a.xpEarned,blueprintGain:a.gemsEarned,leveledUp:a.leveledUp,newlyUnlockedAchievements:a.newlyUnlockedAchievements,cupScore:s},this.activeModal="victory",(h=(l=this.host).playSound)==null||h.call(l,"win")}getUnlockedCampaignIndex(){let t=-1;for(let e=0;e<B.length;e++)this.stats.solvedIds.includes(B[e].id)&&(t=e);return Math.min(B.length-1,t+1)}renderInto(t){var n,b,m,y;const e=typeof window<"u"?window.innerWidth>=900:!0;this.lastDesktopMode=e;const s=((b=(n=this.host).renderTitlebar)==null?void 0:b.call(n))||"",a=this.inBoardView&&this.activePuzzle?this.renderBoardScreenHTML():this.renderHubScreenHTML(e);t.innerHTML=`
+  `}function z(u){return u.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}function at(u){const t=Math.max(0,Math.floor(u)),e=Math.floor(t/60),s=t%60;return`${String(e).padStart(2,"0")}:${String(s).padStart(2,"0")}`}function J(u){return u.map(t=>[...t])}function bt(u){return u.map(t=>t.map(e=>[...e]))}class Ot{constructor(t){c(this,"host");c(this,"stats");c(this,"activeTab","campaign");c(this,"selectedEpisode",1);c(this,"activeModal",null);c(this,"tutorialStep",1);c(this,"tutorialMiniBoard",nt.map(t=>[...t]));c(this,"tutorialSelectedCell",{r:0,c:1});c(this,"customSize",4);c(this,"customDifficulty","easy");c(this,"customSeedInput","");c(this,"inBoardView",!1);c(this,"isPaused",!1);c(this,"activePuzzle",null);c(this,"activeMode","campaign");c(this,"activeChallengeKind","standard");c(this,"activeCupStageIdx",null);c(this,"activeCampaignLevel",null);c(this,"board",[]);c(this,"notes",[]);c(this,"history",[]);c(this,"redoStack",[]);c(this,"selectedCell",{r:0,c:0});c(this,"noteMode",!1);c(this,"activeHint",null);c(this,"activeSightRay",null);c(this,"lastBuiltCell",null);c(this,"buildAnimSeq",0);c(this,"hintsUsedThisGame",0);c(this,"elapsedSeconds",0);c(this,"timerHandle",null);c(this,"gameWon",!1);c(this,"gameOverReason","");c(this,"endlessWave",1);c(this,"blitzRemainingSeconds",120);c(this,"blitzScore",0);c(this,"blitzSolvedCount",0);c(this,"survivalLives",3);c(this,"survivalStreak",0);c(this,"lastWinSummary",null);c(this,"keydownHandler",null);c(this,"resizeHandler",null);c(this,"lastDesktopMode",typeof window<"u"?window.innerWidth>=900:!0);c(this,"mountEl",null);c(this,"viewMode","3d");this.host=t,this.stats=ut();try{this.viewMode=localStorage.getItem("pg_towers_view_mode_v1")==="2d"?"2d":"3d"}catch{this.viewMode="3d"}}reloadStats(){this.stats=ut()}getStats(){return this.stats}pauseIfPlaying(){this.inBoardView&&!this.gameWon&&!this.isPaused&&(this.isPaused=!0,this.render())}syncStatsFromStorage(){const t=JSON.stringify(this.stats);return this.stats=ut(),t!==JSON.stringify(this.stats)}syncStatsFromStorageAndRefresh(){(this.syncStatsFromStorage()||!this.inBoardView)&&this.render()}toggleViewMode(){var t,e;this.viewMode=this.viewMode==="3d"?"2d":"3d",this.lastBuiltCell=null;try{localStorage.setItem("pg_towers_view_mode_v1",this.viewMode)}catch{}(e=(t=this.host).playSound)==null||e.call(t,"click"),this.render()}handleBackNavigation(){return this.activeModal!==null?(this.activeModal=null,this.render(),!0):this.inBoardView?this.isPaused?(this.isPaused=!1,this.render(),!0):(this.stopTimer(),this.inBoardView=!1,this.render(),!0):!1}destroy(){this.stopTimer(),this.keydownHandler&&(window.removeEventListener("keydown",this.keydownHandler),this.keydownHandler=null),this.resizeHandler&&(window.removeEventListener("resize",this.resizeHandler),this.resizeHandler=null)}stopTimer(){this.timerHandle!==null&&(window.clearInterval(this.timerHandle),this.timerHandle=null)}startTimer(){this.stopTimer(),this.timerHandle=window.setInterval(()=>{if(!this.inBoardView||this.gameWon||this.isPaused||this.activeModal!==null)return;if(this.elapsedSeconds+=1,this.activeMode==="blitz"&&(this.blitzRemainingSeconds=Math.max(0,this.blitzRemainingSeconds-1),this.blitzRemainingSeconds<=0)){this.stopTimer(),this.inBoardView=!1,this.render();return}const t=document.getElementById("towers-hud-timer");t&&(t.textContent=this.activeMode==="blitz"?`⏱️ ${at(this.blitzRemainingSeconds)}`:`⏱️ ${at(this.elapsedSeconds)}`)},1e3)}mount(t){this.mountEl=t,this.reloadStats(),this.attachKeyboardListener(),this.attachResizeListener(),this.renderInto(t)}render(){const t=this.mountEl||document.getElementById("towers-mount-root")||document.getElementById("app");t&&this.renderInto(t)}attachResizeListener(){this.resizeHandler&&window.removeEventListener("resize",this.resizeHandler),this.resizeHandler=()=>{const t=window.innerWidth>=900;t!==this.lastDesktopMode&&(this.lastDesktopMode=t,this.lastBuiltCell=null,this.render())},window.addEventListener("resize",this.resizeHandler)}attachKeyboardListener(){this.keydownHandler&&window.removeEventListener("keydown",this.keydownHandler),this.keydownHandler=t=>{if(!this.inBoardView||!this.activePuzzle||this.activeModal!==null||this.isPaused||document.activeElement&&["INPUT","TEXTAREA"].includes(document.activeElement.tagName))return;const e=this.activePuzzle.size;if(t.key==="ArrowUp")t.preventDefault(),this.lastBuiltCell=null,this.selectedCell.r=(this.selectedCell.r-1+e)%e,this.render();else if(t.key==="ArrowDown")t.preventDefault(),this.lastBuiltCell=null,this.selectedCell.r=(this.selectedCell.r+1)%e,this.render();else if(t.key==="ArrowLeft")t.preventDefault(),this.lastBuiltCell=null,this.selectedCell.c=(this.selectedCell.c-1+e)%e,this.render();else if(t.key==="ArrowRight")t.preventDefault(),this.lastBuiltCell=null,this.selectedCell.c=(this.selectedCell.c+1)%e,this.render();else if(t.key.toLowerCase()==="n")t.preventDefault(),this.lastBuiltCell=null,this.noteMode=!this.noteMode,this.render();else if(t.key.toLowerCase()==="v")t.preventDefault(),this.toggleSightRayFromSelection();else if(t.key==="Backspace"||t.key==="Delete"||t.key==="0")t.preventDefault(),this.handleEraseInput();else if((t.ctrlKey||t.metaKey)&&t.key.toLowerCase()==="z")t.preventDefault(),this.handleUndo();else if((t.ctrlKey||t.metaKey)&&t.key.toLowerCase()==="y")t.preventDefault(),this.handleRedo();else if(/^[1-8]$/.test(t.key)){const s=Number(t.key);s>=1&&s<=e&&(t.preventDefault(),this.handleNumberInput(s))}},window.addEventListener("keydown",this.keydownHandler)}startPuzzleSession(t,e,s=null,i){var b,m;this.activePuzzle=t,this.activeMode=e,this.activeChallengeKind=t.challengeKind||"standard",this.activeCupStageIdx=(i==null?void 0:i.cupStageIdx)??null,this.activeCampaignLevel=s,this.board=J(t.givens),this.notes=Array.from({length:t.size},()=>Array.from({length:t.size},()=>[])),this.history=[],this.redoStack=[],this.selectedCell={r:0,c:0};let a=!1;for(let w=0;w<t.size&&!a;w++)for(let l=0;l<t.size;l++)if(t.givens[w][l]===0){this.selectedCell={r:w,c:l},a=!0;break}this.activeHint=null,this.activeSightRay=null,this.lastBuiltCell=null,this.hintsUsedThisGame=0,this.elapsedSeconds=0,this.gameWon=!1,this.isPaused=!1,this.gameOverReason="",this.inBoardView=!0,e==="blitz"&&(i==null?void 0:i.resetSeries)!==!1?(this.blitzRemainingSeconds=120,this.blitzScore=0,this.blitzSolvedCount=0):this.activeChallengeKind==="survival"&&(i==null?void 0:i.resetSeries)!==!1&&(this.survivalLives=3,this.survivalStreak=0),this.startTimer(),(m=(b=this.host).playSound)==null||m.call(b,"click"),this.render()}pushHistory(){this.history.push({board:J(this.board),notes:bt(this.notes)}),this.history.length>100&&this.history.shift(),this.redoStack=[]}handleNumberInput(t){var m,w,l,o,h,g,k,$,M,E,B;if(!this.activePuzzle||this.gameWon||this.isPaused)return;const{r:e,c:s}=this.selectedCell;if(((m=this.activePuzzle.givens[e])==null?void 0:m[s])>0){(l=(w=this.host).playSound)==null||l.call(w,"error");return}if(this.pushHistory(),this.activeHint=null,this.noteMode){this.board[e][s]!==0&&(this.board[e][s]=0);const S=this.notes[e][s],A=S.indexOf(t);A>=0?S.splice(A,1):(S.push(t),S.sort((d,r)=>d-r)),(h=(o=this.host).playSound)==null||h.call(o,"click"),this.render();return}if(this.board[e][s]=this.board[e][s]===t?0:t,this.notes[e][s]=[],this.board[e][s]===0){this.lastBuiltCell=null,(k=(g=this.host).playSound)==null||k.call(g,"erase"),this.render();return}const i=this.board[e][s];this.lastBuiltCell={r:e,c:s,seq:++this.buildAnimSeq};const a=ht(this.activePuzzle,this.board);if(a.duplicateKeys.has(`${e},${s}`)||a.zoningViolationKeys.has(`${e},${s}`)||this.activeChallengeKind==="survival"&&i!==this.activePuzzle.solution[e][s]){if((M=($=this.host).playSound)==null||M.call($,"error"),this.activeChallengeKind==="survival"&&(this.survivalLives=Math.max(0,this.survivalLives-1),this.survivalLives<=0)){this.stopTimer(),this.gameOverReason="3 inşaat baretinin tamamı tükendi! Kat çakışması veya hatalı kat yerleşimi şantiyeyi durdurdu.",this.activeModal="gameover",this.render();return}}else(B=(E=this.host).playSound)==null||B.call(E,"place",{floors:i,maxFloors:this.activePuzzle.size});this.checkWinAfterMove(),this.render()}handleEraseInput(){var s,i,a;if(!this.activePuzzle||this.gameWon||this.isPaused)return;const{r:t,c:e}=this.selectedCell;((s=this.activePuzzle.givens[t])==null?void 0:s[e])>0||this.board[t][e]===0&&this.notes[t][e].length===0||(this.pushHistory(),this.board[t][e]=0,this.notes[t][e]=[],this.activeHint=null,this.lastBuiltCell=null,(a=(i=this.host).playSound)==null||a.call(i,"erase"),this.render())}handleUndo(){var e,s;if(this.history.length===0||this.gameWon||this.isPaused)return;this.redoStack.push({board:J(this.board),notes:bt(this.notes)});const t=this.history.pop();this.board=t.board,this.notes=t.notes,this.activeHint=null,this.lastBuiltCell=null,(s=(e=this.host).playSound)==null||s.call(e,"click"),this.render()}handleRedo(){var e,s;if(this.redoStack.length===0||this.gameWon||this.isPaused)return;this.history.push({board:J(this.board),notes:bt(this.notes)});const t=this.redoStack.pop();this.board=t.board,this.notes=t.notes,this.activeHint=null,this.lastBuiltCell=null,(s=(e=this.host).playSound)==null||s.call(e,"click"),this.render()}handleSmartHint(){var e,s;if(!this.activePuzzle||this.gameWon||this.isPaused)return;const t=Lt(this.activePuzzle,this.board);if(t){if(this.activeHint=t,this.selectedCell={r:t.r,c:t.c},this.hintsUsedThisGame+=1,t.focusClueKey){const[i,a]=t.focusClueKey.split(":");this.activeSightRay={side:i,index:Number(a)||0}}(s=(e=this.host).playSound)==null||s.call(e,"hint"),this.render()}}applyActiveHintMove(){var i,a,b;if(!this.activeHint||!this.activePuzzle||this.gameWon)return;const{r:t,c:e,value:s}=this.activeHint;((i=this.activePuzzle.givens[t])==null?void 0:i[e])>0||(this.pushHistory(),this.board[t][e]=s,this.notes[t][e]=[],this.lastBuiltCell={r:t,c:e,seq:++this.buildAnimSeq},this.activeHint=null,(b=(a=this.host).playSound)==null||b.call(a,"place",{floors:s,maxFloors:this.activePuzzle.size}),this.checkWinAfterMove(),this.render())}toggleSightRayFromSelection(){var t,e;this.activePuzzle&&(this.activeSightRay?this.activeSightRay.side==="left"||this.activeSightRay.side==="right"?this.activeSightRay={side:"top",index:this.selectedCell.c}:this.activeSightRay=null:this.activeSightRay={side:"left",index:this.selectedCell.r},(e=(t=this.host).playSound)==null||e.call(t,"click"),this.render())}checkWinAfterMove(){var a,b,m,w,l,o,h,g,k,$,M,E,B;if(!this.activePuzzle||this.gameWon||!ht(this.activePuzzle,this.board).isSolved)return;const e=new Date().toISOString().slice(0,10);if(this.activeMode==="blitz"){this.blitzSolvedCount+=1,this.blitzScore+=180+Math.max(0,25-this.hintsUsedThisGame*20),this.blitzScore>this.stats.bestBlitzScore&&(this.stats.bestBlitzScore=this.blitzScore);const S=`TWR-BLITZ-${Date.now()}-${this.blitzSolvedCount}`,A=G(4,"easy",S,{title:`⚡ Blitz Kule #${this.blitzSolvedCount+1}`});(b=(a=this.host).playSound)==null||b.call(a,"win");const d=At(this.stats,{elapsedSec:this.elapsedSeconds,hintsUsed:this.hintsUsedThisGame,size:4,isDaily:!1});d.length>0&&(this.stats.blueprintGems+=d.length),st(this.stats),(w=(m=this.host).onCloudStateChanged)==null||w.call(m,!0),Q("towers_solve"),this.hintsUsedThisGame===0&&Q("no_hint_solve"),this.startPuzzleSession(A,"blitz",null,{resetSeries:!1});return}if(this.activeMode==="endless"){this.endlessWave>this.stats.bestEndlessWave&&(this.stats.bestEndlessWave=this.endlessWave),this.endlessWave+=1;const S=St(this.stats,{puzzleId:this.activePuzzle.id,size:this.activePuzzle.size,difficulty:this.activePuzzle.difficulty,elapsedSec:this.elapsedSeconds,hintsUsed:this.hintsUsedThisGame});this.stats=S.nextStats,(o=(l=this.host).onCloudStateChanged)==null||o.call(l,!0),Q("towers_solve"),this.hintsUsedThisGame===0&&Q("no_hint_solve"),this.gameWon=!0,this.stopTimer(),this.lastWinSummary={starsEarned:S.starsEarned,xpGain:S.xpEarned,blueprintGain:S.gemsEarned,leveledUp:S.leveledUp,newlyUnlockedAchievements:S.newlyUnlockedAchievements},this.activeModal="victory",(g=(h=this.host).playSound)==null||g.call(h,"win");return}this.activeChallengeKind==="zoning"?this.stats.zoningSolvedCount=(this.stats.zoningSolvedCount||0)+1:this.activeChallengeKind==="fog"?this.stats.fogSolvedCount=(this.stats.fogSolvedCount||0)+1:this.activeChallengeKind==="survival"&&(this.survivalStreak+=1,this.stats.survivalClearsCount=(this.stats.survivalClearsCount||0)+1);let s;if(this.activeChallengeKind==="weekly_cup"&&this.activeCupStageIdx!==null){const S=ft(),A=Bt(this.activePuzzle.size,this.elapsedSeconds,this.hintsUsedThisGame);s=A;const d=this.stats.weeklyCupKey,r=d===S&&Array.isArray(this.stats.weeklyCupScores)?[...this.stats.weeklyCupScores]:[0,0,0],v=d===S&&Array.isArray(this.stats.weeklyCupRewarded)?[...this.stats.weeklyCupRewarded]:[!1,!1,!1];r[this.activeCupStageIdx]=Math.max(r[this.activeCupStageIdx]||0,A),v[this.activeCupStageIdx]=!0,this.stats.weeklyCupKey=S,this.stats.weeklyCupScores=r,this.stats.weeklyCupRewarded=v}this.gameWon=!0,this.stopTimer();const i=St(this.stats,{puzzleId:((k=this.activeCampaignLevel)==null?void 0:k.id)||this.activePuzzle.id,size:this.activePuzzle.size,difficulty:this.activePuzzle.difficulty,elapsedSec:this.elapsedSeconds,hintsUsed:this.hintsUsedThisGame,isDaily:this.activeMode==="daily",dailyDateKey:this.activeMode==="daily"?e:void 0,campaignLevel:this.activeCampaignLevel?{goldSec:this.activeCampaignLevel.goldSec,silverSec:this.activeCampaignLevel.silverSec}:null});this.stats=i.nextStats,(M=($=this.host).onCloudStateChanged)==null||M.call($,!0),Q("towers_solve"),this.hintsUsedThisGame===0&&Q("no_hint_solve"),this.activeChallengeKind==="weekly_cup"&&Q("duel_or_cup"),this.lastWinSummary={starsEarned:i.starsEarned,xpGain:i.xpEarned,blueprintGain:i.gemsEarned,leveledUp:i.leveledUp,newlyUnlockedAchievements:i.newlyUnlockedAchievements,cupScore:s},this.activeModal="victory",(B=(E=this.host).playSound)==null||B.call(E,"win")}getUnlockedCampaignIndex(){let t=-1;for(let e=0;e<P.length;e++)this.stats.solvedIds.includes(P[e].id)&&(t=e);return Math.min(P.length-1,t+1)}renderInto(t){var a,b,m,w;const e=typeof window<"u"?window.innerWidth>=900:!0;this.lastDesktopMode=e;const s=((b=(a=this.host).renderTitlebar)==null?void 0:b.call(a))||"",i=this.inBoardView&&this.activePuzzle?this.renderBoardScreenHTML():this.renderHubScreenHTML(e);t.innerHTML=`
       ${s}
       <div class="screen-body ${this.inBoardView?"towers-board-body":"menu-mode towers-menu-mode"}" id="towers-screen">
-        ${a}
+        ${i}
         ${this.renderActiveModal()}
       </div>
-    `,(y=(m=this.host).bindTitlebarEvents)==null||y.call(m),this.bindEvents(t)}renderHubScreenHTML(t){var C,z,E,q,H,K,p,o;const e=this.host.getUsername(),s=this.host.getPilotTag(),a=this.host.isBetaChannel(),n=((z=(C=this.host).getCloudSynced)==null?void 0:z.call(C))??!1,b=((q=(E=this.host).canQuit)==null?void 0:q.call(E))??!1,m=kt(this.stats.architectXp),y=V.find(g=>g.id===this.stats.equippedCharacterId)||V[0],r=Mt(this.stats),l=(this.stats.solvedIds||[]).filter(g=>B.some(M=>M.id===g)).length,h=((K=(H=this.host).getSocialAttentionCount)==null?void 0:K.call(H))??0,v=((o=(p=this.host).getAudioSettings)==null?void 0:o.call(p))??{soundEnabled:!0,musicEnabled:!0},$=[{id:"campaign",icon:"🏙️",label:"Şehir Haritası",badge:`${l}/60`},{id:"challenges",icon:"🚧",label:"Challenge & Kupa",badge:"3+1"},{id:"daily",icon:"🧱",label:"Günlük Bina",badge:this.stats.dailyStreak>0?`🔥${this.stats.dailyStreak}`:""},{id:"blitz",icon:"⚡",label:"Kule Blitz",badge:""},{id:"endless",icon:"🏗️",label:"Sonsuz İnşaat",badge:""},{id:"custom",icon:"🎲",label:"Serbest Mimari",badge:""}];return`
+    `,(w=(m=this.host).bindTitlebarEvents)==null||w.call(m),this.bindEvents(t)}renderHubScreenHTML(t){var $,M,E,B,S,A,d,r;const e=this.host.getUsername(),s=this.host.getPilotTag(),i=this.host.isBetaChannel(),a=((M=($=this.host).getCloudSynced)==null?void 0:M.call($))??!1,b=((B=(E=this.host).canQuit)==null?void 0:B.call(E))??!1,m=zt(this.stats.architectXp),w=N.find(v=>v.id===this.stats.equippedCharacterId)||N[0],l=Ht(this.stats),o=(this.stats.solvedIds||[]).filter(v=>P.some(L=>L.id===v)).length,h=((A=(S=this.host).getSocialAttentionCount)==null?void 0:A.call(S))??0,g=((r=(d=this.host).getAudioSettings)==null?void 0:r.call(d))??{soundEnabled:!0,musicEnabled:!0},k=[{id:"campaign",icon:"🏙️",label:"Şehir Haritası",badge:`${o}/60`},{id:"challenges",icon:"🚧",label:"Challenge & Kupa",badge:"3+1"},{id:"daily",icon:"🧱",label:"Günlük Bina",badge:this.stats.dailyStreak>0?`🔥${this.stats.dailyStreak}`:""},{id:"blitz",icon:"⚡",label:"Kule Blitz",badge:""},{id:"endless",icon:"🏗️",label:"Sonsuz İnşaat",badge:""},{id:"custom",icon:"🎲",label:"Serbest Mimari",badge:""}];return`
       <header class="main-menu-topbar towers-menu-topbar">
         <div class="topbar-left">
           <button type="button" class="arcade-return-chip" id="btn-towers-back-hub" title="1000in1 Kaset Odasına Dön">🕹️ Kaset</button>
           <div class="topbar-desktop-telemetry">
-            <span class="topbar-sector-pill towers-sector-pill">🧱 TOWERS • ${l}/${B.length} Mahalle • ⭐ ${r}/${B.length*3}</span>
-            ${a?'<button type="button" class="beta-badge beta-lab-trigger" id="btn-towers-beta-lab" title="Towers Beta Test Laboratuvarı">🧪 BETA LAB</button>':""}
+            <span class="topbar-sector-pill towers-sector-pill">🧱 TOWERS • ${o}/${P.length} Mahalle • ⭐ ${l}/${P.length*3}</span>
+            ${i?'<button type="button" class="beta-badge beta-lab-trigger" id="btn-towers-beta-lab" title="Towers Beta Test Laboratuvarı">🧪 BETA LAB</button>':""}
           </div>
         </div>
 
@@ -318,18 +318,18 @@ var ft=Object.defineProperty;var $t=(d,t,e)=>t in d?ft(d,t,{enumerable:!0,config
       <main class="main-tab-stage towers-main-stage">
         <section class="towers-architect-hero">
           <div class="towers-architect-card">
-            <div class="towers-architect-avatar" style="border-color:${y.accentColor}">
-              ${Z(y.id,46)}
+            <div class="towers-architect-avatar" style="border-color:${w.accentColor}">
+              ${tt(w.id,46)}
             </div>
             <div class="towers-architect-info">
               <div class="towers-architect-head">
-                <span class="towers-architect-name">${S(y.name)}</span>
-                <span class="towers-architect-role">${S(y.title)}</span>
-                <span class="towers-perk-chip">🧱 Güç +${y.powerScore}</span>
+                <span class="towers-architect-name">${z(w.name)}</span>
+                <span class="towers-architect-role">${z(w.title)}</span>
+                <span class="towers-perk-chip">🧱 Güç +${w.powerScore}</span>
               </div>
               <div class="towers-xp-bar-wrap">
                 <div class="towers-xp-labels">
-                  <span><strong>Mimar LVL ${m.level}</strong> • ${S(m.title)}</span>
+                  <span><strong>Mimar LVL ${m.level}</strong> • ${z(m.title)}</span>
                   <span>${this.stats.architectXp>=9e5?"MAX (Beta Sandbox)":`${m.currentXp} / ${m.nextLevelXp} XP (%${m.progressPct})`}</span>
                 </div>
                 <div class="towers-xp-track">
@@ -341,17 +341,17 @@ var ft=Object.defineProperty;var $t=(d,t,e)=>t in d?ft(d,t,{enumerable:!0,config
 
           <div class="towers-Currencies-row">
             <div class="towers-stat-chip"><span class="lbl">Proje Kristali</span><strong class="val">${this.stats.blueprintGems>=9e8?"♾️ Beta":`💠 ${this.stats.blueprintGems}`}</strong></div>
-            <div class="towers-stat-chip"><span class="lbl">Mahalle</span><strong class="val">🏘️ ${l} / 60</strong></div>
-            <div class="towers-stat-chip"><span class="lbl">Yıldız</span><strong class="val">⭐ ${r}</strong></div>
+            <div class="towers-stat-chip"><span class="lbl">Mahalle</span><strong class="val">🏘️ ${o} / 60</strong></div>
+            <div class="towers-stat-chip"><span class="lbl">Yıldız</span><strong class="val">⭐ ${l}</strong></div>
             <div class="towers-stat-chip"><span class="lbl">Başarım</span><strong class="val">🏅 ${this.stats.unlockedAchievements.length}/24</strong></div>
           </div>
         </section>
 
         ${t?"":`
           <div class="towers-mobile-mode-strip" role="tablist">
-            ${$.map(g=>`
-              <button type="button" class="towers-mobile-pill ${this.activeTab===g.id?"active":""}" data-towers-tab="${g.id}">
-                ${g.icon} ${g.label}
+            ${k.map(v=>`
+              <button type="button" class="towers-mobile-pill ${this.activeTab===v.id?"active":""}" data-towers-tab="${v.id}">
+                ${v.icon} ${v.label}
               </button>
             `).join("")}
           </div>
@@ -375,12 +375,12 @@ var ft=Object.defineProperty;var $t=(d,t,e)=>t in d?ft(d,t,{enumerable:!0,config
           </div>
 
           <div class="discord-single-links">
-            ${$.map(g=>`
-              <button type="button" class="bottom-nav-tab ${this.activeTab===g.id?"active":""}" data-towers-tab="${g.id}">
+            ${k.map(v=>`
+              <button type="button" class="bottom-nav-tab ${this.activeTab===v.id?"active":""}" data-towers-tab="${v.id}">
                 <span class="discord-nav-indicator" aria-hidden="true"></span>
-                <span class="tab-icon">${g.icon}</span>
-                <span class="tab-label">${g.label}</span>
-                ${g.badge?`<span class="tab-badge">${S(g.badge)}</span>`:""}
+                <span class="tab-icon">${v.icon}</span>
+                <span class="tab-label">${v.label}</span>
+                ${v.badge?`<span class="tab-badge">${z(v.badge)}</span>`:""}
               </button>
             `).join("")}
             <div class="discord-nav-divider slim" aria-hidden="true"></div>
@@ -398,18 +398,18 @@ var ft=Object.defineProperty;var $t=(d,t,e)=>t in d?ft(d,t,{enumerable:!0,config
               <span class="discord-nav-indicator" aria-hidden="true"></span>
               <span class="tab-icon">🏅</span>
               <span class="tab-label">Başarımlar</span>
-              <span class="tab-badge">${this.stats.unlockedAchievements.length}/${bt.length}</span>
+              <span class="tab-badge">${this.stats.unlockedAchievements.length}/${mt.length}</span>
             </button>
           </div>
 
           <div class="desktop-sidebar-footer discord-user-dock">
             <div class="discord-voice-ship-strip">
               <div class="sidebar-ship-preview">
-                ${Z(y.id,30)}
+                ${tt(w.id,30)}
               </div>
               <div class="discord-voice-ship-info">
                 <span class="discord-conn-green">● Şantiye Hazır</span>
-                <small class="discord-conn-sub">LVL ${m.level} • ${S(y.name)}</small>
+                <small class="discord-conn-sub">LVL ${m.level} • ${z(w.name)}</small>
               </div>
               <button type="button" class="sidebar-hangar-mini-btn" id="btn-towers-workshop">🏗️ Atölye</button>
             </div>
@@ -417,17 +417,17 @@ var ft=Object.defineProperty;var $t=(d,t,e)=>t in d?ft(d,t,{enumerable:!0,config
             <div class="discord-user-bar">
               <button type="button" class="discord-user-identity profile-badge" id="btn-towers-open-profile" title="Ortak Oyuncu Kimliği">
                 <div class="discord-user-avatar">
-                  ${Z(y.id,28)}
-                  <span class="discord-presence-dot ${n?"online":"guest"}"></span>
+                  ${tt(w.id,28)}
+                  <span class="discord-presence-dot ${a?"online":"guest"}"></span>
                 </div>
                 <div class="discord-user-meta">
-                  <strong class="discord-user-nick">${S(e)}<small>#${S(s)}</small></strong>
+                  <strong class="discord-user-nick">${z(e)}<small>#${z(s)}</small></strong>
                   <span class="discord-user-sub">${this.stats.totalPoints} Puan</span>
                 </div>
               </button>
               <div class="discord-user-controls">
-                <button type="button" class="discord-ctrl-btn ${v.soundEnabled?"is-on":"is-muted"}" id="btn-towers-dock-sfx" title="Ses Efektleri">🔊</button>
-                <button type="button" class="discord-ctrl-btn ${v.musicEnabled?"is-on":"is-muted"}" id="btn-towers-dock-music" title="Şehir Müziği">🎵</button>
+                <button type="button" class="discord-ctrl-btn ${g.soundEnabled?"is-on":"is-muted"}" id="btn-towers-dock-sfx" title="Ses Efektleri">🔊</button>
+                <button type="button" class="discord-ctrl-btn ${g.musicEnabled?"is-on":"is-muted"}" id="btn-towers-dock-music" title="Şehir Müziği">🎵</button>
                 <button type="button" class="discord-ctrl-btn" id="btn-towers-settings" title="Ayarlar">⚙️</button>
               </div>
             </div>
@@ -452,7 +452,7 @@ var ft=Object.defineProperty;var $t=(d,t,e)=>t in d?ft(d,t,{enumerable:!0,config
           </div>
         `}
       </nav>
-    `}renderTabContent(){if(this.activeTab==="campaign"){const t=this.getUnlockedCampaignIndex(),e=B[t]||B[0],s=B.filter(r=>r.episode===this.selectedEpisode),a={1:"1. Evre: Kırmızı Tuğla Mahallesi (4×4 – 6×6)",2:"2. Evre: İmarlı Tarihi Semt (4×4 – 7×7)",3:"3. Evre: Eski Saat Meydanı (5×5 – 7×7)",4:"4. Evre: Sisli Konaklar (5×5 – 8×8)",5:"5. Evre: Büyük Metropol (6×6 – 8×8)"},n=ot(this.stats.equippedFacadeId,this.stats.equippedRoofId),b=Lt(s,this.stats,n,this.stats.equippedRoofId,t,r=>B.findIndex(l=>l.id===r)),m=s.map((r,l)=>{const h=B.findIndex(p=>p.id===r.id),v=this.stats.solvedIds.includes(r.id),$=h<=t||v,C=this.stats.levelStars[r.id]||0,z=Ht(v,$,C),E=this.stats.bestTimesSec[r.id],q=r.difficulty==="easy"?"Kolay":r.difficulty==="medium"?"Orta":"Zor",H=z==="gold"?"Lüks Altın Konak":z==="silver"?"Klasik Tuğla Apartman":z==="bronze"?"Mahalle Gecekondusu":z==="active"?"Aktif İnşaat Parseli":"Kilitli Boş Arsa",K=r.challengeKind==="zoning"?'<span class="street-mech-tag zoning">🧱 İmar Kısıtı</span>':r.challengeKind==="fog"?'<span class="street-mech-tag fog">🌫️ Sisli Sokak</span>':"";return{lvl:r,relIdx:l,isCompleted:v,isUnlocked:$,stars:C,tier:z,tierTitle:H,mechPill:K,diffBadge:q,bestSec:E,isLandmark:l===s.length-1}}),y=At(m,n,this.stats.equippedRoofId,it,S);return`
+    `}renderTabContent(){if(this.activeTab==="campaign"){const t=this.getUnlockedCampaignIndex(),e=P[t]||P[0],s=P.filter(l=>l.episode===this.selectedEpisode),i={1:"1. Evre: Kırmızı Tuğla Mahallesi (4×4 – 6×6)",2:"2. Evre: İmarlı Tarihi Semt (4×4 – 7×7)",3:"3. Evre: Eski Saat Meydanı (5×5 – 7×7)",4:"4. Evre: Sisli Konaklar (5×5 – 8×8)",5:"5. Evre: Büyük Metropol (6×6 – 8×8)"},a=dt(this.stats.equippedFacadeId,this.stats.equippedRoofId),b=Pt(s,this.stats,a,this.stats.equippedRoofId,t,l=>P.findIndex(o=>o.id===l)),m=s.map((l,o)=>{const h=P.findIndex(d=>d.id===l.id),g=this.stats.solvedIds.includes(l.id),k=h<=t||g,$=this.stats.levelStars[l.id]||0,M=xt(g,k,$),E=this.stats.bestTimesSec[l.id],B=l.difficulty==="easy"?"Kolay":l.difficulty==="medium"?"Orta":"Zor",S=M==="gold"?"Lüks Altın Konak":M==="silver"?"Klasik Tuğla Apartman":M==="bronze"?"Mahalle Gecekondusu":M==="active"?"Aktif İnşaat Parseli":"Kilitli Boş Arsa",A=l.challengeKind==="zoning"?'<span class="street-mech-tag zoning">🧱 İmar Kısıtı</span>':l.challengeKind==="fog"?'<span class="street-mech-tag fog">🌫️ Sisli Sokak</span>':"";return{lvl:l,relIdx:o,isCompleted:g,isUnlocked:k,stars:$,tier:M,tierTitle:S,mechPill:A,diffBadge:B,bestSec:E,isLandmark:o===s.length-1}}),w=qt(m,a,this.stats.equippedRoofId,at,z);return`
         <div class="towers-campaign-wrap">
           <div class="towers-campaign-header">
             <div>
@@ -460,21 +460,21 @@ var ft=Object.defineProperty;var $t=(d,t,e)=>t in d?ft(d,t,{enumerable:!0,config
               <p>Her parsel boş arsa başlar! Bölüm bitince madalyana göre sokağa <b>Gecekondu ★</b>, <b>Apartman ★★</b> veya <b>Lüks Konak ★★★</b> dikilir.</p>
             </div>
             <button id="btn-towers-play-next" class="towers-primary-cta" data-start-campaign="${e.id}">
-              ▶️ Sıradaki Parsel: #${S(e.code)} (${S(e.cityName)})
+              ▶️ Sıradaki Parsel: #${z(e.code)} (${z(e.cityName)})
             </button>
           </div>
 
           <div class="towers-episode-tabs">
-            ${[1,2,3,4,5].map(r=>`
-              <button type="button" class="towers-ep-btn ${this.selectedEpisode===r?"active":""}" data-towers-ep="${r}">
-                ${S(a[r])}
+            ${[1,2,3,4,5].map(l=>`
+              <button type="button" class="towers-ep-btn ${this.selectedEpisode===l?"active":""}" data-towers-ep="${l}">
+                ${z(i[l])}
               </button>
             `).join("")}
           </div>
 
           <section class="towers-street-panorama-card" aria-label="Mahalle Caddesi Silüeti">
             <div class="street-panorama-head">
-              <strong>🛣️ ${S(a[this.selectedEpisode]||"")}</strong>
+              <strong>🛣️ ${z(i[this.selectedEpisode]||"")}</strong>
               <div class="street-medal-legend">
                 <span>🌱 Arsa</span>
                 <span>🥉 Gecekondu (★)</span>
@@ -488,10 +488,10 @@ var ft=Object.defineProperty;var $t=(d,t,e)=>t in d?ft(d,t,{enumerable:!0,config
           </section>
 
           <div class="towers-street-route" style="background-image: linear-gradient(180deg, rgba(220, 252, 231, 0.16), rgba(187, 247, 208, 0.24)), url('./towers/candy_park_bg.jpg');">
-            ${y}
+            ${w}
           </div>
         </div>
-      `}if(this.activeTab==="challenges"){const t=gt(),e=wt(t),s=this.stats.weeklyCupKey===t&&Array.isArray(this.stats.weeklyCupScores)?this.stats.weeklyCupScores:[0,0,0];return`
+      `}if(this.activeTab==="challenges"){const t=ft(),e=$t(t),s=this.stats.weeklyCupKey===t&&Array.isArray(this.stats.weeklyCupScores)?this.stats.weeklyCupScores:[0,0,0];return`
         <div class="towers-challenges-layout">
           <div class="towers-challenge-cards-grid">
             <article class="towers-challenge-card zoning">
@@ -534,19 +534,19 @@ var ft=Object.defineProperty;var $t=(d,t,e)=>t in d?ft(d,t,{enumerable:!0,config
           <section class="towers-cup-panel">
             <div class="towers-cup-head">
               <div>
-                <h3>🏆 Haftalık Mimar Kupası (${S(t)})</h3>
+                <h3>🏆 Haftalık Mimar Kupası (${z(t)})</h3>
                 <p>Tüm oyuncularla aynı 3 sabit tohumlu tuğla sokak etabı üzerinden yüksek skor yarışı.</p>
               </div>
               <span class="towers-cup-total">Toplam: ${s[0]+s[1]+s[2]} P</span>
             </div>
             <div class="towers-cup-grid">
-              ${e.map(a=>{const n=s[a.index]||0;return`
-                    <div class="towers-cup-stage ${n>0?"done":""}">
-                      <div class="stage-top"><strong>${a.label}</strong><span>${a.size}×${a.size}</span></div>
-                      <small>${S(a.subtitle)}</small>
-                      <div class="stage-score">${n>0?`Skor: <b>${n} P</b>`:"Henüz Çözülmedi"}</div>
-                      <button type="button" class="towers-city-play-btn" data-towers-cup-stage="${a.index}">
-                        ${n>0?"Skoru Geliştir ↻":"Etap Başlat →"}
+              ${e.map(i=>{const a=s[i.index]||0;return`
+                    <div class="towers-cup-stage ${a>0?"done":""}">
+                      <div class="stage-top"><strong>${i.label}</strong><span>${i.size}×${i.size}</span></div>
+                      <small>${z(i.subtitle)}</small>
+                      <div class="stage-score">${a>0?`Skor: <b>${a} P</b>`:"Henüz Çözülmedi"}</div>
+                      <button type="button" class="towers-city-play-btn" data-towers-cup-stage="${i.index}">
+                        ${a>0?"Skoru Geliştir ↻":"Etap Başlat →"}
                       </button>
                     </div>
                   `}).join("")}
@@ -622,28 +622,28 @@ var ft=Object.defineProperty;var $t=(d,t,e)=>t in d?ft(d,t,{enumerable:!0,config
             </div>
             <div class="towers-form-group">
               <label for="inp-towers-custom-seed">Özel Tohum Kodu (Opsiyonel)</label>
-              <input id="inp-towers-custom-seed" class="towers-seed-input" type="text" placeholder="Örn: TWR-5-ORTA-2026" value="${S(this.customSeedInput)}" />
+              <input id="inp-towers-custom-seed" class="towers-seed-input" type="text" placeholder="Örn: TWR-5-ORTA-2026" value="${z(this.customSeedInput)}" />
             </div>
           </div>
           <button id="btn-towers-start-custom" class="towers-primary-cta">🎲 ${this.customSize}×${this.customSize} İnşaata Başla</button>
         </div>
       </div>
-    `}getArchitectSpeechState(t,e,s){var m;const a={char_apprentice:{start:"Arsayı inceledim, köşelere sağlam temeli atalım da rezidans yükselsin!",mid:"Güzel gidiyoruz! Bakalım hangi parsele 4 katlı dikiyoruz?",near:"Son birkaç parsel kaldı, tapuları teslim etmeye hazırız!",hint:"Bak bu kare boş duruyor; dediğim katı tam şuraya dikelim!",warn:"Hop hemşerim! Aynı sırada aynı kattan iki bina yan yana dikilmez.",sight:"Kaldırımdan bakınca öndeki küçük katlar büyük kulenin arkasında gizlenir.",win:"İşte bu! Bu sokağa yaptığım en kârlı proje oldu!"},char_planner:{start:"Vakıf hanı nizamıyla önce en belirgin kenar bakış sayılarını çözelim.",mid:"Satır ve sütun simetrisi harika oturuyor, ölçüyle devam edelim.",near:"Son ince rötuşlar — taş cephe silüetimiz tamamlanmak üzere.",hint:"Cetvel ve gönyeyle hesapladım; bu parsele işaretli kat tam oturuyor.",warn:"Dikkat: Sokak hizasında veya kenar bakışında bir ölçü sapması var.",sight:"Ön cepheden görünen kat sayısı kadar kademeli yükseliş şarttır.",win:"Mükemmel denge ve zarafet — şehrin tarihi dokusu şenlendi."},char_skyline:{start:"Düz bloklar sıkıcı; katları doğanın kendi basamakları gibi dizelim!",mid:"Mozaik taşları yerine oturuyor, her kat silüete renk katıyor.",near:"Az kaldı! Çatılar gökyüzüne doğru kıvrılmaya hazır.",hint:"Görüş ışığı tam bu kareyi işaret ediyor — sıradaki katı koy!",warn:"Burada bir uyumsuzluk var; doğa ve statik kurallar çakışıyor.",sight:"Bakış çizgisinde sadece kendinden öncekinden yüksek kuleler parlar!",win:"Masalsı bir mahalle yarattın — her çatı ayrı bir sanat eseri!"},char_neon:{start:"Görüş akslarını oku; boşluklardaki en yüksek kule yerini ele verecektir.",mid:"Harika akışkanlık — blokların ritmi yavaş yavaş şekilleniyor.",near:"Ufuk çizgisi netleşti, son kuleleri yerleştirip silüeti kilitle.",hint:"Parametrik kesişim noktası belli: önerdiğim katı uygula.",warn:"Çakışma algılandı; yükseklik eğrisini düzeltmemiz gerekiyor.",sight:"Görünen kuleleri tek tek izleyip arkada kalanları eleyebilirsin.",win:"Ufuk çizgisini baştan yazdık — cesur ve kusursuz!"},char_quantum:{start:"İnsan ölçeğinde ferah sokaklar için sabırla önce kesin kareleri bulalım.",mid:"Mahalle nefes almaya başladı; komşu parsellere ışık bırakalım.",near:"Huzurlu bir son dokunuş kaldı, acele etmeden tamamlayalım.",hint:"Bilge bir yaklaşımla bakarsak bu karede başka kat barınamaz.",warn:"Bir kat fazla veya tekrarlı görünüyor; sakince gözden geçirelim.",sight:"Göz hizası ne diyorsa sokak düzeni de ona uymalıdır.",win:"Eline sağlık! Hem ışığı hem sıcaklığı yerinde, yaşanası bir sokak."},char_emperor:{start:"Evlat, önce taşların temel aksını kur; yüksek kubbeler yerini hemen belli eder.",mid:"Mizan ve tenasüp yerli yerinde, sokağın yükü sağlam dağılıyor.",near:"Son taşlar kaldı; bu sokağın da külliyesi tarihe geçecek.",hint:"Hesap şaşmaz: kenar ve sıra dengesine göre buraya tek kat uyar.",warn:"Durakla ve bak evlat; iki aynı boy sütun bir sırada bulunmaz.",sight:"Göz önünden arkaya yükselen her kule sırrını açık eder.",win:"Aferin! Koca Sinan usulünce kusursuz statik ve silüet kurdun!"}},n=a[t]||a.char_apprentice;if(this.activeHint)return{tone:"hint",text:n.hint,winQuote:n.win};if(e)return{tone:"warn",text:n.warn,winQuote:n.win};if(this.activeSightRay)return{tone:"hint",text:n.sight,winQuote:n.win};if(s<=Math.max(3,Math.ceil((((m=this.activePuzzle)==null?void 0:m.size)||4)*.75)))return{tone:"normal",text:n.near,winQuote:n.win};const b=this.activePuzzle?this.activePuzzle.size*this.activePuzzle.size-this.activePuzzle.givens.flat().filter(y=>y>0).length:16;return s<b*.75?{tone:"normal",text:n.mid,winQuote:n.win}:{tone:"normal",text:n.start,winQuote:n.win}}renderBoardScreenHTML(){var H,K;const t=this.activePuzzle,e=t.size,s=ut(t,this.board),a=V.find(p=>p.id===this.stats.equippedCharacterId)||V[0],n=j.find(p=>p.id===this.stats.equippedFacadeId)||j[0],b=j.find(p=>p.id===this.stats.equippedRoofId)||j[5],m=ot(n.id,b.id),y=new Int32Array(e+1);let r=0;for(let p=0;p<e;p++)for(let o=0;o<e;o++){const g=this.board[p][o];g>=1&&g<=e?y[g]++:r++}const l=s.duplicateKeys.size>0||s.zoningViolationKeys.size>0||s.violatedClueKeys.size>0,h=this.getArchitectSpeechState(a.id,l,r),v=new Map;let $="";if(this.activeSightRay){const{side:p,index:o}=this.activeSightRay,g=!!((K=(H=t.hiddenCluesMask)==null?void 0:H[p])!=null&&K[o]),M=g?0:t.clues[p][o],k=[];for(let T=0;T<e;T++){let x=o,I=T;p==="top"?(x=T,I=o):p==="bottom"?(x=e-1-T,I=o):p==="left"?(x=o,I=T):(x=o,I=e-1-T),k.push({r:x,c:I})}const L=Bt(k,this.board,M,p,o);L.visibleCells.forEach(T=>v.set(`${T.r},${T.c}`,"visible")),L.hiddenCells.forEach(T=>v.set(`${T.r},${T.c}`,"blocked")),$=`
+    `}getArchitectSpeechState(t,e,s){var m;const i={char_apprentice:{start:"Arsayı inceledim, köşelere sağlam temeli atalım da rezidans yükselsin!",mid:"Güzel gidiyoruz! Bakalım hangi parsele 4 katlı dikiyoruz?",near:"Son birkaç parsel kaldı, tapuları teslim etmeye hazırız!",hint:"Bak bu kare boş duruyor; dediğim katı tam şuraya dikelim!",warn:"Hop hemşerim! Aynı sırada aynı kattan iki bina yan yana dikilmez.",sight:"Kaldırımdan bakınca öndeki küçük katlar büyük kulenin arkasında gizlenir.",win:"İşte bu! Bu sokağa yaptığım en kârlı proje oldu!"},char_planner:{start:"Vakıf hanı nizamıyla önce en belirgin kenar bakış sayılarını çözelim.",mid:"Satır ve sütun simetrisi harika oturuyor, ölçüyle devam edelim.",near:"Son ince rötuşlar — taş cephe silüetimiz tamamlanmak üzere.",hint:"Cetvel ve gönyeyle hesapladım; bu parsele işaretli kat tam oturuyor.",warn:"Dikkat: Sokak hizasında veya kenar bakışında bir ölçü sapması var.",sight:"Ön cepheden görünen kat sayısı kadar kademeli yükseliş şarttır.",win:"Mükemmel denge ve zarafet — şehrin tarihi dokusu şenlendi."},char_skyline:{start:"Düz bloklar sıkıcı; katları doğanın kendi basamakları gibi dizelim!",mid:"Mozaik taşları yerine oturuyor, her kat silüete renk katıyor.",near:"Az kaldı! Çatılar gökyüzüne doğru kıvrılmaya hazır.",hint:"Görüş ışığı tam bu kareyi işaret ediyor — sıradaki katı koy!",warn:"Burada bir uyumsuzluk var; doğa ve statik kurallar çakışıyor.",sight:"Bakış çizgisinde sadece kendinden öncekinden yüksek kuleler parlar!",win:"Masalsı bir mahalle yarattın — her çatı ayrı bir sanat eseri!"},char_neon:{start:"Görüş akslarını oku; boşluklardaki en yüksek kule yerini ele verecektir.",mid:"Harika akışkanlık — blokların ritmi yavaş yavaş şekilleniyor.",near:"Ufuk çizgisi netleşti, son kuleleri yerleştirip silüeti kilitle.",hint:"Parametrik kesişim noktası belli: önerdiğim katı uygula.",warn:"Çakışma algılandı; yükseklik eğrisini düzeltmemiz gerekiyor.",sight:"Görünen kuleleri tek tek izleyip arkada kalanları eleyebilirsin.",win:"Ufuk çizgisini baştan yazdık — cesur ve kusursuz!"},char_quantum:{start:"İnsan ölçeğinde ferah sokaklar için sabırla önce kesin kareleri bulalım.",mid:"Mahalle nefes almaya başladı; komşu parsellere ışık bırakalım.",near:"Huzurlu bir son dokunuş kaldı, acele etmeden tamamlayalım.",hint:"Bilge bir yaklaşımla bakarsak bu karede başka kat barınamaz.",warn:"Bir kat fazla veya tekrarlı görünüyor; sakince gözden geçirelim.",sight:"Göz hizası ne diyorsa sokak düzeni de ona uymalıdır.",win:"Eline sağlık! Hem ışığı hem sıcaklığı yerinde, yaşanası bir sokak."},char_emperor:{start:"Evlat, önce taşların temel aksını kur; yüksek kubbeler yerini hemen belli eder.",mid:"Mizan ve tenasüp yerli yerinde, sokağın yükü sağlam dağılıyor.",near:"Son taşlar kaldı; bu sokağın da külliyesi tarihe geçecek.",hint:"Hesap şaşmaz: kenar ve sıra dengesine göre buraya tek kat uyar.",warn:"Durakla ve bak evlat; iki aynı boy sütun bir sırada bulunmaz.",sight:"Göz önünden arkaya yükselen her kule sırrını açık eder.",win:"Aferin! Koca Sinan usulünce kusursuz statik ve silüet kurdun!"}},a=i[t]||i.char_apprentice;if(this.activeHint)return{tone:"hint",text:a.hint,winQuote:a.win};if(e)return{tone:"warn",text:a.warn,winQuote:a.win};if(this.activeSightRay)return{tone:"hint",text:a.sight,winQuote:a.win};if(s<=Math.max(3,Math.ceil((((m=this.activePuzzle)==null?void 0:m.size)||4)*.75)))return{tone:"normal",text:a.near,winQuote:a.win};const b=this.activePuzzle?this.activePuzzle.size*this.activePuzzle.size-this.activePuzzle.givens.flat().filter(w=>w>0).length:16;return s<b*.75?{tone:"normal",text:a.mid,winQuote:a.win}:{tone:"normal",text:a.start,winQuote:a.win}}renderBoardScreenHTML(){var S,A;const t=this.activePuzzle,e=t.size,s=ht(t,this.board),i=N.find(d=>d.id===this.stats.equippedCharacterId)||N[0],a=O.find(d=>d.id===this.stats.equippedFacadeId)||O[0],b=O.find(d=>d.id===this.stats.equippedRoofId)||O[5],m=dt(a.id,b.id),w=new Int32Array(e+1);let l=0;for(let d=0;d<e;d++)for(let r=0;r<e;r++){const v=this.board[d][r];v>=1&&v<=e?w[v]++:l++}const o=s.duplicateKeys.size>0||s.zoningViolationKeys.size>0||s.violatedClueKeys.size>0,h=this.getArchitectSpeechState(i.id,o,l),g=new Map;let k="";if(this.activeSightRay){const{side:d,index:r}=this.activeSightRay,v=!!((A=(S=t.hiddenCluesMask)==null?void 0:S[d])!=null&&A[r]),L=v?0:t.clues[d][r],x=[];for(let f=0;f<e;f++){let I=r,q=f;d==="top"?(I=f,q=r):d==="bottom"?(I=e-1-f,q=r):d==="left"?(I=r,q=f):(I=r,q=e-1-f),x.push({r:I,c:q})}const R=Kt(x,this.board,L,d,r);R.visibleCells.forEach(f=>g.set(`${f.r},${f.c}`,"visible")),R.hiddenCells.forEach(f=>g.set(`${f.r},${f.c}`,"blocked")),k=`
         <div class="towers-sight-banner" id="towers-sight-banner">
-          <span>👁️ <strong>Görüş Hattı (${p==="top"?`${o+1}. Sütun (Üstten ▾)`:p==="bottom"?`${o+1}. Sütun (Alttan ▴)`:p==="left"?`${o+1}. Satır (Soldan ▸)`:`${o+1}. Satır (Sağdan ◂)`}):</strong> ${g?"Sisli İpucu (?)":`Hedef = <b>${M||"Yok"}</b>`} • <b class="sight-ok">Görüldü: ${L.visibleCells.length}</b> • <b class="sight-hid">Örtüldü: ${L.hiddenCells.length}</b></span>
+          <span>👁️ <strong>Görüş Hattı (${d==="top"?`${r+1}. Sütun (Üstten ▾)`:d==="bottom"?`${r+1}. Sütun (Alttan ▴)`:d==="left"?`${r+1}. Satır (Soldan ▸)`:`${r+1}. Satır (Sağdan ◂)`}):</strong> ${v?"Sisli İpucu (?)":`Hedef = <b>${L||"Yok"}</b>`} • <b class="sight-ok">Görüldü: ${R.visibleCells.length}</b> • <b class="sight-hid">Örtüldü: ${R.hiddenCells.length}</b></span>
           <button type="button" id="btn-towers-clear-sight" class="towers-mini-btn">Kapat ✕</button>
         </div>
-      `}const C=this.activeMode==="campaign"&&this.activeCampaignLevel?`🏘️ #${this.activeCampaignLevel.code}: ${this.activeCampaignLevel.cityName}`:this.activeMode==="daily"?"🧱 Günlük Bina":this.activeMode==="endless"?`🏗️ Dalga #${this.endlessWave}`:this.activeMode==="blitz"?`⚡ Blitz: ${this.blitzScore} P`:this.activeChallengeKind==="zoning"?"🚧 İmar Kısıtı":this.activeChallengeKind==="fog"?"🌫️ Sisli Sokak":this.activeChallengeKind==="survival"?"🪖 3 Baret Hayatta Kalma":this.activeChallengeKind==="weekly_cup"?`🏆 Kupa Etabı #${(this.activeCupStageIdx??0)+1}`:`🎲 Serbest (${e}×${e})`,z=(p,o)=>{var M,k;if((k=(M=t.hiddenCluesMask)==null?void 0:M[p])!=null&&k[o])return"fogged";const g=`${p}:${o}`;return s.violatedClueKeys.has(g)?"violated":s.satisfiedClueKeys.has(g)?"satisfied":"pending"},E=(p,o,g)=>{var x,I,R,G;const M=!!((I=(x=t.hiddenCluesMask)==null?void 0:x[p])!=null&&I[o]),k=t.clues[p][o],L=z(p,o),W=((R=this.activeSightRay)==null?void 0:R.side)===p&&((G=this.activeSightRay)==null?void 0:G.index)===o,T=M?"🌫️":k>0?String(k):"·";return`
+      `}const $=this.activeMode==="campaign"&&this.activeCampaignLevel?`🏘️ #${this.activeCampaignLevel.code}: ${this.activeCampaignLevel.cityName}`:this.activeMode==="daily"?"🧱 Günlük Bina":this.activeMode==="endless"?`🏗️ Dalga #${this.endlessWave}`:this.activeMode==="blitz"?`⚡ Blitz: ${this.blitzScore} P`:this.activeChallengeKind==="zoning"?"🚧 İmar Kısıtı":this.activeChallengeKind==="fog"?"🌫️ Sisli Sokak":this.activeChallengeKind==="survival"?"🪖 3 Baret Hayatta Kalma":this.activeChallengeKind==="weekly_cup"?`🏆 Kupa Etabı #${(this.activeCupStageIdx??0)+1}`:`🎲 Serbest (${e}×${e})`,M=(d,r)=>{var L,x;if((x=(L=t.hiddenCluesMask)==null?void 0:L[d])!=null&&x[r])return"fogged";const v=`${d}:${r}`;return s.violatedClueKeys.has(v)?"violated":s.satisfiedClueKeys.has(v)?"satisfied":"pending"},E=(d,r,v)=>{var I,q,V,j;const L=!!((q=(I=t.hiddenCluesMask)==null?void 0:I[d])!=null&&q[r]),x=t.clues[d][r],R=M(d,r),T=((V=this.activeSightRay)==null?void 0:V.side)===d&&((j=this.activeSightRay)==null?void 0:j.index)===r,f=L?"🌫️":x>0?String(x):"·";return`
         <button
           type="button"
-          class="towers-clue-cell ${p} ${L} ${W?"active-ray":""}"
-          data-towers-clue="${p}-${o}"
-          title="${M?"Sisli İpucu":"Görüş Hattını Göster / Gizle"}"
+          class="towers-clue-cell ${d} ${R} ${T?"active-ray":""}"
+          data-towers-clue="${d}-${r}"
+          title="${L?"Sisli İpucu":"Görüş Hattını Göster / Gizle"}"
         >
-          ${p==="right"||p==="bottom"?`<span class="clue-arrow">${g}</span><span class="clue-num">${T}</span>`:`<span class="clue-num">${T}</span><span class="clue-arrow">${g}</span>`}
+          ${d==="right"||d==="bottom"?`<span class="clue-arrow">${v}</span><span class="clue-num">${f}</span>`:`<span class="clue-num">${f}</span><span class="clue-arrow">${v}</span>`}
         </button>
-      `},q=!!(this.activeHint||$);return`
-      <div class="towers-board-screen ${q?"has-banner":""}" id="towers-board-screen">
+      `},B=!!(this.activeHint||k);return`
+      <div class="towers-board-screen ${B?"has-banner":""}" id="towers-board-screen">
         <div class="towers-board-hud">
           <div class="hud-left-btns">
             <button type="button" id="btn-towers-leave-board" class="towers-back-map-btn">⬅️ Menü</button>
@@ -651,15 +651,18 @@ var ft=Object.defineProperty;var $t=(d,t,e)=>t in d?ft(d,t,{enumerable:!0,config
           </div>
 
           <div class="towers-hud-center">
-            <span class="towers-hud-title">${S(C)}</span>
-            <span class="towers-hud-sub">${e}×${e} • ${S(n.name)}</span>
+            <span class="towers-hud-title">${z($)}</span>
+            <span class="towers-hud-sub">${e}×${e} • ${z(a.name)}</span>
           </div>
 
           <div class="towers-hud-metrics">
             ${this.activeChallengeKind==="survival"?`<span class="towers-hud-pill survival-lives">${"🪖".repeat(this.survivalLives)}${"⚫".repeat(Math.max(0,3-this.survivalLives))}</span>`:""}
             <span class="towers-hud-pill" id="towers-hud-timer">
-              ⏱️ ${this.activeMode==="blitz"?it(this.blitzRemainingSeconds):it(this.elapsedSeconds)}
+              ⏱️ ${this.activeMode==="blitz"?at(this.blitzRemainingSeconds):at(this.elapsedSeconds)}
             </span>
+            <button type="button" id="btn-towers-view-toggle" class="towers-hud-pill btn-pill ${this.viewMode==="3d"?"active":""}" title="3D Kule / 2D Sade Görünüm">
+              ${this.viewMode==="3d"?"🧊 3D":"▦ 2D"}
+            </button>
             <button type="button" id="btn-towers-sight-toggle" class="towers-hud-pill btn-pill ${this.activeSightRay?"active":""}" title="Görüş Hattını İncele (V)">
               👁️ Görüş
             </button>
@@ -667,9 +670,9 @@ var ft=Object.defineProperty;var $t=(d,t,e)=>t in d?ft(d,t,{enumerable:!0,config
           </div>
         </div>
 
-        ${this.activeHint?"":$}
+        ${this.activeHint?"":k}
 
-        ${q?"":`<div class="towers-clue-guide-strip" aria-hidden="true">
+        ${B?"":`<div class="towers-clue-guide-strip" aria-hidden="true">
           <span>👁️ <b>Kenar sayıları:</b> Ok yönünden bakınca görünen bina sayısıdır • Sayıya dokun = görüşü çiz</span>
         </div>`}
 
@@ -677,7 +680,7 @@ var ft=Object.defineProperty;var $t=(d,t,e)=>t in d?ft(d,t,{enumerable:!0,config
           <div class="towers-hint-banner" id="towers-hint-banner">
             <div class="towers-hint-text">
               <span class="hint-kind-pill ${this.activeHint.isCorrection?"fix":"deduce"}">${this.activeHint.isCorrection?"🔧 DÜZELTME":"🔍 İPUCU"}</span>
-              <strong>${S(this.activeHint.ruleTitle)}:</strong> ${S(this.activeHint.message)}
+              <strong>${z(this.activeHint.ruleTitle)}:</strong> ${z(this.activeHint.message)}
             </div>
             <div class="towers-hint-actions">
               <button type="button" id="btn-towers-apply-hint" class="towers-apply-hint-btn">
@@ -697,56 +700,55 @@ var ft=Object.defineProperty;var $t=(d,t,e)=>t in d?ft(d,t,{enumerable:!0,config
             </div>
           `:""}
           <div class="towers-stage-row">
-            <div class="towers-matrix" id="towers-matrix" style="--towers-size: ${e};">
+            <div class="towers-matrix mode-${this.viewMode}" id="towers-matrix" style="--towers-size: ${e};">
             <div class="towers-corner-spacer"></div>
-            ${Array.from({length:e},(p,o)=>E("top",o,"▼")).join("")}
+            ${Array.from({length:e},(d,r)=>E("top",r,"▼")).join("")}
             <div class="towers-corner-spacer"></div>
 
-            ${Array.from({length:e},(p,o)=>{const g=Array.from({length:e},(M,k)=>{var J,tt,i,u,w,f,A,U,N,_,et;const L=this.board[o][k],W=t.givens[o][k]>0,T=this.selectedCell.r===o&&this.selectedCell.c===k,x=s.duplicateKeys.has(`${o},${k}`),I=s.zoningViolationKeys.has(`${o},${k}`),R=((tt=(J=t.maxHeightLimits)==null?void 0:J[o])==null?void 0:tt[k])||0,G=((i=this.activeHint)==null?void 0:i.r)===o&&((u=this.activeHint)==null?void 0:u.c)===k,rt=!!((w=this.activeHint)!=null&&w.focusLine)&&(((A=(f=this.activeHint)==null?void 0:f.focusLine)==null?void 0:A.kind)==="row"&&this.activeHint.focusLine.index===o||((N=(U=this.activeHint)==null?void 0:U.focusLine)==null?void 0:N.kind)==="col"&&this.activeHint.focusLine.index===k),F=v.get(`${o},${k}`)||"",Q=this.notes[o][k],lt=L>0&&((_=this.lastBuiltCell)==null?void 0:_.r)===o&&((et=this.lastBuiltCell)==null?void 0:et.c)===k;return`
+            ${Array.from({length:e},(d,r)=>{var x;const v=((x=this.board[this.selectedCell.r])==null?void 0:x[this.selectedCell.c])||0,L=Array.from({length:e},(R,T)=>{var p,y,C,H,D,W,U,et,gt,yt,kt;const f=this.board[r][T],I=t.givens[r][T]>0,q=this.selectedCell.r===r&&this.selectedCell.c===T,V=!q&&(r===this.selectedCell.r||T===this.selectedCell.c),j=!q&&f>0&&v>0&&f===v,lt=s.duplicateKeys.has(`${r},${T}`),rt=s.zoningViolationKeys.has(`${r},${T}`),F=((y=(p=t.maxHeightLimits)==null?void 0:p[r])==null?void 0:y[T])||0,X=((C=this.activeHint)==null?void 0:C.r)===r&&((H=this.activeHint)==null?void 0:H.c)===T,ot=!!((D=this.activeHint)!=null&&D.focusLine)&&(((U=(W=this.activeHint)==null?void 0:W.focusLine)==null?void 0:U.kind)==="row"&&this.activeHint.focusLine.index===r||((gt=(et=this.activeHint)==null?void 0:et.focusLine)==null?void 0:gt.kind)==="col"&&this.activeHint.focusLine.index===T),Y=g.get(`${r},${T}`)||"",Z=this.notes[r][T],n=f>0&&((yt=this.lastBuiltCell)==null?void 0:yt.r)===r&&((kt=this.lastBuiltCell)==null?void 0:kt.c)===T;return`
                   <div
-                    class="towers-cell ${L>0?"has-tower":"empty"} ${W?"given":""} ${T?"selected":""} ${x||I?"conflict":""} ${G?"hint-target":""} ${rt&&!G?"hint-focus-line":""} ${R>0?"zoned":""} ${lt?"just-built":""} ${F?`sight-${F}`:""}"
-                    data-towers-cell="${o}-${k}"
-                    data-row="${o}"
-                    data-col="${k}"
-                    data-val="${L}"
+                    class="towers-cell ${f>0?"has-tower":"empty"} ${I?"given":""} ${q?"selected":""} ${V?"crosshair-hl":""} ${j?"same-val-hl":""} ${lt||rt?"conflict":""} ${X?"hint-target":""} ${ot&&!X?"hint-focus-line":""} ${F>0?"zoned":""} ${n?"just-built":""} ${Y?`sight-${Y}`:""}"
+                    data-towers-cell="${r}-${T}"
+                    data-row="${r}"
+                    data-col="${T}"
+                    data-val="${f}"
                   >
-                    ${G&&this.activeHint?`<span class="tower-hint-badge" aria-hidden="true">👇 ${this.activeHint.value}</span>`:""}
-                    ${R>0?`<span class="tower-zone-badge" title="İmar Kısıtı: Maksimum ${R} kat">≤${R}</span>`:""}
-                    ${L>0?`
+                    ${X&&this.activeHint?`<span class="tower-hint-badge" aria-hidden="true">👇 ${this.activeHint.value}</span>`:""}
+                    ${F>0?`<span class="tower-zone-badge" title="İmar Kısıtı: Maksimum ${F} kat">≤${F}</span>`:""}
+                    ${f>0?`
                       <div class="tower-pixel-bldg-wrap">
-                        ${mt(L,e,m,b.id)}
-                        <span class="tower-height-badge ${W?"given-badge":""}">${L}</span>
+                        ${wt(f,e,m,b.id,{isGiven:I,viewMode:this.viewMode})}
                       </div>
-                    `:Q.length>0?`
+                    `:Z.length>0?`
                       <div class="tower-notes-grid">
-                        ${Array.from({length:e},(Ut,St)=>{const dt=St+1;return`<span class="tower-note-item ${Q.includes(dt)?"on":""}">${Q.includes(dt)?dt:""}</span>`}).join("")}
+                        ${Array.from({length:e},(Vt,Ct)=>{const ct=Ct+1;return`<span class="tower-note-item ${Z.includes(ct)?"on":""}">${Z.includes(ct)?ct:""}</span>`}).join("")}
                       </div>
-                    `:'<span class="tower-plot-stakes" aria-hidden="true"><i></i><i></i></span>'}
-                    ${F==="visible"?'<span class="tower-sight-tag visible" title="Görüldü">👁️</span>':F==="blocked"?'<span class="tower-sight-tag blocked" title="Önündeki yüksek bina tarafından örtüldü">⬛</span>':""}
+                    `:""}
+                    ${Y==="visible"?'<span class="tower-sight-tag visible" title="Görüldü">👁️</span>':Y==="blocked"?'<span class="tower-sight-tag blocked" title="Önündeki yüksek bina tarafından örtüldü">⬛</span>':""}
                   </div>
-                `}).join("");return`${E("left",o,"▶")}${g}${E("right",o,"◀")}`}).join("")}
+                `}).join("");return`${E("left",r,"▶")}${L}${E("right",r,"◀")}`}).join("")}
 
             <div class="towers-corner-spacer"></div>
-            ${Array.from({length:e},(p,o)=>E("bottom",o,"▲")).join("")}
+            ${Array.from({length:e},(d,r)=>E("bottom",r,"▲")).join("")}
             <div class="towers-corner-spacer"></div>
           </div>
 
           <aside class="towers-architect-assistant" aria-label="Şantiye Mimarı">
             <div class="arch-assist-head">
-              <div class="arch-assist-portrait" style="border-color:${a.accentColor}">
-                ${Z(a.id,60)}
+              <div class="arch-assist-portrait" style="border-color:${i.accentColor}">
+                ${tt(i.id,60)}
               </div>
               <div class="arch-assist-meta">
-                <strong>${S(a.name)}</strong>
-                <small>${S(a.rarityLabel)}</small>
+                <strong>${z(i.name)}</strong>
+                <small>${z(i.rarityLabel)}</small>
               </div>
             </div>
             <div class="arch-assist-bubble ${h.tone==="normal"?"":h.tone}">
-              “${S(h.text)}”
+              “${z(h.text)}”
             </div>
             <div class="arch-assist-cosmetics">
-              <span>🧱 ${S(n.name)}</span>
-              <span>🏠 ${S(b.name)}</span>
+              <span>🧱 ${z(a.name)}</span>
+              <span>🏠 ${z(b.name)}</span>
             </div>
           </aside>
           </div>
@@ -754,14 +756,14 @@ var ft=Object.defineProperty;var $t=(d,t,e)=>t in d?ft(d,t,{enumerable:!0,config
 
         <div class="towers-controls-dock">
           <div class="towers-numpad" role="group" aria-label="Bina Kat Yüksekliği">
-            ${Array.from({length:e},(p,o)=>{const g=o+1,M=Math.max(0,e-y[g]);return`
+            ${Array.from({length:e},(d,r)=>{const v=r+1,L=Math.max(0,e-w[v]);return`
                 <button
                   type="button"
-                  class="towers-num-btn ${this.noteMode?"note-active":""} ${M===0?"all-placed":""}"
-                  data-towers-num="${g}"
+                  class="towers-num-btn ${this.noteMode?"note-active":""} ${L===0?"all-placed":""}"
+                  data-towers-num="${v}"
                 >
-                  <span class="num-main">${g}</span>
-                  <span class="num-lbl">${this.noteMode?"Not":M===0?"✓":`×${M}`}</span>
+                  <span class="num-main">${v}</span>
+                  <span class="num-lbl">${this.noteMode?"Not":L===0?"✓":`×${L}`}</span>
                 </button>
               `}).join("")}
           </div>
@@ -778,4 +780,4 @@ var ft=Object.defineProperty;var $t=(d,t,e)=>t in d?ft(d,t,{enumerable:!0,config
           </div>
         </div>
       </div>
-    `}renderActiveModal(){if(!this.activeModal)return"";if(this.activeModal==="tutorial")return qt({step:this.tutorialStep,miniBoard:this.tutorialMiniBoard,selectedMiniCell:this.tutorialSelectedCell,palId:{facade:this.stats.equippedFacadeId,roof:this.stats.equippedRoofId}});if(this.activeModal==="rules")return Kt();if(this.activeModal==="workshop")return xt(this.stats);if(this.activeModal==="profile")return It(this.stats);if(this.activeModal==="beta-lab")return Rt(this.inBoardView);if(this.activeModal==="gameover")return Dt(this.gameOverReason);if(this.activeModal==="victory"&&this.lastWinSummary){const t=V.find(s=>s.id===this.stats.equippedCharacterId)||V[0],e=this.getArchitectSpeechState(t.id,!1,0);return Gt({elapsedSeconds:this.elapsedSeconds,hintsUsed:this.hintsUsedThisGame,challengeKind:this.activeChallengeKind,architect:{id:t.id,name:t.name,title:t.title,accentColor:t.accentColor,winQuote:e.winQuote},summary:this.lastWinSummary})}return""}bindEvents(t){var s,a,n,b,m,y,r,l,h,v,$,C,z,E,q,H,K,p,o,g,M,k,L,W,T,x,I,R,G,rt,F,Q,lt,J,tt;(s=t.querySelector("#btn-towers-back-hub"))==null||s.addEventListener("click",()=>{this.stopTimer(),this.host.onBackToHub()}),(a=t.querySelector("#btn-towers-open-social"))==null||a.addEventListener("click",()=>{var i,u;(u=(i=this.host).onOpenSocialHub)==null||u.call(i)}),(n=t.querySelector("#btn-towers-open-profile"))==null||n.addEventListener("click",()=>{var i,u;(u=(i=this.host).onOpenGlobalProfile)==null||u.call(i)}),(b=t.querySelector("#btn-towers-dock-sfx"))==null||b.addEventListener("click",()=>{var i,u;(u=(i=this.host).onToggleSound)==null||u.call(i),this.render()}),(m=t.querySelector("#btn-towers-dock-music"))==null||m.addEventListener("click",()=>{var i,u;(u=(i=this.host).onToggleMusic)==null||u.call(i),this.render()}),(y=t.querySelector("#btn-towers-quit"))==null||y.addEventListener("click",()=>{var i,u;(u=(i=this.host).onQuitApp)==null||u.call(i)}),(r=t.querySelector("#btn-towers-tutorial"))==null||r.addEventListener("click",()=>{this.tutorialStep=1,this.tutorialMiniBoard=nt.map(i=>[...i]),this.tutorialSelectedCell={r:0,c:1},this.activeModal="tutorial",this.render()}),(l=t.querySelector("#btn-towers-rules"))==null||l.addEventListener("click",()=>{this.activeModal="rules",this.render()}),(h=t.querySelector("#btn-towers-workshop"))==null||h.addEventListener("click",()=>{this.activeModal="workshop",this.render()}),(v=t.querySelector("#btn-towers-profile"))==null||v.addEventListener("click",()=>{this.activeModal="profile",this.render()}),($=t.querySelector("#btn-towers-settings"))==null||$.addEventListener("click",()=>{this.host.onOpenGlobalSettings()}),(C=t.querySelector("#btn-towers-beta-lab"))==null||C.addEventListener("click",()=>{this.activeModal="beta-lab",this.render()}),(z=t.querySelector("#btn-towers-close-modal"))==null||z.addEventListener("click",()=>{this.activeModal=null,this.render()}),t.querySelectorAll("[data-tut-step]").forEach(i=>{i.addEventListener("click",()=>{this.tutorialStep=Number(i.dataset.tutStep)||1,this.render()})}),t.querySelectorAll("[data-tut-cell]").forEach(i=>{i.addEventListener("click",()=>{var U,N,_;const[u,w]=(i.dataset.tutCell||"0-0").split("-"),f=Number(u)||0,A=Number(w)||0;((U=nt[f])==null?void 0:U[A])>0||(this.tutorialSelectedCell={r:f,c:A},(_=(N=this.host).playSound)==null||_.call(N,"click"),this.render())})}),t.querySelectorAll("[data-tut-num]").forEach(i=>{i.addEventListener("click",()=>{var A,U,N,_,et;const u=Number(i.dataset.tutNum)||0,{r:w,c:f}=this.tutorialSelectedCell;((A=nt[w])==null?void 0:A[f])>0||(this.tutorialMiniBoard[w][f]=u,u>0?(N=(U=this.host).playSound)==null||N.call(U,"place",{floors:u,maxFloors:3}):(et=(_=this.host).playSound)==null||et.call(_,"erase"),this.render())})}),(E=t.querySelector("#btn-towers-tutorial-next"))==null||E.addEventListener("click",()=>{this.tutorialStep=Math.min(3,this.tutorialStep+1),this.render()}),(q=t.querySelector("#btn-towers-tutorial-practice"))==null||q.addEventListener("click",()=>{this.activeModal=null;const i=B[0],u=D(i.size,i.difficulty,i.seed,{id:i.id,title:i.cityName,code:i.code});this.startPuzzleSession(u,"campaign",i)}),t.querySelectorAll("[data-towers-tab]").forEach(i=>{i.addEventListener("click",()=>{var w,f;const u=i.dataset.towersTab;u&&(this.activeTab=u,(f=(w=this.host).playSound)==null||f.call(w,"click"),this.render())})}),t.querySelectorAll("[data-towers-ep]").forEach(i=>{i.addEventListener("click",()=>{this.selectedEpisode=Number(i.dataset.towersEp)||1,this.render()})}),t.querySelectorAll("[data-start-campaign]").forEach(i=>{i.addEventListener("click",()=>{const u=i.dataset.startCampaign,w=B.find(A=>A.id===u);if(!w)return;const f=w.challengeKind==="zoning"||w.challengeKind==="fog"?at(w.challengeKind,w.size,w.difficulty,w.seed,{id:w.id,title:w.cityName,code:w.code}):D(w.size,w.difficulty,w.seed,{id:w.id,title:w.cityName,code:w.code});this.startPuzzleSession(f,"campaign",w)})}),(H=t.querySelector("#btn-towers-start-zoning"))==null||H.addEventListener("click",()=>{const i=at("zoning",5,"medium",`TWR-ZONE-${Date.now()}`);this.startPuzzleSession(i,"challenge")}),(K=t.querySelector("#btn-towers-start-fog"))==null||K.addEventListener("click",()=>{const i=at("fog",5,"medium",`TWR-FOG-${Date.now()}`);this.startPuzzleSession(i,"challenge")}),(p=t.querySelector("#btn-towers-start-survival"))==null||p.addEventListener("click",()=>{const i=at("survival",5,"hard",`TWR-SURV-${Date.now()}`);this.startPuzzleSession(i,"challenge")}),t.querySelectorAll("[data-towers-cup-stage]").forEach(i=>{i.addEventListener("click",()=>{const u=Number(i.dataset.towersCupStage);if(u!==0&&u!==1&&u!==2)return;const f=wt()[u],A=at(f.challengeKind==="zoning"?"zoning":"weekly_cup",f.size,f.difficulty,f.seed,{id:f.seed,title:`🏆 ${f.label}: ${f.subtitle}`});A.challengeKind="weekly_cup",this.startPuzzleSession(A,"challenge",null,{cupStageIdx:u})})}),(o=t.querySelector("#btn-towers-start-daily"))==null||o.addEventListener("click",()=>{const i=new Date().toISOString().slice(0,10),u=D(5,"medium",`TWR-DAILY-${i}`);this.startPuzzleSession(u,"daily")}),(g=t.querySelector("#btn-towers-start-endless"))==null||g.addEventListener("click",()=>{const i=this.endlessWave<=2?4:this.endlessWave<=5?5:6,u=this.endlessWave<=2?"easy":this.endlessWave<=6?"medium":"hard",w=D(i,u,`TWR-ENDLESS-W${this.endlessWave}-${Date.now()}`);this.startPuzzleSession(w,"endless")}),(M=t.querySelector("#btn-towers-start-blitz"))==null||M.addEventListener("click",()=>{const i=D(4,"easy",`TWR-BLITZ-${Date.now()}-0`);this.startPuzzleSession(i,"blitz")}),t.querySelectorAll("[data-custom-size]").forEach(i=>{i.addEventListener("click",()=>{this.customSize=Number(i.dataset.customSize)||4,this.render()})}),t.querySelectorAll("[data-custom-diff]").forEach(i=>{i.addEventListener("click",()=>{this.customDifficulty=i.dataset.customDiff||"easy",this.render()})});const e=t.querySelector("#inp-towers-custom-seed");e==null||e.addEventListener("input",()=>{this.customSeedInput=e.value}),(k=t.querySelector("#btn-towers-start-custom"))==null||k.addEventListener("click",()=>{const i=this.customSeedInput.trim()||`TWR-CUSTOM-${this.customSize}-${this.customDifficulty}-${Date.now()}`,u=D(this.customSize,this.customDifficulty,i);this.startPuzzleSession(u,"custom")}),(L=t.querySelector("#btn-towers-leave-board"))==null||L.addEventListener("click",()=>{this.stopTimer(),this.inBoardView=!1,this.isPaused=!1,this.render()}),(W=t.querySelector("#btn-towers-pause"))==null||W.addEventListener("click",()=>{this.isPaused=!this.isPaused,this.render()}),(T=t.querySelector("#btn-towers-resume"))==null||T.addEventListener("click",()=>{this.isPaused=!1,this.render()}),(x=t.querySelector("#btn-towers-sight-toggle"))==null||x.addEventListener("click",()=>{this.toggleSightRayFromSelection()}),t.querySelectorAll("[data-towers-cell]").forEach(i=>{i.addEventListener("click",()=>{this.selectedCell={r:Number(i.dataset.row)||0,c:Number(i.dataset.col)||0},this.render()})}),t.querySelectorAll("[data-towers-clue]").forEach(i=>{i.addEventListener("click",()=>{const u=i.dataset.towersClue||"",[w,f]=u.split("-"),A=Number(f)||0;this.activeSightRay&&this.activeSightRay.side===w&&this.activeSightRay.index===A?this.activeSightRay=null:this.activeSightRay={side:w,index:A},this.render()})}),(I=t.querySelector("#btn-towers-clear-sight"))==null||I.addEventListener("click",()=>{this.activeSightRay=null,this.render()}),t.querySelectorAll("[data-towers-num]").forEach(i=>{i.addEventListener("click",()=>{const u=Number(i.dataset.towersNum)||1;this.handleNumberInput(u)})}),(R=t.querySelector("#btn-towers-notes-toggle"))==null||R.addEventListener("click",()=>{this.noteMode=!this.noteMode,this.render()}),(G=t.querySelector("#btn-towers-erase"))==null||G.addEventListener("click",()=>this.handleEraseInput()),(rt=t.querySelector("#btn-towers-undo"))==null||rt.addEventListener("click",()=>this.handleUndo()),(F=t.querySelector("#btn-towers-redo"))==null||F.addEventListener("click",()=>this.handleRedo()),(Q=t.querySelector("#btn-towers-hint"))==null||Q.addEventListener("click",()=>this.handleSmartHint()),(lt=t.querySelector("#btn-towers-apply-hint"))==null||lt.addEventListener("click",()=>this.applyActiveHintMove()),(J=t.querySelector("#btn-towers-close-hint"))==null||J.addEventListener("click",()=>{this.activeHint=null,this.activeSightRay=null,this.render()}),(tt=t.querySelector("#btn-towers-reset"))==null||tt.addEventListener("click",()=>{!this.activePuzzle||this.isPaused||(this.pushHistory(),this.board=X(this.activePuzzle.givens),this.notes=Array.from({length:this.activePuzzle.size},()=>Array.from({length:this.activePuzzle.size},()=>[])),this.activeHint=null,this.lastBuiltCell=null,this.render())}),this.bindWorkshopAndMetaModals(t)}bindWorkshopAndMetaModals(t){var e,s,a,n,b,m,y;t.querySelectorAll("[data-buy-char]").forEach(r=>{r.addEventListener("click",()=>{const l=r.dataset.buyChar,h=V.find(v=>v.id===l);!h||this.stats.blueprintGems<h.costGems||(this.stats.blueprintGems-=h.costGems,this.stats.unlockedCharacterIds.includes(l)||this.stats.unlockedCharacterIds.push(l),this.stats.equippedCharacterId=l,st(this.stats),this.render())})}),t.querySelectorAll("[data-equip-char]").forEach(r=>{r.addEventListener("click",()=>{const l=r.dataset.equipChar;this.stats.unlockedCharacterIds.includes(l)&&(this.stats.equippedCharacterId=l,st(this.stats),this.render())})}),t.querySelectorAll("[data-buy-cosmetic]").forEach(r=>{r.addEventListener("click",()=>{const l=r.dataset.buyCosmetic,h=j.find(v=>v.id===l);!h||this.stats.blueprintGems<h.costGems||(this.stats.blueprintGems-=h.costGems,this.stats.unlockedCosmeticIds.includes(l)||this.stats.unlockedCosmeticIds.push(l),h.slot==="facade"?this.stats.equippedFacadeId=l:this.stats.equippedRoofId=l,st(this.stats),this.render())})}),t.querySelectorAll("[data-equip-cosmetic]").forEach(r=>{r.addEventListener("click",()=>{const l=r.dataset.equipCosmetic,h=j.find(v=>v.id===l);h&&(h.slot==="facade"?this.stats.equippedFacadeId=l:this.stats.equippedRoofId=l,st(this.stats),this.render())})}),(e=t.querySelector("#btn-towers-preset-max"))==null||e.addEventListener("click",()=>{this.stats=ht("unlock_all"),this.activeModal=null,this.render()}),(s=t.querySelector("#btn-towers-preset-mid"))==null||s.addEventListener("click",()=>{this.stats=ht("classic_sandbox"),this.activeModal=null,this.render()}),(a=t.querySelector("#btn-towers-preset-reset"))==null||a.addEventListener("click",()=>{this.stats=ht("fresh_lvl1"),this.activeModal=null,this.render()}),(n=t.querySelector("#btn-towers-instant-solve"))==null||n.addEventListener("click",()=>{this.activePuzzle&&(this.activeModal=null,this.board=X(this.activePuzzle.solution),this.checkWinAfterMove(),this.render())}),(b=t.querySelector("#btn-towers-retry-board"))==null||b.addEventListener("click",()=>{this.activePuzzle&&(this.activeModal=null,this.startPuzzleSession(this.activePuzzle,this.activeMode,this.activeCampaignLevel,{resetSeries:!0,cupStageIdx:this.activeCupStageIdx}))}),(m=t.querySelector("#btn-towers-win-map"))==null||m.addEventListener("click",()=>{this.activeModal=null,this.inBoardView=!1,this.render()}),(y=t.querySelector("#btn-towers-win-next"))==null||y.addEventListener("click",()=>{if(this.activeModal=null,this.activeMode==="campaign"&&this.activeCampaignLevel){const r=B.findIndex(v=>v.id===this.activeCampaignLevel.id),l=B[Math.min(B.length-1,r+1)];this.selectedEpisode=l.episode;const h=D(l.size,l.difficulty,l.seed,{id:l.id,title:l.cityName,code:l.code});this.startPuzzleSession(h,"campaign",l)}else if(this.activeMode==="endless"){const r=this.endlessWave<=2?4:this.endlessWave<=5?5:6,l=this.endlessWave<=2?"easy":this.endlessWave<=6?"medium":"hard",h=D(r,l,`TWR-ENDLESS-W${this.endlessWave}-${Date.now()}`);this.startPuzzleSession(h,"endless")}else this.inBoardView=!1,this.render()})}}class Ot{constructor(){c(this,"id","towers");c(this,"title","Towers");c(this,"sceneTheme","brick-city");c(this,"controller",null);c(this,"host",null)}mount(t,e){this.unmount(),this.host=e;const s={getUsername:()=>e.getUsername(),getPilotTag:()=>e.getPilotTag(),isBetaChannel:()=>e.isBetaChannel,getCloudSynced:()=>{var a;return((a=e.getCloudSynced)==null?void 0:a.call(e))??!1},canQuit:()=>{var a;return((a=e.canQuit)==null?void 0:a.call(e))??!1},renderTitlebar:()=>{var a;return((a=e.renderTitlebar)==null?void 0:a.call(e))??""},bindTitlebarEvents:()=>{var a;return(a=e.bindTitlebarEvents)==null?void 0:a.call(e)},onBackToHub:()=>e.returnToHub(),onOpenGlobalSettings:()=>e.openGlobalSettings(),onOpenGlobalProfile:()=>{var a;return(a=e.openGlobalProfile)==null?void 0:a.call(e)},onOpenSocialHub:()=>e.openSocialHub({pauseActiveGame:!0}),getSocialAttentionCount:()=>{var a;return((a=e.getSocialAttentionCount)==null?void 0:a.call(e))??0},getAudioSettings:()=>{var a;return((a=e.getAudioSettings)==null?void 0:a.call(e))??{soundEnabled:O.soundEnabled,musicEnabled:O.musicEnabled}},onToggleSound:()=>{var a;return(a=e.toggleSound)==null?void 0:a.call(e)},onToggleMusic:()=>{var a;return(a=e.toggleMusic)==null?void 0:a.call(e)},onQuitApp:()=>{var a;return(a=e.quitApp)==null?void 0:a.call(e)},playSound:(a,n)=>{a==="error"?O.playLockedBarrier():a==="win"?O.playVictory():a==="hint"?O.playGalaxyComplete(1):a==="erase"?O.playTrowelErase():a==="place"?O.playBrickPlace((n==null?void 0:n.floors)||2,(n==null?void 0:n.maxFloors)||6):O.playConsoleButton()}};this.controller=new Wt(s),this.controller.mount(t),e.setAudioScene(this.sceneTheme)}unmount(){this.controller&&(this.controller.destroy(),this.controller=null),this.host=null}refreshHostState(){var t,e;(t=this.controller)==null||t.syncStatsFromStorage(),(e=this.controller)==null||e.render()}onPauseForOverlay(){var t;(t=this.controller)==null||t.pauseIfPlaying()}handleBackNavigation(){return!this.controller||!this.host?!1:(this.controller.handleBackNavigation()||this.host.returnToHub(),!0)}}export{Ot as TowersPlugin};
+    `}renderActiveModal(){if(!this.activeModal)return"";if(this.activeModal==="tutorial")return Rt({step:this.tutorialStep,miniBoard:this.tutorialMiniBoard,selectedMiniCell:this.tutorialSelectedCell,palId:{facade:this.stats.equippedFacadeId,roof:this.stats.equippedRoofId}});if(this.activeModal==="rules")return Gt();if(this.activeModal==="workshop")return Dt(this.stats);if(this.activeModal==="profile")return Wt(this.stats);if(this.activeModal==="beta-lab")return Ut(this.inBoardView);if(this.activeModal==="gameover")return Nt(this.gameOverReason);if(this.activeModal==="victory"&&this.lastWinSummary){const t=N.find(s=>s.id===this.stats.equippedCharacterId)||N[0],e=this.getArchitectSpeechState(t.id,!1,0);return _t({elapsedSeconds:this.elapsedSeconds,hintsUsed:this.hintsUsedThisGame,challengeKind:this.activeChallengeKind,architect:{id:t.id,name:t.name,title:t.title,accentColor:t.accentColor,winQuote:e.winQuote},summary:this.lastWinSummary})}return""}bindEvents(t){var s,i,a,b,m,w,l,o,h,g,k,$,M,E,B,S,A,d,r,v,L,x,R,T,f,I,q,V,j,lt,rt,F,X,ot,Y,Z;(s=t.querySelector("#btn-towers-back-hub"))==null||s.addEventListener("click",()=>{this.stopTimer(),this.host.onBackToHub()}),(i=t.querySelector("#btn-towers-open-social"))==null||i.addEventListener("click",()=>{var n,p;(p=(n=this.host).onOpenSocialHub)==null||p.call(n)}),(a=t.querySelector("#btn-towers-open-profile"))==null||a.addEventListener("click",()=>{var n,p;(p=(n=this.host).onOpenGlobalProfile)==null||p.call(n)}),(b=t.querySelector("#btn-towers-dock-sfx"))==null||b.addEventListener("click",()=>{var n,p;(p=(n=this.host).onToggleSound)==null||p.call(n),this.render()}),(m=t.querySelector("#btn-towers-dock-music"))==null||m.addEventListener("click",()=>{var n,p;(p=(n=this.host).onToggleMusic)==null||p.call(n),this.render()}),(w=t.querySelector("#btn-towers-quit"))==null||w.addEventListener("click",()=>{var n,p;(p=(n=this.host).onQuitApp)==null||p.call(n)}),(l=t.querySelector("#btn-towers-tutorial"))==null||l.addEventListener("click",()=>{this.tutorialStep=1,this.tutorialMiniBoard=nt.map(n=>[...n]),this.tutorialSelectedCell={r:0,c:1},this.activeModal="tutorial",this.render()}),(o=t.querySelector("#btn-towers-rules"))==null||o.addEventListener("click",()=>{this.activeModal="rules",this.render()}),(h=t.querySelector("#btn-towers-workshop"))==null||h.addEventListener("click",()=>{this.activeModal="workshop",this.render()}),(g=t.querySelector("#btn-towers-profile"))==null||g.addEventListener("click",()=>{this.activeModal="profile",this.render()}),(k=t.querySelector("#btn-towers-settings"))==null||k.addEventListener("click",()=>{this.host.onOpenGlobalSettings()}),($=t.querySelector("#btn-towers-beta-lab"))==null||$.addEventListener("click",()=>{this.activeModal="beta-lab",this.render()}),(M=t.querySelector("#btn-towers-close-modal"))==null||M.addEventListener("click",()=>{this.activeModal=null,this.render()}),t.querySelectorAll("[data-tut-step]").forEach(n=>{n.addEventListener("click",()=>{this.tutorialStep=Number(n.dataset.tutStep)||1,this.render()})}),t.querySelectorAll("[data-tut-cell]").forEach(n=>{n.addEventListener("click",()=>{var D,W,U;const[p,y]=(n.dataset.tutCell||"0-0").split("-"),C=Number(p)||0,H=Number(y)||0;((D=nt[C])==null?void 0:D[H])>0||(this.tutorialSelectedCell={r:C,c:H},(U=(W=this.host).playSound)==null||U.call(W,"click"),this.render())})}),t.querySelectorAll("[data-tut-num]").forEach(n=>{n.addEventListener("click",()=>{var H,D,W,U,et;const p=Number(n.dataset.tutNum)||0,{r:y,c:C}=this.tutorialSelectedCell;((H=nt[y])==null?void 0:H[C])>0||(this.tutorialMiniBoard[y][C]=p,p>0?(W=(D=this.host).playSound)==null||W.call(D,"place",{floors:p,maxFloors:3}):(et=(U=this.host).playSound)==null||et.call(U,"erase"),this.render())})}),(E=t.querySelector("#btn-towers-tutorial-next"))==null||E.addEventListener("click",()=>{this.tutorialStep=Math.min(3,this.tutorialStep+1),this.render()}),(B=t.querySelector("#btn-towers-tutorial-practice"))==null||B.addEventListener("click",()=>{this.activeModal=null;const n=P[0],p=G(n.size,n.difficulty,n.seed,{id:n.id,title:n.cityName,code:n.code});this.startPuzzleSession(p,"campaign",n)}),t.querySelectorAll("[data-towers-tab]").forEach(n=>{n.addEventListener("click",()=>{var y,C;const p=n.dataset.towersTab;p&&(this.activeTab=p,(C=(y=this.host).playSound)==null||C.call(y,"click"),this.render())})}),t.querySelectorAll("[data-towers-ep]").forEach(n=>{n.addEventListener("click",()=>{this.selectedEpisode=Number(n.dataset.towersEp)||1,this.render()})}),t.querySelectorAll("[data-start-campaign]").forEach(n=>{n.addEventListener("click",()=>{const p=n.dataset.startCampaign,y=P.find(H=>H.id===p);if(!y)return;const C=y.challengeKind==="zoning"||y.challengeKind==="fog"?it(y.challengeKind,y.size,y.difficulty,y.seed,{id:y.id,title:y.cityName,code:y.code}):G(y.size,y.difficulty,y.seed,{id:y.id,title:y.cityName,code:y.code});this.startPuzzleSession(C,"campaign",y)})}),(S=t.querySelector("#btn-towers-start-zoning"))==null||S.addEventListener("click",()=>{const n=it("zoning",5,"medium",`TWR-ZONE-${Date.now()}`);this.startPuzzleSession(n,"challenge")}),(A=t.querySelector("#btn-towers-start-fog"))==null||A.addEventListener("click",()=>{const n=it("fog",5,"medium",`TWR-FOG-${Date.now()}`);this.startPuzzleSession(n,"challenge")}),(d=t.querySelector("#btn-towers-start-survival"))==null||d.addEventListener("click",()=>{const n=it("survival",5,"hard",`TWR-SURV-${Date.now()}`);this.startPuzzleSession(n,"challenge")}),t.querySelectorAll("[data-towers-cup-stage]").forEach(n=>{n.addEventListener("click",()=>{const p=Number(n.dataset.towersCupStage);if(p!==0&&p!==1&&p!==2)return;const C=$t()[p],H=it(C.challengeKind==="zoning"?"zoning":"weekly_cup",C.size,C.difficulty,C.seed,{id:C.seed,title:`🏆 ${C.label}: ${C.subtitle}`});H.challengeKind="weekly_cup",this.startPuzzleSession(H,"challenge",null,{cupStageIdx:p})})}),(r=t.querySelector("#btn-towers-start-daily"))==null||r.addEventListener("click",()=>{const n=new Date().toISOString().slice(0,10),p=G(5,"medium",`TWR-DAILY-${n}`);this.startPuzzleSession(p,"daily")}),(v=t.querySelector("#btn-towers-start-endless"))==null||v.addEventListener("click",()=>{const n=this.endlessWave<=2?4:this.endlessWave<=5?5:6,p=this.endlessWave<=2?"easy":this.endlessWave<=6?"medium":"hard",y=G(n,p,`TWR-ENDLESS-W${this.endlessWave}-${Date.now()}`);this.startPuzzleSession(y,"endless")}),(L=t.querySelector("#btn-towers-start-blitz"))==null||L.addEventListener("click",()=>{const n=G(4,"easy",`TWR-BLITZ-${Date.now()}-0`);this.startPuzzleSession(n,"blitz")}),t.querySelectorAll("[data-custom-size]").forEach(n=>{n.addEventListener("click",()=>{this.customSize=Number(n.dataset.customSize)||4,this.render()})}),t.querySelectorAll("[data-custom-diff]").forEach(n=>{n.addEventListener("click",()=>{this.customDifficulty=n.dataset.customDiff||"easy",this.render()})});const e=t.querySelector("#inp-towers-custom-seed");e==null||e.addEventListener("input",()=>{this.customSeedInput=e.value}),(x=t.querySelector("#btn-towers-start-custom"))==null||x.addEventListener("click",()=>{const n=this.customSeedInput.trim()||`TWR-CUSTOM-${this.customSize}-${this.customDifficulty}-${Date.now()}`,p=G(this.customSize,this.customDifficulty,n);this.startPuzzleSession(p,"custom")}),(R=t.querySelector("#btn-towers-leave-board"))==null||R.addEventListener("click",()=>{this.stopTimer(),this.inBoardView=!1,this.isPaused=!1,this.render()}),(T=t.querySelector("#btn-towers-pause"))==null||T.addEventListener("click",()=>{this.isPaused=!this.isPaused,this.render()}),(f=t.querySelector("#btn-towers-resume"))==null||f.addEventListener("click",()=>{this.isPaused=!1,this.render()}),(I=t.querySelector("#btn-towers-view-toggle"))==null||I.addEventListener("click",()=>{this.toggleViewMode()}),(q=t.querySelector("#btn-towers-sight-toggle"))==null||q.addEventListener("click",()=>{this.toggleSightRayFromSelection()}),t.querySelectorAll("[data-towers-cell]").forEach(n=>{n.addEventListener("click",()=>{this.lastBuiltCell=null,this.selectedCell={r:Number(n.dataset.row)||0,c:Number(n.dataset.col)||0},this.render()})}),t.querySelectorAll("[data-towers-clue]").forEach(n=>{n.addEventListener("click",()=>{const p=n.dataset.towersClue||"",[y,C]=p.split("-"),H=Number(C)||0;this.activeSightRay&&this.activeSightRay.side===y&&this.activeSightRay.index===H?this.activeSightRay=null:this.activeSightRay={side:y,index:H},this.render()})}),(V=t.querySelector("#btn-towers-clear-sight"))==null||V.addEventListener("click",()=>{this.activeSightRay=null,this.render()}),t.querySelectorAll("[data-towers-num]").forEach(n=>{n.addEventListener("click",()=>{const p=Number(n.dataset.towersNum)||1;this.handleNumberInput(p)})}),(j=t.querySelector("#btn-towers-notes-toggle"))==null||j.addEventListener("click",()=>{this.noteMode=!this.noteMode,this.render()}),(lt=t.querySelector("#btn-towers-erase"))==null||lt.addEventListener("click",()=>this.handleEraseInput()),(rt=t.querySelector("#btn-towers-undo"))==null||rt.addEventListener("click",()=>this.handleUndo()),(F=t.querySelector("#btn-towers-redo"))==null||F.addEventListener("click",()=>this.handleRedo()),(X=t.querySelector("#btn-towers-hint"))==null||X.addEventListener("click",()=>this.handleSmartHint()),(ot=t.querySelector("#btn-towers-apply-hint"))==null||ot.addEventListener("click",()=>this.applyActiveHintMove()),(Y=t.querySelector("#btn-towers-close-hint"))==null||Y.addEventListener("click",()=>{this.activeHint=null,this.activeSightRay=null,this.render()}),(Z=t.querySelector("#btn-towers-reset"))==null||Z.addEventListener("click",()=>{!this.activePuzzle||this.isPaused||(this.pushHistory(),this.board=J(this.activePuzzle.givens),this.notes=Array.from({length:this.activePuzzle.size},()=>Array.from({length:this.activePuzzle.size},()=>[])),this.activeHint=null,this.lastBuiltCell=null,this.render())}),this.bindWorkshopAndMetaModals(t)}bindWorkshopAndMetaModals(t){var e,s,i,a,b,m,w;t.querySelectorAll("[data-buy-char]").forEach(l=>{l.addEventListener("click",()=>{var g,k;const o=l.dataset.buyChar,h=N.find($=>$.id===o);!h||this.stats.blueprintGems<h.costGems||(this.stats.blueprintGems-=h.costGems,this.stats.unlockedCharacterIds.includes(o)||this.stats.unlockedCharacterIds.push(o),this.stats.equippedCharacterId=o,this.stats.cosmeticsUpdatedAt=Date.now(),st(this.stats),(k=(g=this.host).onCloudStateChanged)==null||k.call(g,!1),this.render())})}),t.querySelectorAll("[data-equip-char]").forEach(l=>{l.addEventListener("click",()=>{var h,g;const o=l.dataset.equipChar;this.stats.unlockedCharacterIds.includes(o)&&(this.stats.equippedCharacterId=o,this.stats.cosmeticsUpdatedAt=Date.now(),st(this.stats),(g=(h=this.host).onCloudStateChanged)==null||g.call(h,!1),this.render())})}),t.querySelectorAll("[data-buy-cosmetic]").forEach(l=>{l.addEventListener("click",()=>{var g,k;const o=l.dataset.buyCosmetic,h=O.find($=>$.id===o);!h||this.stats.blueprintGems<h.costGems||(this.stats.blueprintGems-=h.costGems,this.stats.unlockedCosmeticIds.includes(o)||this.stats.unlockedCosmeticIds.push(o),h.slot==="facade"?this.stats.equippedFacadeId=o:this.stats.equippedRoofId=o,this.stats.cosmeticsUpdatedAt=Date.now(),st(this.stats),(k=(g=this.host).onCloudStateChanged)==null||k.call(g,!1),this.render())})}),t.querySelectorAll("[data-equip-cosmetic]").forEach(l=>{l.addEventListener("click",()=>{var g,k;const o=l.dataset.equipCosmetic,h=O.find($=>$.id===o);h&&(h.slot==="facade"?this.stats.equippedFacadeId=o:this.stats.equippedRoofId=o,this.stats.cosmeticsUpdatedAt=Date.now(),st(this.stats),(k=(g=this.host).onCloudStateChanged)==null||k.call(g,!1),this.render())})}),(e=t.querySelector("#btn-towers-preset-max"))==null||e.addEventListener("click",()=>{this.stats=pt("unlock_all"),this.activeModal=null,this.render()}),(s=t.querySelector("#btn-towers-preset-mid"))==null||s.addEventListener("click",()=>{this.stats=pt("classic_sandbox"),this.activeModal=null,this.render()}),(i=t.querySelector("#btn-towers-preset-reset"))==null||i.addEventListener("click",()=>{this.stats=pt("fresh_lvl1"),this.activeModal=null,this.render()}),(a=t.querySelector("#btn-towers-instant-solve"))==null||a.addEventListener("click",()=>{this.activePuzzle&&(this.activeModal=null,this.board=J(this.activePuzzle.solution),this.checkWinAfterMove(),this.render())}),(b=t.querySelector("#btn-towers-retry-board"))==null||b.addEventListener("click",()=>{this.activePuzzle&&(this.activeModal=null,this.startPuzzleSession(this.activePuzzle,this.activeMode,this.activeCampaignLevel,{resetSeries:!0,cupStageIdx:this.activeCupStageIdx}))}),(m=t.querySelector("#btn-towers-win-map"))==null||m.addEventListener("click",()=>{this.activeModal=null,this.inBoardView=!1,this.render()}),(w=t.querySelector("#btn-towers-win-next"))==null||w.addEventListener("click",()=>{if(this.activeModal=null,this.activeMode==="campaign"&&this.activeCampaignLevel){const l=P.findIndex(g=>g.id===this.activeCampaignLevel.id),o=P[Math.min(P.length-1,l+1)];this.selectedEpisode=o.episode;const h=G(o.size,o.difficulty,o.seed,{id:o.id,title:o.cityName,code:o.code});this.startPuzzleSession(h,"campaign",o)}else if(this.activeMode==="endless"){const l=this.endlessWave<=2?4:this.endlessWave<=5?5:6,o=this.endlessWave<=2?"easy":this.endlessWave<=6?"medium":"hard",h=G(l,o,`TWR-ENDLESS-W${this.endlessWave}-${Date.now()}`);this.startPuzzleSession(h,"endless")}else this.inBoardView=!1,this.render()})}}class Yt{constructor(){c(this,"id","towers");c(this,"title","Towers");c(this,"sceneTheme","brick-city");c(this,"controller",null);c(this,"host",null)}mount(t,e){this.unmount(),this.host=e;const s={getUsername:()=>e.getUsername(),getPilotTag:()=>e.getPilotTag(),isBetaChannel:()=>e.isBetaChannel,getCloudSynced:()=>{var i;return((i=e.getCloudSynced)==null?void 0:i.call(e))??!1},canQuit:()=>{var i;return((i=e.canQuit)==null?void 0:i.call(e))??!1},renderTitlebar:()=>{var i;return((i=e.renderTitlebar)==null?void 0:i.call(e))??""},bindTitlebarEvents:()=>{var i;return(i=e.bindTitlebarEvents)==null?void 0:i.call(e)},onBackToHub:()=>e.returnToHub(),onOpenGlobalSettings:()=>e.openGlobalSettings(),onOpenGlobalProfile:()=>{var i;return(i=e.openGlobalProfile)==null?void 0:i.call(e)},onOpenSocialHub:()=>e.openSocialHub({pauseActiveGame:!0}),getSocialAttentionCount:()=>{var i;return((i=e.getSocialAttentionCount)==null?void 0:i.call(e))??0},getAudioSettings:()=>{var i;return((i=e.getAudioSettings)==null?void 0:i.call(e))??{soundEnabled:_.soundEnabled,musicEnabled:_.musicEnabled}},onToggleSound:()=>{var i;return(i=e.toggleSound)==null?void 0:i.call(e)},onToggleMusic:()=>{var i;return(i=e.toggleMusic)==null?void 0:i.call(e)},onCloudStateChanged:i=>{var a;return(a=e.onCloudStateChanged)==null?void 0:a.call(e,i)},onQuitApp:()=>{var i;return(i=e.quitApp)==null?void 0:i.call(e)},playSound:(i,a)=>{i==="error"?_.playLockedBarrier():i==="win"?_.playVictory():i==="hint"?_.playGalaxyComplete(1):i==="erase"?_.playTrowelErase():i==="place"?_.playBrickPlace((a==null?void 0:a.floors)||2,(a==null?void 0:a.maxFloors)||6):_.playConsoleButton()}};this.controller=new Ot(s),this.controller.mount(t),e.setAudioScene(this.sceneTheme)}unmount(){this.controller&&(this.controller.destroy(),this.controller=null),this.host=null}refreshHostState(){var t;(t=this.controller)==null||t.syncStatsFromStorageAndRefresh()}onPauseForOverlay(){var t;(t=this.controller)==null||t.pauseIfPlaying()}handleBackNavigation(){return!this.controller||!this.host?!1:(this.controller.handleBackNavigation()||this.host.returnToHub(),!0)}}export{Yt as TowersPlugin};
