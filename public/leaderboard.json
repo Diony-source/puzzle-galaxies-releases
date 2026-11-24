@@ -11,14 +11,14 @@
       "bestBlitzScore": 10110,
       "lastPuzzleTitle": "15×15 • 1-10",
       "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEerh6PLEjYAcLK285FXo5LxwbepFEqeDg9yePBQDpoEeiqeld5CLl3FVG5SZs4Fsd67FJj2aGa9iC/x082SguKw==",
-      "updatedAt": 1795344837731,
+      "updatedAt": 1795516694336,
       "tag": "9031",
       "shipCode": "3.3.3.3.3",
       "pilotLevel": 8,
       "duelElo": 1200,
-      "weeklyCupKey": "2026-W47",
+      "weeklyCupKey": "2026-W48",
       "secretHash": "477d58e0",
-      "signature": "WjZ7juHJ/YLNKZeCHP9tOMJhgWgFWfBJffcMqvLt/xegNYUW8tCyufK76Xnm7nXmHc1AYTN9oDd4RMhGMthirg==",
+      "signature": "ScaTi+DLW2VbMthkyVb2JyZKNepgaAJdrrAA9DOMhmt2xcYS0Vv0A8ln/qkRMFhKGP7SsR4ziAggjx1UdN6Rog==",
       "dailyBestDate": "2026-11-15",
       "dailyBestSec": 90
     },
@@ -41,7 +41,6 @@
       "weeklyCupKey": "2026-W47",
       "dailyBestDate": "2026-11-20",
       "dailyBestSec": 64,
-      "secretHash": "74ed7536",
       "signature": "TMT7EfSjCnnz04AVEUy59uiAFONluJyoYUmoPujB+GDCR0VX9zjgjYB8t3hmctVusrBjRu7hCqSDw6Xzo9Kcbw=="
     }
   },
