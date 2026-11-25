@@ -28,20 +28,19 @@
       "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEUMwTRYpj/74HHjuhu2OXe6Xg1CXrzoWPAArSlv5hEl17xMSl16/ZxYl7T2niWgyojyeYO7UOzpADdqMPW9XJFw==",
       "nickname": "BeratUtq",
       "avatar": "☄️",
-      "totalPoints": 55997,
-      "solvedCount": 82,
+      "totalPoints": 56802,
+      "solvedCount": 333,
       "bestTimeSec": 6,
       "bestBlitzScore": 12000,
-      "lastPuzzleTitle": "Günlük Bulmaca (2026-11-20)",
-      "updatedAt": 1795344941998,
+      "lastPuzzleTitle": "Günlük Bulmaca (2026-11-25)",
+      "updatedAt": 1795593826788,
       "tag": "1177",
       "shipCode": "4.4.2.6.5",
       "pilotLevel": 10,
       "duelElo": 1200,
       "weeklyCupKey": "2026-W47",
-      "dailyBestDate": "2026-11-20",
-      "dailyBestSec": 64,
-      "signature": "TMT7EfSjCnnz04AVEUy59uiAFONluJyoYUmoPujB+GDCR0VX9zjgjYB8t3hmctVusrBjRu7hCqSDw6Xzo9Kcbw=="
+      "dailyBestDate": "2026-11-25",
+      "dailyBestSec": 40
     }
   },
   "feed": [
