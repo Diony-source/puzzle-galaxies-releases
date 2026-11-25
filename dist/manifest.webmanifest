@@ -1,7 +1,7 @@
 {
-  "name": "1000in1 — Retro Konsol & Mini Oyunlar",
-  "short_name": "1000in1",
-  "description": "1000in1 — Retro Konsol, Puzzle Galaxies & Towers 3D",
+  "name": "Puzzle Galaxies - Galaksi Bulmacası",
+  "short_name": "Galaxies",
+  "description": "180° Simetrik Galaksi Mantık Bulmacası (Tentai Show / Spiral Galaxies)",
   "start_url": "./index.html",
   "display": "standalone",
   "orientation": "portrait-primary",
