@@ -1,16 +1,16 @@
 {
-  "version": "2.5.4",
-  "releaseDate": "2026-11-22",
+  "version": "2.5.5",
+  "releaseDate": "2026-11-25",
   "mandatory": true,
   "repoOwner": "Diony-source",
   "repoName": "puzzle-galaxies-releases",
   "updateManifestUrl": "https://raw.githubusercontent.com/Diony-source/puzzle-galaxies-releases/main/version.json",
   "releaseNotes": [
+    "Galaksi Blitz Oyunu Bitir & Puanları Kaydet (v2.5.5): Galaksi Blitz modunda sürenin bitmesini beklemeden üst bardaki 'Bitir & Kaydet' butonuyla veya menüden çıkış ekranından oyunu tamamlayıp topladığın puanları, XP'yi ve rekorunu anında kaydetme seçeneği eklendi; Beta ve Canlı kanallar eşitlendi.",
     "Towers 3D Tasarım, Mobil Okunabilirlik & Telefon-PC Bulut Senkronizasyonu (v2.5.4): Towers ilerlemesi (çözülen mahalleler, yıldızlar, mimar seviyesi, atölye kozmetikleri, başarımlar) ve 1000in1 karakter seçimi artık telefon ve PC arasında otomatik eşitlenir; oyun tahtası küçük ekranlarda da rahat okunabilen 3D mimari bloklar, dev merkez rakamlar, tek tık 3D/2D geçişi, satır/sütun vurgusu ve erken kenar ipucu uyarısıyla yenilendi.",
     "1000in1 Paket Temizliği & Skor Tablosu Senkronizasyon Koruması (v2.5.3): Kullanılmayan pasif kaset dosyaları OTA paketinden temizlendi; açılışta yerel skor tablosu puanının bulut senkronizasyonu sırasında ezilmesini önleyen puan koruma düzeltmesi yayınlandı.",
     "Steam Tarzı 1000in1 Profil, 2D Piksel Karakterler & OTA Yol Düzeltmesi (v2.5.2): Otomatik güncelleme manifestindeki Windows ters eğik çizgi (\\) engeli giderildi; 1000in1 ana odasında kullanıcı adına tıklayınca açılan profil, 6 GBA/retro seçilebilir 2D piksel karakter (oda yürüyüşüyle canlı senkron!), konsol seviyesi, 10 yeni 1000in1 Genel Platform Başarımı ve Steam tarzı '1000in1 Genel / Puzzle Galaxies / Towers' oyun sekmeleriyle yayınlandı.",
-    "Yeni Oyun Kaseti #002 — TOWERS Canlı Sürümde (v2.5.0): 1000in1 oyun dolabında Towers kaseti açıldı! 60 bölümlü Tuğla Şehir Cadde Seferi (madalya derecene göre arsaya Gecekondu ★, Apartman ★★ veya Lüks Konak ★★★ dikilir), 6 ünlü mimar portresi (Ali Ağaoğlu'ndan Efsanevi Mimar Sinan'a), bina cepheleri ve çatı tasarımları, Günlük Bina, Kule Blitz, Sonsuz İnşaat, İmar Kısıtı, Sisli Sokak ve 3 Baret & Haftalık Kupa modlarıyla oynanabilir.",
-    "Güvenlik & Stabilite Sertleştirmesi: Electron ve Android güncellemeleri için SHA-256 doğrulama, RPC erişim sertleştirmesi ve tam masaüstü/mobil ekran ölçeklendirme iyileştirmeleri."
+    "Yeni Oyun Kaseti #002 — TOWERS Canlı Sürümde (v2.5.0): 1000in1 oyun dolabında Towers kaseti açıldı! 60 bölümlü Tuğla Şehir Cadde Seferi (madalya derecene göre arsaya Gecekondu ★, Apartman ★★ veya Lüks Konak ★★★ dikilir), 6 ünlü mimar portresi (Ali Ağaoğlu'ndan Efsanevi Mimar Sinan'a), bina cepheleri ve çatı tasarımları, Günlük Bina, Kule Blitz, Sonsuz İnşaat, İmar Kısıtı, Sisli Sokak ve 3 Baret & Haftalık Kupa modlarıyla oynanabilir."
   ],
   "installerUrl": "",
   "files": [
@@ -53,8 +53,8 @@
   "announcement": "",
   "fileHashes": {
     "assets/TowersPlugin.js": "b5e4b081f29b02b2a2fd65eab197084bcc9657548b3172b8997f741b68a33f7b",
-    "assets/app.css": "a2ef1621918c3a0a6aacd267a6274246bb793b5e62731b98db025a70fd68d4e2",
-    "assets/app.js": "1ef06d16f31f47aed059c94d61679815b14668b48a58b2ce3bfc92e17eecab74",
+    "assets/app.css": "3e98ebcf5a01d84221515a96ae4158ad0e706fa942e624d70548544f04fe94c8",
+    "assets/app.js": "d459ffd9a09527351c3cf39b38e2063009d51b930635ee5541da32bf95fc4258",
     "assets/web.js": "092d9d061f4a3129619d1c318da01190da6d04fb8c50d6fc6c8d90a6cde42eb9",
     "assets/web2.js": "4a0cc3ac09324665e3096b2d71937844328b6c6d9f037437098523a57031b0d5",
     "cozy-room-backdrop.jpg": "6503a18f7ff8c45fbe5ae3a0f59849559ba918d94758e2e62d4a03879aeb8a97",
@@ -67,9 +67,9 @@
     "icon.ico": "45c7aaa8e0d7cc3e4c085d2fbd52e56ebfa23757d6ba2e21ffc30465613cb065",
     "icon.png": "f17fd7015b90c27945381d056aa784eb83fd9155331a7bd22cde83cd19ddade2",
     "icon.svg": "33084c7a79a457eb932633ae1d99df97dcfce4ac7d86cb6025f75b59f083e8b0",
-    "index.html": "d591cb2e5c34d6b6835ab670459fb26d05272dbb768d6e83bb3f683ae284ce22",
-    "leaderboard.json": "d900147b566d95e2dac92829b7bbf9d428b25d8f4407dbd3d58ca29dfea4598a",
-    "manifest.webmanifest": "1244578070351a78ee62f56be85a68773bffdba140871e9b8653e3c146c01273",
+    "index.html": "b1e645e53d4d9dfb57496af131de2d861e8382e00ee6255a5bb82a5e186e898c",
+    "leaderboard.json": "0fbafe7ec977d1b538249da3698d2117bac960731220942dd04b25ddc9bc537d",
+    "manifest.webmanifest": "7c5c1d081133f395b12c03e430d4306f5628bab7fca110607af8c1f39f27cb2e",
     "towers/arch_agaoglu.png": "c32205c94482d609f27f45ff480603ea3316f893ad12e93d703a61fcaaad1df4",
     "towers/arch_cansever.png": "1e6c10300e670715592d9ecd67d36946de0b4409bc47b4a7edb0e9ed1d983ae5",
     "towers/arch_gaudi.png": "d5725c403b578094927f08423c834a456081d0bd6bbfbf97d20354ccbc168701",
